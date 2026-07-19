@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>土地法 L5｜地用：房屋、基地、耕地租用與空地荒地</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --ink:#1a1a1a; --sub:#6b7280; --line:#e5e7eb; --line-strong:#94a3b8;
+    --accent:#8B4438; --accent-bg:#f1e2dd;
+    --accent2:#9C7A34; --accent2-bg:#efe6d0;
+  }
+  body {
+    font-family: 'Microsoft JhengHei', '微軟正黑體', sans-serif;
+    background: #f4f1eb;
+    color: var(--ink);
+    width: 1400px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    font-size: 15px;
+    line-height: 1.42;
+  }
+
+  /* ── 頁首 ── */
+  .page-header {
+    background: #1e293b;
+    color: white;
+    border-radius: 16px;
+    padding: 18px 32px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .page-header h1 { font-size: 30px; font-weight: 900; letter-spacing: 2px; }
+  .page-header .subtitle { font-size: 15px; opacity: .85; margin-top: 5px; }
+  .page-header .badge {
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 12px;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 13px;
+  }
+  .page-header .badge strong { font-size: 20px; display: block; }
+
+  /* ── Section 標題 ── */
+  .section { margin-bottom: 6px; }
+  .section-title { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .section-num {
+    background: var(--ink); color: white;
+    width: 34px; height: 34px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 15px; flex-shrink: 0;
+  }
+  .section-title h2 {
+    font-size: 21px; font-weight: 900; color: var(--ink);
+    border-bottom: 3px solid var(--ink); padding-bottom: 3px;
+  }
+
+  /* ── 卡片網格 ── */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 11px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+
+  /* ── 通用卡片 ── */
+  .card { background: white; border-radius: 12px; padding: 11px 15px; box-shadow: 0 2px 8px rgba(0,0,0,.07); border: 1.5px solid var(--line); }
+  .card-title { font-size: 15px; font-weight: 900; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; color: var(--ink); }
+  .card-title .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+  /* ── 徽章（方框字，不靠顏色分類）── */
+  .badge-tag { display: inline-block; padding: 2px 11px; border: 1.5px solid var(--ink); border-radius: 5px; font-size: 12.5px; font-weight: 900; color: var(--ink); background: #fff; }
+  .badge-tag.no { color: var(--sub); border-color: var(--line-strong); }
+
+  .stars { color: var(--accent); font-size: 14px; }
+
+  /* ── 表格 ── */
+  table { width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.07); }
+  th { background: var(--ink); color: white; padding: 6px 12px; text-align: left; font-size: 14px; font-weight: 700; }
+  td { padding: 6px 12px; border-bottom: 1px solid var(--line); font-size: 14px; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: #f8fafc; }
+  tr:hover td { background: #f1f5f9; }
+
+  /* ── 流程箭頭 ── */
+  .flow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .flow-item { background: var(--ink); color: white; padding: 7px 16px; border-radius: 8px; font-weight: 700; font-size: 14px; }
+  .flow-arrow { color: var(--sub); font-size: 20px; font-weight: 700; }
+
+  /* ── 重點框：黑灰階為主，陶紅=最高等級／易混淆，赭黃=次一級提醒 ── */
+  .highlight-box { border-left: 5px solid var(--ink); background: #f8fafc; padding: 7px 13px; border-radius: 0 8px 8px 0; margin: 5px 0; font-size: 14px; }
+  .highlight-box.warning { border-left-color: var(--accent2); background: var(--accent2-bg); }
+  .highlight-box.danger { border-left-color: var(--accent); background: var(--accent-bg); }
+
+  /* ── 法條標籤 ── */
+  .law-tag { display: inline-block; background: var(--ink); color: white; padding: 2px 9px; border-radius: 5px; font-size: 12px; font-weight: 700; margin: 0 2px; }
+
+  /* ── 口訣字（inline） ── */
+  .mnem { font-weight: 900; color: var(--accent); }
+
+  /* ── 例題 ── */
+  .example-box { background: #f8fafc; border: 2px solid var(--line); border-radius: 12px; padding: 9px 13px; margin-top: 6px; }
+  .example-label { font-size: 12px; color: var(--sub); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+
+  /* ── IRAC ── */
+  .irac-card { border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.08); border: 1.5px solid var(--line); }
+  .irac-header { padding: 7px 15px; color: white; font-weight: 900; font-size: 15px; background: var(--ink); }
+  .irac-body { background: white; padding: 9px 13px; }
+  .irac-row { display: grid; grid-template-columns: 80px 1fr; gap: 8px; padding: 4px 0; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
+  .irac-row:last-child { border-bottom: none; }
+  .irac-label { font-weight: 900; color: var(--sub); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; padding-top: 2px; }
+
+  /* ── 條文速查 ── */
+  .law-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  .law-item { background: white; border-radius: 10px; padding: 8px 12px; box-shadow: 0 2px 6px rgba(0,0,0,.07); border-top: 4px solid var(--ink); }
+  .law-item .num { font-size: 18px; font-weight: 900; color: var(--ink); margin-bottom: 5px; }
+  .law-item .desc { font-size: 13px; color: #374151; }
+
+  hr { border: none; border-top: 2px dashed var(--line); margin: 5px 0; }
+  .note { font-size: 13px; color: var(--sub); font-style: italic; margin-top: 6px; }
+
+  .vs-divider { display: flex; align-items: center; gap: 12px; margin: 8px 0; }
+  .vs-divider::before, .vs-divider::after { content: ''; flex: 1; border-top: 1px solid var(--line); }
+  .vs-text { font-weight: 900; color: var(--sub); font-size: 13px; }
+</style>
+</head>
+<body>
+
+<!-- ═══ 頁首 ═══ -->
+<div class="page-header">
+  <div>
+    <div style="font-size:13px;opacity:.7;margin-bottom:6px;">114年 不動產經紀人考試｜土地法規 Lesson 3</div>
+    <h1>L5｜地用</h1>
+    <div class="subtitle">土地使用編定 → 房屋租用 → 基地租用 → 耕地租用 → 空地與荒地</div>
+  </div>
+  <div style="display:flex;gap:16px;">
+    <div class="badge"><strong>土§94～122</strong>核心條文</div>
+    <div class="badge"><strong>平§3,11,26,74,77</strong>對照條文</div>
+    <div class="badge"><strong>⭐⭐⭐⭐⭐</strong>比較題必考</div>
+  </div>
+</div>
+
+<!-- ═══ 零、土地使用基本概念 ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num">1</div>
+    <h2>土地使用｜基本概念</h2>
+  </div>
+  <div class="grid-2" style="align-items:start;">
+    <div class="card">
+      <div class="card-title" style="font-size:16px;">定義與使用編定</div>
+      <div class="highlight-box">
+        <strong>土地使用</strong>：謂施以勞力或資本而為土地之利用
+      </div>
+      <div style="font-size:14px;margin-top:10px;">
+        <strong>使用編定</strong>：直轄市或縣（市）地政機關得就管轄區內之土地，依國家經濟政策、地方需要情形及土地所能供使用之性質，分別商同有關機關，編為各種使用地
+      </div>
+      <div style="margin-top:12px;font-size:13px;color:#374151;">
+        依據：區域計畫法施行細則、非都市土地使用管制規則<br>
+        規範範圍：<strong>非都市土地</strong>（都市土地屬都市發展局管轄）
+      </div>
+      <div class="highlight-box warning" style="margin-top:12px;">
+        管制原則：凡編為某種使用地之土地，<strong>不得供其他用途之使用</strong>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="font-size:16px;">使用分區與使用地類別</div>
+      <table>
+        <thead><tr><th>項目</th><th>內容</th></tr></thead>
+        <tbody>
+          <tr><td><strong>使用分區</strong>（11種）</td><td style="font-size:13px;">特定農業區、一般農業區、工業區、鄉村區、<strong>森林區、山坡地保育區</strong>、風景區、國家公園區、河川區、海域區、其他使用區或特定專用區</td></tr>
+          <tr><td><strong>使用地類別</strong>（19種）</td><td style="font-size:13px;">甲種／乙種／丙種／丁種建築用地、<strong>農牧用地</strong>、林業用地、養殖用地、鹽業用地、礦業用地等</td></tr>
+        </tbody>
+      </table>
+      <div class="highlight-box danger" style="margin-top:12px;">
+        <strong>⚠️ 易混淆：耕地 ≠ 農牧用地</strong><br>
+        「耕地」＝特定農業區、一般農業區、森林區、山坡地保育區（特、一、森、山）下的<strong>農牧用地</strong>，是專業名詞；跟後面「耕地租用」的耕地是不同層次的概念，要分清楚
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══ 一、房屋租用 ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num">2</div>
+    <h2>房屋租用 <span class="stars">★★★★★</span></h2>
+  </div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-title" style="font-size:16px;">定義與調處</div>
+    <div class="highlight-box">
+      <span class="law-tag">民§421</span> 稱租賃者，謂當事人約定，一方以物租與他方使用收益，他方支付租金之契約
+    </div>
+    <div style="font-size:14px;margin-top:10px;">
+      <span class="law-tag">土§101</span> 房屋租用發生爭議 → 由該管直轄市或縣（市）地政機關予以<strong>調處</strong>，不服調處者得向司法機關訴請處理
+      <span class="note">（與土§34-1共有物分割調處是同一套邏輯）</span>
+    </div>
+  </div>
+
+  <div class="flow" style="justify-content:center;margin-bottom:24px;">
+    <div class="flow-item">① 政府房屋供給義務</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-item">② 租金與押金規範</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-item">③ 收回限制</div>
+  </div>
+
+  <div class="card-title" style="font-size:18px;margin-bottom:14px;">① 政府房屋供給義務 <span class="law-tag">土§94,95,96</span></div>
+  <div class="card" style="margin-bottom:20px;">
+    <div style="font-size:14px;">政府應準備相當數量之房屋（如社會住宅），供人民居住使用──這是政府對外的<strong>供給責任</strong>，不是私人租約條款</div>
+    <div style="text-align:center;margin-top:14px;">
+      <span style="font-size:24px;font-weight:900;">政府準備房屋之租金 ≤ 年息 8%</span>
+    </div>
+  </div>
+
+  <div class="card-title" style="font-size:18px;margin-bottom:14px;">② 租金上限與押金規範</div>
+  <div class="grid-2" style="margin-bottom:20px;">
+    <div class="card">
+      <div class="card-title">一般房屋租金上限 <span class="law-tag">土§97</span></div>
+      <div style="font-size:14px;">城市地方房屋（一般人民房屋，非政府準備）之租金上限</div>
+      <div style="text-align:center;margin-top:14px;">
+        <span style="font-size:24px;font-weight:900;">租金 ≤ 建物申報價額 10%</span>
+      </div>
+      <div class="highlight-box warning" style="margin-top:10px;font-size:13px;">
+        客體限「<strong>住宅用</strong>」；<strong>營業用</strong>房屋可超過 10%。超過上限 → 政府得強制減定
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">押金規定 <span class="law-tag">土§98,99</span></div>
+      <div style="font-size:13px;line-height:2;">
+        <strong>性質：</strong>無名契約（要物）<br>
+        <strong>利息 §98：</strong>押金利息算作租金之一部<br>
+        <strong>上限 §99：</strong>≤ 2 個月房租額，且<strong>不得</strong>抵付房租
+      </div>
+    </div>
+  </div>
+
+  <div class="card-title" style="font-size:18px;margin-bottom:14px;">③ 收回限制｜土地法 100 條 vs 民法 450 條</div>
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>土地法 100 條（不定期房屋租用）</th>
+          <th>民法 450 條</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-size:13px;">出租人非因左列情形之一，<strong>不得收回房屋</strong>：<br>
+            一、出租人<span class="mnem">收</span>回自住或重新建築時<br>
+            二、承租人違反民§443Ⅰ<span class="mnem">轉</span>租於他人時<br>
+            三、承租人積<span class="mnem">欠</span>租金額，除擔保金抵償外，達<strong>2個月以上</strong>時<br>
+            四、承租人以房屋供<span class="mnem">違</span>反法令之使用時<br>
+            五、承租人違反租賃<span class="mnem">契</span>約時<br>
+            六、承租人損<span class="mnem">壞</span>出租人房屋或附著財物，而不為相當賠償時</td>
+          <td style="font-size:13px;">
+            租賃定期限者，期限屆滿時消滅；未定期限者，各當事人得隨時終止契約，但有利於承租人之習慣者從其習慣<br><br>
+            <span class="law-tag">民§440</span> 租金遲延，出租人得定期催告；<strong>房屋</strong>遲付租金總額非達<strong>2個月之租額</strong>，不得終止契約</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="highlight-box danger" style="margin-top:16px;">
+    <strong>⚠️ 考試陷阱｜欠租月數：土地法優先於民法（特別法優於普通法）</strong><br>
+    民法 440 條：遲付租金達 <strong>2 個月</strong>即可終止契約<br>
+    土地法 100 條第 3 款：除擔保金（上限2個月）抵償外，再欠 <strong>2 個月以上</strong> → 實質上可欠到 <strong>4 個月</strong><br>
+    → 承租人若懂法律，會主張適用土地法（特別法），可以多欠 2 個月才被收回房屋
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══ 二、基地租用 ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num">3</div>
+    <h2>基地租用 <span class="stars">★★★★★</span></h2>
+  </div>
+
+  <div class="highlight-box">
+    <strong>基地租用</strong>＝租一塊土地來蓋房子（房屋的基地），跟房屋租用（租房子來住）不同。標的是「土地」不是「房屋」
+  </div>
+
+  <div class="card-title" style="font-size:18px;margin:20px 0 14px;">債權關係物權化（訓示規定）</div>
+  <div class="card" style="margin-bottom:20px;">
+    <div class="grid-2">
+      <div>
+        <div class="card-title" style="font-size:15px;">民法第 422-1 條</div>
+        <div style="font-size:14px;">租用基地建築房屋者，承租人於契約成立後，得請求出租人為<strong>地上權之登記</strong></div>
+      </div>
+      <div>
+        <div class="card-title" style="font-size:15px;">土地法第 102 條</div>
+        <div style="font-size:14px;">租用基地建築房屋，應由出租人與承租人於契約訂立後<strong>二個月內</strong>，聲請該管直轄市或縣（市）地政機關為地上權之登記</div>
+      </div>
+    </div>
+    <div class="highlight-box" style="margin-top:14px;">
+      這兩個月的規定是<strong>訓示規定</strong>：不登記仍然有效，只是沒有物權化的保障。登記後<strong>租約與地上權併存</strong>，仍以租約為主。同屬「債權關係物權化」的例子還有<strong>預告登記</strong>
+    </div>
+  </div>
+
+  <div class="card-title" style="font-size:18px;margin-bottom:14px;">租約終止｜土地法 103 條 vs 土地法 100 條</div>
+  <div class="card" style="margin-bottom:20px;">
+    <table>
+      <thead>
+        <tr>
+          <th>土地法 103 條（基地租用，定期/不定期均適用）</th>
+          <th>土地法 100 條（房屋租用，僅不定期適用）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>一、<span class="mnem">契</span>約年限屆滿時</td><td style="color:var(--sub);">✗ 無此項</td></tr>
+        <tr><td>二、承租人以基地供<span class="mnem">違</span>反法令之使用時</td><td>四、承租人以房屋供違反法令之使用時</td></tr>
+        <tr><td>三、承租人<span class="mnem">轉</span>租基地於他人時</td><td>二、承租人違反民§443Ⅰ轉租於他人時</td></tr>
+        <tr><td>四、承租人積<span class="mnem">欠</span>租金額，除擔保金抵償外，達<strong>2年以上</strong>時</td><td>三、承租人積欠租金額，除擔保金抵償外，達<strong>2個月以上</strong>時</td></tr>
+        <tr><td>五、承租人違反租賃<span class="mnem">契</span>約時</td><td>五、承租人違反租賃契約時</td></tr>
+        <tr><td style="color:var(--sub);">✗ 無此項</td><td>一、出租人收回自住或重新建築時</td></tr>
+        <tr><td style="color:var(--sub);">✗ 無此項</td><td>六、承租人損壞房屋或附著財物，不為賠償時</td></tr>
+      </tbody>
+    </table>
+    <div class="highlight-box warning" style="margin-top:14px;">
+      <strong>差異邏輯：</strong>基地租用只是租土地，沒有「收回自住重建」與「損壞房屋」的需要，所以 103 條比 100 條<strong>少了第一項與最後一項</strong>；其餘轉租、欠租、違法使用、違反契約邏輯相同，只差<strong>欠租門檻</strong>（房屋2個月 vs 基地2年）
+    </div>
+  </div>
+
+  <div class="card-title" style="font-size:18px;margin-bottom:14px;">優先購買權 <span class="law-tag">土§104</span></div>
+  <div class="card">
+    <div style="font-size:14px;margin-bottom:14px;">
+      <strong>目的：</strong>促使房屋與基地所有權合一，促進房地利用（<strong>物權效力</strong>，具對世效力）
+    </div>
+    <div class="grid-2">
+      <div>
+        <div class="card-title" style="font-size:14px;">要件 <span class="law-tag">土§104Ⅰ</span></div>
+        <div style="font-size:14px;">
+          賣地：地上權人／典權人／承租人有優先購買權<br>
+          賣屋：基地所有人有優先購買權
+        </div>
+        <div class="example-box" style="margin-top:10px;">
+          <div class="example-label">例子</div>
+          <div style="font-size:13px;">土地是甲的，租給乙蓋房子（房屋是乙的）。甲賣地 → 乙有優先購買權；乙賣屋 → 甲有優先購買權</div>
+        </div>
+      </div>
+      <div>
+        <div class="card-title" style="font-size:14px;">程序與效力 <span class="law-tag">土§104Ⅱ</span></div>
+        <div style="font-size:14px;">
+          未通知他方而擅自賣給第三人丙 → 他方得主張該買賣契約<strong>無效</strong>
+        </div>
+        <div class="highlight-box danger" style="margin-top:10px;font-size:13px;">
+          物權效力 vs 土§34-1Ⅳ（債權效力）：共有物優先購買僅生損害賠償問題，本條則可逕主張契約無效，效力更強
+          <div style="text-align:center;margin-top:10px;font-size:20px;font-weight:900;color:var(--accent);">物權效力 ＞ 債權效力</div>
+        </div>
+      </div>
+    </div>
+    <div class="highlight-box" style="margin-top:14px;">
+      <strong>其他：</strong>租金、擔保金、爭議調處，<strong>準用</strong>房屋租用規定 <span class="law-tag">土§97, 99, 101</span>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══ 三、耕地租用 ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num">4</div>
+    <h2>耕地租用 <span class="stars">★★★★★</span></h2>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:20px;">
+    <div class="card">
+      <div class="card-title" style="font-size:16px;">定義 <span class="law-tag">土§106</span></div>
+      <div class="highlight-box warning">
+        以<strong>自任耕作</strong>（或魚牧）為目的，約定支付地租，使用他人之農地者，為耕地租用
+      </div>
+      <div class="note">耕地泛指「農業用地」，跟前面「特一森山＋農牧用地」的耕地是不同層次概念，注意區分</div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="font-size:16px;">優先購買權 <span class="law-tag">土§107</span></div>
+      <div style="font-size:14px;">出租人出賣或出典耕地時，承租人有依相同條件<strong>優先承買或承典</strong>之權</div>
+      <div class="note">與基地租用優先購買權（土§104）邏輯相同，均為<strong>物權效力</strong>，都是要促使「所有權」與「耕作權/地上權」合一</div>
+    </div>
+  </div>
+
+  <div class="card-title" style="font-size:18px;margin-bottom:14px;">租金四大規定 <span class="law-tag">土§110～113</span></div>
+  <div class="grid-4" style="margin-bottom:20px;">
+    <div class="card" style="text-align:center;">
+      <div style="font-size:13px;color:var(--sub);">① 地租上限</div>
+      <div style="font-size:22px;font-weight:900;margin-top:8px;">≤ 法定地價 8%</div>
+      <div class="note">法定地價＝規定地價後所有權人申報地價；對應現行「申報地價」</div>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-size:13px;color:var(--sub);">② 代繳方式</div>
+      <div style="font-size:16px;font-weight:900;margin-top:8px;">得依習慣<br>以農作物代繳</div>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-size:13px;color:var(--sub);">③ 預收限制</div>
+      <div style="font-size:16px;font-weight:900;margin-top:8px;">出租人<br><strong>不得預收地租</strong></div>
+      <div class="note">保護佃農，避免一次收好幾期</div>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-size:13px;color:var(--sub);">④ 擔保金上限 <span class="law-tag">土§112</span></div>
+      <div style="font-size:22px;font-weight:900;margin-top:8px;">≤ 年租額 1/4</div>
+    </div>
+  </div>
+
+  <div class="card-title" style="font-size:18px;margin-bottom:14px;">租約終止 <span class="law-tag">土§114</span>（不定期）</div>
+  <div class="card" style="margin-bottom:20px;">
+    <div class="highlight-box warning">
+      依<strong>不定期限</strong>租用耕地之契約，僅得於有左列情形之一時終止之
+    </div>
+    <table style="margin-top:14px;">
+      <thead><tr><th>款次</th><th>情形</th><th>定期租約準用？</th></tr></thead>
+      <tbody>
+        <tr><td>一</td><td>承租人<span class="mnem">死</span>亡而無繼承人時</td><td><span class="badge-tag">準用</span></td></tr>
+        <tr><td>二</td><td>承租人<span class="mnem">放</span>棄其耕作權利時</td><td><span class="badge-tag">準用</span></td></tr>
+        <tr><td>三</td><td>出租人<span class="mnem">收</span>回自耕時</td><td><span class="badge-tag no">不準用</span></td></tr>
+        <tr><td>四</td><td>耕地依法<span class="mnem">變</span>更其使用時</td><td><span class="badge-tag no">不準用</span></td></tr>
+        <tr><td>五</td><td>違反民§432、462Ⅱ規定（未盡<span class="mnem">善</span>良管理人之注意）</td><td><span class="badge-tag no">不準用</span></td></tr>
+        <tr><td>六</td><td>違反土§108規定（不得<span class="mnem">轉</span>租）</td><td><span class="badge-tag">準用</span></td></tr>
+        <tr><td>七</td><td>地租積<span class="mnem">欠</span>達 2 年之總額時</td><td><span class="badge-tag">準用</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card-title" style="font-size:18px;margin-bottom:14px;">耕地收回補償（第4款：依法變更為建築用地）</div>
+  <div class="card">
+    <div class="grid-2" style="align-items:start;">
+      <div>
+        <div style="font-size:14px;margin-bottom:10px;">
+          <span class="law-tag">平§76</span> 出租耕地經依法編定為建築用地，出租人收回建築者，出租人須<strong>限期使用</strong>：一年內未建，政府得<strong>照價收買</strong>
+        </div>
+        <div class="highlight-box warning">
+          <span class="law-tag">平均地權條例§77Ⅰ</span> 承租人可獲得三種補償：
+          <ol style="margin:8px 0 0 20px;font-size:14px;">
+            <li>改良土地費用之補償</li>
+            <li>農作改良物之補償</li>
+            <li>公告現值（扣除土地增值稅）× <strong>1/3</strong>（現金補償，出租人自留2/3）</li>
+          </ol>
+        </div>
+        <div class="note">相關補充：耕地三七五減租條例第17條亦有類似補償規定，可對照比較</div>
+        <div class="note" style="margin-top:6px;">用詞提醒：§76、§77 條文用「出租人」，§78 申請程序條文用「所有權人」——此情境下兩者是同一人，考試作答時依各條文原用字即可</div>
+      </div>
+      <div>
+        <div class="card-title" style="font-size:14px;">終止程序 <span class="law-tag">平§78</span></div>
+        <div class="flow" style="flex-direction:column;align-items:stretch;gap:10px;">
+          <div class="flow-item" style="text-align:center;">所有權人書面申請政府核准終止租約</div>
+          <div style="text-align:center;color:var(--sub);">↓</div>
+          <div class="flow-item" style="text-align:center;">政府審查是否已達成協議</div>
+          <div style="text-align:center;color:var(--sub);">↓ 未達成</div>
+          <div class="flow-item" style="text-align:center;">政府協調 → 不成則代為計算補償金額</div>
+          <div style="text-align:center;color:var(--sub);">↓</div>
+          <div class="flow-item" style="text-align:center;">出租人補償承租人 → 租約終止</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="margin-top:16px;">
+    耕地租約爭議 <span class="law-tag">土§122</span>：業佃間發生爭議，得由該管直轄市或縣（市）地政機關予以調處，不服調處者得向司法機關訴請處理（與房屋、基地租用爭議處理方式相同）
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══ 四、空地與荒地 ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num">5</div>
+    <h2>空地與荒地 <span class="stars">★★★★★</span></h2>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:16px;">
+    <div class="highlight-box">
+      <strong>空地</strong>：編為建築使用的用地，可以蓋房子但沒有蓋
+    </div>
+    <div class="highlight-box">
+      <strong>荒地</strong>：可做農業使用（耕作），但沒有耕作
+    </div>
+  </div>
+  <div class="note" style="margin-bottom:16px;">土地法與平均地權條例都有定義及罰則規定，且經常互相比較出題；現行實務以<strong>平均地權條例</strong>為主，但兩者都要背</div>
+
+  <div class="card-title" style="font-size:18px;margin-bottom:14px;">空地｜定義比較</div>
+  <div class="card" style="margin-bottom:20px;">
+    <table>
+      <thead><tr><th>法規</th><th>當然空地</th><th>視為空地</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>土地法§87</strong></td>
+          <td style="font-size:13px;">凡編為建築用地，未依法使用者</td>
+          <td style="font-size:13px;">建築改良物實價價值<strong>不及所占基地申報地價 20%</strong></td>
+        </tr>
+        <tr>
+          <td><strong>平均地權條例§3</strong></td>
+          <td style="font-size:13px;">已完成道路、排水及電力設施，於有自來水地區並已完成自來水系統，而仍未依法建築使用者</td>
+          <td style="font-size:13px;">建築改良物價值<strong>不及所占基地申報地價 10%</strong>，且經直轄市或縣（市）政府認定應予增建、改建或重建之私有及公有非公用建築用地</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="highlight-box danger" style="margin-top:12px;">
+      <strong>⚠️ 兩者差異：</strong>土地法規定較粗略（編為建築用地即算），平均地權條例規定較細（基礎設施都完成才算），且視為空地門檻不同：土地法 <strong>20%</strong> vs 平均地權條例 <strong>10%</strong>
+    </div>
+  </div>
+
+  <div class="card-title" style="font-size:18px;margin-bottom:14px;">荒地｜定義比較</div>
+  <div class="card" style="margin-bottom:20px;">
+    <table>
+      <thead><tr><th>法規</th><th>定義</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>土地法</strong></td>
+          <td style="font-size:13px;">凡編為農業或其他直接生產用地，未依法使用者為荒地。但因<strong>農業生產之必要而休閒</strong>之土地，不在此限（例：休耕）</td>
+        </tr>
+        <tr>
+          <td><strong>平均地權條例</strong></td>
+          <td style="font-size:13px;">閒置不用之農業用地（農業用地定義見平§3：供農作、森林、養殖、畜牧、保育使用；供與農業經營不可分離之農舍畜禽舍倉儲設備曬場集貨場農路灌溉排水等；農民團體與合作農場所有直接供農業使用之倉庫冷凍庫農機中心蠶種製造場等）</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card-title" style="font-size:18px;margin-bottom:14px;">空地與荒地｜管制及罰則比較</div>
+  <div class="grid-2" style="margin-bottom:20px;">
+    <div class="card">
+      <div class="card-title" style="font-size:16px;">空地管制</div>
+      <div class="flow" style="flex-direction:column;align-items:stretch;gap:8px;">
+        <div style="text-align:center;font-size:13px;font-weight:900;color:var(--sub);">土地法</div>
+        <div class="flow-item" style="text-align:center;">限期使用 §89Ⅰ</div>
+        <div style="text-align:center;">↓</div>
+        <div class="flow-item" style="background:var(--accent);text-align:center;">空地稅 §173（應納稅額 3～10倍）</div>
+      </div>
+      <div class="flow" style="flex-direction:column;align-items:stretch;gap:8px;margin-top:14px;">
+        <div style="text-align:center;font-size:13px;font-weight:900;color:var(--sub);">平均地權條例</div>
+        <div class="flow-item" style="text-align:center;">限期建築 §26Ⅰ</div>
+        <div style="text-align:center;">↓</div>
+        <div class="flow-item" style="background:var(--accent);text-align:center;">空地稅 or 照價收買（應納稅額 2～5倍）</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="font-size:16px;">荒地管制</div>
+      <div class="flow" style="flex-direction:column;align-items:stretch;gap:8px;">
+        <div style="text-align:center;font-size:13px;font-weight:900;color:var(--sub);">土地法 §88</div>
+        <div class="flow-item" style="text-align:center;">限期使用 §89</div>
+        <div style="text-align:center;">↓</div>
+        <div class="flow-item" style="background:var(--accent);text-align:center;">荒地稅 or 照價收買 §174, §89Ⅱ</div>
+      </div>
+      <div class="flow" style="flex-direction:column;align-items:stretch;gap:8px;margin-top:14px;">
+        <div style="text-align:center;font-size:13px;font-weight:900;color:var(--sub);">平均地權條例</div>
+        <div class="flow-item" style="text-align:center;">限期使用</div>
+        <div style="text-align:center;">↓</div>
+        <div class="flow-item" style="background:var(--accent);text-align:center;">荒地稅 → 滿三年 → 照價收買 <span class="law-tag" style="background:rgba(255,255,255,.3);">平§26-1</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-title" style="font-size:16px;">罰則總表快查 <span class="stars">★★★★★</span></div>
+    <table>
+      <thead><tr><th></th><th>空地</th><th>荒地</th></tr></thead>
+      <tbody>
+        <tr><td><strong>土地法</strong></td><td>只有<strong>空地稅</strong></td><td><strong>荒地稅</strong>或<strong>照價收買</strong></td></tr>
+        <tr><td><strong>平均地權條例</strong></td><td><strong>空地稅</strong>或<strong>照價收買</strong></td><td><strong>荒地稅</strong>，課滿<strong>三年</strong>才可照價收買</td></tr>
+      </tbody>
+    </table>
+    <div class="highlight-box danger" style="margin-top:12px;">
+      <strong>⚠️ 最容易搞混的點：</strong>土地法「空地」只罰稅、沒有照價收買；土地法「荒地」才有照價收買。平均地權條例則是空地、荒地都有照價收買，差別只在荒地要先課滿三年
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="font-size:16px;">協議建築 <span class="law-tag">平§74</span></div>
+    <div style="font-size:14px;">
+      土地已出租或設定地上權，而承租人／地上權人不建築或建築簡陋（視同空地）時，政府通知<strong>土地所有權人</strong>限期建築或使用。所有權人因土地已出租、無法自行使用，須與承租人／地上權人<strong>協議建築</strong>；<strong>協議不成</strong>時，土地所有權人得<strong>終止租約或撤銷地上權</strong>
+    </div>
+    <div class="note">目的：避免土地所有權人的土地因他人不建築而被課空地稅／荒地稅或照價收買</div>
+  </div>
+
+  <div class="card-title" style="font-size:18px;margin:20px 0 14px;">荒地照價收買後之承租人補償 <span class="law-tag">平§11</span></div>
+  <div class="card">
+    <div style="font-size:14px;margin-bottom:10px;">
+      荒地照價收買是<strong>政府買走</strong>土地（不同於耕地收回是出租人自己要蓋房子），因此補償分兩種來源：
+    </div>
+    <div class="grid-2">
+      <div style="background:#f8fafc;border-radius:10px;padding:14px;border:1.5px solid var(--line);">
+        <div style="font-weight:900;">政府補償承租人</div>
+        <div style="font-size:13px;margin-top:6px;">① 改良土地費用　② 農作改良物</div>
+      </div>
+      <div style="background:#f8fafc;border-radius:10px;padding:14px;border:1.5px solid var(--line);">
+        <div style="font-weight:900;">出租人補償承租人</div>
+        <div style="font-size:13px;margin-top:6px;">現金：（照價收買金額－土地增值稅）× <strong>1/3</strong><br>出租人自留 2/3</div>
+      </div>
+    </div>
+    <div class="note" style="margin-top:10px;">可與平均地權條例§77（耕地變更為建築用地收回之補償）對照比較，結構相同</div>
+  </div>
+
+  <div class="card-title" style="font-size:18px;margin:20px 0 14px;">照價收買地價計算總表 <span class="law-tag">平§31</span></div>
+  <div class="card">
+    <div style="font-size:13.5px;margin-bottom:10px;">同樣是「照價收買」，依觸發的條款不同，地價算法也不一樣——不是通通用申報地價</div>
+    <table>
+      <thead><tr><th>觸發條款</th><th>情況</th><th>地價計算</th></tr></thead>
+      <tbody>
+        <tr><td><strong>§16</strong></td><td style="font-size:13px;">申報地價低報，未達公告地價 80%</td><td style="font-size:13px;"><strong>申報地價</strong></td></tr>
+        <tr><td><strong>§47-1</strong></td><td style="font-size:13px;">依§47-1情形收買（土地移轉申報有爭議等）</td><td style="font-size:13px;"><strong>申報土地移轉現值</strong></td></tr>
+        <tr><td><strong>§26、§26-1、§76</strong></td><td style="font-size:13px;">逾期未依限改善——空地逾期未建築、荒地滿三年未使用、耕地變更建築用地逾期未建</td><td style="font-size:13px;"><strong>收買當期之公告土地現值</strong></td></tr>
+      </tbody>
+    </table>
+    <div class="highlight-box danger" style="margin-top:12px;">
+      <strong>⚠️ 容易誤答的點：</strong>荒地稅滿三年照價收買（§26-1）雖然聽起來跟「地價偏低」無關，但因為屬於「逾期未改善」類型，仍是用<strong>收買當期公告土地現值</strong>，不是申報地價
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══ 五、概念比一比總表 ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num">6</div>
+    <h2>概念比一比總表</h2>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title" style="font-size:16px;">① 終止租約（收回租賃物）之規定</div>
+      <table>
+        <thead><tr><th>標的</th><th>不定期</th><th>定期</th></tr></thead>
+        <tbody>
+          <tr><td><strong>耕地</strong></td><td>土§114（7款）</td><td style="font-size:13px;">1、2、6、7款準用</td></tr>
+          <tr><td><strong>房屋</strong></td><td>土§100（6款）</td><td colspan="1" style="text-align:center;color:var(--sub);">僅規範不定期</td></tr>
+          <tr><td><strong>基地</strong></td><td colspan="2" style="text-align:center;">土§103（5款，定期不定期均適用）</td></tr>
+        </tbody>
+      </table>
+      <div class="note">耕地的定期租約準用§114第1、2、6、7款（死、放、轉、欠），第3、4、5款（收、變、善）僅不定期適用</div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="font-size:16px;">② 本堂涉及之 1/3 補償公式</div>
+      <table>
+        <thead><tr><th>情況</th><th>補償公式</th></tr></thead>
+        <tbody>
+          <tr><td>耕地依法變更為建築用地，出租人收回建築</td><td>（建物公告現值－土地增值稅）× 1/3<br><span class="note">平§77Ⅰ，出租人補承租人</span></td></tr>
+          <tr><td>荒地限期不使用，遭政府照價收買</td><td>（照價收買金額－土地增值稅）× 1/3<br><span class="note">平§11，出租人補承租人；政府另補改良費用＋農作改良物</span></td></tr>
+        </tbody>
+      </table>
+      <div class="note">兩種情況結構相同：出租人拿到的錢先扣土地增值稅，再抽 1/3 給承租人</div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══ 六、例題 ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num">7</div>
+    <h2>例題解析（104年普考地政）</h2>
+  </div>
+  <div class="irac-card">
+    <div class="irac-header">何謂耕地租用？其依不定期限租用耕地之契約，僅得於哪些法定情形之一時終止之？如因耕地租用爭議時，其處理方式為何？請依土地法規定分別說明之。</div>
+    <div class="irac-body">
+      <div class="irac-row">
+        <div class="irac-label">定義</div>
+        <div><span class="law-tag">土§106</span> 以自任耕作（或魚牧）為目的，約定支付地租使用他人之農地者，為耕地租用。前項所稱耕作，包括漁牧</div>
+      </div>
+      <div class="irac-row">
+        <div class="irac-label">終止情形</div>
+        <div><span class="law-tag">土§114</span> 依不定期限租用耕地之契約，僅得於有左列情形之一時終止之：一、承租人死亡而無繼承人時。二、承租人放棄其耕作權利時。三、出租人收回自耕時。四、耕地依法變更其使用時。五、違反民法第432條及第462條第2項之規定時。六、違反第108條之規定時。七、地租積欠達2年之總額時</div>
+      </div>
+      <div class="irac-row">
+        <div class="irac-label">爭議處理</div>
+        <div><span class="law-tag">土§122</span> 因耕地租用，業佃間發生爭議，得由該管直轄市或縣（市）地政機關予以調處，不服調處者，得向司法機關訴請處理</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══ 七、條文速查 ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num">8</div>
+    <h2>條文速查</h2>
+  </div>
+  <div class="law-grid">
+    <div class="law-item"><div class="num">土§94～96</div><div class="desc">政府準備房屋<br>租金≤年息8%</div></div>
+    <div class="law-item"><div class="num">土§97</div><div class="desc">城市房屋租金<br>≤申報價額10%</div></div>
+    <div class="law-item"><div class="num">土§98,99</div><div class="desc">押金利息算租金<br>上限2個月</div></div>
+    <div class="law-item"><div class="num">土§100</div><div class="desc">房屋收回限制<br>收轉欠違契壞</div></div>
+    <div class="law-item"><div class="num">土§101</div><div class="desc">房屋租用爭議調處</div></div>
+    <div class="law-item"><div class="num">土§102</div><div class="desc">基地租用<br>2個月內辦地上權登記</div></div>
+    <div class="law-item"><div class="num">土§103</div><div class="desc">基地收回限制<br>契轉欠違契</div></div>
+    <div class="law-item"><div class="num">土§104</div><div class="desc">基地優先購買權</div></div>
+    <div class="law-item"><div class="num">土§106</div><div class="desc">耕地租用定義</div></div>
+    <div class="law-item"><div class="num">土§107</div><div class="desc">耕地優先購買權</div></div>
+    <div class="law-item"><div class="num">土§110～113</div><div class="desc">耕地租金≤8%<br>不得預收/押金≤1/4</div></div>
+    <div class="law-item"><div class="num">土§114</div><div class="desc">耕地收回限制<br>死放收變善轉欠</div></div>
+    <div class="law-item"><div class="num">土§122</div><div class="desc">耕地租用爭議調處</div></div>
+    <div class="law-item"><div class="num">土§87</div><div class="desc">空地定義<br>視為空地20%</div></div>
+    <div class="law-item"><div class="num">土§88,89</div><div class="desc">荒地定義<br>限期使用</div></div>
+    <div class="law-item"><div class="num">土§173,174</div><div class="desc">空地稅3~10倍<br>荒地稅/照價收買</div></div>
+    <div class="law-item"><div class="num">平§3</div><div class="desc">空地10%/農業用地<br>及荒地定義</div></div>
+    <div class="law-item"><div class="num">平§26</div><div class="desc">空地限期建築<br>稅2~5倍/照價收買</div></div>
+    <div class="law-item" style="border-top-color:var(--accent);"><div class="num" style="color:var(--accent);">平§26-1</div><div class="desc">農業用地閒置<br>荒地稅滿3年→照價收買</div></div>
+    <div class="law-item" style="border-top-color:var(--accent);"><div class="num" style="color:var(--accent);">平§31</div><div class="desc">照價收買地價計算<br>依觸發條款分3種算法</div></div>
+    <div class="law-item"><div class="num">平§74</div><div class="desc">協議建築<br>不成得終止租約</div></div>
+    <div class="law-item"><div class="num">平§76</div><div class="desc">耕地變更建築用地<br>逾期未建→照價收買</div></div>
+    <div class="law-item"><div class="num">平§11,77</div><div class="desc">照價收買/收回<br>補償1/3規定</div></div>
+  </div>
+</div>
+
+<div style="text-align:center;color:var(--sub);font-size:12px;margin-top:24px;padding-bottom:16px;">
+  土地法 L5｜114年不動產經紀人考試 · 地用：房屋、基地、耕地租用與空地荒地 · 2026-07-19 配色改版
+</div>
+
+</body>
+</html>
