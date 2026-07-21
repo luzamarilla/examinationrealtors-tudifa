@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>土地法 L11｜地價稅</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink:#1e293b; --sub:#64748b; --line:#e2e8f0; --line-strong:#94a3b8;
+    --neutral:#334155; --neutral-bg:#f1f5f9;
+    --accent:#8B4438; --accent-bg:#F1E2DD;
+    --accent2:#9C7A34; --accent2-bg:#EFE6D0;
+  }
+  body {
+    font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+    width: 1400px;
+    margin: 0 auto;
+    background: #f4f5f7;
+    color: var(--ink);
+    padding: 22px 32px 36px;
+  }
+  h1.page-title {
+    font-size: 30px;
+    color: #fff;
+    background: var(--ink);
+    padding: 16px 24px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h1.page-title .sub { font-size: 15px; font-weight: normal; opacity: 0.9; }
+  .tip-banner {
+    background: var(--neutral-bg);
+    border: 2px solid var(--line-strong);
+    color: var(--neutral);
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 15px;
+    margin-bottom: 18px;
+    font-weight: bold;
+  }
+  section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  h2.sec-title {
+    font-size: 20px;
+    color: var(--ink);
+    border-left: 6px solid var(--ink);
+    padding-left: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2.sec-title .star { color: var(--accent); font-size: 15px; }
+  h3.sub-title { font-size: 15.5px; color: var(--ink); margin: 16px 0 8px; }
+  .law-tag {
+    display: inline-block;
+    background: var(--neutral-bg);
+    color: var(--neutral);
+    border: 1px solid var(--line-strong);
+    font-size: 13px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: bold;
+    margin: 2px 4px 2px 0;
+  }
+  .law-tag.sub-law { background: #f8fafc; color: var(--sub); border-color: var(--line); }
+  .law-tag.hi { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
+  .law-tag.hi2 { background: var(--accent2-bg); color: var(--accent2); border-color: var(--accent2); }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; }
+  .card { border-radius: 12px; padding: 14px 16px; border: 2px solid var(--line-strong); background: #fff; }
+  .card-title { font-size: 17px; font-weight: bold; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; color: var(--ink); }
+  .card p { font-size: 14.5px; line-height: 1.75; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-top: 4px; }
+  table th { background: var(--ink); color: #fff; padding: 8px 10px; text-align: left; }
+  table td { padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  table tr:nth-child(even) td { background: #f9fafb; }
+  .warn-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); color: var(--neutral);
+    border-radius: 10px; padding: 10px 16px; font-size: 14.5px; margin-top: 10px; font-weight: bold;
+  }
+  .warn-box.hi { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+  .warn-box.hi2 { background: var(--accent2-bg); border-color: var(--accent2); color: var(--accent2); }
+  .info-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); color: var(--neutral);
+    border-radius: 10px; padding: 10px 16px; font-size: 14px; margin-top: 10px;
+  }
+  .formula-box {
+    background: var(--accent2-bg); border: 2px solid var(--accent2); color: var(--accent2);
+    border-radius: 10px; padding: 12px 20px; font-size: 17px; text-align: center; font-weight: bold; margin: 10px 0;
+  }
+  .example-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); border-radius: 10px;
+    padding: 12px 18px; font-size: 14.5px; line-height: 1.6; color: var(--neutral);
+  }
+  .mnemo-char {
+    display: inline-block; min-width: 1.5em; height: 1.5em; line-height: 1.42em; text-align: center;
+    border-radius: 50%; border: 2px solid var(--accent2); background: var(--accent2-bg); color: var(--accent2);
+    font-weight: 800; margin: 0 1px;
+  }
+  .sub-block { margin-top: 4px; }
+  .sub-block + .sub-block { margin-top: 12px; padding-top: 12px; border-top: 2px dashed var(--line); }
+  .sub-tag {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: bold; color: #fff;
+    background: var(--neutral); padding: 3px 11px; border-radius: 999px; margin-bottom: 8px;
+  }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+
+  /* ---- 分支樹（公有/私有 → 沒申報/有申報） ---- */
+  .tree, .tree ul { display: flex; list-style: none; }
+  .tree { text-align: center; justify-content: center; padding: 6px 0 0; }
+  .tree li {
+    display: flex; flex-direction: column; align-items: center;
+    position: relative; padding: 26px 16px 0;
+  }
+  .tree li::before, .tree li::after {
+    content: ''; position: absolute; top: 0; right: 50%;
+    border-top: 2px solid var(--line-strong); width: 50%; height: 26px;
+  }
+  .tree li::after { right: auto; left: 50%; border-left: 2px solid var(--line-strong); }
+  .tree li:only-child::before, .tree li:only-child::after { display: none; }
+  .tree li:only-child { padding-top: 0; }
+  .tree li:first-child::before, .tree li:last-child::after { border: 0 none; }
+  .tree li:last-child::before { border-right: 2px solid var(--line-strong); border-radius: 0 8px 0 0; }
+  .tree li:first-child::after { border-radius: 8px 0 0 0; }
+  .tree ul::before {
+    content: ''; position: absolute; top: 0; left: 50%;
+    border-left: 2px solid var(--line-strong); width: 0; height: 26px;
+  }
+  .tree > li { padding-top: 0; }
+  .tree > li::before, .tree > li::after { display: none; }
+  .tree-node {
+    display: inline-block; border: 2px solid var(--line-strong); border-radius: 10px;
+    padding: 8px 18px; font-size: 15px; font-weight: bold; background: #fff; white-space: nowrap;
+  }
+  .tree-node.root { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .tree-node.leaf-hi { border-color: var(--accent); background: var(--accent-bg); color: var(--accent); }
+  .tree-node.leaf-mid { border-color: var(--accent2); background: var(--accent2-bg); color: var(--accent2); }
+  .tree-result { margin-top: 8px; font-size: 13.5px; color: var(--sub); line-height: 1.6; max-width: 210px; }
+  .tree-result b { color: var(--ink); }
+
+  /* ---- 迷你水平刻度（嵌在「有申報」節點下方）---- */
+  .mini-scale { position: relative; width: 210px; height: 16px; margin: 14px auto 6px; }
+  .mini-scale .track { position: absolute; top: 6px; left: 0; right: 0; height: 4px; background: var(--accent2); border-radius: 3px; }
+  .mini-scale .cap { position: absolute; top: 1px; width: 2px; height: 14px; background: var(--ink); }
+  .mini-scale .cap.left { left: 0; }
+  .mini-scale .cap.mid { left: 50%; transform: translateX(-1px); }
+  .mini-scale .cap.right { right: 0; }
+  .mini-scale .tick-label { position: absolute; top: -15px; font-size: 11px; font-weight: bold; color: var(--ink); white-space: nowrap; }
+  .mini-scale .tick-label.left { left: 0; }
+  .mini-scale .tick-label.mid { left: 50%; transform: translateX(-50%); }
+  .mini-scale .tick-label.right { right: 0; }
+  .mini-scale-note {
+    display: flex; justify-content: space-between; width: 210px; margin: 0 auto;
+    font-size: 11px; color: var(--sub); line-height: 1.4; gap: 6px;
+  }
+  .mini-scale-note span { max-width: 100px; }
+  .mini-scale-note span:last-child { text-align: right; }
+
+  /* ---- 特別稅率申請：時間軸 ---- */
+  .timeline { position: relative; margin: 16px 4px 6px; padding-left: 4px; }
+  .timeline-track { position: relative; height: 6px; background: var(--line); border-radius: 4px; margin: 34px 10px 0; }
+  .timeline-pt {
+    position: absolute; top: 50%; width: 16px; height: 16px; border-radius: 50%;
+    background: var(--ink); border: 3px solid #fff; box-shadow: 0 0 0 2px var(--ink);
+    transform: translate(-50%, -50%);
+  }
+  .timeline-pt.hi { background: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+  .timeline-lbl-top {
+    position: absolute; bottom: 18px; font-size: 13px; font-weight: bold; color: var(--ink);
+    transform: translateX(-50%); text-align: center; white-space: nowrap;
+  }
+  .timeline-lbl-bot {
+    position: absolute; top: 18px; font-size: 12.5px; color: var(--sub);
+    transform: translateX(-50%); text-align: center; white-space: nowrap;
+  }
+  .timeline-lbl-bot b { color: var(--accent); }
+  .examhit {
+    display: inline-block; margin-left: 6px; font-size: 11.5px; font-weight: 800; color: var(--accent);
+    background: var(--accent-bg); border: 1px solid var(--accent); border-radius: 10px; padding: 1px 9px;
+    vertical-align: middle;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">
+  土地法 L11｜地價稅
+  <span class="sub">持有稅・逐字稿＋上課講義（15張）＋考古題四方面核對（2026-07-21）</span>
+</h1>
+
+<div class="tip-banner">📌 讀書建議：先抓住「地價稅＝持有稅、土地增值稅＝移轉稅」這條分界線，再逐一記納稅義務人、稅基、稅率三大主軸</div>
+
+<!-- 一、概念 -->
+<section>
+  <h2 class="sec-title">① 地價稅概念——持有稅</h2>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">地價稅＝持有稅</div>
+      <p>只要<b>擁有</b>這筆土地，就要<b>每年</b>繳地價稅，不論有沒有移轉。</p>
+    </div>
+    <div class="card">
+      <div class="card-title">土地增值稅＝移轉稅（下一堂）</div>
+      <p>只有<b>移轉</b>才要繳；沒有移轉就不用繳增值稅。</p>
+    </div>
+  </div>
+  <div class="warn-box hi">
+    課徵範圍分界：<span class="law-tag" style="background:transparent;border-color:var(--accent);color:var(--accent);">土地稅法 §14</span><b>已規定地價</b>之土地（土地登記謄本上有「公告地價」）→ 課<b>地價稅</b>；<b>未規定地價</b>或<b>農地</b>（農用證明）→ 課<b>田賦</b>（實物繳納，如稻穀、小麥），但田賦自<b>民國 76 年起停徵至今</b> → 這類土地目前<b>沒有持有稅</b>。一般土地大多已規定地價，通常都要繳地價稅。
+  </div>
+</section>
+
+<!-- 二、納稅義務人 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ② 納稅義務人 <span class="examhit">106・107・108・109測・109申論</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">原則：<b>土地所有權人</b>。以下是特殊情況：</p>
+  <table>
+    <tr><th style="width:20%">情況</th><th>納稅義務人</th></tr>
+    <tr><td>典權土地</td><td><b>典權人</b>（實際使用人）</td></tr>
+    <tr><td>承領／承墾土地</td><td><b>承領人／有耕作權人</b>（較早期年代的情況）</td></tr>
+    <tr><td>公有土地</td><td><b>管理機關</b>（謄本除所有權人外另列「管理人」，例如市立學校管理人為教育局）</td></tr>
+    <tr><td>信託土地</td><td><b>受託人</b>（名義上所有權人）</td></tr>
+  </table>
+  <div class="warn-box hi">
+    ⚠️ <b>納稅義務基準日：每年 8 月 31 日</b> <span class="law-tag sub-law">稅細§20</span>——以當天土地登記簿記載的所有權人（或典權人）為<b>當年度全年</b>的納稅義務人，不論實際持有時間長短。例：10/1 才辦妥贈與移轉登記予乙，因為移轉發生在 8/31 之後，<b>當年度地價稅仍是原所有權人（甲）繳</b>，不是乙；反之若 8/31 前已移轉完成，新所有權人即使才持有幾天，也要繳全年地價稅。這條規則是「移轉/設典時間點誰繳稅」類考題的關鍵依據。
+  </div>
+  <div class="info-box">
+    ⚠️ <b>代繳 ≠ 納稅義務人</b>：納稅義務人行蹤不明、權責不明、無人管理，或有占有人時，可申請由占有人「代為繳納」，但代繳人只是幫忙繳，真正的納稅義務人仍是上表所列的人，不會因代繳而變更。
+  </div>
+</section>
+
+<!-- 三、稅基 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ③ 稅基——申報地價</h2>
+  <p style="font-size:14.5px;margin-bottom:6px;"><span class="law-tag">土地稅法 §15 I</span>：地價稅按每一土地所有權人在<b>每一直轄市或縣市轄區</b>內的地價總額計徵 → 地價稅是<b>地方稅</b>，土地在哪個縣市，就由該縣市政府徵收，各縣市分別計算。</p>
+  <p style="font-size:14.5px;">「地價總額」＝<b>申報地價</b>總額（不是市價，也不是公告地價本身）。公告地價公布後，所有權人須在<span class="law-tag hi2">30 天內</span>辦理申報 <span class="law-tag sub-law">平均地權條例§16</span>。</p>
+  <div class="warn-box hi">
+    ⚠️ 常見陷阱：題目問地價稅要用<b>申報地價</b>，不能直接用<b>公告地價</b>！申報地價＝公告地價 × 80%（未申報者，政府逕以此計算）。
+  </div>
+
+  <ul class="tree" style="margin-top:10px;">
+    <li>
+      <span class="tree-node root">土地</span>
+      <ul>
+        <li>
+          <span class="tree-node leaf-hi">🏛️ 公有</span>
+          <div class="tree-result">申報地價 <b>＝</b> 公告地價<br><span class="law-tag hi">100%，不打折</span></div>
+        </li>
+        <li>
+          <span class="tree-node">🏠 私有</span>
+          <ul>
+            <li>
+              <span class="tree-node leaf-hi">📭 沒申報</span>
+              <div class="tree-result">逕以<span class="law-tag hi">公告地價 × 80%</span>認定<br>（實務上私有土地多屬此類）</div>
+            </li>
+            <li>
+              <span class="tree-node leaf-mid">📝 有申報</span>
+              <div class="tree-result">需落在公告地價 <b>80%～120%</b> 區間內</div>
+              <div class="mini-scale">
+                <div class="track"></div>
+                <div class="cap left"></div>
+                <div class="cap mid"></div>
+                <div class="cap right"></div>
+                <div class="tick-label left">80%</div>
+                <div class="tick-label mid">100%</div>
+                <div class="tick-label right">120%</div>
+              </div>
+              <div class="mini-scale-note">
+                <span>低於 80%：政府得照價收買</span>
+                <span>超過 120%：以 120% 為準</span>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<!-- 四、稅率 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ④ 稅率——一般稅率（累進） <span class="examhit">105・108・112・113・114測</span></h2>
+  <p style="font-size:14.5px;margin-bottom:6px;"><span class="law-tag">土地稅法 §16 I</span>：基本稅率 <b>10‰</b>，地價總額未超過累進起點地價者，一律按 10‰ 徵收；超過部分依下表累進加徵：</p>
+  <table>
+    <tr><th style="width:34%">超過累進起點地價的倍數</th><th>稅率</th></tr>
+    <tr><td>未超過（基本）</td><td>10‰</td></tr>
+    <tr><td>超過起點，未達 5 倍</td><td>15‰</td></tr>
+    <tr><td>超過 5 倍～10 倍</td><td>25‰</td></tr>
+    <tr><td>超過 10 倍～15 倍</td><td>35‰</td></tr>
+    <tr><td>超過 15 倍～20 倍</td><td>45‰</td></tr>
+    <tr><td>超過 20 倍以上</td><td>55‰</td></tr>
+  </table>
+  <div class="info-box">記憶口訣：稅率 <b>10、15、25、35、45、55</b>；倍數 <b>5、10、15、20</b>。</div>
+  <div class="example-box" style="margin-top:10px;">
+    <b>累進概念（停車費比喻）：</b>停車第 1 小時 20 元、第 2 小時 30 元、第 3 小時 40 元，停 3 小時繳 <b>20+30+40＝90 元</b>，不是「三小時都用 40 元」算。地價稅也是這樣——每個級距只對「該級距內的部分」課該級距稅率，不是超過就整筆用最高稅率。
+  </div>
+</section>
+
+<!-- 五、累進起點地價 -->
+<section>
+  <h2 class="sec-title">⑤ 累進起點地價 <span class="law-tag">土地稅法 §16 II</span><span class="examhit">113測</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">每個直轄市／縣市各自不同，以該縣市土地「<b>7 公畝之平均地價</b>」為準，但<b>排除</b>：<span class="mnemo-char">工</span>業用地、<span class="mnemo-char">礦</span>業用地、<span class="mnemo-char">農</span>業用地、<span class="mnemo-char">免</span>稅土地（這四類地價通常偏低，若納入計算會拉低累進起點，反而讓一般所有權人更容易被課到高稅率）。</p>
+  <div class="formula-box">累進起點地價 ＝ (該縣市總地價－工礦農免總地價) ÷ (該縣市總面積－工礦農免總面積) × 7</div>
+  <p style="font-size:13.5px;color:var(--sub);">→ 先算出扣除四類地後的「每公畝平均單價」，再乘以 7（因規定是 7 公畝）。台北市地價高，累進起點地價自然也比台中、台南高，分縣市計算才公平。</p>
+</section>
+
+<!-- 六、特別稅率 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑥ 特別稅率 <span class="law-tag">土地稅法 §17～20</span><span class="examhit">105・106・109・112測</span></h2>
+  <table>
+    <tr><th style="width:14%">稅率</th><th style="width:16%">是否累進</th><th>適用範圍</th></tr>
+    <tr><td><b>2‰</b></td><td>不累進</td><td>自用住宅、國民住宅、勞工宿舍，或符合自用住宅使用之信託土地（都跟「住」有關，屬民生必需，稅率最優惠）</td></tr>
+    <tr><td><b>6‰</b></td><td>不累進</td><td>公共設施保留地，<b>保留期間仍作建築使用</b>者（若做自用住宅使用則適用 2‰）</td></tr>
+    <tr><td><b>10‰</b></td><td>不累進</td><td>「事業用地」：工業用地、公有土地、礦業用地、加油站、停車場、寺廟、名勝古蹟、動物園、體育場所等——政府鼓勵興辦事業，用地面積通常較大，故統一不累進</td></tr>
+    <tr><td><b>免徵</b></td><td>—</td><td>公共設施保留地<b>未使用</b>且與使用中土地<b>有隔離</b>者；公有土地作<b>公眾使用</b>者（機關自用或營業使用仍課 10‰）</td></tr>
+  </table>
+  <div class="info-box" style="margin-top:10px;">
+    💡 小額免徵：每戶地價稅稅額在新台幣 <b>100 元以下者，免徵</b>（106年考古題出現過）。
+  </div>
+</section>
+
+<!-- 七、自用住宅用地 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑦ 自用住宅用地（2‰ 優惠稅率要件） <span class="examhit">107・114測</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;"><span class="law-tag">土地稅法 §9</span>（廣義定義，之後不管哪個稅目牽扯自用住宅都以此為大原則）：土地所有權人或其配偶、直系親屬，在該地辦竣<b>戶籍登記</b>，且<b>無出租</b>也<b>無供營業使用</b>。</p>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">設籍限制</div>
+      <p>所有權人、配偶或直系親屬辦理戶籍登記</p>
+    </div>
+    <div class="card">
+      <div class="card-title">使用限制</div>
+      <p>未出租或供營業使用</p>
+    </div>
+  </div>
+  <h3 class="sub-title">地價稅專屬的額外要件</h3>
+  <table>
+    <tr><th style="width:20%">項目</th><th>內容</th></tr>
+    <tr><td>面積限制</td><td>都市土地不超過 <b>3 公畝</b>；非都市土地不超過 <b>7 公畝</b></td></tr>
+    <tr><td>處數限制</td><td>所有權人與配偶及<b>未成年</b>受扶養親屬，以<b>一處</b>為限；若<b>成年</b>直系親屬另設籍且符合要件，不受此限，可再申請</td></tr>
+    <tr><td>建物所有權人</td><td>地上建物須為所有權人、配偶或直系親屬所有 <span class="law-tag sub-law">稅細§4</span></td></tr>
+  </table>
+  <div class="warn-box hi2">
+    面積超過限制時：所有權人可<b>自選</b>；未選則稅捐機關代選<b>地價較高</b>者適用優惠（對所有權人有利） <span class="law-tag sub-law">稅細§9</span>；地價相同則依「<b>長幼有序</b>」排定：<br>
+    <b>①本人＋配偶＋未成年受扶養親屬（同屬一處為限，不是排序）→ ②直系血親尊親屬 → ③直系血親卑親屬 → ④直系姻親</b>
+  </div>
+  <div class="info-box">
+    申請期限與流程細節 <span class="law-tag sub-law">土地稅法 §40～42</span> → 見下方 ⑧ 特別稅率申請。
+  </div>
+</section>
+
+<!-- 八、特別稅率申請 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑧ 特別稅率申請 <span class="law-tag">土地稅法 §41～42</span></h2>
+  <p style="font-size:14.5px;margin-bottom:4px;">以地價稅<b>開徵日（每年 11 月 1 日）</b>為基準，往前推算兩個時間點：</p>
+
+  <div class="timeline">
+    <div class="timeline-track">
+      <div class="timeline-pt" style="left:8%"></div>
+      <div class="timeline-lbl-top" style="left:8%">前 60 天</div>
+      <div class="timeline-lbl-bot" style="left:8%">公告</div>
+
+      <div class="timeline-pt hi" style="left:50%"></div>
+      <div class="timeline-lbl-top" style="left:50%">前 40 天（9/22）</div>
+      <div class="timeline-lbl-bot" style="left:50%"><b>申請截止</b></div>
+
+      <div class="timeline-pt" style="left:92%"></div>
+      <div class="timeline-lbl-top" style="left:92%">開徵日</div>
+      <div class="timeline-lbl-bot" style="left:92%">11/1</div>
+    </div>
+  </div>
+
+  <div class="warn-box hi2" style="margin-top:28px;">
+    申請截止日遇假日<b>順延至次一工作日</b>：例｜9/20（三）起算 → 截止 9/22（五），準時；9/20（四）起算 → 應為 9/22（六，例假日）→ <b>順延至 9/24（一）</b>。
+  </div>
+
+  <div class="grid-2" style="margin-top:14px;">
+    <div class="card">
+      <div class="card-title">✅ 申請生效</div>
+      <p>如期（9/22 前）申請 → <b>當年度</b>立即適用特別稅率；逾期申請 → 順延至<b>次年度</b>才適用。一經申請，以後年度皆可沿用，不必每年重新申請。</p>
+    </div>
+    <div class="card">
+      <div class="card-title">⛔ 原因消滅（方向相反，易混淆）</div>
+      <p>不再符合特別稅率要件時，須於 <b>30 天內</b>申報 → <b>當年度立即恢復</b>一般稅率（不必等到次年度）；未申報而短漏繳者，處短徵稅額 <b>3 倍以下</b>罰鍰。</p>
+    </div>
+  </div>
+
+  <div class="info-box" style="margin-top:10px;">
+    ⚠️ 例外：<b>勞工宿舍</b>可直接從<b>購買日</b>起適用特別稅率，不受 9/22 這條時間線限制。
+  </div>
+  <p style="font-size:12.5px;color:var(--sub);margin-top:8px;">📊 考古題提醒：這段申請期限流程近10年（105-114）查無獨立命題，重點應放在③⑥⑦本身的稅基/稅率/要件判斷。</p>
+</section>
+
+<!-- 九、信託土地稅基 -->
+<section>
+  <h2 class="sec-title">⑨ 信託土地的稅基計算 <span class="law-tag">土地稅法 §3-1</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;"><b>持有期間課稅原則</b>：地價稅與房屋稅在信託關係存續期間，一律由<b>受託人</b>負責繳納（不論自益或他益，繳納義務人都不會變）。</p>
+  <table>
+    <tr><th style="width:26%">信託類型</th><th style="width:18%">併同何人計算</th><th style="width:14%">稅率</th><th style="width:14%">何人繳納</th></tr>
+    <tr><td>自益信託（<b>符合</b>自用住宅要件）</td><td>委託人</td><td class="law-tag hi" style="display:inline-block;">2‰</td><td>受託人</td></tr>
+    <tr><td>自益信託（<b>不符合</b>自用住宅要件）</td><td>委託人</td><td>一般稅率</td><td>受託人</td></tr>
+    <tr><td>他益信託（未保有變更受益人之權利）</td><td>受益人</td><td>一般稅率</td><td>受託人</td></tr>
+  </table>
+  <div class="info-box" style="margin-top:10px;">
+    「併同何人計算」是指信託土地地價要<b>併入該人名下其他土地</b>一起合併計算累進稅率，算出<b>總稅額</b>後，再依<b>各筆土地地價佔比</b>分算出信託土地本身應負擔的稅額——不是信託土地自己單獨套稅率。
+  </div>
+  <h3 class="sub-title">計算範例（自益信託：委託人自有地＋信託地合併計算）</h3>
+  <div class="example-box">
+    信託土地與委託人自有地地價合計 <b>500 萬</b>：自有地 4 公畝（400 萬）＋ 信託地 1 公畝（100 萬）→ 合併「累進總歸戶」計算出地價稅總額 <b>80 萬</b> → 再依<b>地價佔比</b>分算各自應負擔的稅額：
+    <div class="formula-box" style="font-size:15px;">
+      自有地部分（委託人自繳）：80萬 × 400萬/500萬 ＝ <b>64 萬</b><br>
+      信託地部分（受託人代繳）：80萬 × 100萬/500萬 ＝ <b>16 萬</b>
+    </div>
+  </div>
+</section>
+
+<!-- 十、空地與荒地罰則比較 -->
+<section>
+  <h2 class="sec-title">⑩ 空地與荒地罰則比較 <span class="examhit">106測</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;"><span class="law-tag">土地稅法 §11</span>：已完成道路、排水、自來水、電力等設施而<b>不使用</b>，或使用價值不及申報地價 <b>10%</b> 者，視為<b>空地</b>。</p>
+  <div class="warn-box hi" style="margin-bottom:10px;">易混淆：土地法與平均地權條例對「空地」「荒地」的罰則規定<b>不一樣</b>，題目沒指定法源時要特別小心分辨。</div>
+  <table>
+    <tr><th style="width:16%">法源</th><th>空地</th><th>荒地</th></tr>
+    <tr><td><b>土地法</b></td><td>只有<b>空地稅</b>（無照價收買）</td><td><b>荒地稅</b>或<b>照價收買</b>（二擇一）</td></tr>
+    <tr><td><b>平均地權條例</b></td><td><b>空地稅</b>或<b>照價收買</b>（二擇一）</td><td><b>荒地稅</b>，<b>滿 3 年</b>未使用才轉<b>照價收買</b></td></tr>
+  </table>
+  <div class="info-box" style="margin-top:10px;">
+    記憶法：<b>土地法對空地比較寬鬆</b>（只加稅、不會被收買）；<b>平均地權條例對空地就可以直接照價收買</b>，門檻比土地法嚴格；兩部法對「荒地」都留了緩衝——差別在土地法是「稅或收買二選一」、平均地權條例是「先課稅、滿3年才會被收買」。
+  </div>
+  <div class="warn-box hi2" style="margin-top:10px;">空地稅罰則：加徵地價稅基本稅額的 <b>2～5 倍</b>。</div>
+</section>
+
+<!-- 十一、其他特殊減免 -->
+<section>
+  <h2 class="sec-title">⑪ 其他特殊減免</h2>
+  <div class="sub-block">
+    <span class="sub-tag">道路與騎樓</span>
+    <table>
+      <tr><th style="width:30%">項目</th><th>處理</th></tr>
+      <tr><td>無償供公眾通行之道路土地</td><td>使用期間內地價稅<b>全免</b></td></tr>
+      <tr><td>公眾通行之騎樓走廊地（無建築物）</td><td><b>免徵</b>地價稅</td></tr>
+      <tr><td>公眾通行之騎樓走廊地（有建築物）</td><td><b>減徵</b>（按層數比例減徵）</td></tr>
+    </table>
+  </div>
+  <div class="sub-block">
+    <span class="sub-tag">地價稅抵繳土地增值稅</span>
+    <p style="font-size:14.5px;"><span class="law-tag">土地稅法 §31 III</span>：持有土地期間內，因<b>重新規定地價</b>而增繳的地價稅，於該筆土地移轉繳納土地增值稅時，<b>准予抵繳</b>。</p>
+    <div class="warn-box hi2">抵繳上限：不得超過該筆土地移轉時應繳<b>土地增值稅總額的 5%</b>（111年考古題出現過，跟土地增值稅／L12 筆記要用同一個口徑）。</div>
+  </div>
+</section>
+
+<!-- 十二、條文速查 -->
+<section>
+  <h2 class="sec-title">⑫ 條文速查</h2>
+  <table>
+    <tr><th style="width:26%">主題</th><th>條號</th></tr>
+    <tr><td>已規定地價課徵範圍</td><td>土地稅法 §14</td></tr>
+    <tr><td>納稅義務人（一般）／信託</td><td>§3-1</td></tr>
+    <tr><td>納稅義務基準日（8/31）</td><td>土地稅法施行細則 §20</td></tr>
+    <tr><td>稅基（地價總額）</td><td>§15 I</td></tr>
+    <tr><td>申報地價 30 天內申報</td><td>平均地權條例 §16</td></tr>
+    <tr><td>一般稅率／累進起點地價</td><td>§16 I／§16 II</td></tr>
+    <tr><td>特別稅率（2‰／6‰／10‰／免徵）</td><td>§17～20</td></tr>
+    <tr><td>自用住宅用地廣義定義</td><td>§9</td></tr>
+    <tr><td>自用住宅用地要件</td><td>§9、§17、施行細則§4、§9</td></tr>
+    <tr><td>特別稅率申請流程／原因消滅</td><td>§41～42</td></tr>
+    <tr><td>空地認定與罰則</td><td>§11</td></tr>
+    <tr><td>地價稅抵繳土地增值稅（上限5%）</td><td>§31 III</td></tr>
+  </table>
+</section>
+
+</body>
+</html>
