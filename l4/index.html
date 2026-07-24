@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>土地法 L4｜地價</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink:#1e293b; --sub:#64748b; --line:#e2e8f0; --line-strong:#94a3b8;
+    --neutral:#334155; --neutral-bg:#f1f5f9;
+    --accent:#8B4438; --accent-bg:#F1E2DD;
+    --accent2:#9C7A34; --accent2-bg:#EFE6D0;
+  }
+  body {
+    font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+    width: 1400px;
+    margin: 0 auto;
+    background: #f4f5f7;
+    color: var(--ink);
+    padding: 22px 32px 36px;
+  }
+  h1.page-title {
+    font-size: 30px;
+    color: #fff;
+    background: var(--ink);
+    padding: 16px 24px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h1.page-title .sub { font-size: 15px; font-weight: normal; opacity: 0.9; }
+  .tip-banner {
+    background: var(--neutral-bg);
+    border: 2px solid var(--line-strong);
+    color: var(--neutral);
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 15px;
+    margin-bottom: 18px;
+    font-weight: bold;
+  }
+  section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  h2.sec-title {
+    font-size: 20px;
+    color: var(--ink);
+    border-left: 6px solid var(--ink);
+    padding-left: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2.sec-title .star { color: var(--accent); font-size: 15px; }
+  h3.sub-title { font-size: 15.5px; color: var(--ink); margin: 16px 0 8px; }
+  .law-tag {
+    display: inline-block;
+    background: var(--neutral-bg);
+    color: var(--neutral);
+    border: 1px solid var(--line-strong);
+    font-size: 13px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: bold;
+    margin: 2px 4px 2px 0;
+  }
+  .law-tag.sub-law { background: #f8fafc; color: var(--sub); border-color: var(--line); }
+  .law-tag.hi { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
+  .law-tag.hi2 { background: var(--accent2-bg); color: var(--accent2); border-color: var(--accent2); }
+  .law-tag.unclear { background: #fff; color: var(--sub); border-color: var(--line); font-style: italic; }
+  .examhit {
+    display: inline-block; margin-left: 6px; font-size: 11.5px; font-weight: 800; color: var(--accent);
+    background: var(--accent-bg); border: 1px solid var(--accent); border-radius: 10px; padding: 1px 9px;
+    vertical-align: middle;
+  }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .card { border-radius: 12px; padding: 14px 16px; border: 2px solid var(--line-strong); background: #fff; }
+  .card-title { font-size: 17px; font-weight: bold; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; color: var(--ink); }
+  .card p { font-size: 14.5px; line-height: 1.75; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-top: 4px; }
+  table th { background: var(--ink); color: #fff; padding: 8px 10px; text-align: left; }
+  table td { padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  table tr:nth-child(even) td { background: #f9fafb; }
+  .warn-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); color: var(--neutral);
+    border-radius: 10px; padding: 10px 16px; font-size: 14.5px; margin-top: 10px; font-weight: bold;
+  }
+  .warn-box.hi { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+  .warn-box.hi2 { background: var(--accent2-bg); border-color: var(--accent2); color: var(--accent2); }
+  .info-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); color: var(--neutral);
+    border-radius: 10px; padding: 10px 16px; font-size: 14px; margin-top: 10px;
+  }
+  .example-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); border-radius: 10px;
+    padding: 12px 18px; font-size: 14.5px; line-height: 1.7; color: var(--neutral);
+  }
+  .flow { display: flex; flex-direction: column; gap: 3px; }
+  .flow-step { display: flex; align-items: center; gap: 14px; }
+  .flow-num {
+    flex-shrink: 0; width: 28px; height: 28px; background: var(--ink); color: #fff; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13.5px;
+  }
+  .flow-box { flex: 1; background: var(--neutral-bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 14px; font-size: 14.5px; }
+  .flow-arrow { text-align: center; color: var(--sub); font-size: 15px; margin-left: 13px; }
+  .sub-block { margin-top: 4px; }
+  .sub-block + .sub-block { margin-top: 12px; padding-top: 12px; border-top: 2px dashed var(--line); }
+  .sub-tag {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: bold; color: #fff;
+    background: var(--neutral); padding: 3px 11px; border-radius: 999px; margin-bottom: 8px;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">
+  土地法 L4｜地價
+  <span class="sub">規定地價・實價登錄・照價收買・依逐字稿製作＋考古題核對（尚無上課講義可核對，2026-07-23）</span>
+</h1>
+
+<div class="tip-banner">📌 讀書建議：先弄懂「公告地價」跟「公告土地現值」性質不同（分別對應地價稅、土地增值稅），再記「申報土地移轉現值六種審核標準」——這是本堂最高頻考點</div>
+
+<!-- 一、公告地價 vs 公告土地現值 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ① 公告地價 vs 公告土地現值</h2>
+  <table>
+    <tr><th style="width:20%">項目</th><th style="width:34%">公告地價</th><th>公告土地現值（公告現值）</th></tr>
+    <tr><td>公告頻率</td><td>每兩年一次</td><td>每年一次（每年1月1日）</td></tr>
+    <tr><td>用途</td><td>供土地所有權人申報地價，作為課徵<b>地價稅</b>依據</td><td>作為申報土地移轉現值參考，課徵<b>土地增值稅</b>依據</td></tr>
+    <tr><td>稅性質</td><td>地價稅＝持有稅（每年課）</td><td>土地增值稅＝移轉稅（移轉時才課）</td></tr>
+    <tr><td>與市價關係</td><td>較低（對所有權人優惠）</td><td>較高，但仍低於實際市價</td></tr>
+    <tr><td>徵收補償關聯</td><td>—</td><td>修法前曾是徵收補償依據參考（加成）；<b>土地徵收條例§30修法後，徵收補償一律依市價</b></td></tr>
+  </table>
+  <div class="info-box">💡 邏輯：地價稅是每年繳的持有稅，公告地價故意訂低一點對地主較優惠；公告現值只在移轉時課一次稅，訂高一點更能保障地主的徵收權益（修法前）。兩者都不是真正市價，市價通常比公告現值還要高。</div>
+</section>
+
+<!-- 二、規定地價程序 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ② 規定地價程序<span class="examhit">106・108・109測</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">法源：<span class="law-tag unclear">土§149、150（逐字稿口述條號，建議另查證正確條號區間）</span>、<span class="law-tag sub-law">平§15</span>。<b>平均地權條例是土地法的特別法，考試以平均地權條例為主</b>，土地法規定較簡陋僅供比較。</p>
+  <h3 class="sub-title">程序（平均地權條例§15）</h3>
+  <div class="flow">
+    <div class="flow-step"><div class="flow-num">1</div><div class="flow-box">分區調查最近一年土地買賣價格或收益價格</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">2</div><div class="flow-box">地政機關分區，估計「區段地價」</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">3</div><div class="flow-box">提交<b>地價評議委員會</b>決定（不是地政機關自己說了算）</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">4</div><div class="flow-box">計算每宗地單位地價</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">5</div><div class="flow-box">公告＋人民申報地價</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">6</div><div class="flow-box">編造地價冊、總歸戶冊</div></div>
+  </div>
+
+  <h3 class="sub-title">平均地權條例 vs 土地法 對照</h3>
+  <table>
+    <tr><th style="width:24%">項目</th><th style="width:36%">平均地權條例</th><th>土地法</th></tr>
+    <tr><td>規定地價頻率</td><td>每兩年一次</td><td>每五年一次，或地價有50%以上增減時</td></tr>
+    <tr><td>規定地價後之名稱</td><td>公告地價</td><td>標準地價</td></tr>
+    <tr><td>申報地價範圍</td><td>公告地價的80%~120%</td><td>標準地價±20%（效果相同）</td></tr>
+    <tr><td>確定後之名稱</td><td>申報地價</td><td>法定地價</td></tr>
+    <tr><td>特殊規定</td><td>—</td><td>若標準地價過高，所有權人可申請政府依標準地價<b>照價收買</b></td></tr>
+  </table>
+
+  <h3 class="sub-title">未申報地價的推定規則</h3>
+  <div class="example-box">
+    假設公告地價＝100：<br>
+    ・未申報 → 以<b>80</b>（公告地價80%）為申報地價<br>
+    ・申報但超過120 → 以<b>120</b>為申報地價<br>
+    ・申報但低於80 → 以<b>80</b>為申報地價，或政府可直接照價收買<br>
+    → 「99.9%的人不會申報」：申報也不能報低於80%，不申報也是直接算80%，所以查詢公告地價後直接乘以80%即可推斷申報地價。
+  </div>
+  <div class="warn-box hi">
+    ⚠️ <b>例外規定</b>（逐字稿：「這個例外大家要記得」）<span class="law-tag sub-law">平細§21</span>：<b>公有土地</b>、及依平均地權條例§16照價收買之土地，一律以「<b>公告地價</b>」作為申報地價，免予申報，<b>不適用80%折算</b>。
+  </div>
+  <div class="warn-box hi2">
+    💡 <b>稅法考題陷阱</b>（老師特別提醒）：題目給公告地價問稅額，一般土地要先乘以80%才是申報地價（稅基）；若題目特別註明是<b>公有土地</b>，則不用打8折，直接用公告地價。
+  </div>
+</section>
+
+<!-- 三、公告現值程序與申報移轉現值 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★★</span> ③ 公告現值程序與申報移轉現值<span class="examhit">107・108・111・112・114測</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">最終目的：實現「漲價歸公」，透過土地增值稅達成。</p>
+  <h3 class="sub-title">公告現值程序</h3>
+  <div class="flow">
+    <div class="flow-step"><div class="flow-num">1</div><div class="flow-box">繪製地價圖</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">2</div><div class="flow-box">估計區段地價</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">3</div><div class="flow-box">地價評議委員會評定</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">4</div><div class="flow-box">編製土地現值表</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">5</div><div class="flow-box">每年1月1日公告</div></div>
+  </div>
+  <div class="info-box">用途：作為土地移轉或設定典權時，申報土地移轉現值的參考（即土地增值稅稅基）；作為主管機關審核土地移轉現值及徵收補償地價之依據<span class="law-tag unclear">（逐字稿未明確提及此處具體條號）</span>。</div>
+
+  <h3 class="sub-title">申報土地移轉現值時機</h3>
+  <p style="font-size:14.5px;">權利人義務人於訂定契約之日起<b>30日內</b>申請所有權移轉登記，同時申報土地移轉現值<span class="law-tag sub-law">平§47-1</span>——申報移轉現值過低者，以公告現值課徵土地增值稅（申報過高則依申報金額課稅，因此「99.9%的人都直接用公告現值申報」）。</p>
+
+  <h3 class="sub-title">★★ 申報移轉現值六種審核標準（本堂最高頻考點）</h3>
+  <table>
+    <tr><th style="width:26%">情況</th><th>審核標準（以哪個時點的公告現值為準）</th></tr>
+    <tr><td>① 期限內申報（一般情形）</td><td>以<b>訂約日</b>當期公告土地現值為準</td></tr>
+    <tr><td>② 逾期申報</td><td>以<b>收件日</b>當期公告土地現值為準</td></tr>
+    <tr><td>③ 遺贈土地</td><td>以<b>遺贈人死亡日</b>當期公告土地現值為準</td></tr>
+    <tr><td>④ 法院判決移轉登記</td><td>以<b>申報人向法院起訴日</b>當期公告土地現值為準</td></tr>
+    <tr><td>⑤ 法拍土地</td><td>以<b>拍定日</b>當期公告土地現值為準</td></tr>
+    <tr><td>⑥ 政府照價收買或協議價購</td><td>以<b>政府收買日或購買日</b>當期公告土地現值為準</td></tr>
+  </table>
+  <div class="example-box" style="margin-top:10px;">
+    <b>老師舉例：</b>111年訂約、112年才辦登記，因有一年落差、112年現值較高，此時仍應以<b>訂約日111年</b>當期公告現值為準，而非收件日112年。
+  </div>
+</section>
+
+<!-- 四、實價登錄制度 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ④ 實價登錄制度<span class="examhit">112・113測</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">法條：<span class="law-tag sub-law">平§47、47-3、81-2</span>（老師明講「非常重要，一定要好好熟記」）。</p>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">(A) 成屋買賣</div>
+      <p>申報時機：申請所有權移轉登記同時。申報人：權利人與義務人（買賣雙方）共同申報。<br>
+      未依限申報罰則：3~15萬元，可按次處罰，最高罰至30~100萬元。<br>
+      申報不實－價格不實：罰3~15萬元；不改正罰30~100萬元。<br>
+      申報不實－價格以外資訊不實：罰6,000~3萬元。</p>
+    </div>
+    <div class="card">
+      <div class="card-title">(B) 預售屋買賣</div>
+      <p>申報時機：簽訂<b>或解除</b>買賣契約之日起30日內（「解除」是最新修法新增）。申報人：原則為銷售預售屋者（建商）；<b>若委託代銷，申報義務轉落在不動產經紀業身上</b>。<br>
+      罰則同成屋：3~15萬元，不按期改善罰30~100萬元。<br>
+      申報不實－價格<b>及面積</b>不實：罰3~15萬元；不按期改正罰30~100萬元。</p>
+    </div>
+  </div>
+  <div class="info-box">💡 成屋 vs 預售屋罰則邏輯差異：成屋已完成登記，面積可從謄本查證，僅價格有申報不實風險；預售屋尚未做建物所有權第一次登記，面積無法從謄本查證，且面積直接影響單價換算，因此預售屋多把「面積」納入重罰項目。這組比較是最近修法的熱門考點。</div>
+
+  <h3 class="sub-title">112年平均地權條例修法五大重點（老師明講「大家一定要記起來」）</h3>
+  <table>
+    <tr><th style="width:20%">項目</th><th style="width:16%">法條</th><th>內容摘要</th></tr>
+    <tr><td>① 限制換約轉售</td><td>§47-4（罰§81-3）</td><td>預售屋或新建成屋簽約後不得讓與/轉售契約給第三人，也不得自行委託刊登讓與/讓售廣告。例外含：配偶、直系血親或二親等內旁系血親移轉；中央主管機關公告得讓與或轉售，經直轄市或縣市主管機關核准<span class="law-tag unclear">（逐字稿僅明確列出2款，老師說共4款，其餘2款待查證）</span>。罰則：50萬以上300萬以下，得按次處罰</td></tr>
+    <tr><td>② 管制法人購屋</td><td>§79-1</td><td>私法人買受供<b>住宅使用</b>之房屋（辦公室/商業用不在此限），須①檢具使用計畫②經中央主管機關許可，許可後<b>5年內</b>不得移轉、讓與或預告登記</td></tr>
+    <tr><td>③ 重罰炒作行為</td><td>§47-5（罰§81-3）</td><td>罰鍰100萬以上5,000萬以下，得按次處罰</td></tr>
+    <tr><td>④ 檢舉獎金制度</td><td>§81-4</td><td><span class="law-tag unclear">逐字稿僅提及法條號，具體獎金金額待查證</span></td></tr>
+    <tr><td>⑤ 預售屋解約之申報登記</td><td>§47-3</td><td>112年修正前僅規定簽約要申報登錄；<b>修正後解約也要申報</b></td></tr>
+  </table>
+</section>
+
+<!-- 五、照價收買制度 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ⑤ 照價收買制度<span class="examhit">105・107・108・109・112測</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">定義：政府依某一價格（申報地價／申報移轉現值等）強制買下所有權人土地。</p>
+  <h3 class="sub-title">照價收買六種時機</h3>
+  <table>
+    <tr><th style="width:20%">分類</th><th style="width:36%">時機</th><th>法條</th></tr>
+    <tr><td rowspan="2">申報過低</td><td>① 申報地價過低（低於公告地價80%）</td><td>平§16</td></tr>
+    <tr><td>④ 申報移轉現值過低</td><td><span class="law-tag unclear">待查證</span></td></tr>
+    <tr><td rowspan="2">土地閒置</td><td>② 空地逾期未建（建地閒置）</td><td>—（L5地用堂有更詳細比較）</td></tr>
+    <tr><td>③ 荒地（課荒地稅滿3年仍不使用）</td><td><span class="law-tag unclear">待查證</span></td></tr>
+    <tr><td rowspan="2">懲罰性</td><td>⑤ 超額土地（超過私有土地面積最高額限制）</td><td>平§72</td></tr>
+    <tr><td>⑥ 耕地收回自行建築使用後未依規定建造</td><td>平§76</td></tr>
+  </table>
+  <div class="info-box">💡 第⑥項細節：早期政府為保障佃農，耕地出租後地主原則不可任意收回，除非該耕地已依法編列為建築用地，地主可終止租約收回自行建築；但若收回後未依規定建造，政府得照價收買。</div>
+
+  <h3 class="sub-title">照價收買程序 <span class="law-tag sub-law">平§28</span></h3>
+  <div class="flow">
+    <div class="flow-step"><div class="flow-num">1</div><div class="flow-box">政府先行公告，並以書面通知相關權利人</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">2</div><div class="flow-box">通知送達日起<b>50日內</b>，權利人須繳回土地所有權狀及相關證件；不繳者，政府逕行宣告其權利書狀無效</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">3</div><div class="flow-box">審核後宣告原土地所有權狀無效</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">4</div><div class="flow-box">政府於<b>30日內</b>給付補償地價（他項權利人依法也給予相關補償）</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">5</div><div class="flow-box">所有權人不領取者，政府依法<b>提存</b>（存入專戶）</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">6</div><div class="flow-box">所有權人應於<b>60日內</b>將土地交付政府；逾期不交付，政府得強制執行</div></div>
+  </div>
+
+  <h3 class="sub-title">照價收買後土地之處理 <span class="law-tag sub-law">平細§48</span></h3>
+  <table>
+    <tr><th style="width:26%">情況</th><th>處理方式</th></tr>
+    <tr><td>土地上有房屋</td><td>得<b>讓售</b>給房屋承租人或地上權人</td></tr>
+    <tr><td>空地</td><td>得<b>讓售</b>給鄰地所有權人或有合併使用效益之相關人</td></tr>
+    <tr><td>上述特定人不願承購</td><td>得公開<b>標售</b>（不特定人皆可參與）</td></tr>
+    <tr><td>農業用地</td><td>得<b>標售或出租</b>（可租給農民耕作）</td></tr>
+  </table>
+  <div class="info-box">💡 讓售 vs 標售：讓售＝賣給特定人（承租人、地上權人、鄰地所有權人）；標售＝不特定任何人皆可參與投標。</div>
+</section>
+
+<!-- 六、考古題查證 -->
+<section>
+  <h2 class="sec-title">⑥ 考古題查證彙整（105-114年）</h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">結論：這個主題在105~114年「每一年都有出現」，是全科目命中率最高的常考主題之一。</p>
+  <table>
+    <tr><th style="width:10%">年度</th><th>命中子題</th></tr>
+    <tr><td>105</td><td>照價收買時機（4選項辨析）；公告地價vs公告土地現值差別</td></tr>
+    <tr><td>106</td><td>規定地價程序＋申報地價80%規則（申論題）；公告土地現值／自用住宅退稅；空地荒地與申報地價</td></tr>
+    <tr><td>107</td><td>超額私有建築用地照價收買；公告土地現值（市地重劃補償）；申報移轉現值＋原規定地價（配偶贈與再移轉）</td></tr>
+    <tr><td>108</td><td>申報移轉現值審核標準（出現2題）；照價收買；登記費計收標準；規定地價＋80%規則＋照價收買</td></tr>
+    <tr><td>109</td><td>規定地價／公告地價／申報地價；申報土地移轉現值（30日申報期限）；照價收買（耕地終止租約收回）</td></tr>
+    <tr><td>110</td><td>公告現值（登記費計算）；公告土地現值／申報土地移轉現值；公告現值實務計算題</td></tr>
+    <tr><td>111</td><td>申報移轉現值審核標準（含遺贈、訂約日、法院判決、拍賣情形）</td></tr>
+    <tr><td>112</td><td><b>命中最密集的一年（4題）</b>：申報移轉現值審核標準（法院判決）；換約轉售例外情形（112年新制）；委託代銷預售屋實價登錄申報時機（112年新制）；私有空地處置與照價收買</td></tr>
+    <tr><td>113</td><td>私法人購屋許可程序（112年修法延伸考點）</td></tr>
+    <tr><td>114</td><td>申報土地移轉現值（訂約後30日內申報）</td></tr>
+  </table>
+  <div class="warn-box hi2">
+    💡 <b>最常考的子題排序：</b>①申報土地移轉現值六種審核標準——107、108(×2)、111、112、114，頻率最高 ②照價收買時機與程序——105、107、108、109、112 ③公告地價vs公告土地現值的性質差異——105、106、109、110 ④規定地價程序＋申報地價80%推定規則——106、108、109 ⑤112年平均地權條例修法新制（換約轉售限制、私法人購屋管制、預售屋代銷實價登錄申報時機）——集中在112、113年，屬新制熱點，往後幾年仍可能延續考出
+  </div>
+  <div class="info-box">💡 實價登錄的「罰則金額」本身（3-15萬/30-100萬/6000-3萬等具體數字）在這10年考古題中沒有直接以選擇題數字命題出現，但「申報時機」與「112年新制五大重點」則是明確近年考點，筆記中仍完整保留罰則數字表格以防萬一考細節。</div>
+</section>
+
+<!-- 七、待補查證清單 -->
+<section>
+  <h2 class="sec-title">⑦ 待補查證清單（下次補講義時優先核對）</h2>
+  <p style="font-size:14.5px;">這堂沒有上課講義可核對，以下條號/細節僅依逐字稿口述整理，需要之後查證全國法規資料庫或補到講義才能確認：</p>
+  <table>
+    <tr><td>土地法149、150條是否確實對應規定地價（逐字稿原文照錄）</td></tr>
+    <tr><td>公告現值「作為主管機關審核土地移轉現值及徵收補償地價之依據」的具體土地法條號</td></tr>
+    <tr><td>換約轉售例外的另外兩款內容（逐字稿僅提供2款，老師說共4款）</td></tr>
+    <tr><td>檢舉獎金制度（§81-4）的具體獎金金額／比例等細節</td></tr>
+    <tr><td>照價收買中「申報移轉現值過低」「荒地」項目的具體條號</td></tr>
+  </table>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>土地法 L13｜房地合一所得稅</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink:#1e293b; --sub:#64748b; --line:#e2e8f0; --line-strong:#94a3b8;
+    --neutral:#334155; --neutral-bg:#f1f5f9;
+    --accent:#8B4438; --accent-bg:#F1E2DD;
+    --accent2:#9C7A34; --accent2-bg:#EFE6D0;
+  }
+  body {
+    font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+    width: 1400px;
+    margin: 0 auto;
+    background: #f4f5f7;
+    color: var(--ink);
+    padding: 22px 32px 36px;
+  }
+  h1.page-title {
+    font-size: 30px;
+    color: #fff;
+    background: var(--ink);
+    padding: 16px 24px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h1.page-title .sub { font-size: 15px; font-weight: normal; opacity: 0.9; }
+  .tip-banner {
+    background: var(--neutral-bg);
+    border: 2px solid var(--line-strong);
+    color: var(--neutral);
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 15px;
+    margin-bottom: 18px;
+    font-weight: bold;
+  }
+  section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  h2.sec-title {
+    font-size: 20px;
+    color: var(--ink);
+    border-left: 6px solid var(--ink);
+    padding-left: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2.sec-title .star { color: var(--accent); font-size: 15px; }
+  h3.sub-title { font-size: 15.5px; color: var(--ink); margin: 16px 0 8px; }
+  .law-tag {
+    display: inline-block;
+    background: var(--neutral-bg);
+    color: var(--neutral);
+    border: 1px solid var(--line-strong);
+    font-size: 13px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: bold;
+    margin: 2px 4px 2px 0;
+  }
+  .law-tag.sub-law { background: #f8fafc; color: var(--sub); border-color: var(--line); }
+  .law-tag.hi { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
+  .law-tag.hi2 { background: var(--accent2-bg); color: var(--accent2); border-color: var(--accent2); }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid-5 { display: grid; grid-template-columns: repeat(5,1fr); gap: 10px; }
+  .card { border-radius: 12px; padding: 14px 16px; border: 2px solid var(--line-strong); background: #fff; }
+  .card-title { font-size: 17px; font-weight: bold; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; color: var(--ink); }
+  .card p { font-size: 14.5px; line-height: 1.75; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-top: 4px; }
+  table th { background: var(--ink); color: #fff; padding: 8px 10px; text-align: left; }
+  table td { padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  table tr:nth-child(even) td { background: #f9fafb; }
+  .warn-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); color: var(--neutral);
+    border-radius: 10px; padding: 10px 16px; font-size: 14.5px; margin-top: 10px; font-weight: bold;
+  }
+  .warn-box.hi { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+  .warn-box.hi2 { background: var(--accent2-bg); border-color: var(--accent2); color: var(--accent2); }
+  .info-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); color: var(--neutral);
+    border-radius: 10px; padding: 10px 16px; font-size: 14px; margin-top: 10px;
+  }
+  .formula-box {
+    background: var(--accent2-bg); border: 2px solid var(--accent2); color: var(--accent2);
+    border-radius: 10px; padding: 12px 20px; font-size: 17px; text-align: center; font-weight: bold; margin: 10px 0;
+  }
+  .example-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); border-radius: 10px;
+    padding: 12px 18px; font-size: 14.5px; line-height: 1.7; color: var(--neutral);
+  }
+  .step-tag {
+    display: inline-block; background: var(--ink); color: #fff; font-size: 12.5px; font-weight: bold;
+    padding: 2px 10px; border-radius: 6px; margin-bottom: 6px;
+  }
+  .sub-block { margin-top: 4px; }
+  .sub-block + .sub-block { margin-top: 12px; padding-top: 12px; border-top: 2px dashed var(--line); }
+  .mnemo-char {
+    display: inline-block; min-width: 1.5em; height: 1.5em; line-height: 1.42em; text-align: center;
+    border-radius: 50%; border: 2px solid var(--accent2); background: var(--accent2-bg); color: var(--accent2);
+    font-weight: 800; margin: 0 1px;
+  }
+  .examhit {
+    display: inline-block; margin-left: 6px; font-size: 11.5px; font-weight: 800; color: var(--accent);
+    background: var(--accent-bg); border: 1px solid var(--accent); border-radius: 10px; padding: 1px 9px;
+    vertical-align: middle;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">
+  土地法 L13｜房地合一所得稅
+  <span class="sub">移轉稅（房地一體）・逐字稿＋上課講義＋重點講義＋考古題四方核對（2026-07-23）</span>
+</h1>
+
+<div class="tip-banner">📌 讀書建議：先弄懂「跟土地增值稅不重複課稅」的原理（扣除土地漲價總數額），再記稅率級距（2/5/10年、45/35/20/15%）跟自用住宅400萬免稅額</div>
+
+<!-- 一、意義 -->
+<section>
+  <h2 class="sec-title">① 意義——房地一體的移轉稅</h2>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">房地合一所得稅</div>
+      <p>房屋＋坐落基地<b>一體</b>看漲幅，稅基＝<b>實際成交價</b>減取得成本（實價課稅）</p>
+    </div>
+    <div class="card">
+      <div class="card-title">土地增值稅（L12）</div>
+      <p>只看<b>土地</b>移轉現值的漲幅（公告現值，非市價）</p>
+    </div>
+  </div>
+  <div class="warn-box hi">
+    ⚠️ 會不會重複課稅？<b>不會</b>——房地合一所得稅的稅基會<b>扣除土地漲價總數額</b>（已被土地增值稅課過的部分），詳見④。
+  </div>
+  <div class="info-box">
+    個人房屋土地交易<b>損失</b>：可在交易之日後<b>3 年內</b>的房屋土地交易所得中扣除<span class="examhit">108測</span>（考古題常用「5年」「7年」當干擾選項，正確是 3 年）。歷史脈絡：房地合一稅的前身是「奢侈稅」，房地合一稅上路後奢侈稅已廢除走入歷史。
+  </div>
+</section>
+
+<!-- 二、課徵對象 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ② 課徵對象 <span class="law-tag">所得稅法 §4-4</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">須為<b>民國 105 年 1 月 1 日以後</b>取得（新制），之前取得適用舊制、不課房地合一稅。五種標的：</p>
+  <div class="grid-5">
+    <div class="card"><p>① 房屋及其坐落基地</p></div>
+    <div class="card"><p>② 依法得核發建造執照之土地</p></div>
+    <div class="card"><p>③ 地上權房屋</p></div>
+    <div class="card"><p>④ 預售屋</p></div>
+    <div class="card"><p>⑤ 股份或出資額（見下方warn）</p></div>
+  </div>
+  <div class="warn-box hi">
+    ⚠️ 第⑤項——<b>雙重門檻缺一不可</b>：① 個人或營利事業<b>直接或間接持有該營利事業股份/出資額過半數</b>；② 該營利事業股權/出資額之價值<b>50% 以上由境內房屋、土地所構成</b>。兩者都符合才視為變相移轉不動產，一併納入課徵對象（防止用「賣空殼公司股份」規避不動產稅賦）。
+  </div>
+  <div class="warn-box hi2">
+    💡 <b>市地重劃／區段徵收分配土地的取得日認定</b><span class="examhit">111測</span>：出售參與重劃／徵收後獲分配之土地，<b>取得日＝原取得重劃前土地之日</b>，不是重劃分配公告或完成登記之日（依財政部「房地合一課徵所得稅申報作業要點」第3點）。持有期間因此<b>往前追溯</b>，不會因為重劃而重新起算。若是繼承取得已重劃分配的土地，一樣追溯到<b>被繼承人原取得重劃前土地之日</b>，不是繼承開始日、也不是重劃後移轉登記日。例：107年參與自辦市地重劃 → 110年完成分配登記 → 111年出售，適用稅率的持有期間應從<b>107年</b>起算，不是110年。
+  </div>
+</section>
+
+<!-- 三、納稅義務人 -->
+<section>
+  <h2 class="sec-title">③ 納稅義務人</h2>
+  <p style="font-size:14.5px;">交易上述房屋、土地、地上權房屋、預售屋或股份出資額的<b>所有權人（賣方）</b>。每筆交易<b>分別申報</b>，不併入個人綜合所得稅申報。</p>
+</section>
+
+<!-- 四、稅基 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ④ 稅基——房地交易所得 <span class="law-tag">所得稅法 §14-4 I</span></h2>
+  <div class="formula-box">交易所得 ＝ 交易價額(市價) － 取得成本 － 必要費用 － 土地漲價總數額</div>
+  <table>
+    <tr><th style="width:20%">項目</th><th>內容</th></tr>
+    <tr><td>交易價額</td><td><b>成交總價（市價）</b>，不像土地增值稅只看公告現值</td></tr>
+    <tr><td>取得成本</td><td>當初買入的價格（繼承／受贈取得者，以房屋現值或土地公告現值計算，並乘以物價指數換算）</td></tr>
+    <tr><td>必要費用</td><td>取得時／持有期間（如裝潢整修）／本次交易，三段期間支付的必要費用；<b>不含已繳的土地增值稅</b>（原則）</td></tr>
+    <tr><td>土地漲價總數額</td><td>已被土地增值稅課過的部分，<b>從稅基扣除避免重複課稅</b>（見下方⑤）</td></tr>
+  </table>
+  <div class="warn-box hi2">
+    💡 必要費用<b>推計</b> <span class="law-tag sub-law" style="background:transparent;border-color:var(--accent2);color:var(--accent2);">所得稅法 §14-6</span><span class="examhit">110測</span>：沒有單據證明時，以成交價 <b>3%</b> 計算，<b>上限 30 萬元</b>（無下限）。例：成交 1000 萬 → 3% ＝30萬（達上限）；成交 100 萬 → 3% ＝3萬。（考古題實際算過：700萬購入、900萬售出、當期公告現值800萬 → 費用以 800萬×3%＝24萬，未達30萬上限）
+  </div>
+</section>
+
+<!-- 五、土地漲價總數額扣除上限 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ⑤ 土地漲價總數額扣除的申報上限（防高報現值陷阱）</h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">土地漲價總數額的計算，須依<span class="law-tag sub-law">土地稅法 §30 I</span> 規定的<b>公告土地現值</b>來算（如期申報＝訂約當日公告現值），<b>不是所有權人自己愛報多少就多少</b>。</p>
+  <div class="warn-box hi">
+    ⚠️ 為什麼要限制？房地合一稅稅率最高 <b>45%</b>，遠高於土地增值稅最高 <b>40%</b>（自用甚至只要 10%）——有人會故意<b>高報土地移轉現值</b>去多繳一點土地增值稅，換取在房地合一稅稅基裡扣除更大金額的土地漲價總數額，藉此少繳房地合一稅。修法後已<b>限制只能用當期公告現值計算</b>，堵住這個漏洞。
+  </div>
+  <div class="example-box">
+    <b>圖解：</b>A 取得時公告現值 10 元，賣出時公告現值 20 元（訂約當日）。<br>
+    ・A 若<b>如實</b>以 20 元申報土地增值稅 → 房地合一稅可扣的土地漲價總數額 ＝ 20－10 ＝<b>10</b><br>
+    ・A 若<b>高報</b>成 50 元申報土地增值稅 → 房地合一稅仍<b>只能扣 20－10＝10</b>（不是 50－10＝40），高報無法多扣<br>
+    ・<b>唯一例外</b>：20～50 元這段差額多繳的土地增值稅，<b>可以列為必要費用扣除</b>（否則正常情況下已繳的土地增值稅不能列入必要費用）
+  </div>
+  <div class="info-box" style="margin-top:10px;">
+    <b>公告土地現值認定基準日（依取得情境分 5 種）：</b>
+    <table style="margin-top:6px;">
+      <tr><th style="width:30%">情境</th><th>基準日</th></tr>
+      <tr><td>如期申報（30日內）</td><td>訂約日當期公告現值</td></tr>
+      <tr><td>逾期申報</td><td>收件日當期公告現值</td></tr>
+      <tr><td>遺贈取得土地</td><td>死亡日當期公告現值</td></tr>
+      <tr><td>法院判決移轉土地</td><td>起訴日當期公告現值</td></tr>
+      <tr><td>法院拍賣</td><td>拍定日當期公告現值</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- 六、稅率 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ⑥ 稅率——持有期間累進 <span class="law-tag">所得稅法 §14-4 III</span><span class="examhit">106・110・111・112測</span></h2>
+  <table>
+    <tr><th style="width:24%">持有期間</th><th style="width:19%">境內個人</th><th style="width:19%">境內法人</th><th>境外個人／法人</th></tr>
+    <tr><td>2 年以內</td><td><b>45%</b></td><td><b>45%</b></td><td><b>45%</b></td></tr>
+    <tr><td>超過 2 年～5 年</td><td><b>35%</b></td><td><b>35%</b></td><td><b>35%</b></td></tr>
+    <tr><td>超過 5 年～10 年</td><td><b>20%</b></td><td><b>20%</b>（最低級距）</td><td>—（無此級距）</td></tr>
+    <tr><td>超過 10 年</td><td><b>15%</b>（最低級距）</td><td>—（無此級距）</td><td>—（無此級距）</td></tr>
+  </table>
+  <div class="info-box">記憶口訣：級距 <span class="mnemo-char">2</span><span class="mnemo-char">5</span><span class="mnemo-char">10</span> 年；稅率 <b>45、35、20、15</b>。持有越久稅率越低，鼓勵長期持有；<b>境外</b>個人／法人沒有 20%、15% 這兩個較低級距；<b>境內法人</b>沒有最低的 15% 級距（最低就是 20%）。</div>
+  <div class="warn-box hi">⚠️ 這是本堂<b>最常考</b>的一節，命題手法固定：級距本身就是「2年／2~5年／5~10年／10年以上」，考題常故意把 2、5、10 改成 1、3、7 等其他數字當誘答，考的是精確記憶，不是概念理解，務必背死「2、5、10」這三個數字本身。</div>
+</section>
+
+<!-- 七、特別稅率20% -->
+<section>
+  <h2 class="sec-title">⑦ 特別優惠稅率 20%（境內個人）<span class="examhit">106・113測</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">下列情形<b>持有期間 5 年以下</b>，一律課 <b>20%</b>（取代原本 45%／35% 的較高級距）：</p>
+  <div class="grid-2">
+    <div class="card"><p>非自願性離職，或因不動產被徵收等非自願因素，持有 5 年以下被迫出售</p></div>
+    <div class="card"><p>合建分屋銷售，持有 5 年以下</p></div>
+    <div class="card"><p>都更／危老重建配回房地，配回後第一次移轉，持有 5 年以下</p></div>
+  </div>
+</section>
+
+<!-- 八、自用住宅優惠 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ⑧ 自用住宅優惠——10% 稅率＋400萬免稅額 <span class="law-tag">所得稅法 §4-5</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">課稅所得（稅基）<b>400 萬以下免稅</b>；超過 400 萬，<b>超過部分課 10%</b>。三項要件（均須滿 <b>6 年</b>，比一生一屋更嚴格）：</p>
+  <table>
+    <tr><th style="width:22%">要件</th><th>內容</th></tr>
+    <tr><td>① 設籍＋持有＋居住</td><td>本人、配偶或未成年子女辦竣戶籍登記，並<b>持有並居住滿 6 年</b></td></tr>
+    <tr><td>② 使用限制</td><td>交易前 <b>6 年內</b>無出租、無營業，<b>也不得供執行業務使用</b>（開事務所，如地政士／會計師事務所——這是房地合一稅特有、比其他稅目多出的限制）</td></tr>
+    <tr><td>③ 次數限制</td><td>個人、配偶及子女，交易前 <b>6 年內未曾適用</b>本優惠（類似土地增值稅的一生一次／一生一屋，但門檻是 6 年）</td></tr>
+  </table>
+  <div class="example-box" style="margin-top:10px;">
+    <b>計算範例：</b>課稅所得 300 萬（未超過400萬）→ 稅額 <b>0 元</b>。<br>
+    課稅所得 600 萬 → (600－400) × 10% ＝<b>20 萬</b>
+  </div>
+</section>
+
+<!-- 九、其他免稅 -->
+<section>
+  <h2 class="sec-title">⑨ 其他免稅對象 <span class="law-tag">所得稅法 §4-5 II～IV</span></h2>
+  <div class="grid-2">
+    <div class="card"><p>符合<span class="law-tag sub-law">農發條例 §37、§38-1</span>本可不課徵土地增值稅的土地</p></div>
+    <div class="card"><p>被徵收土地，或徵收前之協議價購</p></div>
+    <div class="card"><p>公共設施保留地，被徵收前之移轉</p></div>
+    <div class="card"><p>（合計四項：自用住宅400萬以下＋以上三項）</p></div>
+  </div>
+</section>
+
+<!-- 十、申報期間與罰則 -->
+<section>
+  <h2 class="sec-title">⑩ 申報期間與罰則 <span class="law-tag">所得稅法 §108-2</span></h2>
+  <table>
+    <tr><th style="width:30%">交易類型</th><th>申報起算日</th></tr>
+    <tr><td>一般房地（已登記）</td><td>所有權<b>移轉登記之次日起 30 日內</b></td></tr>
+    <tr><td>地上權房屋／預售屋</td><td>（尚未能辦移轉登記）<b>交易之日起 30 日內</b></td></tr>
+    <tr><td>股份或出資額交易</td><td><b>交易之日次日起 30 日內</b></td></tr>
+  </table>
+  <div class="info-box" style="margin-top:10px;">
+    申報機關：<b>境內居住者</b> → 戶籍所在地國稅局；<b>非境內居住者</b> → 不動產所在地國稅局。
+  </div>
+  <div class="warn-box hi">
+    罰則：未依限申報（已補報）→ <b>3,000～3萬元</b>罰鍰；短報／漏報 → 稅額<b>2倍以下</b>罰鍰；<b>完全未申報</b> → 稅額<b>3倍以下</b>罰鍰（最重）。
+  </div>
+</section>
+
+<!-- 十一、重購退稅比較 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑪ 重購退稅——vs 土地增值稅比較<span class="examhit">106・108・110測</span></h2>
+  <table>
+    <tr><th style="width:20%">項目</th><th style="width:38%">房地合一所得稅</th><th>土地增值稅（L12）</th></tr>
+    <tr><td>出售前規定</td><td>本人、配偶、<b>未成年子女</b>設籍<b>並居住</b>；出售前<b>一年</b>未供<b>出租、營業或執行業務</b>使用</td><td>本人、配偶或直系親屬設籍；出售前<b>一年</b>未供出租、營業用</td></tr>
+    <tr><td>重購年限</td><td colspan="2">兩年內（不論先買後賣或先賣後買）——<b>兩者相同</b></td></tr>
+    <tr><td>重購價格</td><td><b>不論買貴買便宜都可退</b>：重購價格<b>大於</b>出售價格 → <b>全額退</b>；重購價格<b>小於</b>出售價格 → 按<b>比例</b>退</td><td>只有<b>買貴（重購價&gt;出售價）</b>才可退（扣除土增稅之餘額可退），買便宜不能退</td></tr>
+    <tr><td>面積限制</td><td><b>無限制</b></td><td>都市 3 公畝／非都市 7 公畝</td></tr>
+    <tr><td>出售人＝購買人</td><td>可為<b>本人或配偶</b>（先生賣、太太買也可申請）</td><td>須<b>登記名義人同一人</b>（先生賣須先生買）</td></tr>
+    <tr><td>重購後管制</td><td colspan="2"><b>5 年內</b>不得改用途或移轉，否則追稅——<b>兩者相同</b></td></tr>
+    <tr><td>申請時效／扣抵</td><td><b>5 年內</b>申請；若<b>先買後賣</b>可<b>直接扣抵</b>應納稅額，不用先繳再退</td><td><b>10 年內</b>申請；須先繳清才能申請退還</td></tr>
+  </table>
+  <div class="example-box" style="margin-top:10px;">
+    <b>比例退範例：</b>房地合一稅繳了 50 萬，出售價格 200 萬、重購價格 100 萬（重購價格<b>小於</b>出售價格）→ 按比例退稅 ＝ 50萬 × (100÷200) ＝<b>25 萬</b>。若重購價格 &gt; 出售價格則全額退。
+  </div>
+  <div class="warn-box hi2">💡 考題陷阱：考古題出現過另一種「自耕農地出售後 2 年內購買仍供自耕農地」可退稅的規定，那是<b>土地稅法舊制</b>（自耕地互易）條文，<b>不是</b>房地合一稅本身的重購退稅，作答時不要混用兩套規則。</div>
+</section>
+
+<!-- 十二、歷屆考題 -->
+<section>
+  <h2 class="sec-title">⑫ 歷屆考題參考——107年不動產經紀人</h2>
+  <div class="example-box">
+    甲擬於近日出售其所有位於 A 市一間房屋及其坐落基地，依法須繳納房地交易所得稅，甲由其從事不動產仲介業務之朋友處得知亦有土地增值稅之負擔問題。則甲於出售該房地而計徵其房地交易所得稅額時，所涉及「交易所得額」與「交易所得稅率」之規定內容為何？又應如何處理其所涉「土地增值稅」？試依據土地稅法及所得稅法等法律之規定分述之。
+  </div>
+  <div class="warn-box hi2">
+    💡 這題直接對應本篇①③④⑤⑥的內容：交易所得額算法見④，稅率級距見⑥，土地增值稅的處理（不重複課稅、稅基扣除土地漲價總數額）見①⑤。房地合一2.0是近年考試重點，稅率結構務必背熟。
+  </div>
+</section>
+
+<!-- 十三、條文速查 -->
+<section>
+  <h2 class="sec-title">⑬ 條文速查</h2>
+  <table>
+    <tr><th style="width:30%">主題</th><th>條號</th></tr>
+    <tr><td>課徵對象</td><td>所得稅法 §4-4</td></tr>
+    <tr><td>稅基／土地漲價總數額扣除</td><td>§14-4 I</td></tr>
+    <tr><td>必要費用推計（3%上限30萬）</td><td>§14-6</td></tr>
+    <tr><td>稅率級距</td><td>§14-4 III</td></tr>
+    <tr><td>自用住宅優惠／其他免稅</td><td>§4-5</td></tr>
+    <tr><td>申報罰則</td><td>§108-2</td></tr>
+    <tr><td>移轉現值認定（土地漲價總數額計算依據）</td><td>土地稅法 §30 I</td></tr>
+  </table>
+</section>
+
+</body>
+</html>

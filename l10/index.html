@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>土地法 L10｜土地稅法導論</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink:#1e293b; --sub:#64748b; --line:#e2e8f0; --line-strong:#94a3b8;
+    --neutral:#334155; --neutral-bg:#f1f5f9;
+    --accent:#8B4438; --accent-bg:#F1E2DD;
+    --accent2:#9C7A34; --accent2-bg:#EFE6D0;
+  }
+  body {
+    font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+    width: 1400px;
+    margin: 0 auto;
+    background: #f4f5f7;
+    color: var(--ink);
+    padding: 22px 32px 36px;
+  }
+  h1.page-title {
+    font-size: 30px;
+    color: #fff;
+    background: var(--ink);
+    padding: 16px 24px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h1.page-title .sub {
+    font-size: 15px;
+    font-weight: normal;
+    opacity: 0.9;
+  }
+  .tip-banner {
+    background: var(--neutral-bg);
+    border: 2px solid var(--line-strong);
+    color: var(--neutral);
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 15px;
+    margin-bottom: 18px;
+    font-weight: bold;
+  }
+  section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  h2.sec-title {
+    font-size: 20px;
+    color: var(--ink);
+    border-left: 6px solid var(--ink);
+    padding-left: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2.sec-title .star { color: var(--accent); font-size: 15px; }
+  .law-tag {
+    display: inline-block;
+    background: var(--neutral-bg);
+    color: var(--neutral);
+    border: 1px solid var(--line-strong);
+    font-size: 13px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: bold;
+    margin: 2px 4px 2px 0;
+  }
+  .law-tag.sub-law { background: #f8fafc; color: var(--sub); border-color: var(--line); }
+  .law-tag.hi { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
+  .law-tag.hi2 { background: var(--accent2-bg); color: var(--accent2); border-color: var(--accent2); }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; }
+  .card {
+    border-radius: 12px;
+    padding: 14px 16px;
+    border: 2px solid var(--line-strong);
+    background: #fff;
+  }
+  .card-title {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: flex; align-items: center; gap: 6px;
+    color: var(--ink);
+  }
+  .card p { font-size: 14.5px; line-height: 1.75; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-top: 4px; }
+  table th { background: var(--ink); color: #fff; padding: 8px 10px; text-align: left; }
+  table td { padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  table tr:nth-child(even) td { background: #f9fafb; }
+  .warn-box {
+    background: var(--neutral-bg);
+    border: 2px solid var(--line-strong);
+    color: var(--neutral);
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 14.5px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .warn-box.hi { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+  .warn-box.hi2 { background: var(--accent2-bg); border-color: var(--accent2); color: var(--accent2); }
+  .info-box {
+    background: var(--neutral-bg);
+    border: 2px solid var(--line-strong);
+    color: var(--neutral);
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .formula-box {
+    background: var(--accent2-bg);
+    border: 2px solid var(--accent2);
+    color: var(--accent2);
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 17px;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">
+  土地法 L10｜土地稅法導論
+  <span class="sub">前導課・稅目全覽與共通架構・依逐字稿製作（尚無上課講義可核對）</span>
+</h1>
+
+<div class="tip-banner">📌 讀書建議：前導課重點是建立「稅額＝稅基×稅率」這套共通架構，後面每堂課（地價稅、增值稅⋯）都是套這套架構去理解，不用死背</div>
+
+<!-- 一、命題範圍 -->
+<section>
+  <h2 class="sec-title">① 命題範圍：五大稅目</h2>
+  <p style="font-size:14.5px;margin-bottom:10px;">不動產經紀人考試「土地法」與「土地相關稅法」是<b>同一考科</b>，正式名稱為「土地法與土地相關稅法概要」，不是分科考。</p>
+  <table>
+    <tr><th style="width:38%">法規</th><th>對應稅目</th></tr>
+    <tr><td>土地稅法及其施行細則</td><td><b>地價稅、土地增值稅</b>（下兩堂課主題）</td></tr>
+    <tr><td>契稅條例</td><td>契稅</td></tr>
+    <tr><td>房屋稅條例</td><td>房屋稅</td></tr>
+    <tr><td>所得稅法及其施行細則</td><td>房地合一稅（不動產交易部分）</td></tr>
+  </table>
+  <div class="info-box">📖 地政士考試比經紀人多考一科「稅捐稽徵法」，經紀人命題大綱雖然沒列，但它是稽徵的<b>根本大法</b>——稅法的基本原理、法律關係、程序關係、稅的保全、罰則，都規定在裡面，仍要知道關鍵條文（見下方②）。</div>
+</section>
+
+<!-- 二、滯納金陷阱 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ② 稅捐稽徵法 §20 滯納金——考試最愛出的修法陷阱</h2>
+  <div class="warn-box hi">
+    ⚠️ 滯納金已從「每 2 日加徵 1%」修正為「<b>每 3 日加徵 1%</b>」（民國 110 年修正 <span class="law-tag" style="background:transparent;border-color:var(--accent);color:var(--accent);">稅捐稽徵法 §20</span>）。修正時<b>沒有同步修正其他稅法條文</b>，所以房屋稅條例、契稅條例等條文上可能還寫著「每 2 日」，但實際滯納金計算要以稅捐稽徵法這部根本大法的最新規定為準。
+  </div>
+  <p style="font-size:14.5px;margin-top:10px;"><span class="law-tag sub-law">稅捐稽徵法 §1</span>：稅捐之稽徵，依本法之規定；本法未規定者，依其他有關法律之規定。→ 各稅法沒特別規定的程序性事項（含滯納金），一律回歸稅捐稽徵法最新版本。</p>
+</section>
+
+<!-- 三、共通架構 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ③ 稅法共通架構</h2>
+  <p style="font-size:14.5px;margin-bottom:6px;">土地稅法要念地價稅、土地增值稅、房屋稅、契稅⋯這麼多種稅，其實每種稅的架構都長得一樣：</p>
+  <div class="formula-box">稅額　＝　稅基　×　稅率</div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">稅基（課稅的基礎）</div>
+      <p>找出稅基的兩個問句：<br>① 為什麼要課稅？<br>② 課什麼稅？<br><br>例：因為<b>持有房屋</b>、房屋有<b>評定現值</b>，所以課房屋稅 → 稅基就是評定現值。</p>
+    </div>
+    <div class="card">
+      <div class="card-title">稅率（課稅的尺度）</div>
+      <p>找稅率要看兩件事：<br>① 適用<b>一般稅率</b>還是<b>特殊稅率</b>（有沒有符合減免/特殊要件）<br>② 是否達到<b>累進稅率</b>的門檻</p>
+    </div>
+  </div>
+</section>
+
+<!-- 四、納稅義務人 -->
+<section>
+  <h2 class="sec-title">④ 納稅義務人</h2>
+  <div class="info-box">
+    納稅義務人＝「需要繳稅的人」，例如房屋稅的納稅義務人就是<b>房屋所有權人</b>。<br><br>
+    ⚠️ 一棟房子從甲移轉到你名下，誰要繳稅？答案是「<b>不一定</b>」——要看是買賣、贈與等<b>不同移轉原因</b>，以及是<b>哪一種稅目</b>（契稅或增值稅），納稅義務人都會不同。這部分規定非常重要，每個稅目的納稅義務人要牢牢記住（後續各堂逐一介紹）。
+  </div>
+</section>
+
+<!-- 五、考試題型分析 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑤ 考試題型分析</h2>
+  <table>
+    <tr><th style="width:16%">題型</th><th style="width:46%">內容</th><th>實際考題範例</th></tr>
+    <tr><td><b>解釋題</b></td><td>名詞解釋</td><td>105年：「什麼叫累進起點地價」</td></tr>
+    <tr><td><b>法規題</b></td><td>納稅義務人是誰、稅率結構、稅基是什麼、減免要件為何——直接寫出法規內容就能得分</td><td>103年：「課徵土地增值稅的目的」及「減徵情況」</td></tr>
+    <tr><td><b>概念比較</b></td><td>不同稅目之間的比較</td><td>111年：說明並比較房地合一稅、土地增值稅與房屋稅的「課稅標的」</td></tr>
+    <tr><td><b>計算題</b></td><td>地政士常考申論計算題；經紀人多出現在<b>選擇題</b>中，通常較簡單</td><td>110年：經紀人計算題，不需複雜算式</td></tr>
+  </table>
+  <div class="warn-box hi2">
+    💡 小撇步：考試前一天確認「能不能帶計算機」——能帶 → 提高警覺，可能有計算題；不能帶 → 計算題通常會比較簡單，不需要用到計算機。
+  </div>
+</section>
+
+<!-- 六、持有稅比較表 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ⑥ 持有稅比較表——地價稅 vs 房屋稅</h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">持有稅指「只要持有就要每年繳」的稅，目前只剩<b>地價稅、房屋稅</b>兩項（<b>田賦已於民國 76 年起停徵</b>，農地／未規定地價土地目前實務上沒有持有稅負擔，詳見 L11①）。跨稅目比較是申論常考題型（例如 111 年考題要求比較房地合一稅、土地增值稅、房屋稅的「課稅標的」），下表整理地價稅（L11）與房屋稅（L14）兩堂已完成筆記的重點對照：</p>
+  <table>
+    <tr><th style="width:18%">項目</th><th style="width:41%">地價稅</th><th>房屋稅</th></tr>
+    <tr><td>課稅標的</td><td>已規定地價之土地</td><td>房屋（含增加使用價值之建物如頂樓加蓋，<b>含違章建築</b>）</td></tr>
+    <tr><td>稅基</td><td>申報地價（公告地價 × 80%～120%）</td><td>房屋現值（標準單價 × 面積 × 地段調整率 ×(1－折舊率×年數)）</td></tr>
+    <tr><td>納稅義務人（原則）</td><td>土地所有權人</td><td>房屋所有權人</td></tr>
+    <tr><td>特殊納稅義務人</td><td>典權人／管理機關（公有地）／受託人（信託）</td><td>使用權人（地上權房屋）／典權人／受託人／共有推派代表</td></tr>
+    <tr><td>一般稅率</td><td>10‰起，累進至最高 55‰（6 級距）</td><td>單一稅率，依用途別區分，<b>不累進</b></td></tr>
+    <tr><td>特別／差別稅率</td><td>2‰（自用住宅等）／6‰（保留地建築使用）／10‰（事業用地）／免徵</td><td>住家用 1%～4.8%（四級距＋全國總戶數/持有時間差別稅率）；非住家用 3%～5%</td></tr>
+    <tr><td>減免與優惠</td><td>自用住宅用地 2‰；道路／騎樓全免或減徵；小額（100元以下）免徵</td><td>毀損停止課徵；災害減半／免徵；公用公益免徵 9 項；小額（100元以下）免徵</td></tr>
+    <tr><td>課徵期間</td><td>當年 1/1～12/31</td><td>前一年 7/1～當年 6/30</td></tr>
+    <tr><td>開徵（繳納）月份</td><td>每年 11 月</td><td>每年 5 月</td></tr>
+    <tr><td>課稅基準日</td><td>當年 8/31（土地登記謄本所有權人）</td><td>當年 2 月末日；新建／增建按月比例計課</td></tr>
+    <tr><td>減免／優惠申請期限</td><td>特別稅率：開徵日前 40 天（即 9/22 前）</td><td>減免：每期開徵前 40 天（即 3/22 前）</td></tr>
+    <tr><td>稅單數量</td><td>依縣市<b>合併計算</b>，一縣市一張（例：台北2筆＋台中2筆 → 2張）</td><td><b>一戶一張</b>（例：4棟房屋 → 4張），但稅率按<b>全國總戶數</b>計算級距</td></tr>
+    <tr><td>評定組織</td><td>地價評議委員會</td><td>不動產評價委員會</td></tr>
+    <tr><td>評定項目</td><td>公告地價（課地價稅）、公告現值（課增值稅參考）</td><td>房屋標準價格（單價×面積×調整率－折舊）</td></tr>
+    <tr><td>評定週期</td><td>公告地價<b>每2年</b>；公告現值<b>每年1/1</b></td><td>房屋現值<b>每3年</b></td></tr>
+    <tr><td>組織法源</td><td>平均地權條例</td><td>房屋稅條例</td></tr>
+    <tr><td>中央主管機關</td><td>內政部（地政系統）</td><td>財政部（財稅系統）</td></tr>
+    <tr><td>地方徵收機關</td><td>地方稅務局</td><td>地方稅務局</td></tr>
+  </table>
+  <div class="warn-box hi">⚠️ 最容易考混：地價稅、房屋稅申請特別稅率／減免的期限<b>都是「開徵日前 40 天」</b>，但因開徵月份不同，實際日期不同——地價稅是 9/22 前（11 月開徵），房屋稅是 3/22 前（5 月開徵），要連著開徵月份一起記，不要只背「40 天」這個數字。</div>
+  <div class="info-box">💡 田賦：課徵對象是未規定地價土地或農地，性質同屬持有稅，但自民國 76 年起<b>停徵至今</b>——考試若問「持有稅有哪幾種」，仍可提到田賦（法制上存在），但要強調目前停徵、無須列入計算。</div>
+</section>
+
+<!-- 七、移轉稅比較表 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ⑦ 移轉稅比較表——土地增值稅 vs 契稅</h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">移轉稅指「有移轉行為才要繳」的稅：土地移轉繳<b>土地增值稅</b>（L12），房屋移轉繳<b>契稅</b>（L15）。房地合一所得稅性質上屬<b>所得稅</b>而非傳統移轉稅，暫不列入本表。</p>
+  <table>
+    <tr><th style="width:18%">項目</th><th style="width:41%">土地增值稅</th><th>契稅</th></tr>
+    <tr><td>課稅標的</td><td>土地（移轉時的漲價利益）</td><td>房屋（買賣／承典／交換／贈與／分割／占有取得）</td></tr>
+    <tr><td>與對方稅目的排他關係</td><td>—</td><td><b>已開徵土地增值稅區域</b>之土地免徵契稅（契稅實質只針對房屋課徵）</td></tr>
+    <tr><td>稅基</td><td>土地漲價總數額＝本次移轉現值－(前次移轉現值×物價指數)－土地改良費用</td><td>契價＝不動產評價委員會評定之房屋標準價格（例外：領買／標購公產／法拍，實際價格較低者從低）</td></tr>
+    <tr><td>納稅義務人（買賣）</td><td><b>原所有權人（賣方）</b></td><td><b>買受人（買方）</b>——方向相反，要注意分辨</td></tr>
+    <tr><td>納稅義務人（贈與）</td><td>取得人（受贈人）</td><td>受贈人——與土地增值稅方向相同</td></tr>
+    <tr><td>納稅義務人（其他）</td><td>設典：出典人／信託：受託人或受益人</td><td>占有：占有人／典權：典權人／交換：交換人／分割：分割人</td></tr>
+    <tr><td>稅率結構</td><td>一般 20%/30%/40% 累進；長期持有(20/30/40年)打8/7/6折；自用住宅特別稅率 <b>10%</b>（一生一次／一生一屋）</td><td><b>6%</b>（買賣/贈與/占有）／<b>4%</b>（典權）／<b>2%</b>（交換/分割）</td></tr>
+    <tr><td>減免與優惠</td><td><b>免徵</b>（繼承、公有地出售/受贈、捐贈財團法人、被徵收、都市計畫公共設施保留地）vs <b>不課徵</b>（夫妻贈與、農地農用、公司合併、信託5款）——原地價是否重新核計是關鍵區分</td><td>減免 5 項（公家取得公用／起造人單純變更名義）；信託不課徵 5 項（§14-1，與土增稅信託規定幾乎一致）</td></tr>
+    <tr><td>申報期限</td><td>訂約日起<b>30日內</b>申報；稅單核發：一般稅率7天／自用住宅稅率20天</td><td>立約日起<b>30日內</b>申報；收件15天內查定發單；欠件7日內通知補正</td></tr>
+    <tr><td>繳納期限</td><td>核發稅單後<b>30日內</b>繳納</td><td>收單後<b>30日內</b>繳納</td></tr>
+    <tr><td>逾期罰則</td><td>依稅捐稽徵法滯納金：每3日1%</td><td><b>怠報金</b>（不申報）每3日1%，雙重上限；<b>滯納金</b>（不繳納）每2日1%——契稅滯納金天數與稅捐稽徵法通例不同</td></tr>
+    <tr><td>徵收機關</td><td>不動產所在地地方稅務局</td><td>直轄市及縣市稅捐稽徵處（或鄉鎮市區公所代徵）</td></tr>
+  </table>
+  <div class="warn-box hi">⚠️ 最容易考混：<b>買賣</b>的納稅義務人，土地增值稅是<b>賣方</b>，契稅是<b>買方</b>，方向相反；<b>贈與</b>的納稅義務人兩者都是<b>受贈人</b>，方向相同——這組「買賣相反、贈與相同」是申論題常見的比較點。</div>
+</section>
+
+<!-- 八、重購退稅比較表 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑧ 重購退稅比較表——房地合一所得稅 vs 土地增值稅 <span class="examhit">106・108・110測</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">重購退稅是<b>移轉稅／所得稅中僅限「土地」</b>的專屬設計，地價稅、房屋稅、契稅都沒有這個制度。房地合一稅（L13）與土地增值稅（L12）都有各自的重購退稅規定，兩者細節差異是申論題常見比較點：</p>
+  <table>
+    <tr><th style="width:20%">項目</th><th style="width:38%">房地合一所得稅</th><th>土地增值稅</th></tr>
+    <tr><td>出售前規定</td><td>本人、配偶、<b>未成年子女</b>設籍<b>並居住</b>；出售前<b>一年</b>未供出租、營業或執行業務使用</td><td>本人、配偶或直系親屬設籍；出售前<b>一年</b>未供出租、營業用</td></tr>
+    <tr><td>重購年限</td><td colspan="2">兩年內（不論先買後賣或先賣後買）——<b>兩者相同</b></td></tr>
+    <tr><td>重購價格</td><td><b>不論買貴買便宜都可退</b>：重購價格<b>大於</b>出售價格 → <b>全額退</b>；重購價格<b>小於</b>出售價格 → 按<b>比例</b>退</td><td>只有<b>買貴（重購價&gt;出售價）</b>才可退（扣除土增稅之餘額可退），買便宜不能退</td></tr>
+    <tr><td>面積限制</td><td><b>無限制</b></td><td>都市 3 公畝／非都市 7 公畝</td></tr>
+    <tr><td>出售人＝購買人</td><td>可為<b>本人或配偶</b>（先生賣、太太買也可申請）</td><td>須<b>登記名義人同一人</b>（先生賣須先生買）</td></tr>
+    <tr><td>重購後管制</td><td colspan="2"><b>5 年內</b>不得改用途或移轉，否則追稅——<b>兩者相同</b></td></tr>
+    <tr><td>申請時效／扣抵</td><td><b>5 年內</b>申請；若<b>先買後賣</b>可<b>直接扣抵</b>應納稅額，不用先繳再退</td><td><b>10 年內</b>申請；須先繳清才能申請退還</td></tr>
+  </table>
+  <div class="example-box" style="margin-top:10px;">
+    <b>比例退範例：</b>房地合一稅繳了 50 萬，出售價格 200 萬、重購價格 100 萬（重購價格<b>小於</b>出售價格）→ 按比例退稅 ＝ 50萬 × (100÷200) ＝<b>25 萬</b>。若重購價格 &gt; 出售價格則全額退。
+  </div>
+  <div class="warn-box hi2">💡 考題陷阱：考古題出現過另一種「自耕農地出售後 2 年內購買仍供自耕農地」可退稅的規定，那是<b>土地稅法舊制</b>（自耕地互易）條文，<b>不是</b>房地合一稅本身的重購退稅，作答時不要混用兩套規則。</div>
+</section>
+
+<!-- 九、筆記呈現方式 -->
+<section>
+  <h2 class="sec-title">⑨ 筆記呈現方式</h2>
+  <p style="font-size:14.5px;">與土地法相同，採主題式重點整理＋法條提示（篇幅關係無法貼出完整條文，對照小六法或全國法規資料庫）。每個稅目（地價稅、增值稅⋯）各自做一個單元，方便針對不熟悉的稅目複習。下一堂 L11 進入<b>地價稅</b>，L12 進入<b>土地增值稅</b>。</p>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>土地法 L6｜土地重劃（v2 依上課講義校正）</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink:#1e293b; --sub:#64748b; --line:#e2e8f0; --line-strong:#94a3b8;
+    --neutral:#334155; --neutral-bg:#f1f5f9;
+    --accent:#8B4438; --accent-bg:#F1E2DD;
+    --accent2:#9C7A34; --accent2-bg:#EFE6D0;
+  }
+  body {
+    font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+    width: 1400px;
+    margin: 0 auto;
+    background: #f4f5f7;
+    color: var(--ink);
+    padding: 22px 32px 36px;
+  }
+  h1.page-title {
+    font-size: 30px;
+    color: #fff;
+    background: var(--ink);
+    padding: 16px 24px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h1.page-title .sub {
+    font-size: 15px;
+    font-weight: normal;
+    opacity: 0.9;
+  }
+  .tip-banner {
+    background: var(--neutral-bg);
+    border: 2px solid var(--line-strong);
+    color: var(--neutral);
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 15px;
+    margin-bottom: 18px;
+    font-weight: bold;
+  }
+  section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  h2.sec-title {
+    font-size: 20px;
+    color: var(--ink);
+    border-left: 6px solid var(--ink);
+    padding-left: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2.sec-title .star {
+    color: var(--accent);
+    font-size: 15px;
+  }
+  .law-tag {
+    display: inline-block;
+    background: var(--neutral-bg);
+    color: var(--neutral);
+    border: 1px solid var(--line-strong);
+    font-size: 13px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: bold;
+    margin: 2px 4px 2px 0;
+  }
+  .law-tag.sub-law {
+    background: #f8fafc;
+    color: var(--sub);
+    border-color: var(--line);
+  }
+  .law-tag.hi {
+    background: var(--accent-bg);
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+  .law-tag.hi2 {
+    background: var(--accent2-bg);
+    color: var(--accent2);
+    border-color: var(--accent2);
+  }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; }
+  .card {
+    border-radius: 12px;
+    padding: 14px 16px;
+    border: 2px solid var(--line-strong);
+    background: #fff;
+  }
+  .card-city, .card-farm { background: #fff; border-color: var(--line-strong); }
+  .card-title {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--ink);
+  }
+  .card-city .card-title, .card-farm .card-title { color: var(--ink); }
+  .card p { font-size: 14.5px; line-height: 1.75; }
+  .badge {
+    font-size: 12px;
+    background: var(--neutral);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14.5px;
+    margin-top: 4px;
+  }
+  table th {
+    background: var(--ink);
+    color: #fff;
+    padding: 8px 10px;
+    text-align: left;
+  }
+  table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: top;
+  }
+  table tr:nth-child(even) td { background: #f9fafb; }
+  .mnemo-char {
+    display: inline-block;
+    min-width: 1.5em;
+    height: 1.5em;
+    line-height: 1.42em;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid var(--accent2);
+    background: var(--accent2-bg);
+    color: var(--accent2);
+    font-weight: 800;
+    margin: 0 1px;
+  }
+  .flow {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .flow-step {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .flow-num {
+    flex-shrink: 0;
+    width: 30px; height: 30px;
+    background: var(--ink);
+    color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: bold; font-size: 14px;
+  }
+  .flow-step.key .flow-num { background: var(--accent); }
+  .flow-box {
+    flex: 1;
+    background: var(--neutral-bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 14.5px;
+  }
+  .flow-step.key .flow-box {
+    background: var(--accent-bg);
+    border-color: var(--accent);
+    font-weight: bold;
+    color: var(--accent);
+  }
+  .flow-box .law-tag { margin-left: 6px; }
+  .flow-arrow {
+    text-align: center;
+    color: var(--sub);
+    font-size: 16px;
+    margin-left: 15px;
+  }
+  .flow-branch {
+    margin-left: 44px;
+    background: var(--accent2-bg);
+    border: 1px dashed var(--accent2);
+    color: var(--accent2);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 13.5px;
+  }
+  .ten-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin: 10px 0;
+  }
+  .ten-item {
+    background: var(--neutral-bg);
+    border: 1px solid var(--line-strong);
+    color: var(--neutral);
+    text-align: center;
+    padding: 8px 4px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .ten-item.diff {
+    background: var(--accent-bg);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .warn-box {
+    background: var(--neutral-bg);
+    border: 2px solid var(--line-strong);
+    color: var(--neutral);
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 14.5px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .warn-box.hi {
+    background: var(--accent-bg);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .warn-box.hi2 {
+    background: var(--accent2-bg);
+    border-color: var(--accent2);
+    color: var(--accent2);
+  }
+  .info-box {
+    background: var(--neutral-bg);
+    border: 2px solid var(--line-strong);
+    color: var(--neutral);
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .formula-box {
+    background: var(--accent2-bg);
+    border: 2px solid var(--accent2);
+    color: var(--accent2);
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 17px;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  .example-box {
+    background: var(--neutral-bg);
+    border: 2px solid var(--line-strong);
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--neutral);
+  }
+  .compare-legend {
+    display: flex;
+    gap: 18px;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  .legend-dot {
+    display: inline-block;
+    width: 12px; height: 12px;
+    border-radius: 3px;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  .role-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  .role-card {
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 14px;
+    line-height: 1.6;
+    background: #fff;
+    border: 2px solid var(--line-strong);
+    color: var(--ink);
+  }
+  .role-a, .role-b, .role-c { background: #fff; border: 2px solid var(--line-strong); color: var(--ink); }
+  .role-name { font-weight: bold; font-size: 15px; margin-bottom: 6px; color: var(--ink); }
+
+  /* 從屬層級（自辦重劃 → 籌備會／重劃會） */
+  .nested-wrap {
+    margin: 12px 0 0 20px;
+    padding: 10px 0 4px 16px;
+    border-left: 3px dashed var(--line-strong);
+  }
+  .nested-label {
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--sub);
+    margin-bottom: 8px;
+  }
+
+  /* 子區塊（同一大主題內的兩個分項） */
+  .sub-block { margin-top: 4px; }
+  .sub-block + .sub-block {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 2px dashed var(--line);
+  }
+  .sub-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    font-weight: bold;
+    color: #fff;
+    background: var(--neutral);
+    padding: 3px 11px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">
+  土地法 L6｜土地重劃
+  <span class="sub">市地重劃（主力）／農地重劃（次要）・依上課講義校正法條版</span>
+</h1>
+
+<div class="tip-banner">📌 讀書建議：市地重劃是考試火力集中點，農地重劃冷門、行有餘力再看</div>
+
+<!-- 一、定義比較 -->
+<section>
+  <h2 class="sec-title">① 定義比較</h2>
+  <div class="grid-2">
+    <div class="card card-city">
+      <div class="card-title">🏙️ 市地重劃</div>
+      <p>依都市計畫，將一定區域內<b>零細碎不整</b>的土地，按<b>原位次交換分合</b>成方整土地後，<b>配回原所有權人</b>。</p>
+      <p style="margin-top:8px;">效果：提高土地效用、提升土地價值。</p>
+    </div>
+    <div class="card card-farm">
+      <div class="card-title">🌾 農地重劃</div>
+      <p>將一定區域內<b>不合經濟利用</b>的農地重新整理與交換分合，新修標準區塊，並加強<b>農地公共設施</b>（農水路、灌溉排水溝渠）。</p>
+      <p style="margin-top:8px;">效果：改善農業生產環境、擴大農場規模。</p>
+    </div>
+  </div>
+  <div class="warn-box hi">
+    ⚠️ 兩者共同關鍵字「<b>交換分合</b>」≠ 一般土地登記的「土地交換」（你我互換）；重劃是「整理後配回原本所有權人」，<b>不是移轉</b>。
+  </div>
+</section>
+
+<!-- 二、重劃事由 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ② 重劃事由</h2>
+  <table>
+    <tr><th style="width:22%">法源</th><th>內容</th></tr>
+    <tr>
+      <td><span class="law-tag hi">平均地權條例 §56</span><br>（主力，優先背）</td>
+      <td>
+        1. <span class="mnemo-char">新</span>開發都市地區全部/一部實施開發建設<br>
+        2. <span class="mnemo-char">舊</span>都市地區為公共安全衛生、促進合理使用<br>
+        3. <span class="mnemo-char">都</span>市土地開發新社區<br>
+        4. <span class="mnemo-char">經</span>中央主管機關指定限期辦理
+      </td>
+    </tr>
+    <tr>
+      <td><span class="law-tag">土地法 §135</span><br>（次要，比較用）</td>
+      <td>多了<b>耕地、集體農場、標準農場</b>——土地法較早，除市地外也管農地；平均地權條例偏重市地重劃。</td>
+    </tr>
+  </table>
+</section>
+
+<!-- 三、市地重劃性質 -->
+<section>
+  <h2 class="sec-title">③ 市地重劃的性質 <span class="law-tag">平均地權條例 §62</span></h2>
+  <div class="grid-3">
+    <div class="card card-city">
+      <div class="card-title">① 不是移轉</div>
+      <p>沒有移轉行為 → <b>不課徵土地增值稅</b></p>
+    </div>
+    <div class="card card-city">
+      <div class="card-title">② 標示變更</div>
+      <p>面積、界址會重新調整</p>
+    </div>
+    <div class="card card-city">
+      <div class="card-title">③ 視為原有土地延續</div>
+      <p>原地價不變<br><span class="law-tag">平均地權條例 §62</span></p>
+    </div>
+  </div>
+  <div class="info-box">
+    📖 <b>老師板書上這三點是掛在「平§62」下面一起講的</b>，但精確對照條文原文，§62 明確寫出的其實只有第③點「視為原有之土地」；①②兩點是重劃本質的延伸說明（①不課土增稅另有土地稅法規定支持），背誦時 §62 先扣住第③點準沒錯。
+  </div>
+  <div class="warn-box hi">
+    ⚠️ 額外考點——<b>刑責</b>：破壞或移動重劃測量標樁，致妨害市地重劃工程者，構成「妨害市地重劃罪」<span class="law-tag" style="background:transparent;border-color:var(--accent);color:var(--accent);">平均地權條例 §83-1</span>，可處 3 年以下有期徒刑、拘役，或科或併科 5,000 元以下罰金。
+  </div>
+</section>
+
+<!-- 四、重劃方式 -->
+<section>
+  <h2 class="sec-title">④ 重劃方式</h2>
+  <table>
+    <tr><th style="width:16%">方式</th><th style="width:18%">主導者</th><th style="width:18%">法源</th><th>要件</th></tr>
+    <tr><td>政府實施</td><td>政府</td><td><span class="law-tag">平均地權條例 §56</span></td><td>—</td></tr>
+    <tr><td>地主請求優先辦理</td><td>政府（地主可要求優先）</td><td><span class="law-tag">平均地權條例 §57</span></td><td><b>私有</b>土地所有權人 <b>≥ 1/2</b>（半數以上）且其所有土地面積 <b>≥</b> 區內私有土地總面積 <b>1/2</b></td></tr>
+    <tr><td>自辦重劃</td><td>地主自己（經主管機關核准）</td><td><span class="law-tag">平均地權條例 §58 III</span></td><td><b>私有</b>土地所有權人 <b>≥ 1/2</b>（半數以上）且其所有土地面積 <b>≥</b> 重劃區私有土地總面積 <b>1/2</b></td></tr>
+  </table>
+
+  <div class="nested-wrap">
+    <div class="nested-label">↳ 自辦重劃怎麼進行：籌備會 → 重劃會</div>
+    <div class="grid-2">
+      <div class="card card-city">
+        <div class="card-title">籌備會</div>
+        <p>規定在《獎勵土地所有權人自行辦理市地重劃辦法》（不在平均地權條例）。門檻：<b>土地所有權人總數＋土地面積都要超過 3/10</b>。由來：<span class="law-tag">釋字第739號</span>（申論題可模仿用語）</p>
+      </div>
+      <div class="card card-city">
+        <div class="card-title">重劃會</div>
+        <p>籌備會之後，可自辦重劃的正式組織。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 五、自辦重劃獎勵 -->
+<section>
+  <h2 class="sec-title">⑤ 自辦重劃的五項獎勵 <span class="law-tag">平均地權條例 §58</span></h2>
+  <div class="grid-3">
+    <div class="card card-city"><p>① 低利重劃貸款</p></div>
+    <div class="card card-city"><p>② 免/減地籍整理規費、換狀費用</p></div>
+    <div class="card card-city"><p>③ 優先興建區域內公共設施</p></div>
+    <div class="card card-city"><p>④ 免/減地價稅或田賦（田賦76年已停徵）</p></div>
+    <div class="card card-city"><p>⑤ 其他有助推行事項</p></div>
+  </div>
+</section>
+
+<!-- 六、重劃程序全流程 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑥ 重劃程序全流程</h2>
+  <div class="flow">
+    <div class="flow-step"><div class="flow-num">1</div><div class="flow-box">選定重劃地區（新舊都經）<span class="law-tag">平§56 I</span></div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">2</div><div class="flow-box">擬定重劃計畫書 → 送主管機關核定<span class="law-tag">平§56 II</span><span class="law-tag">施行細則§81</span></div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">3</div><div class="flow-box">核定及公告通知 30 天<span class="law-tag">平§56 II</span><span class="law-tag">平§59（禁止處分）</span></div></div>
+    <div class="flow-branch">若所有權人數＋面積 &gt; 1/2 反對 → 調處（僅一次）<span class="law-tag sub-law" style="background:transparent;border-color:var(--accent2);color:var(--accent2);">平§56 III</span> → 修訂計畫書 → 重新報請核定 → 直接公告實施</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">4</div><div class="flow-box">測量調查（界址/面積/權利狀態）＋ 地價評估（重劃前各筆地價／重劃後區段地價）</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step key"><div class="flow-num">5</div><div class="flow-box">計算負擔 ＋ 分配設計</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">6</div><div class="flow-box">工程規劃與施工</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">7</div><div class="flow-box">公告分配結果、通知所有權人<span class="law-tag">平§60-2</span></div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">8</div><div class="flow-box">地籍整理（登記新地籍）</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step key"><div class="flow-num">9</div><div class="flow-box">交接（拿回土地）＋ 清償（他項權利/租賃權補償）</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">10</div><div class="flow-box">（政府端）抵費地處理、財務結算</div></div>
+  </div>
+</section>
+
+<!-- 七、十工用地 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑦ 費用負擔——十工用地 <span class="law-tag">平均地權條例 §60 I</span><span class="law-tag">施行細則 §83</span></h2>
+  <div class="ten-grid">
+    <div class="ten-item">道路</div>
+    <div class="ten-item">溝渠</div>
+    <div class="ten-item">兒童遊樂場</div>
+    <div class="ten-item">鄰里公園</div>
+    <div class="ten-item">廣場</div>
+    <div class="ten-item">綠地</div>
+    <div class="ten-item diff">國民小學</div>
+    <div class="ten-item diff">國民中學</div>
+    <div class="ten-item">停車場</div>
+    <div class="ten-item diff">零售市場</div>
+  </div>
+  <div class="compare-legend">
+    <span><span class="legend-dot" style="background:var(--line-strong);"></span>與區段徵收九工相同</span>
+    <span><span class="legend-dot" style="background:var(--accent);"></span>與區段徵收九工的差異點</span>
+  </div>
+  <div class="warn-box hi">
+    對照區段徵收九工（道、溝、綠、兒、廣、車、體、國、公）：市地重劃<b>沒有體育場所</b>，改成「零售市場」；區段徵收的「國民學校」在市地重劃拆成「國民小學」＋「國民中學」兩項。
+  </div>
+
+  <h3 style="margin-top:20px;font-size:15.5px;color:var(--ink);">抵充順序 <span style="font-weight:normal;font-size:13px;color:var(--sub);">（兩條各自獨立的規定，不是同一套流程的接續步驟）</span></h3>
+  <div class="grid-2" style="margin-top:10px;">
+    <div class="nested-wrap">
+      <div class="nested-label">↳ 十工用地（十種列舉項目）<span class="law-tag" style="margin-left:6px;">平§60 I</span></div>
+      <div class="flow">
+        <div class="flow-step"><div class="flow-num">1</div><div class="flow-box">先用區內<b>道路、溝渠、河川、未登記土地</b>四種抵充<span class="law-tag">施行細則§82</span></div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step"><div class="flow-num">2</div><div class="flow-box">仍不夠 ＋ 工程費/重劃費/貸款利息 → 全部列為「共同負擔」，依<b>受益比例</b>分攤</div></div>
+      </div>
+    </div>
+    <div class="nested-wrap">
+      <div class="nested-label">↳ 十工以外的其他公共設施<span class="law-tag" style="margin-left:6px;">平§60 II</span></div>
+      <div class="flow">
+        <div class="flow-step"><div class="flow-num">1</div><div class="flow-box">土地交換分配時，直接優先用該重劃地區<b>公有土地</b>指配</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 八、共同負擔與抵費地 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑧ 共同負擔與抵費地 <span class="law-tag">平均地權條例 §60</span><span class="law-tag">施行細則 §84</span></h2>
+  <p style="font-size:14.5px;margin-bottom:10px;">共同負擔原則用<b>抵費地</b>（區內未建築土地）折抵<span class="law-tag sub-law">細§84 I</span>，例外才用現金。</p>
+  <div class="warn-box hi">
+    ⚠️ 抵費地比例<b>不得超過 45%</b><span class="law-tag sub-law" style="background:transparent;border-color:var(--accent);color:var(--accent);">平§60 III</span>（除非<b>私有</b>土地所有權人半數以上，且其所有土地面積超過區內私有土地總面積半數同意）→ 換句話說，所有權人配回的土地<b>最少不會低於 55%</b>
+  </div>
+  <p style="font-size:14.5px;margin-top:12px;">政府拿到的抵費地：可讓售國宅用地，或標售/標租/設定地上權<span class="law-tag sub-law">細§84 II</span>，收入<b>專款專用</b>於該重劃區公共建設，價款處理<span class="law-tag sub-law">細§84 III</span>。</p>
+</section>
+
+<!-- 九、土地分配 -->
+<section>
+  <h2 class="sec-title">⑨ 土地分配——地價數額比例 <span class="law-tag">平均地權條例 §60-1</span></h2>
+  <p style="font-size:14.5px;margin:10px 0;">原則：配回原位次<span class="law-tag sub-law">平§60-1 I</span>；例外（原地太小，扣完 45% 抵費地後不夠一塊可用地）改發現金<span class="law-tag sub-law">平§60-1 但書</span>。</p>
+  <div class="formula-box">分配比例 ＝ 重劃前該筆地價 ÷ 重劃前總地價<span class="law-tag sub-law" style="background:transparent;border-color:var(--accent2);color:var(--accent2);">平§60-1 II</span></div>
+  <div class="example-box">
+    <b>範例：</b>重劃前 A、B、C 地價各 1 萬、2 萬、3 萬（共 6 萬）→ 比例 1/6、2/6、3/6<br>
+    重劃後總值 10 萬 → A 分到 10 萬 × 1/6 ≈ 1.67 萬
+  </div>
+</section>
+
+<!-- 十、差額地價與公告確定 -->
+<section>
+  <h2 class="sec-title">⑩ 差額地價與公告確定</h2>
+
+  <div class="sub-block">
+    <span class="sub-tag">差額地價 <span class="law-tag sub-law" style="background:rgba(255,255,255,.25);color:#fff;border-color:transparent;">平§60-1 II～IV</span></span>
+    <p style="font-size:14.5px;">因面積無法切得剛剛好而產生的價差，需<b>先繳清才能辦理移轉</b>。</p>
+    <div class="warn-box hi2">
+      例外：<b>繼承</b>不受此限——繼承人自被繼承人死亡時已取得土地，登記後才可處分（<span class="law-tag" style="background:transparent;border-color:var(--accent2);color:var(--accent2);">民法 §759</span>）
+    </div>
+  </div>
+
+  <div class="sub-block">
+    <span class="sub-tag tag-b">公告・異議・調處 <span class="law-tag sub-law" style="background:rgba(255,255,255,.25);color:#fff;border-color:transparent;">平§60-2</span></span>
+    <p style="font-size:14.5px;">分配結果公告 30 天<span class="law-tag sub-law">平§60-2 I</span>；土地所有權人得於公告期間內書面提出異議<span class="law-tag sub-law">平§60-2 II</span>，無異議者公告期滿即確定；異議由主管機關調處，調處不成報請上級裁決<span class="law-tag sub-law">平§60-2 III</span>。</p>
+    <p style="font-size:14.5px;margin-top:10px;">確定後<span class="law-tag">平均地權條例 §62</span>：視為原有之土地。</p>
+  </div>
+</section>
+
+<!-- 十一、權利清理 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑪ 權利清理<span style="margin-left:auto;font-weight:normal;font-size:13px;color:var(--sub);text-align:right;max-width:640px;line-height:1.6;"><b style="color:var(--ink);">目的：</b>換地後，舊地上原有的租約、地上權、抵押權等權利需轉載、補償或協調處理，避免產權不清。</span></h2>
+  <h3 style="font-size:15.5px;color:var(--ink);margin-bottom:8px;">1. 租賃權（債權）<span class="law-tag sub-law">平§63／§63-1</span></h3>
+  <table>
+    <tr><th style="width:20%">類型</th><th style="width:33%">情況</th><th>補償</th><th style="width:16%">依據</th></tr>
+    <tr><td rowspan="2">耕地（公私有皆通用）</td><td>出租人有分配到土地</td><td>補承租人<b>公告現值 1/3</b></td><td rowspan="2"><span class="law-tag sub-law">平§63</span><span class="law-tag sub-law">細§89、90</span></td></tr>
+    <tr><td>出租人沒分配到土地（領現金）</td><td>補償費 <b>1/3 給承租人、2/3 給出租人</b></td></tr>
+    <tr><td>非耕地</td><td>因重劃無法達租約目的，租約終止</td><td>補承租人<b>一年租金</b>（得請求，較寬鬆）</td><td><span class="law-tag sub-law">平§63-1</span><span class="law-tag sub-law">§65</span></td></tr>
+  </table>
+
+  <h3 style="font-size:15.5px;color:var(--ink);margin:16px 0 8px;">2. 他項權利（物權）</h3>
+  <table>
+    <tr><th style="width:28%">類型</th><th>處理</th><th style="width:20%">依據</th></tr>
+    <tr><td>其他用益物權（地上權、永佃權等）</td><td>無法沿用 → 視為消滅，可請求相當補償</td><td><span class="law-tag sub-law">平§64 I</span><span class="law-tag sub-law">§65</span><span class="law-tag sub-law">細§91</span></td></tr>
+    <tr><td>抵押權、典權（有分配到地）</td><td>無法沿用 → 視為消滅，但<b>可要求轉載</b>到分回土地</td><td><span class="law-tag sub-law">平§64 II</span><span class="law-tag sub-law">§65</span></td></tr>
+    <tr><td>抵押權、典權（未分配到地）</td><td>由主管機關邀集權利人「協調清理」</td><td><span class="law-tag sub-law">平§64-1</span><span class="law-tag sub-law">細§92</span></td></tr>
+  </table>
+  <div class="warn-box hi2">請求期限：分配結果<b>公告確定之日起 2 個月內</b><span class="law-tag sub-law" style="background:transparent;border-color:var(--accent2);color:var(--accent2);">平§65</span><span class="law-tag sub-law" style="background:transparent;border-color:var(--accent2);color:var(--accent2);">細§91</span></div>
+</section>
+
+<!-- 十二、後續處理 -->
+<section>
+  <h2 class="sec-title">⑫ 重劃後續處理 <span class="law-tag">平均地權條例</span></h2>
+  <div class="grid-2">
+    <div class="card card-city">
+      <div class="card-title"><span class="law-tag">§66</span> 遷讓／接管</div>
+      <p>重劃機關以書面通知原土地所有權人及使用人，限期辦理遷讓或接管；逾期不遷讓者 → 得移送法院強制執行；逾期不接管者，自限期屆滿之日起，視為已接管。</p>
+    </div>
+    <div class="card card-city">
+      <div class="card-title"><span class="law-tag">§67</span> 地籍與權狀</div>
+      <p>重劃機關依重劃結果重新編號，列冊送該管登記機關，逕為辦理權利變更登記，換發土地權利書狀；未於規定期限內領取者，宣告其原土地權利書狀無效。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 十三、實例題 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑬ 實例題</h2>
+  <p style="font-size:14.5px;margin-bottom:14px;">A 有甲地（耕地），設定抵押權給 B，出租給 C 耕作。重劃後分回一塊住宅區小 A 地。</p>
+  <div class="role-grid">
+    <div class="role-card role-a">
+      <div class="role-name">A（所有權人）</div>
+      負擔完共同負擔後，配回小 A 地所有權<br><span class="law-tag">平§60-1</span>
+    </div>
+    <div class="role-card role-b">
+      <div class="role-name">B（抵押權人）</div>
+      可要求轉載到小 A 地；若無法轉載則消滅，可向 A 請求相當補償<br><span class="law-tag">平§64 II</span><span class="law-tag">§64-1</span>
+    </div>
+    <div class="role-card role-c">
+      <div class="role-name">C（承租人）</div>
+      耕地租約且 A 有分配到地 → 可向 A 要求<b>公告現值 1/3</b> 補償<br><span class="law-tag">平§63</span><span class="law-tag">細§89、90</span>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

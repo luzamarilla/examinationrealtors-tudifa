@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>土地法 L14｜房屋稅</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink:#1e293b; --sub:#64748b; --line:#e2e8f0; --line-strong:#94a3b8;
+    --neutral:#334155; --neutral-bg:#f1f5f9;
+    --accent:#8B4438; --accent-bg:#F1E2DD;
+    --accent2:#9C7A34; --accent2-bg:#EFE6D0;
+  }
+  body {
+    font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+    width: 1400px;
+    margin: 0 auto;
+    background: #f4f5f7;
+    color: var(--ink);
+    padding: 22px 32px 36px;
+  }
+  h1.page-title {
+    font-size: 30px;
+    color: #fff;
+    background: var(--ink);
+    padding: 16px 24px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h1.page-title .sub { font-size: 15px; font-weight: normal; opacity: 0.9; }
+  .tip-banner {
+    background: var(--neutral-bg);
+    border: 2px solid var(--line-strong);
+    color: var(--neutral);
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 15px;
+    margin-bottom: 18px;
+    font-weight: bold;
+  }
+  section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  h2.sec-title {
+    font-size: 20px;
+    color: var(--ink);
+    border-left: 6px solid var(--ink);
+    padding-left: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2.sec-title .star { color: var(--accent); font-size: 15px; }
+  h3.sub-title { font-size: 15.5px; color: var(--ink); margin: 16px 0 8px; }
+  .law-tag {
+    display: inline-block;
+    background: var(--neutral-bg);
+    color: var(--neutral);
+    border: 1px solid var(--line-strong);
+    font-size: 13px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: bold;
+    margin: 2px 4px 2px 0;
+  }
+  .law-tag.sub-law { background: #f8fafc; color: var(--sub); border-color: var(--line); }
+  .law-tag.hi { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
+  .law-tag.hi2 { background: var(--accent2-bg); color: var(--accent2); border-color: var(--accent2); }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+  .card { border-radius: 12px; padding: 14px 16px; border: 2px solid var(--line-strong); background: #fff; }
+  .card-title { font-size: 17px; font-weight: bold; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; color: var(--ink); }
+  .card p { font-size: 14.5px; line-height: 1.75; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-top: 4px; }
+  table th { background: var(--ink); color: #fff; padding: 8px 10px; text-align: left; }
+  table td { padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  table tr:nth-child(even) td { background: #f9fafb; }
+  .warn-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); color: var(--neutral);
+    border-radius: 10px; padding: 10px 16px; font-size: 14.5px; margin-top: 10px; font-weight: bold;
+  }
+  .warn-box.hi { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+  .warn-box.hi2 { background: var(--accent2-bg); border-color: var(--accent2); color: var(--accent2); }
+  .info-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); color: var(--neutral);
+    border-radius: 10px; padding: 10px 16px; font-size: 14px; margin-top: 10px;
+  }
+  .flow { display: flex; flex-direction: column; gap: 3px; }
+  .flow-step { display: flex; align-items: center; gap: 14px; }
+  .flow-num {
+    flex-shrink: 0; width: 30px; height: 30px; background: var(--ink); color: #fff; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px;
+  }
+  .flow-box { flex: 1; background: var(--neutral-bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 14px; font-size: 14.5px; }
+  .flow-arrow { text-align: center; color: var(--sub); font-size: 16px; margin-left: 15px; }
+  .sub-block { margin-top: 4px; }
+  .sub-block + .sub-block { margin-top: 12px; padding-top: 12px; border-top: 2px dashed var(--line); }
+  .sub-tag {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: bold; color: #fff;
+    background: var(--neutral); padding: 3px 11px; border-radius: 999px; margin-bottom: 8px;
+  }
+  .examhit {
+    display: inline-block; margin-left: 6px; font-size: 11.5px; font-weight: 800; color: var(--accent);
+    background: var(--accent-bg); border: 1px solid var(--accent); border-radius: 10px; padding: 1px 9px;
+    vertical-align: middle;
+  }
+  .example-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); border-radius: 10px;
+    padding: 12px 18px; font-size: 14.5px; line-height: 1.7; color: var(--neutral);
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">
+  土地法 L14｜房屋稅
+  <span class="sub">持有稅（課稅標的：房屋）・逐字稿＋上課講義＋考古題三方核對（2026-07-23）</span>
+</h1>
+
+<div class="tip-banner">📌 讀書建議：113年囤房稅2.0大修法是近年最熱門考點，稅率表要花時間記熟；其餘規定相對單純，比地價稅簡單</div>
+
+<!-- 一、概念 -->
+<section>
+  <h2 class="sec-title">① 概念——持有稅，課稅標的是房屋</h2>
+  <p style="font-size:14.5px;">房屋稅是<b>持有稅</b>：只要持有房屋，每年都要繳；移轉時則改繳<b>契稅</b>（見 L15），與土地「持有繳地價稅、移轉繳增值稅」邏輯相同，只是標的換成房屋。</p>
+</section>
+
+<!-- 二、課徵對象 -->
+<section>
+  <h2 class="sec-title">② 課徵對象 <span class="law-tag">房屋稅條例 §3</span></h2>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">① 房屋</div>
+      <p>固定在土地上的建築物，作營業、工作或住宅用；<b>含違章建築</b>——違建雖未登記，一樣有使用價值，仍要課房屋稅</p>
+    </div>
+    <div class="card">
+      <div class="card-title">② 增加使用價值之建築物</div>
+      <p>依附於房屋、增加該房屋使用價值的其他建物，例如頂樓加蓋、一樓外推鐵皮屋——稅捐機關會測量增加的面積另計房屋稅</p>
+    </div>
+  </div>
+  <div class="warn-box hi">
+    ⚠️ 常見誤解：「有繳房屋稅稅單＝合法房屋」是<b>錯的</b>！房屋稅（<b>稅捐單位</b>管轄）與房屋登記（<b>地政單位</b>管轄）是不同機關、不同制度，違建一樣要繳房屋稅，繳稅不代表房屋合法。
+  </div>
+</section>
+
+<!-- 三、納稅義務人 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ③ 納稅義務人 <span class="law-tag">房屋稅條例 §4</span><span class="examhit">106・109・111・114測</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">原則：<b>房屋所有權人</b>（<b>住址不明</b>者，由管理人或現住人代徵）。特殊情況：</p>
+  <table>
+    <tr><th style="width:24%">情況</th><th>納稅義務人</th></tr>
+    <tr><td>地上權房屋</td><td><b>使用權人</b>（建商設地上權蓋房子轉賣，消費者買到的是土地地上權＋房屋使用權，非所有權）</td></tr>
+    <tr><td>設定典權</td><td><b>典權人</b>（住址不明者，同樣由管理人或現住人代徵）</td></tr>
+    <tr><td>共有房屋</td><td>共有人推派<b>代表</b>繳納；<b>未推定</b>代表者，由<b>現住人或使用人</b>代繳</td></tr>
+    <tr><td>信託房屋</td><td><b>受託人</b></td></tr>
+  </table>
+  <h3 class="sub-title">未辦建物所有權第一次登記，且所有權人不明（依序回推）</h3>
+  <div class="flow">
+    <div class="flow-step"><div class="flow-num">1</div><div class="flow-box">有<b>使用執照</b> → 使用執照起照人</div></div>
+    <div class="flow-arrow">↓ 沒有使用執照</div>
+    <div class="flow-step"><div class="flow-num">2</div><div class="flow-box">有<b>建築執照</b> → 建築執照起照人</div></div>
+    <div class="flow-arrow">↓ 都沒有（如鄉下老舊三合院）</div>
+    <div class="flow-step"><div class="flow-num">3</div><div class="flow-box"><b>現住人或管理人</b></div></div>
+  </div>
+  <div class="info-box">蓋房子順序：申請<b>建築執照</b>（許可興建）→ 興建完成申請<b>使用執照</b> → 辦理<b>建物所有權第一次登記</b>。回推順序即上圖 1→2→3。</div>
+  <div class="warn-box hi2">
+    💡 <b>房屋權利變動時，義務人歸屬年度怎麼算</b><span class="examhit">106測</span>：房屋稅按<b>期</b>課徵（課徵期間＝前一年7/1～當年6/30，見⑧），若房屋在課稅期間內<b>設典或移轉所有權</b>，該期房屋稅的納稅義務人以<b>課稅期間內某個認定時點</b>（通常是移轉/設典生效時的權利人狀態）為準，不是等到下一期才轉移義務——這是考古題曾以「典權人設典後房屋稅由誰繳、哪一期開始換人」的情境題型出現，作答時要先確認題目給的移轉/設典日落在哪個課稅期間內。
+  </div>
+</section>
+
+<!-- 四、稅基 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ④ 稅基——房屋現值 <span class="law-tag">房屋稅條例 §10</span><span class="examhit">112申論</span></h2>
+  <div class="flow">
+    <div class="flow-step"><div class="flow-num">1</div><div class="flow-box">建造完成 <b>30 天內</b>向稅務局申報現值</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">2</div><div class="flow-box">稅務局參考「<b>不動產評價委員會</b>」評定的房屋標準價格</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">3</div><div class="flow-box">核定<b>房屋現值</b>（＝房屋稅稅基）</div></div>
+  </div>
+  <div class="warn-box" style="margin-top:10px;background:var(--accent2-bg);border-color:var(--accent2);color:var(--accent2);">
+    📐 <b>房屋現值計算公式：</b>房屋現值 ＝ 房屋標準<b>單價</b> × <b>面積</b> × <b>地段調整率</b> × (1 － <b>折舊率</b> × 經歷年數)。房屋稅稅額 ＝ 房屋現值 × 稅率。
+  </div>
+  <div class="info-box">
+    納稅義務人對核定現值有異議，可於收到通知書之日起 <b>30 日內</b>檢附證明文件申請重新核計。<br><br>
+    評定因素<span class="law-tag sub-law">房稅§11</span>：<b>建材</b>等級種類（鋼筋混凝土／鋼骨等）、<b>耐用年數與折舊</b>標準、<b>市場供需</b>與所屬商圈交通（<b>路段率</b>）。實務流程：先依<b>房屋類別＋樓層</b>訂單價 → 乘以<b>路段調整率</b> → 再乘以<b>折舊率</b>（越舊房屋現值越低，房屋稅理論上逐年遞減）。<b>每 3 年評定一次</b>。
+  </div>
+  <div class="warn-box hi">
+    🔥 <b>112年申論主考點——房屋標準價格三大影響因素及實務爭議</b>：三大因素＝①建材等級及耐用年數折舊標準、②路段率（所屬商圈交通繁榮程度）、③市場供需。爭議點：實務上常見<b>單價逾30年未調整</b>（房屋標準單價老舊，跟不上市場行情）、<b>路段率評估浮濫</b>（路段率打分主觀、跟實際商業繁榮程度脫節）兩大批評，申論題常要求申論者評論這套評定制度的合理性，不是只背評定流程本身。
+  </div>
+</section>
+
+<!-- 五、稅率 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★★</span> ⑤ 稅率——113年囤房稅2.0大修法 <span class="law-tag">房屋稅條例 §5 I</span><span class="examhit">113・114測</span></h2>
+  <div class="warn-box hi">🔥 113 年大修法（囤房稅2.0）甫上路即入題：113年申論題整題考房屋稅（無人設籍空屋能否適用自住稅率），MC也開始考新制稅率級距與自住認定要件，務必記熟以下稅率表</div>
+
+  <h3 class="sub-title">住家用房屋（由低到高四個級距）</h3>
+  <table>
+    <tr><th style="width:8%">級距</th><th style="width:30%">情況</th><th style="width:16%">稅率</th><th>說明</th></tr>
+    <tr><td>特別</td><td>本人／配偶／未成年子女<b>全國僅一戶</b>自住，<b>且房屋現值在一定金額以下</b>（財政部公告基準，各地方政府得另訂）</td><td><b>1%</b></td><td>本次修法新增的最低稅率；<b>現值門檻是常見誘答點</b>，只符合「全國一戶」但現值超過門檻者，不適用1%，仍是1.2%</td></tr>
+    <tr><td>①</td><td>供自住，或屬<b>公益出租人</b>（出租給符合租金補貼資格者，或透過社福團體轉租）</td><td><b>1.2%</b></td><td>不累進</td></tr>
+    <tr><td>②</td><td>出租且<b>有申報租賃所得</b>達一定金額；或<b>繼承取得共有</b>房屋（非自願，無法自住）</td><td><b>1.5%～2.4%</b></td><td>次低級距</td></tr>
+    <tr><td>③</td><td>起造人持有、使用執照載明住家用途之<b>待售房屋</b>，<b>2 年內</b></td><td><b>2%～3.6%</b></td><td>鼓勵建商盡速售出，通常是建商</td></tr>
+    <tr><td>④</td><td><b>其他</b>住家用房屋（待售超過2年、非公益出租又未申報所得的一般出租等）</td><td><b>2%～4.8%</b></td><td>最高級距</td></tr>
+  </table>
+
+  <h3 class="sub-title">非住家用房屋</h3>
+  <table>
+    <tr><th style="width:30%">情況</th><th>稅率</th></tr>
+    <tr><td>營業用或執行業務用（診所、事務所等）</td><td><b>3%～5%</b></td></tr>
+    <tr><td>人民團體非營業使用</td><td><b>1.5%～2.5%</b>（減半）</td></tr>
+  </table>
+
+  <div class="warn-box hi2">
+    💡 <b>「自住」認定標準有兩層，不要混用</b> <span class="law-tag sub-law">住家用房屋供自住及公益出租人出租使用認定標準§2</span>：
+    <br>① <b>一般自住（1.2%）</b>：無出租或供營業使用＋本人／配偶／<b>直系親屬</b>辦竣戶籍登記並實際居住＋本人／配偶／<b>未成年子女全國合計3戶以內</b>。
+    <br>② <b>全國僅一戶（1%，門檻更嚴格）</b>：本人／配偶／<b>未成年子女全國僅一戶</b>自住，<b>且房屋現值在一定金額以下</b>。
+    <br>差異：①用「直系親屬」、戶數上限是<b>3戶</b>；②限定「未成年子女」、戶數上限是<b>1戶</b>，還多一個現值門檻。<b>超過3戶</b>連1.2%都不適用（落入②③④更高級距）。
+  </div>
+  <div class="sub-block">
+    <span class="sub-tag">住家＋非住家混合使用</span>
+    <p style="font-size:14.5px;">依實際使用面積分別按住家用／非住家用稅率課徵，但<b>非住家用課稅面積不得少於全部面積的 1/6</b>。例：60 坪房屋部分自住、部分開事務所 → 非住家用面積最少要算 <b>10 坪</b>（60÷6）。</p>
+  </div>
+</section>
+
+<!-- 六、差別稅率 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ⑥ 全國總持有戶數差別稅率 <span class="law-tag">房屋稅條例 §5 II</span><span class="examhit">113測</span></h2>
+  <div class="warn-box hi">
+    ⚠️ 修法重點：從「直轄市／縣市政府<b>得</b>訂差別稅率」改為「<b>應</b>訂差別稅率」——各縣市政府現在<b>必須</b>依全國總持有戶數（或持有時間）訂出累進的差別稅率，這是本次修法的重要變化。
+  </div>
+  <div class="warn-box hi2">
+    💡 <b>易錯觀念</b>：財政部發布基準其實是<b>依§5 I 第1款第2～4目分成三類，各類分級依據不同</b>——不是同一套「戶數分級」套用到所有住家用房屋，第2類、第3類-3.1其實是按<b>持有時間</b>分級，只有第1類跟第3類-3.2是按<b>戶數</b>分級。
+  </div>
+  <h3 class="sub-title">第1類｜出租有申報租賃所得或繼承取得共有房屋（§5I①目2，1.5%～2.4%）—— 按全國總戶數</h3>
+  <table>
+    <tr><th style="width:30%">全國總持有戶數</th><th>稅率</th></tr>
+    <tr><td>4 戶以內</td><td><b>1.5%</b></td></tr>
+    <tr><td>5～6 戶</td><td><b>2.0%</b></td></tr>
+    <tr><td>7 戶以上</td><td><b>2.4%</b></td></tr>
+  </table>
+  <h3 class="sub-title">第2類｜起造人持有待銷售房屋，2年以內（§5I①目3，2.0%～3.6%）—— 按持有時間</h3>
+  <table>
+    <tr><th style="width:30%">持有時間</th><th>稅率</th></tr>
+    <tr><td>1 年以內</td><td><b>2.0%</b></td></tr>
+    <tr><td>超過 1 年，2 年以內</td><td><b>2.4%</b></td></tr>
+  </table>
+  <h3 class="sub-title">第3類｜其他住家用房屋（§5I①目4，2.0%～4.8%）——分兩種情形</h3>
+  <div class="sub-block">
+    <span class="sub-tag">3.1 起造人持有待銷售房屋，超過2年 —— 按持有時間</span>
+    <table>
+      <tr><th style="width:30%">持有時間</th><th>稅率</th></tr>
+      <tr><td>超過 2 年，4 年以內</td><td><b>3.6%</b></td></tr>
+      <tr><td>超過 4 年，5 年以內</td><td><b>4.2%</b></td></tr>
+      <tr><td>超過 5 年</td><td><b>4.8%</b></td></tr>
+    </table>
+  </div>
+  <div class="sub-block">
+    <span class="sub-tag">3.2 除3.1以外之其他住家用房屋（一般出租未達申報標準等）—— 按直轄市/非直轄市 × 戶數</span>
+    <table>
+      <tr><th style="width:20%">組別</th><th style="width:30%">全國總持有戶數</th><th>稅率</th></tr>
+      <tr><td rowspan="4">直轄市</td><td>2 戶以內</td><td><b>3.2%</b></td></tr>
+      <tr><td>3～4 戶</td><td><b>3.8%</b></td></tr>
+      <tr><td>5～6 戶</td><td><b>4.2%</b></td></tr>
+      <tr><td>7 戶以上</td><td><b>4.8%</b></td></tr>
+      <tr><td rowspan="4">非直轄市</td><td>1 戶</td><td><b>2.6%</b></td></tr>
+      <tr><td>2～4 戶</td><td><b>3.2%</b></td></tr>
+      <tr><td>5～6 戶</td><td><b>3.8%</b></td></tr>
+      <tr><td>7 戶以上</td><td><b>4.8%</b></td></tr>
+    </table>
+  </div>
+  <div class="info-box" style="margin-top:10px;">⚠️ 注意與所得稅級距的差異：戶數達最高級距門檻，是<b>全部戶數都適用該最高稅率</b>，不是像所得稅級距只對超過部分課稅。實際各縣市確切稅率仍以當地縣市政府公告為準；113年考題已開始考新制稅率級距，不能再只記簡化版「4戶內/5-6戶/7戶以上」這一套，要分清楚是哪一類（第1類戶數 vs 第2類持有時間 vs 第3類戶數+城市別）。</div>
+</section>
+
+<!-- 七、減免 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ⑦ 減免規定——三個層級 <span class="examhit">107・109・114測</span></h2>
+  <div class="sub-block">
+    <span class="sub-tag">停止課徵</span>
+    <p style="font-size:14.5px;"><span class="law-tag sub-law">§8</span>房屋因<b>毀損、坍塌或拆除致不堪居住使用</b>（如火災燒毀），在<b>重建完成前</b>停止課徵房屋稅。</p>
+  </div>
+  <div class="sub-block">
+    <span class="sub-tag">減半徵收（5項）</span>
+    <table>
+      <tr><td>① 災害毀損<b>3成以上、未達5成</b>之房屋<span class="examhit">107・109・114測</span></td></tr>
+      <tr><td>② 合法登記工廠（按營業用稅率減半，鼓勵工廠合法登記）</td></tr>
+      <tr><td>③ 農會自用倉庫或檢驗場</td></tr>
+      <tr><td>④ 農產品批發市場之房屋</td></tr>
+      <tr><td>⑤ 政府興建配售之平民住宅</td></tr>
+    </table>
+  </div>
+  <div class="sub-block">
+    <span class="sub-tag">免徵（8項）</span>
+    <table>
+      <tr><td>① 災害毀損<b>5成以上</b>之房屋<span class="examhit">107・109・114測</span></td></tr>
+      <tr><td>② 農會<b>專供儲存公糧</b>之倉庫（注意 vs 減半的③農會「自用」倉庫，別搞混）</td></tr>
+      <tr><td>③ 慈善救濟事業之房屋</td></tr>
+      <tr><td>④ 無償供政府機關公用或軍用之房屋</td></tr>
+      <tr><td>⑤ 私立學校、圖書館、博物館、藝術館等公眾使用之房屋</td></tr>
+      <tr><td>⑥ 寺廟、教堂、宗祠</td></tr>
+      <tr><td>⑦ 專供飼養禽畜及農業生產用之房屋</td></tr>
+      <tr><td>⑧ 公益社團辦公用之房屋</td></tr>
+      <tr><td>⑨ 房屋稅稅額在<b>新臺幣100元以下</b>者<span class="examhit">106測</span></td></tr>
+    </table>
+  </div>
+  <div class="warn-box hi2">
+    💡 記憶重點：免徵幾乎都跟「<b>公用／慈善／公益</b>」有關；容易混淆的是「農會<b>儲存公糧</b>倉庫＝免徵」vs「農會<b>自用</b>倉庫或檢驗場＝減半」，兩者不要寫反。作答時視題目配分決定要列舉幾項，不一定要全部背滿。
+  </div>
+  <div class="warn-box hi" style="margin-top:10px;">
+    ⚠️ <b>申報期限（易忽略的手續題）</b><span class="law-tag sub-law">房稅§15 III</span><span class="examhit">104申論</span>：私有房屋符合減免規定者，應由納稅義務人於<b>每期房屋稅開徵40日以前（即每年3月22日以前）</b>向房屋所在地稽徵機關申報；<b>逾期申報者，自申報之次期開始適用</b>（不會溯及當期）。經核定後<b>減免原因未變更者，以後免再申報</b>。
+  </div>
+  <div class="example-box" style="margin-top:8px;">
+    <b>104年不動產經紀人考古題（大意）：</b>依房屋稅條例規定，房屋稅之徵收，係以附著於土地之各種房屋及有關增加該房屋使用價值之建築物為對象。試問私有房屋有哪些情形其房屋稅減半徵收？又依規定應申報減半徵收之查定手續為何？
+    <br>→ 減半情形見本節「減半徵收（5項）」清單；查定手續即上方「每年3/22前申報、逾期次期才適用、原因不變免再申報」這套規則。
+  </div>
+</section>
+
+<!-- 八、vs地價稅比較 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ⑧ 房屋稅 vs 地價稅——重要比較表</h2>
+  <table>
+    <tr><th style="width:20%">項目</th><th style="width:38%">地價稅</th><th>房屋稅</th></tr>
+    <tr><td>課徵標的</td><td>土地</td><td>附著於土地、有使用價值之建築物（<b>含違建</b>）</td></tr>
+    <tr><td>課徵期間</td><td>當年 <b>1/1～12/31</b></td><td><b>前一年 7/1～當年 6/30</b></td></tr>
+    <tr><td>開徵（繳納）月份</td><td>每年 <b>11 月</b></td><td>每年 <b>5 月</b></td></tr>
+    <tr><td>稅率結構</td><td>一般稅率<b>累進</b></td><td><b>單一稅率、不累進</b>（依用途別有差別稅率，但決定類別後就固定用到底）</td></tr>
+    <tr><td>課稅基準日</td><td>當年 <b>8 月 31 日</b>土地登記謄本所有權人</td><td>當年 <b>2 月末日</b>房屋所有權人；<b>新建／增建／改建</b>房屋<b>按月比例</b>計課，<b>未滿一個月不計</b></td></tr>
+    <tr><td>稅單數量</td><td>依縣市<b>合併計算</b>，一縣市一張（例：台北2筆＋台中2筆 → 2張）</td><td><b>一戶一張</b>（例：4棟房屋 → 4張），但稅率按<b>全國總戶數</b>計算級距</td></tr>
+    <tr><td>評定組織</td><td>地價評議委員會</td><td>不動產評價委員會</td></tr>
+    <tr><td>組織法源</td><td>平均地權條例</td><td>房屋稅條例</td></tr>
+    <tr><td>中央主管機關</td><td>內政部（地政系統）</td><td>財政部（財稅系統）</td></tr>
+    <tr><td>評定項目</td><td>公告地價（課地價稅）、公告現值（課增值稅參考）</td><td>房屋標準價格（單價×面積×調整率－折舊）</td></tr>
+    <tr><td>評定週期</td><td>公告地價<b>每2年</b>；公告現值<b>每年1/1</b></td><td>房屋現值<b>每3年</b></td></tr>
+  </table>
+</section>
+
+<!-- 九、歷屆考題參考 -->
+<section>
+  <h2 class="sec-title">⑨ 歷屆考題參考——112、113年連續以房屋稅整題申論命題</h2>
+  <div class="example-box">
+    <b>112年申論（大意）：</b>房屋標準價格評定的三大影響因素為何？實務上有哪些爭議（單價逾30年未調整、路段率評估浮濫等）？非自住房屋稅率如何規定？地方政府訂定徵收率時可能面臨哪些問題？
+  </div>
+  <div class="example-box" style="margin-top:8px;">
+    <b>113年申論（大意，囤房稅2.0上路後第一次入題）：</b>無人設籍之空屋，房屋稅應如何課徵？是否能適用自住優惠稅率？並跨結合<b>地價稅之空地稅</b>、<b>平均地權條例限期建築</b>規定，一併討論政府對於「有屋不住、有地不建」的稅制因應手段。
+  </div>
+  <div class="warn-box hi2">
+    💡 這兩題直接對應本篇④房屋標準價格評定（含爭議點）、⑤囤房稅2.0稅率表、自住認定要件；113年題型特別是「跨稅目整合」，房屋稅單一主題已經不夠，要同步串聯地價稅空地稅、土地法限期建築的概念一起準備。
+  </div>
+  <div class="info-box" style="margin-top:8px;">
+    <b>幾乎不單獨命題的部分：</b>房屋現值§10評定「流程」本身很少單獨成題，通常依附在④標準價格影響因素的申論題一起考；⑧房屋稅vs地價稅比較表這類跨稅目比較，選擇題極少單獨考，多半出現在申論題裡列多稅目一起比較；②違建課徵對象單獨命題也少見，多半併入③納稅義務人題組一起問。
+  </div>
+</section>
+
+<!-- 十、條文速查 -->
+<section>
+  <h2 class="sec-title">⑩ 條文速查</h2>
+  <table>
+    <tr><th style="width:30%">主題</th><th>條號</th></tr>
+    <tr><td>課徵對象</td><td>房屋稅條例 §3</td></tr>
+    <tr><td>納稅義務人</td><td>§4</td></tr>
+    <tr><td>稅基（房屋現值）</td><td>§10</td></tr>
+    <tr><td>房屋現值評定因素</td><td>§11</td></tr>
+    <tr><td>稅率（113年修法）</td><td>§5 I（住家用四級距）、§5 II（全國總戶數／持有時間差別稅率）</td></tr>
+    <tr><td>增加使用價值之建築物</td><td>§2</td></tr>
+    <tr><td>停止課徵</td><td>§8</td></tr>
+    <tr><td>減半徵收／私有免徵及申報期限</td><td>§15</td></tr>
+    <tr><td>公有房屋免徵</td><td>§14</td></tr>
+  </table>
+</section>
+
+</body>
+</html>

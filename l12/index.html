@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>土地法 L12｜土地增值稅</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink:#1e293b; --sub:#64748b; --line:#e2e8f0; --line-strong:#94a3b8;
+    --neutral:#334155; --neutral-bg:#f1f5f9;
+    --accent:#8B4438; --accent-bg:#F1E2DD;
+    --accent2:#9C7A34; --accent2-bg:#EFE6D0;
+  }
+  body {
+    font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+    width: 1400px;
+    margin: 0 auto;
+    background: #f4f5f7;
+    color: var(--ink);
+    padding: 22px 32px 36px;
+  }
+  h1.page-title {
+    font-size: 30px;
+    color: #fff;
+    background: var(--ink);
+    padding: 16px 24px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h1.page-title .sub { font-size: 15px; font-weight: normal; opacity: 0.9; }
+  .tip-banner {
+    background: var(--neutral-bg);
+    border: 2px solid var(--line-strong);
+    color: var(--neutral);
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 15px;
+    margin-bottom: 18px;
+    font-weight: bold;
+  }
+  section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  h2.sec-title {
+    font-size: 20px;
+    color: var(--ink);
+    border-left: 6px solid var(--ink);
+    padding-left: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2.sec-title .star { color: var(--accent); font-size: 15px; }
+  h3.sub-title { font-size: 15.5px; color: var(--ink); margin: 16px 0 8px; }
+  .law-tag {
+    display: inline-block;
+    background: var(--neutral-bg);
+    color: var(--neutral);
+    border: 1px solid var(--line-strong);
+    font-size: 13px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: bold;
+    margin: 2px 4px 2px 0;
+  }
+  .law-tag.sub-law { background: #f8fafc; color: var(--sub); border-color: var(--line); }
+  .law-tag.hi { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
+  .law-tag.hi2 { background: var(--accent2-bg); color: var(--accent2); border-color: var(--accent2); }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  .card { border-radius: 12px; padding: 14px 16px; border: 2px solid var(--line-strong); background: #fff; }
+  .card-title { font-size: 17px; font-weight: bold; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; color: var(--ink); }
+  .card p { font-size: 14.5px; line-height: 1.75; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-top: 4px; }
+  table th { background: var(--ink); color: #fff; padding: 8px 10px; text-align: left; }
+  table td { padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  table tr:nth-child(even) td { background: #f9fafb; }
+  .warn-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); color: var(--neutral);
+    border-radius: 10px; padding: 10px 16px; font-size: 14.5px; margin-top: 10px; font-weight: bold;
+  }
+  .warn-box.hi { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+  .warn-box.hi2 { background: var(--accent2-bg); border-color: var(--accent2); color: var(--accent2); }
+  .info-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); color: var(--neutral);
+    border-radius: 10px; padding: 10px 16px; font-size: 14px; margin-top: 10px;
+  }
+  .flow-h { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+  .flow-h-box { background: var(--neutral-bg); border: 1px solid var(--line-strong); border-radius: 10px; padding: 10px 16px; font-size: 14.5px; text-align: center; font-weight: bold; color: var(--ink); }
+  .flow-h-sub { display: block; font-size: 12px; font-weight: normal; color: var(--sub); margin-top: 2px; }
+  .flow-h-arrow { font-size: 13px; color: var(--sub); white-space: nowrap; }
+  .flow-h-branch { display: flex; flex-direction: column; gap: 4px; background: var(--accent-bg); border: 1px solid var(--accent); border-radius: 10px; padding: 8px 14px; font-size: 14px; color: var(--accent); font-weight: bold; }
+  .examhit {
+    display: inline-block; margin-left: 6px; font-size: 11.5px; font-weight: 800; color: var(--accent);
+    background: var(--accent-bg); border: 1px solid var(--accent); border-radius: 10px; padding: 1px 9px;
+    vertical-align: middle;
+  }
+  .card table { margin-top: 0; }
+  .card table td { font-size: 14px; padding: 7px 8px; }
+  .card table td:last-child { width: 34%; color: var(--sub); font-size: 13px; }
+  .formula-box {
+    background: var(--accent2-bg); border: 2px solid var(--accent2); color: var(--accent2);
+    border-radius: 10px; padding: 12px 20px; font-size: 17px; text-align: center; font-weight: bold; margin: 10px 0;
+  }
+  .example-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); border-radius: 10px;
+    padding: 12px 18px; font-size: 14.5px; line-height: 1.7; color: var(--neutral);
+  }
+  .example-box b.hl { color: var(--accent); }
+  .step-tag {
+    display: inline-block; background: var(--ink); color: #fff; font-size: 12.5px; font-weight: bold;
+    padding: 2px 10px; border-radius: 6px; margin-bottom: 6px;
+  }
+  .sub-block { margin-top: 4px; }
+  .sub-block + .sub-block { margin-top: 12px; padding-top: 12px; border-top: 2px dashed var(--line); }
+  .sub-tag {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: bold; color: #fff;
+    background: var(--neutral); padding: 3px 11px; border-radius: 999px; margin-bottom: 8px;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">
+  土地法 L12｜土地增值稅
+  <span class="sub">移轉稅・依逐字稿＋上課講義核對</span>
+</h1>
+
+<div class="tip-banner">📌 讀書建議：這堂資訊量最大，先抓穩「稅基＝漲價總數額」「稅率20/30/40％累進」「自用10％」三根柱子，再練 Byon 例題把整套算法串起來</div>
+
+<!-- 一、意義 -->
+<section>
+  <h2 class="sec-title">① 意義——移轉稅・漲價歸公</h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">土地增值稅是<b>移轉成本</b>的概念：土地有移轉才要繳；沒有移轉，只是平常持有，繳的是地價稅（見 L11）。</p>
+  <div class="info-box">
+    立法精神：<b>地力共享</b>——土地增值不是所有權人努力造成的，而是<b>整體社會、經濟發展</b>造成，這種「不勞而獲」的增值利益應回歸全民共享，也就是「<b>漲價歸公，地力共享</b>」。
+  </div>
+</section>
+
+<!-- 二、納稅義務人 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ② 納稅義務人 <span class="law-tag">土地稅法 §5</span><span class="law-tag">§5-2</span></h2>
+  <table>
+    <tr><th style="width:24%">情況</th><th style="width:38%">說明</th><th>納稅義務人</th></tr>
+    <tr><td>有償移轉</td><td>買賣、交換、照價收買等</td><td><b>原所有權人</b>（賣方，得到利益的人）</td></tr>
+    <tr><td>無償移轉</td><td>贈與、遺贈（以遺囑贈與土地給第三人）</td><td><b>取得人</b>（得到好處的人）</td></tr>
+    <tr><td>設定典權</td><td>回贖時<b>無息返還</b>已繳稅款——目的是預防用設典方式規避移轉課稅</td><td><b>出典人</b>（預繳性質）</td></tr>
+    <tr><td>信託期間有償移轉</td><td>受託人是名義上所有權人（同地價稅邏輯）</td><td><b>受託人</b></td></tr>
+    <tr><td>依信託本旨交付土地</td><td>屬無償移轉，受益人是取得好處的人</td><td><b>受益人</b>（權利歸屬人）</td></tr>
+  </table>
+  <div class="info-box">
+    ⚠️ <b>代繳</b>：納稅義務人未如期繳納時，可由取得所有權人代為繳納，代繳人仍非真正納稅義務人。另外，若依<span class="law-tag sub-law">土地稅法 §49-1 後段</span>或<span class="law-tag sub-law">土地登記規則 §27</span> 由權利人<b>單獨申報移轉現值</b>，則由該權利人代為繳納。
+  </div>
+</section>
+
+<!-- 三、稅基 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ③ 稅基——土地漲價總數額 <span class="law-tag">土地稅法 §28</span></h2>
+  <div class="formula-box">土地漲價總數額 ＝ 本次移轉現值 － (前次移轉現值 × 物價指數) － 土地改良費用</div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">物價指數是什麼</div>
+      <p>前次移轉現值要<b>先乘以物價指數</b>再相減，因為「10 年前的 100 萬」跟「現在的 100 萬」價值不能直接比較。<br>例：10 年前 100 萬取得，物價漲了 50%（指數 150）→ 換算成現在價值＝100 萬 × 150% ＝150 萬，再跟本次移轉現值相減。</p>
+    </div>
+    <div class="card">
+      <div class="card-title">可扣除的土地改良費用</div>
+      <p>工程受益費、土地重劃費用、改良土地費用、無償捐贈一定比率作公共設施——這些是<b>人為因素</b>造成的增值，不屬於「不勞而獲」，可扣除。若沒有繳過這些費用，就直接以「本次現值－前次現值（換算後）」為稅基。</p>
+    </div>
+  </div>
+  <div class="warn-box hi2">
+    ⚠️ <b>免徵</b>（非不課徵）：<b>因繼承而移轉</b>的土地、各級政府出售或依法贈與的公有土地、受贈的私有土地——依§28 但書，這些均<b>免徵</b>土地增值稅（詳細分類見⑨）。
+  </div>
+</section>
+
+<!-- 四、一般稅率 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ④ 一般稅率（累進）<span class="law-tag">土地稅法 §33 I</span></h2>
+  <table>
+    <tr><th style="width:46%">漲價總數額 ÷（原地價或前次移轉現值）</th><th>稅率</th></tr>
+    <tr><td>未超過 100%（1 倍）</td><td><b>20%</b></td></tr>
+    <tr><td>超過 100%，未達 200%</td><td><b>30%</b></td></tr>
+    <tr><td>超過 200%（2 倍以上）</td><td><b>40%</b></td></tr>
+  </table>
+  <div class="info-box">記憶口訣：稅率 <b>20、30、40</b>。與地價稅相同，這是累進稅率——低的部分用低稅率，超過的部分才用高稅率，跟停車費階梯計費同一個道理（見 L11）。</div>
+</section>
+
+<!-- 五、長期持有減徵 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑤ 長期持有減徵 <span class="law-tag">土地稅法 §33 VI～VIII</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">規則：對「<b>超過最低稅率（20%）的部分</b>」打折，不是整筆稅率都打折。</p>
+  <table>
+    <tr><th style="width:22%">持有年限</th><th>折扣</th><th>20% 級距</th><th>30% 級距（超過部分 10% 打折）</th><th>40% 級距（超過部分 20% 打折）</th></tr>
+    <tr><td>20 年以上</td><td>打 8 折（減徵 20%）</td><td>20%</td><td>20%+10%×0.8＝<b>28%</b></td><td>20%+20%×0.8＝<b>36%</b></td></tr>
+    <tr><td>30 年以上</td><td>打 7 折（減徵 30%）</td><td>20%</td><td>20%+10%×0.7＝<b>27%</b></td><td>20%+20%×0.7＝<b>34%</b></td></tr>
+    <tr><td>40 年以上</td><td>打 6 折（減徵 40%）</td><td>20%</td><td>20%+10%×0.6＝<b>26%</b></td><td>20%+20%×0.6＝<b>32%</b></td></tr>
+  </table>
+  <div class="warn-box hi">⚠️ 最容易算錯的地方：<b>不是整個稅率打折</b>，只有「超過 20% 基本稅率」的那一段才打折，最低的 20% 永遠不變。</div>
+</section>
+
+<!-- 六、特別稅率10%：一生一次／一生一屋 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑥ 特別稅率 10%——自用住宅「一生一次」與「一生一屋」<span class="law-tag">土地稅法 §34 I～IV</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">土地增值稅的特別稅率只有一種：<b>10%</b>，僅適用自用住宅。先符合 <span class="law-tag sub-law">§9</span> 廣義定義（設籍＋無出租無營業，見 L11）。「一生一次」終身<b>只能用一次</b>，用掉就沒了；「一生一屋」<b>不限次數</b>，重點不是次數而是「<b>同一時間名下只能有這一戶自用住宅</b>」——只要每次出售當下都符合右欄要件（尤其持有並設籍滿 6 年），可以反覆使用：</p>
+  <table>
+    <tr><th style="width:16%">項目</th><th>一生一次（先）</th><th>一生一屋（後）</th></tr>
+    <tr><td>基本規定</td><td>地上建物須本人、配偶或<b>直系親屬</b>所有，且辦竣戶籍登記</td><td>地上建物須本人、配偶或<b>未成年子女</b>所有，且辦竣戶籍登記（範圍比一生一次窄，不含其他直系親屬）</td></tr>
+    <tr><td>設籍限制</td><td>出售前有設籍即可</td><td><b>連續設籍滿 6 年</b></td></tr>
+    <tr><td>使用限制</td><td>出售前<b>1 年</b>內無出租營業</td><td>出售前<b>5 年</b>內無出租營業</td></tr>
+    <tr><td>面積限制</td><td>都市 <b>3 公畝</b>／非都市 <b>7 公畝</b></td><td>減半：都市 <b>1.5 公畝</b>／非都市 <b>3.5 公畝</b></td></tr>
+    <tr><td>其他限制</td><td>建物評定現值需達所占基地公告現值 <b>10%</b> 以上；<b>建築完成滿一年</b>者不在此限——防止為避稅隨意搭建簡陋房屋充當自用住宅。<b>次數</b>限制不是<b>處數</b>限制，同一次可同時移轉兩筆土地皆適用</td><td>❌ 無建物 10% 價值規定（本就要求持有滿 6 年，不會有一年內完工的問題）；出售前須<b>持有滿 6 年</b>以上；所有權人與配偶、未成年子女<b>不得有該屋以外房屋</b>；<b>不限次數</b>，只要每次都符合本欄要件即可反覆適用，不是只能再用一次</td></tr>
+  </table>
+</section>
+
+<!-- 八、例題 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ⑦ 計算例題——Byon 案例完整拆解</h2>
+  <div class="example-box" style="margin-bottom:12px;">
+    <b>題目：</b>Byon 於 109 年出售都市土地 5 公畝，申報現值共 1,000 萬。25 年前取得，取得現值 100 萬，期間物價上漲 200%（指數 2.0）。已申請「一生一次」自用住宅稅率，問應繳土地增值稅多少？
+  </div>
+
+  <div class="sub-block">
+    <span class="step-tag">STEP 1｜面積拆分（自用 3 公畝 ＋ 一般 2 公畝）</span>
+    <p style="font-size:14.5px;">出售 5 公畝，自用住宅面積限制都市土地 3 公畝 → <b>3 公畝適用 10% 自用稅率，剩下 2 公畝適用一般累進稅率</b>（25 年持有，超過 20 年，套用上表 20%/28%/36% 減徵稅率）。</p>
+  </div>
+
+  <div class="sub-block">
+    <span class="step-tag">STEP 2｜自用部分（3 公畝，占比 3/5）</span>
+    <table>
+      <tr><td style="width:38%">本次移轉現值</td><td>1,000萬 × 3/5 ＝ <b>600 萬</b></td></tr>
+      <tr><td>前次移轉現值（含物價換算）</td><td>100萬 × 200% × 3/5 ＝ <b>120 萬</b></td></tr>
+      <tr><td>漲價總數額</td><td>600 － 120 ＝ <b>480 萬</b></td></tr>
+      <tr><td>稅額（10%）</td><td>480 × 10% ＝ <b class="hl">48 萬</b></td></tr>
+    </table>
+  </div>
+
+  <div class="sub-block">
+    <span class="step-tag">STEP 3｜一般部分（2 公畝，占比 2/5）——分級累進</span>
+    <table>
+      <tr><td style="width:38%">本次移轉現值</td><td>1,000萬 × 2/5 ＝ 400 萬</td></tr>
+      <tr><td>前次移轉現值（含物價換算，＝「前一」）</td><td>100萬 × 200% × 2/5 ＝ 80 萬</td></tr>
+      <tr><td>漲價總數額</td><td>400 － 80 ＝ 320 萬</td></tr>
+    </table>
+    <table style="margin-top:8px;">
+      <tr><th style="width:34%">級距</th><th style="width:20%">金額</th><th>稅額</th></tr>
+      <tr><td>第一階（未超過前一 100%，即 0～80 萬）</td><td>80 萬</td><td>80 × 20% ＝ 16 萬</td></tr>
+      <tr><td>第二階（超過 100%～200%，即 80～160 萬）</td><td>80 萬</td><td>80 × 28% ＝ 22.4 萬</td></tr>
+      <tr><td>第三階（超過 200%，即 320－160＝160 萬）</td><td>160 萬</td><td>160 × 36% ＝ 57.6 萬</td></tr>
+    </table>
+    <div class="formula-box" style="margin-top:8px;">一般部分總稅額 ＝ 16 ＋ 22.4 ＋ 57.6 ＝ <b>96 萬</b></div>
+  </div>
+
+  <div class="sub-block">
+    <span class="step-tag">STEP 4｜合計</span>
+    <div class="formula-box">應繳土地增值稅 ＝ 48 萬（自用）＋ 96 萬（一般）＝ <b>144 萬</b></div>
+  </div>
+  <div class="warn-box hi">⚠️ 作答時務必仔細檢核題目是否符合各項要件（面積限制、持有年限），漏掉任一步驟答案就會錯。</div>
+</section>
+
+<!-- 九、申報期間 -->
+<section>
+  <h2 class="sec-title">⑧ 申報期間與繳稅流程</h2>
+  <div class="flow-h">
+    <div class="flow-h-box">契約日<span class="flow-h-sub">（公定契約日期，起算日）</span></div>
+    <div class="flow-h-arrow">30 日內 →</div>
+    <div class="flow-h-box">地方稅務局<span class="flow-h-sub">（不動產所在地）</span></div>
+    <div class="flow-h-arrow">→</div>
+    <div class="flow-h-branch"><div>一般稅率：<b>7 天</b></div><div>自用住宅稅率：<b>20 天</b>（需審核要件）</div></div>
+    <div class="flow-h-arrow">→</div>
+    <div class="flow-h-box">核發稅單</div>
+    <div class="flow-h-arrow">30 日內繳費 →</div>
+    <div class="flow-h-box">土地移轉登記</div>
+  </div>
+  <div class="info-box">
+    免申報情形：<b>被徵收</b>或<b>法拍</b>皆免申報，改由徵收機關／法院於出售後 <b>15 天內</b>通知稅捐稽徵機關計算土增稅額，直接代為扣繳<span class="law-tag sub-law">§52</span>。
+  </div>
+</section>
+
+<!-- 十、免徵vs不課徵 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ⑨ 免徵 vs 不課徵——最愛考的比較</h2>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">免徵（本次移轉不需繳）</div>
+      <table>
+        <tr><td>政府機關出售公有地／受贈私有地</td><td>§28</td></tr>
+        <tr><td>繼承取得之土地（已繳遺產稅）</td><td>同 §28</td></tr>
+        <tr><td>捐贈財團法人社福或學校</td><td>§28-1——須為財團法人、不得從中獲利、解散後財產歸地方政府；違反處<b>2 倍</b>罰鍰</td></tr>
+        <tr><td>被徵收土地</td><td>§39——一般徵收全免；區段徵收抵價地、市地重劃後土地<b>第一次</b>出售皆減徵 40%</td></tr>
+        <tr><td>公共設施保留地（都市計畫指定），被徵收前移轉<span class="examhit">113・114測</span></td><td>§39 II——釋字779號：僅限<b>都市</b>土地，非都市土地即使已編定公共設施用途仍<b>不能</b>免稅</td></tr>
+        <tr><td>協議價購土地</td><td>—</td></tr>
+        <tr><td>土地分割或合併（價值未變動）</td><td>—</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <div class="card-title">不課徵（本次暫時不課，遞延）</div>
+      <table>
+        <tr><td>夫妻間贈與</td><td>§28-2</td></tr>
+        <tr><td>農地移轉且自然人繼續農用</td><td>§39-2——稅捐機關核准後 1 個月內通知農業主管機關列管</td></tr>
+        <tr><td>公司合併</td><td>金融機構合併法 §13</td></tr>
+        <tr><td>信託財產移轉</td><td>§28-3——信託成立、受託人變更、自益信託消滅、遺囑信託消滅、信託不成立/無效/解除/撤銷，共 5 款</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="warn-box hi">
+    ⚠️ 關鍵差異——<b>免徵</b>：土地移轉後<b>原地價重新核計</b>（例：10 元取得、20 元賣出免徵，下次從 20 元起算）。<b>不課徵</b>：土地移轉後<b>原地價不變</b>，本質是「租稅遞延」（例：10 元移轉不課徵，下次課稅仍從最初的 10 元開始算）。
+  </div>
+  <div class="info-box">
+    💡 考點提醒：這裡幾乎年年考，但<b>很少直接死記列舉</b>，多半是給一個移轉情境，讓你判斷屬於免徵／不課徵／應課稅，關鍵就是上面那條「原地價是否重新核計」。
+  </div>
+</section>
+
+<!-- 十一、移轉現值認定 -->
+<section>
+  <h2 class="sec-title">⑩ 移轉現值的認定 <span class="law-tag">土地稅法 §31</span><span class="law-tag">§30、30-1</span><span class="law-tag sub-law">平§47-2</span></h2>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">前次移轉現值</div>
+      <table>
+        <tr><td>未曾移轉過</td><td>原規定地價</td></tr>
+        <tr><td>曾經移轉過</td><td>前次取得時之公告現值</td></tr>
+        <tr><td>因繼承取得</td><td>被繼承人死亡時之公告現值（遺產中如有抵價地，其公告現值高於死亡日公告現值者，<b>從高認定</b>）</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <div class="card-title">本次移轉現值（申報現值）</div>
+      <table>
+        <tr><td>如期申報<span class="flow-h-sub">（30 日內）</span></td><td><b>訂約當日</b>公告現值</td></tr>
+        <tr><td>逾期申報</td><td><b>收件當日</b>公告現值</td></tr>
+        <tr><td>遺贈</td><td><b>死亡日</b>當期公告現值（遺贈給繼承人以外第三人仍須繳增值稅）</td></tr>
+        <tr><td>法院判決</td><td><b>起訴日</b></td></tr>
+        <tr><td>法院拍賣</td><td><b>拍定日</b></td></tr>
+        <tr><td>照價收買／協議價購</td><td><b>收買日／購買日</b></td></tr>
+        <tr><td>政府出售公有土地</td><td><b>實際售價</b></td></tr>
+        <tr><td>政府贈與或受贈公有土地</td><td><b>贈與契約訂約日</b>公告現值</td></tr>
+        <tr><td>取得抵價地</td><td><b>實際領回抵價地地價</b></td></tr>
+        <tr><td>贈與社會福利事業</td><td><b>贈與日</b>公告現值</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="warn-box hi">
+    ⚠️ 最容易考混的一組——<b>如期申報</b>（30 日內）算<b>訂約當日</b>公告現值；<b>逾期申報</b>改算<b>收件當日</b>公告現值。逾期申報等於把認定基準點往後拖到「稅務局收到的那天」，公告現值通常逐年調升，逾期對納稅人反而更不利。
+  </div>
+</section>
+
+<!-- 十二、重購退稅 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑪ 重購退稅 <span class="law-tag">土地稅法 §35</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">土地所有權人出售土地（含先買後賣）後<b>兩年內</b>重購自用土地，且新購土地價額高於「原出售土地價額扣除已納增值稅後之餘額」，可申請退回已繳增值稅。七大限制缺一不可：</p>
+  <table>
+    <tr><th style="width:20%">限制</th><th>內容</th></tr>
+    <tr><td>性質限制</td><td>限自用住宅、自營工廠、自耕農地</td></tr>
+    <tr><td>時間限制</td><td>兩年內（不論先買後賣或先賣後買）</td></tr>
+    <tr><td>使用限制</td><td>前一年內無出租或營業</td></tr>
+    <tr><td>移轉限制</td><td>重購後 5 年內不得改用途或移轉，否則追繳稅款</td></tr>
+    <tr><td>登記限制</td><td>所有權人須為同一人</td></tr>
+    <tr><td>面積限制</td><td>都市 3 公畝／非都市 7 公畝</td></tr>
+    <tr><td>價格限制</td><td>新購價格 &gt; （出售價格－增值稅）</td></tr>
+  </table>
+</section>
+
+<!-- 十三、補充 -->
+<section>
+  <h2 class="sec-title">⑫ 補充規定</h2>
+  <table>
+    <tr><th style="width:26%">項目</th><th>內容</th></tr>
+    <tr><td>地價稅抵繳 <span class="law-tag sub-law">§31 III</span></td><td>持有期間因地價上漲而多繳的地價稅，出售時可抵繳增值稅；抵繳總額不得超過應納增值稅總額的 <b>5%</b>（整體上限，查證土地稅法全文未見逐年比例限制，之前「每年1%」的說法沒有條文依據，已更正）</td></tr>
+    <tr><td>稅率檢討</td><td>公告現值調整達市價 <b>90%</b> 以上時，稅率應重新檢討<span class="law-tag sub-law">§33</span></td></tr>
+    <tr><td>同時出售兩筆地</td><td>可同時申請適用自用稅率（限制是計「次」而非計「處」），適用都3非都7；<b>有擇定</b>從其擇定，<b>未擇定</b>則土增稅高者優先適用；<b>不同日</b>出售則只能擇一</td></tr>
+    <tr><td>農地變更不課徵</td><td>農地依法變更為非農地，但細部計畫尚未發布或未實施開發，符合條件仍可申請<b>不課徵土增稅</b>，同時<b>免徵遺產稅、贈與稅、田賦</b><span class="law-tag sub-law">農發條例 §38-1</span></td></tr>
+    <tr><td>其他稅未繳不可過戶</td><td><b>遺產稅、贈與稅、地價稅、土地增值稅、房屋稅、契稅</b>任一項未繳清，皆不可辦理移轉過戶登記</td></tr>
+  </table>
+</section>
+
+<!-- 十四、條文速查 -->
+<section>
+  <h2 class="sec-title">⑬ 條文速查</h2>
+  <table>
+    <tr><th style="width:30%">主題</th><th>條號</th></tr>
+    <tr><td>納稅義務人</td><td>土地稅法 §5、§5-2</td></tr>
+    <tr><td>稅基（漲價總數額）／繼承等免徵</td><td>§28</td></tr>
+    <tr><td>一般稅率／長期持有減徵</td><td>§33 I／§33 VI～VIII</td></tr>
+    <tr><td>自用住宅特別稅率10%</td><td>§34 I～IV（廣義定義見 §9）</td></tr>
+    <tr><td>免徵：捐贈財團法人／被徵收土地／公共設施保留地</td><td>§28-1／§39／§39 II（釋字779號限縮都市土地）</td></tr>
+    <tr><td>不課徵：夫妻贈與／農地繼續農用／信託</td><td>§28-2／§39-2／§28-3</td></tr>
+    <tr><td>不課徵：公司合併</td><td>金融機構合併法 §13</td></tr>
+    <tr><td>重購退稅</td><td>§35</td></tr>
+    <tr><td>移轉現值認定</td><td>§31（前次）／§30、30-1（本次）／平§47-2</td></tr>
+    <tr><td>地價稅抵繳增值稅（上限5%）</td><td>§31 III</td></tr>
+    <tr><td>被徵收／法拍免申報代扣</td><td>§52</td></tr>
+    <tr><td>權利人單獨申報</td><td>§49-1 後段／土地登記規則 §27</td></tr>
+    <tr><td>農地變更不課徵（另免遺贈稅田賦）</td><td>農發條例 §38-1</td></tr>
+  </table>
+</section>
+
+</body>
+</html>

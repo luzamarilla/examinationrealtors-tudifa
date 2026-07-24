@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>土地法 L2｜地權</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink:#1e293b; --sub:#64748b; --line:#e2e8f0; --line-strong:#94a3b8;
+    --neutral:#334155; --neutral-bg:#f1f5f9;
+    --accent:#8B4438; --accent-bg:#F1E2DD;
+    --accent2:#9C7A34; --accent2-bg:#EFE6D0;
+  }
+  body {
+    font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+    width: 1400px;
+    margin: 0 auto;
+    background: #f4f5f7;
+    color: var(--ink);
+    padding: 22px 32px 36px;
+  }
+  h1.page-title {
+    font-size: 30px;
+    color: #fff;
+    background: var(--ink);
+    padding: 16px 24px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h1.page-title .sub { font-size: 15px; font-weight: normal; opacity: 0.9; }
+  .tip-banner {
+    background: var(--neutral-bg);
+    border: 2px solid var(--line-strong);
+    color: var(--neutral);
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 15px;
+    margin-bottom: 18px;
+    font-weight: bold;
+  }
+  section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  h2.sec-title {
+    font-size: 20px;
+    color: var(--ink);
+    border-left: 6px solid var(--ink);
+    padding-left: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2.sec-title .star { color: var(--accent); font-size: 15px; }
+  h3.sub-title { font-size: 15.5px; color: var(--ink); margin: 16px 0 8px; }
+  .law-tag {
+    display: inline-block;
+    background: var(--neutral-bg);
+    color: var(--neutral);
+    border: 1px solid var(--line-strong);
+    font-size: 13px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: bold;
+    margin: 2px 4px 2px 0;
+  }
+  .law-tag.sub-law { background: #f8fafc; color: var(--sub); border-color: var(--line); }
+  .law-tag.hi { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
+  .law-tag.hi2 { background: var(--accent2-bg); color: var(--accent2); border-color: var(--accent2); }
+  .examhit {
+    display: inline-block; margin-left: 6px; font-size: 11.5px; font-weight: 800; color: var(--accent);
+    background: var(--accent-bg); border: 1px solid var(--accent); border-radius: 10px; padding: 1px 9px;
+    vertical-align: middle;
+  }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+  .card { border-radius: 12px; padding: 14px 16px; border: 2px solid var(--line-strong); background: #fff; }
+  .card-title { font-size: 17px; font-weight: bold; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; color: var(--ink); }
+  .card p { font-size: 14.5px; line-height: 1.75; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-top: 4px; }
+  table th { background: var(--ink); color: #fff; padding: 8px 10px; text-align: left; }
+  table td { padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  table tr:nth-child(even) td { background: #f9fafb; }
+  .warn-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); color: var(--neutral);
+    border-radius: 10px; padding: 10px 16px; font-size: 14.5px; margin-top: 10px; font-weight: bold;
+  }
+  .warn-box.hi { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+  .warn-box.hi2 { background: var(--accent2-bg); border-color: var(--accent2); color: var(--accent2); }
+  .info-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); color: var(--neutral);
+    border-radius: 10px; padding: 10px 16px; font-size: 14px; margin-top: 10px;
+  }
+  .example-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); border-radius: 10px;
+    padding: 12px 18px; font-size: 14.5px; line-height: 1.7; color: var(--neutral);
+  }
+  .flow { display: flex; flex-direction: column; gap: 3px; }
+  .flow-step { display: flex; align-items: center; gap: 14px; }
+  .flow-num {
+    flex-shrink: 0; width: 28px; height: 28px; background: var(--ink); color: #fff; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13.5px;
+  }
+  .flow-box { flex: 1; background: var(--neutral-bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 14px; font-size: 14.5px; }
+  .flow-arrow { text-align: center; color: var(--sub); font-size: 15px; margin-left: 13px; }
+  .sub-block { margin-top: 4px; }
+  .sub-block + .sub-block { margin-top: 12px; padding-top: 12px; border-top: 2px dashed var(--line); }
+  .sub-tag {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: bold; color: #fff;
+    background: var(--neutral); padding: 3px 11px; border-radius: 999px; margin-bottom: 8px;
+  }
+  .ladder { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+  .ladder-step {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); border-radius: 10px;
+    padding: 10px 16px; font-size: 14.5px; display: flex; align-items: center; gap: 10px;
+  }
+  .ladder-rank {
+    flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--ink); color: #fff;
+    display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;
+  }
+  .ladder-arrow { text-align: center; color: var(--accent); font-weight: bold; font-size: 16px; }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">
+  土地法 L2｜地權
+  <span class="sub">土地權利得喪限制・優先購買權・逐字稿＋上課講義＋考古題三方核對（2026-07-23）</span>
+</h1>
+
+<div class="tip-banner">📌 讀書建議：這堂是全科最高頻考點之一，重點是「共有土地處分§34-1」跟「優先購買權效力排序」，務必先弄懂物權效力vs債權效力這條分類線，其他子題再依序補強</div>
+
+<!-- 一、土地總論 -->
+<section>
+  <h2 class="sec-title">① 土地總論</h2>
+  <h3 class="sub-title">土地定義</h3>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">廣義 <span class="law-tag sub-law">土§1</span></div>
+      <p>「本法所稱土地，謂水陸及天然富源」</p>
+    </div>
+    <div class="card">
+      <div class="card-title">狹義 <span class="law-tag sub-law">民§66</span></div>
+      <p>「稱不動產者，謂土地及其定著物」；不動產之出產物，尚未分離者，為該不動產之部分（例：土地上未摘採的蘋果＝不動產一部分）</p>
+    </div>
+  </div>
+  <div class="warn-box hi">⚠️ 易混淆：<b>土地改良物≠土地本身</b><span class="law-tag sub-law">土§5</span>，分為①建築改良物②農作改良物——之後土地徵收條例的補償規定會再用到這個分類，先記下來。</div>
+
+  <h3 class="sub-title">土地分類——三種分類角度</h3>
+  <table>
+    <tr><th style="width:22%">分類角度</th><th style="width:38%">內容</th><th>法條</th></tr>
+    <tr><td>依<b>使用性質</b></td><td>建築用地／直接生產用地／交通水利用地／其他用地（四類）</td><td><span class="law-tag sub-law">土§2</span>；第三、四類<b>免予編號登記</b><span class="law-tag sub-law">土§41</span></td></tr>
+    <tr><td>依<b>權利歸屬</b></td><td>公有（國有／直轄市有／縣市有／鄉鎮市有）vs 私有（經人民依法取得所有權者；私有土地所有權消滅者為國有）</td><td><span class="law-tag sub-law">土§4</span>／<span class="law-tag sub-law">土§10</span></td></tr>
+    <tr><td>依<b>管制方式</b></td><td>都市土地（都市計畫範圍內）vs 非都市土地</td><td><span class="law-tag sub-law">平§3</span></td></tr>
+  </table>
+  <div class="info-box">💡 拋棄所有權後歸屬<b>國有</b>，不是變成「無主」；實務判讀技巧：土地標示部使用分區欄位<b>空白＝都市土地</b>，<b>有文字（如一般農業區農牧用地）＝非都市土地</b>。</div>
+
+  <h3 class="sub-title">不動產權利分類</h3>
+  <p style="font-size:14.5px;">所有權／他項權利——民法物權編：地上權、農育權、不動產役權、抵押權＋<b>土地法獨創的耕作權</b>。</p>
+</section>
+
+<!-- 二、不動產權利取得與喪失 -->
+<section>
+  <h2 class="sec-title">② 不動產權利取得與喪失</h2>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">取得原因</div>
+      <p>時效取得<span class="law-tag sub-law">民§769、770</span>／回復<span class="law-tag sub-law">土§12 II</span>／重劃分配<span class="law-tag sub-law">土§136・平§62</span>／領回抵價地<span class="law-tag sub-law">平§54・徵§39</span>／增加（浮覆地）<span class="law-tag sub-law">土§13</span>／承墾荒地<span class="law-tag sub-law">土§133</span></p>
+    </div>
+    <div class="card">
+      <div class="card-title">喪失原因</div>
+      <p>拋棄<span class="law-tag sub-law">民§764</span>／無人繼承<span class="law-tag sub-law">民§1185</span>／天然變遷／私地徵收／無主土地公告30日登記國有<span class="law-tag sub-law">土§57</span>／照價收買（強制）<span class="law-tag sub-law">平§89 II</span>／面積測量增減<span class="law-tag sub-law">土§63</span></p>
+    </div>
+  </div>
+  <div class="warn-box hi">
+    ⚠️ <b>原始取得 vs 繼受取得</b>（逐字稿明講「非常重要的考點」）：<b>原始取得</b>＝非基於既有權利，重新創設新所有權（如徵收、時效取得、區段徵收領回抵價地）；<b>繼受取得</b>＝承受前手權利（如買賣連同原有抵押權負擔）。
+  </div>
+
+  <h3 class="sub-title">未辦繼承之處理流程 <span class="law-tag">土§73-1</span></h3>
+  <div class="flow">
+    <div class="flow-step"><div class="flow-num">1</div><div class="flow-box">繼承開始之日起<b>逾1年</b>未辦繼承登記</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">2</div><div class="flow-box">地政機關公告<b>3個月</b>＋書面通知</div></div>
+    <div class="flow-arrow">↓ 逾3個月仍未登記</div>
+    <div class="flow-step"><div class="flow-num">3</div><div class="flow-box">列冊管理<b>15年</b></div></div>
+    <div class="flow-arrow">↓ 逾15年</div>
+    <div class="flow-step"><div class="flow-num">4</div><div class="flow-box">書面通知＋移請<b>國產署</b>標售</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">5</div><div class="flow-box">國產署先公告<b>3個月</b>→優先購買權人<b>30日內</b>可主張→標售</div></div>
+  </div>
+  <div class="info-box">
+    標售成功：價金歸國庫專戶，<b>10年內</b>繼承人可領取。標售不成：每次降價20%，最多標<b>5次</b>；5次不成則登記國有，繼承人仍可依第5次底價領價金。
+  </div>
+  <div class="warn-box hi2">
+    💡 優先購買權人：繼承人、使用人、共有人，但條文限定「<b>就其使用範圍</b>」才有優先購買權——逐字稿特別強調「有沒有實際使用是非常關鍵的要件」。
+  </div>
+  <div class="warn-box hi">
+    ⚠️ <b>法條號更正</b>：逐字稿口述「因繼承...應經登記始得處分」時說是民法<b>758條</b>，但講義印刷版與查證後確認正確是民法<b>§759</b>（因繼承、強制執行、徵收、法院之判決或其他非因法律行為，於登記前已取得不動產物權者，應經登記，始得處分其物權）——逐字稿是老師口誤，筆記以759條為準。<b>土地法§73-1是111年6月修正的重大修法重點</b>，務必留意。
+  </div>
+</section>
+
+<!-- 三、不動產權利限制 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ③ 不動產權利限制</h2>
+
+  <div class="sub-block">
+    <span class="sub-tag">①禁止私有（任何人）<span class="law-tag" style="background:transparent;border-color:#fff;color:#fff;">§14、§15</span></span>
+    <p style="font-size:14.5px;">十款不得私有土地<span class="law-tag sub-law">土§14</span>：海岸／天然湖澤／可通運水道／城鎮水道湖澤／公共交通道路／礦泉地／瀑布地／公共水源地／名勝古蹟／其他。附著於土地之礦<b>不因</b>土地所有權取得而私有<span class="law-tag sub-law">土§15</span>（例：買礦山≠擁有礦）。立法目的：貫徹依法治國原則＋符合比例原則。</p>
+  </div>
+
+  <div class="sub-block">
+    <span class="sub-tag">②禁止私有（外國人）<span class="examhit">109・110・111・112・114測</span></span>
+    <table>
+      <tr><th style="width:16%">條號</th><th style="width:20%">性質</th><th>內容</th></tr>
+      <tr><td>§17</td><td>絕對限制</td><td>林地、漁地、狩獵地、鹽地、礦地、水源地、要塞軍備地不得移轉、設定負擔或租賃於外國人，<b>但可繼承取得</b>，須於登記後3年內出售給本國人，逾期準用§73-1程序標售</td></tr>
+      <tr><td>§18</td><td>相對限制</td><td><b>平等互惠原則</b>——需該外國以同等條件對待我國人民</td></tr>
+      <tr><td>§19</td><td>相對限制</td><td><b>取得用途限制</b>——外國人為自用/投資/公益可取得住宅、營業處所、教堂、醫院、外僑子弟學校、使領館及公益團體會所、墳場，以及「有助於國內重大建設、整體經濟或農牧經營之投資」（此項須經中央目的事業主管機關核准，逐字稿特別強調要記起來）</td></tr>
+      <tr><td>§20</td><td>程序</td><td>申請登記(I,II)→依規定使用(III)→3年未依計畫使用→須出售→逾期未售逕為標售</td></tr>
+    </table>
+    <div class="info-box">💡 <b>大陸地區人民</b>另有專門規範：原則依「台灣地區與大陸地區人民關係條例」§69，限制依「大陸地區人民在台灣地區取得設定或移轉不動產物權許可辦法」§2、3、4、7、8、9。互惠國家分類（完全平等互惠／附條件／非平等互惠，例如台灣人在新加坡只能買區分所有建物其中一層非透天）逐字稿有舉例但無對應投影片，可查「外國人在我國取得或設定土地權利互惠國家一覽表」補充。</div>
+  </div>
+
+  <div class="sub-block">
+    <span class="sub-tag">③禁止私有（私法人）<span class="law-tag" style="background:transparent;border-color:#fff;color:#fff;">平§79-1・農發§33</span></span>
+    <p style="font-size:14.5px;"><b>絕對限制</b>：私法人不得承受耕地（特定農業區、一般農業區、山坡地保育區、森林區的農牧用地）。<b>相對限制</b>：私法人買受須經許可之房屋，須檢具使用計畫經中央主管機關許可；登記完畢<b>5年內</b>不得移轉、讓與、預告登記（強制執行、徵收、法院判決等例外）。</p>
+  </div>
+
+  <div class="sub-block">
+    <span class="sub-tag">④最高額面積限制</span>
+    <table>
+      <tr><td><span class="law-tag sub-law">土§28、29</span>私有土地超過最高額→限期出賣→不出賣則<b>徵收</b></td></tr>
+      <tr><td><span class="law-tag sub-law">平§71、72</span><b>尚未建築</b>之私有土地→2年內建築或出賣→逾期<b>照價收買</b>；面積上限<b>10公畝</b>（僅限尚未建築之建築用地，已有建物者不算入）</td></tr>
+    </table>
+  </div>
+
+  <div class="sub-block">
+    <span class="sub-tag">⑤重劃或徵收確定後之限制</span>
+    <p style="font-size:14.5px;">區段徵收/市地重劃地區選定後公告禁止移轉、分割、設定負擔：<span class="law-tag sub-law">平§53</span>（區段徵收）／<span class="law-tag sub-law">平§59</span>（市地重劃）／<span class="law-tag sub-law">徵§23</span>（一般徵收）／<span class="law-tag sub-law">徵§37</span>（區段徵收）</p>
+  </div>
+</section>
+
+<!-- 四、公有土地處分 -->
+<section>
+  <h2 class="sec-title">④ 公有土地處分 vs 撥用</h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">定義：<span class="law-tag sub-law">土§4・土§25</span>（處分）vs <span class="law-tag sub-law">平§7・土§26</span>（撥用）</p>
+  <div class="flow">
+    <div class="flow-step"><div class="flow-num">1</div><div class="flow-box">直轄市/縣市政府對公有土地欲<b>處分、設定負擔、或為超過10年期租賃</b></div></div>
+    <div class="flow-arrow">↓ 須同時具備</div>
+    <div class="flow-step"><div class="flow-num">2</div><div class="flow-box">經該管區內<b>民意機關同意</b> ＋ <b>行政院核准</b>（三個條件缺一不可）</div></div>
+  </div>
+  <div class="info-box">💡 <b>撥用</b>：公家機關對公家機關之間互相調用土地（例：A單位要用B單位管理的地要辦撥用），原則<b>無償</b>，有償為例外<span class="law-tag sub-law">平細§13・徵§43、44</span>。</div>
+</section>
+
+<!-- 五、共有土地處分 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★★</span> ⑤ 共有土地處分——土地法 §34-1</h2>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">民法§819原則</div>
+      <p>各共有人得<b>自由處分</b>應有部分；但共有物<b>處分/變更/設定負擔</b>須<b>全體共有人同意</b></p>
+    </div>
+    <div class="card">
+      <div class="card-title">土地法§34-1（民法特別法）</div>
+      <p><b>多數決例外規定</b>：共有人數1/2以上<b>且</b>應有部分1/2以上；<b>或</b>應有部分逾2/3（人數不計）</p>
+    </div>
+  </div>
+  <p style="font-size:14.5px;margin:10px 0 4px;"><b>三大立法目的</b>：①保護多數人利益 ②促進共有不動產經濟利用（I~III，共有物本身）③簡化共有關係（IV，優先購買權）</p>
+  <div class="warn-box hi">
+    ⚠️ <b>易混淆比較</b>：土地法§34-1講「<b>處分</b>」（賣掉），民法§820講「<b>管理</b>」（如出租），兩者要件相同（人數過半+應有部分過半，或應有部分逾2/3人數不計）但<b>適用情境不同</b>，引用法條時務必小心不要誤用。
+  </div>
+
+  <h3 class="sub-title">§34-1 完整六項逐條拆解</h3>
+  <table>
+    <tr><th style="width:12%">項次</th><th style="width:26%">內容</th><th>白話</th></tr>
+    <tr><td>I 要件</td><td>多數決比例</td><td>人數+應有部分雙過半，或應有部分逾2/3免計人數</td></tr>
+    <tr><td>II 程序</td><td>通知義務</td><td>事先<b>書面通知</b>他共有人；不能書面通知則<b>公告</b></td></tr>
+    <tr><td>III 責任</td><td>連帶清償</td><td>對他共有人負連帶清償責任，須提出受領/提存證明才能辦登記，並代為申請登記</td></tr>
+    <tr><td>IV 優購權</td><td>優先購買權</td><td>共有人出賣應有部分時，他共有人得同一價格共同或單獨優先承購</td></tr>
+    <tr><td>V 準用</td><td>公同共有</td><td>前四項規定於公同共有準用之</td></tr>
+    <tr><td>VI 分割調處</td><td>爭議處理</td><td>不能協議分割者，得申請直轄市/縣市地政機關調處，不服者<b>15日內</b>向司法機關訴請處理</td></tr>
+  </table>
+  <h3 class="sub-title">處分程序</h3>
+  <div class="flow">
+    <div class="flow-step"><div class="flow-num">1</div><div class="flow-box">書面通知全體共有人（不能通知→公告代替）</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">2</div><div class="flow-box">提出不同意共有人受領證明或價金提存證明</div></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><div class="flow-num">3</div><div class="flow-box">辦理移轉登記</div></div>
+  </div>
+</section>
+
+<!-- 六、優先購買權 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★★</span> ⑥ 優先購買權<span class="examhit">105・106・107・108・109・111測</span></h2>
+  <p style="font-size:14.5px;margin-bottom:6px;">意義：不動產出售時，權利關係人有「依<b>同樣條件</b>」優先購買的權利（若共有人需貸款而買方不需要，則不符合）。</p>
+  <div class="warn-box hi2">
+    💡 前提：①須是<b>有效買賣</b>（先有買賣才有優先購買權）②買受人須為共有人以外之<b>第三人</b>（賣給共有人，另一共有人不可主張優先購買，因已達成簡化共有關係目的）；只適用<b>有償買賣</b>——贈與、交換、信託行為、共有物分割皆不適用；性質為<b>法定形成權</b>（一方意思表示即使法律關係發生變動）。
+  </div>
+
+  <h3 class="sub-title">效力比較：物權 vs 債權</h3>
+  <table>
+    <tr><th style="width:16%"></th><th style="width:28%">依據</th><th style="width:28%">未通知的後果</th><th>立法目的</th></tr>
+    <tr><td><b>物權效力</b></td><td><span class="law-tag sub-law">土§104、107</span></td><td>買賣契約<b>無效</b></td><td>促使房地基地所有權合一</td></tr>
+    <tr><td><b>債權效力</b></td><td><span class="law-tag sub-law">土§34-1・民物編施行§8-5</span></td><td>契約仍有效，僅得<b>請求損害賠償</b></td><td>簡化共有關係</td></tr>
+  </table>
+
+  <div class="grid-2" style="margin-top:12px;">
+    <div class="card">
+      <div class="card-title">物權效力細節</div>
+      <p><span class="law-tag sub-law">土§104</span>基地出賣時，地上權人/典權人/承租人有優先購買權；房屋出賣時，基地所有權人有優先購買權；順序以登記先後定之；<b>10日內</b>不表示視為放棄；出賣人未通知而與第三人訂約者，<b>契約不得對抗</b>優先購買權人。<span class="law-tag sub-law">土§107</span>出租人出賣或出典<b>耕地</b>時規定同上（基地換成耕地）。</p>
+    </div>
+    <div class="card">
+      <div class="card-title">債權效力細節——賣地 vs 賣屋</div>
+      <p><span class="law-tag sub-law">民物編施行§8-5 III</span>（賣地）：區分所有建物之基地分離出賣時，專有部分所有權人無基地應有部分或不足者，按面積比例優先承買，<b>且權利優先於其他共有人</b>。<span class="law-tag sub-law">民物編施行§8-5 V</span>（賣屋）：專有部分分離出賣時，基地所有權人無專有部分者，有依相同條件優先承買之權——<b>注意條文沒有「優先於其他共有人」這句話</b>！</p>
+    </div>
+  </div>
+  <div class="warn-box hi">
+    ⚠️ <b>前提概念</b>：民法§799 V規定區分所有建物專有部分與其所屬基地權利不得分離而為移轉或設定負擔，理解8-5條為何存在要先懂這條——正常情況下建物與基地綁在一起賣，8-5條處理的是「修法前已分屬不同人」這種例外情境。
+  </div>
+
+  <h3 class="sub-title">優先購買權競合效果——最終排序</h3>
+  <div class="ladder">
+    <div class="ladder-step"><div class="ladder-rank">1</div>土地法§104、107（物權效力）——最優先</div>
+    <div class="ladder-arrow">▼ 優先於</div>
+    <div class="ladder-step"><div class="ladder-rank">2</div>民法物權編施行法§8-5第3項（賣地時，區分所有建物所有權人優先於其他共有人）</div>
+    <div class="ladder-arrow">▼ 優先於</div>
+    <div class="ladder-step"><div class="ladder-rank">3</div>土地法§34-1（債權效力，共有人優先購買）</div>
+    <div class="ladder-arrow">▼ 優先於</div>
+    <div class="ladder-step"><div class="ladder-rank">4</div>民法物權編施行法§8-5第5項（賣屋時，基地所有權人優先承買）——最後順位</div>
+  </div>
+  <div class="info-box">出處：土地法第34條之1執行要點第13點(六)。</div>
+  <div class="example-box" style="margin-top:10px;">
+    <b>圖解情境：</b>三樓公寓，土地各1/3，A/B/C為建物所有權人。<br>
+    ・<b>賣地情境</b>：D（基地共有人）賣地給E → A（建物所有權人之一，無基地應有部分）優先購買，且 <b>A ＞ B、C（其他共有人）</b>（適用§8-5 III）<br>
+    ・<b>賣屋情境</b>：甲乙各1/2持有建物，丙持有全部土地1/3，甲要賣屋 → 丙（基地所有權人）雖有優先購買權，但因§8-5 V沒說優先於其他共有人，須退回土地法34-1判斷，結論是 <b>乙（房屋共有人，依34-1）＞ 丙（依§8-5 V）</b>
+  </div>
+
+  <h3 class="sub-title">調處</h3>
+  <p style="font-size:14.5px;">共有物分割依共有人協議之方法行之（原則全體同意，<span class="law-tag sub-law">民§824</span>）：協議分割→不成→（土地走）調處/（建改物走）裁判→不服調處15日內起訴→裁判；15日內未起訴則其他共有人可依調處結果辦理共有物分割登記。調處時機不只共有物分割，還包括土§34-1共有物分割爭議、土§46-2重測界址爭議、土§59土地權利爭議等（皆由直轄市/縣市政府調處委員會處理，目的是減訟便民）。</p>
+</section>
+
+<!-- 七、考古題查證 -->
+<section>
+  <h2 class="sec-title">⑦ 考古題查證彙整（105-114年）</h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">結論：「地權」相關主題幾乎每年都考，是全科最高頻考點之一，其中<b>土地法§34-1（共有土地處分）與優先購買權</b>（§104、§107、§34-1、民法物權編施行法§8-5）出現頻率最高，且申論題也常直接命題。</p>
+  <table>
+    <tr><th style="width:10%">年度</th><th>出現情形</th></tr>
+    <tr><td>105</td><td>選擇題大量集中考優先購買權與共有物，以及土§25公有土地處分；申論題考「土地不得為私有」的限制規定</td></tr>
+    <tr><td>106</td><td>外國人取得我國土地之限制、逾期未辦繼承登記（§73-1）之處理程序</td></tr>
+    <tr><td>107</td><td>§34-1多數決之適用/不適用範圍、§73-1未辦繼承登記列冊管理與標售次數</td></tr>
+    <tr><td>108</td><td>土地徵收條例優先購買權、基地房屋優先購買權（§104相關）、繼承登記與§73-1標售程序</td></tr>
+    <tr><td>109</td><td>§34-1共有關係、外國人不得移轉之土地種類、§73-1未辦繼承登記處理程序</td></tr>
+    <tr><td>110</td><td>外國人取得土地種類之限制</td></tr>
+    <tr><td>111</td><td><b>申論題直接考「不動產優先購買權」</b>，要求列舉三項規定（§34-1、§104、§107）並說明行使要件與法律性質；測驗題另考§34-1比例要件</td></tr>
+    <tr><td>112</td><td>申論題偏重都市計畫/區段徵收與地用限制，仍有涉及禁止處分登記等土地權利限制的情境題</td></tr>
+  </table>
+  <div class="warn-box hi2">
+    💡 <b>最常考的子題排序：</b>①共有土地處分＋優先購買權（§34-1）——幾乎每年必考 ②優先購買權效力比較（物權vs債權）——常考效力大小排序 ③未辦繼承登記之處理（§73-1）——列冊管理年限、標售次數、「就其使用範圍」是常見誤答陷阱 ④外國人取得土地之限制 ⑤公有土地處分（§25）——出現頻率較低但仍有單題
+  </div>
+</section>
+
+</body>
+</html>

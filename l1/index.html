@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>土地法 L1｜土地法規總論（前導課）</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink:#1e293b; --sub:#64748b; --line:#e2e8f0; --line-strong:#94a3b8;
+    --neutral:#334155; --neutral-bg:#f1f5f9;
+    --accent:#8B4438; --accent-bg:#F1E2DD;
+    --accent2:#9C7A34; --accent2-bg:#EFE6D0;
+  }
+  body {
+    font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+    width: 1400px;
+    margin: 0 auto;
+    background: #f4f5f7;
+    color: var(--ink);
+    padding: 22px 32px 36px;
+  }
+  h1.page-title {
+    font-size: 30px;
+    color: #fff;
+    background: var(--ink);
+    padding: 16px 24px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h1.page-title .sub { font-size: 15px; font-weight: normal; opacity: 0.9; }
+  .tip-banner {
+    background: var(--neutral-bg);
+    border: 2px solid var(--line-strong);
+    color: var(--neutral);
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 15px;
+    margin-bottom: 18px;
+    font-weight: bold;
+  }
+  section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  h2.sec-title {
+    font-size: 20px;
+    color: var(--ink);
+    border-left: 6px solid var(--ink);
+    padding-left: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2.sec-title .star { color: var(--accent); font-size: 15px; }
+  h3.sub-title { font-size: 15.5px; color: var(--ink); margin: 16px 0 8px; }
+  .law-tag {
+    display: inline-block;
+    background: var(--neutral-bg);
+    color: var(--neutral);
+    border: 1px solid var(--line-strong);
+    font-size: 13px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: bold;
+    margin: 2px 4px 2px 0;
+  }
+  .law-tag.sub-law { background: #f8fafc; color: var(--sub); border-color: var(--line); }
+  .law-tag.hi { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
+  .law-tag.hi2 { background: var(--accent2-bg); color: var(--accent2); border-color: var(--accent2); }
+  .examhit {
+    display: inline-block; margin-left: 6px; font-size: 11.5px; font-weight: 800; color: var(--accent);
+    background: var(--accent-bg); border: 1px solid var(--accent); border-radius: 10px; padding: 1px 9px;
+    vertical-align: middle;
+  }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+  .card { border-radius: 12px; padding: 14px 16px; border: 2px solid var(--line-strong); background: #fff; }
+  .card-title { font-size: 17px; font-weight: bold; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; color: var(--ink); }
+  .card p { font-size: 14.5px; line-height: 1.75; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-top: 4px; }
+  table th { background: var(--ink); color: #fff; padding: 8px 10px; text-align: left; }
+  table td { padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  table tr:nth-child(even) td { background: #f9fafb; }
+  table.dim td, table.dim th { opacity: 0.55; }
+  .warn-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); color: var(--neutral);
+    border-radius: 10px; padding: 10px 16px; font-size: 14.5px; margin-top: 10px; font-weight: bold;
+  }
+  .warn-box.hi { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+  .warn-box.hi2 { background: var(--accent2-bg); border-color: var(--accent2); color: var(--accent2); }
+  .info-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); color: var(--neutral);
+    border-radius: 10px; padding: 10px 16px; font-size: 14px; margin-top: 10px;
+  }
+  .example-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); border-radius: 10px;
+    padding: 12px 18px; font-size: 14.5px; line-height: 1.7; color: var(--neutral);
+  }
+  .flow { display: flex; flex-direction: column; gap: 3px; }
+  .flow-step { display: flex; align-items: center; gap: 14px; }
+  .flow-num {
+    flex-shrink: 0; width: 28px; height: 28px; background: var(--ink); color: #fff; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13.5px;
+  }
+  .flow-box { flex: 1; background: var(--neutral-bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 14px; font-size: 14.5px; }
+  .flow-arrow { text-align: center; color: var(--sub); font-size: 15px; margin-left: 13px; }
+  .sub-block { margin-top: 4px; }
+  .sub-block + .sub-block { margin-top: 12px; padding-top: 12px; border-top: 2px dashed var(--line); }
+  .sub-tag {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: bold; color: #fff;
+    background: var(--neutral); padding: 3px 11px; border-radius: 999px; margin-bottom: 8px;
+  }
+  .step-tag {
+    display: inline-block; background: var(--ink); color: #fff; font-size: 12.5px; font-weight: bold;
+    padding: 2px 10px; border-radius: 6px; margin-bottom: 6px;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">
+  土地法 L1｜土地法規總論（前導課）
+  <span class="sub">科目架構・讀書方法・逐字稿＋上課講義＋考古題三方核對（2026-07-23）</span>
+</h1>
+
+<div class="tip-banner">📌 這堂是前導課，沒有法條實體內容，重點是搞懂「這科要讀什麼、去哪查、怎麼考」，把時間留給後面地權/地籍/地價/地用等堂次的實質內容</div>
+
+<!-- 一、命題大綱與科目範圍 -->
+<section>
+  <h2 class="sec-title">① 命題大綱與科目範圍</h2>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">不動產經紀人</div>
+      <p>考科名稱：<b>土地法與土地相關稅法概要</b>（法規＋稅法合考一科，難度較低，只需了解規定內容）</p>
+    </div>
+    <div class="card">
+      <div class="card-title">地政士（對照組，非本次考試科目）</div>
+      <p>考科名稱：<b>土地法規</b>（法規、稅法分開考，各自要讀得更深）</p>
+    </div>
+  </div>
+  <h3 class="sub-title">土地法規類（命題大綱範圍）</h3>
+  <table>
+    <tr><td><b>土地法</b>——僅考<b>第一編總則、第二編地籍、第三編土地使用</b>；<span style="color:var(--accent);font-weight:bold;">第四編土地稅、第五編土地徵收不考</span></td></tr>
+    <tr><td>平均地權條例及施行細則</td></tr>
+    <tr><td>土地徵收條例</td></tr>
+    <tr><td>非都市土地使用管制規則</td></tr>
+    <tr><td>區域計畫法</td></tr>
+    <tr><td>都市計畫法——僅考<b>第一～四章</b>（總則／擬定變更發布實施／土地使用分區管制／公共設施用地）；<span style="color:var(--accent);font-weight:bold;">第五～九章不考</span></td></tr>
+  </table>
+  <h3 class="sub-title">稅法類（命題大綱範圍）</h3>
+  <table>
+    <tr><td>土地稅法及施行細則</td></tr>
+    <tr><td>契稅條例</td></tr>
+    <tr><td>房屋稅條例</td></tr>
+    <tr><td>所得稅法及施行細則（不動產交易部分／房地合一稅）</td></tr>
+  </table>
+  <div class="warn-box hi2">
+    💡 <b>國土計畫法是「隱藏法規」</b>：沒被列入正式命題大綱，但近年考古題偶爾會冷不防出一兩題選擇題，比例極低。念過大概念即可，錯了也不用在意，把火力集中在大綱內法規上。
+  </div>
+</section>
+
+<!-- 二、法規架構總覽 -->
+<section>
+  <h2 class="sec-title">② 法規架構總覽</h2>
+  <h3 class="sub-title">土地法（五編，僅前三編列入考試範圍）</h3>
+  <table>
+    <tr><th style="width:14%">編</th><th style="width:40%">章節與起始條號</th><th>老師強調重點</th></tr>
+    <tr><td><b>第一編總則</b><br>§1</td><td>法例§1／地權§10／地權限制§14／公有土地§25／地權調整§28</td><td><span class="law-tag hi">地權限制§14</span><span class="law-tag hi">公有土地§25</span>是本編中特別重要的部分</td></tr>
+    <tr><td><b>第二編地籍</b><br>§36</td><td>通則§36／地籍測量§44／土地總登記§48／土地權利變更登記§72</td><td>整體不算太重要（細節多規定在「土地登記規則」而非土地法本身），<span class="law-tag hi">唯獨土地總登記</span>特別重要</td></tr>
+    <tr><td><b>第三編土地使用</b><br>§80</td><td>通則§80／使用限制§90／房屋及基地租用§94／耕地租用§106／荒地使用§125／土地重劃§135</td><td>房屋租用規定與民法「大同小異」，記住差異點即可</td></tr>
+    <tr class="dim"><td><b>第四編土地稅</b><br>§143</td><td colspan="2">不考，明確排除</td></tr>
+    <tr class="dim"><td><b>第五編土地徵收</b><br>§208</td><td colspan="2">不考，明確排除</td></tr>
+  </table>
+  <div class="grid-2" style="margin-top:14px;">
+    <div class="card">
+      <div class="card-title">平均地權條例（8章）</div>
+      <p>總則§1／規定地價§13／照價徵稅§17／照價收買§27／漲價歸公§35／<b>土地使用§52（含重劃，非常重要）</b>／罰則§80／附則§84</p>
+    </div>
+    <div class="card">
+      <div class="card-title">土地徵收條例（6章）</div>
+      <p>總則§1／徵收程序§10／徵收補償§30／區段徵收§37／徵收之撤銷及廢止§49／附則§56</p>
+    </div>
+  </div>
+  <h3 class="sub-title">都市計畫相關法規群（定位比較）</h3>
+  <table>
+    <tr><th style="width:30%">法規</th><th>規範範圍</th></tr>
+    <tr><td>區域計畫法</td><td>位階較高，規範<b>整個土地使用</b>的上位計畫</td></tr>
+    <tr><td>都市計畫法（僅1-4章列入考試）</td><td>規範<b>都市計畫範圍內</b>土地</td></tr>
+    <tr><td>非都市土地使用管制規則</td><td>規範<b>非都市土地</b></td></tr>
+    <tr><td>國土計畫法（隱藏、比例低）</td><td>近年才頒布的最上位計畫體系</td></tr>
+  </table>
+</section>
+
+<!-- 三、讀書工具 -->
+<section>
+  <h2 class="sec-title">③ 讀書工具——全國法規資料庫使用教學</h2>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">用途一：查編章節範圍</div>
+      <p>點某部法規的「編章節」，可以看到完整章節架構（例如土地法可看到第一編總則／第二編地籍／第三編土地使用），藉此驗證命題大綱涵蓋範圍，確認自己讀的範圍對不對。</p>
+    </div>
+    <div class="card">
+      <div class="card-title">用途二：查沿革確認版本</div>
+      <p>用「沿革」功能檢查手邊六法全書是不是最新版。例如 111 年 6 月 22 日土地法新增公布 §73-1，如果手邊書是 111 年 1 月出版就會漏掉這條，要自行更新補上。</p>
+    </div>
+  </div>
+  <div class="info-box">💡 這兩個技巧逐字稿有講但投影片完全沒有對應畫面，是老師純口頭補充的實用技巧，之後查任何法條有疑問，都可以用這個方法自己驗證範圍跟版本。</div>
+</section>
+
+<!-- 四、筆記體例說明 -->
+<section>
+  <h2 class="sec-title">④ 筆記體例說明</h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">筆記採<b>主題式整理</b>（不逐條抄，按主題如「實價登錄」「土地使用」分類），法條提示用簡寫代號：<b>土</b>＝土地法（如「土30」＝土地法第30條）、<b>平</b>＝平均地權條例，以此類推——之後每一堂筆記的 law-tag 都延續這套簡寫邏輯。</p>
+  <div class="warn-box hi2">💡 星號重要度分級（★＝土地使用、★★＝照價收買、★★★＝實價登錄）是投影片原始設計的重要度標示，不是老師手寫畫記；這套三星分級邏輯之後也會延續套用在各堂筆記的標題重要度上。</div>
+</section>
+
+<!-- 五、課程主題式編排 -->
+<section>
+  <h2 class="sec-title">⑤ 課程主題式編排（共8堂）</h2>
+  <table>
+    <tr><th style="width:8%">堂次</th><th style="width:20%">主題</th><th>內容範圍</th></tr>
+    <tr><td>L1</td><td><b>前導課</b></td><td>土地法規之基本架構與介紹（本堂）</td></tr>
+    <tr><td>L2</td><td><b>地權</b></td><td>土地得喪、限制、優先購買權</td></tr>
+    <tr><td>L3</td><td><b>地籍</b></td><td>地籍測量、土地登記</td></tr>
+    <tr><td>L4</td><td><b>地價</b></td><td>規定地價、實價登錄與照價收買</td></tr>
+    <tr><td>L5</td><td><b>地用</b></td><td>房屋、基地、耕地租用，空地與荒地</td></tr>
+    <tr><td>L6</td><td><b>土地重劃</b></td><td>市地與農地重劃</td></tr>
+    <tr><td>L7</td><td><b>徵收</b></td><td>一般徵收之意義、程序、補償、收回權、撤銷與廢止、一併徵收</td></tr>
+    <tr><td>L8</td><td><b>徵收與徵用</b></td><td>土地徵用、區段徵收之意義、程序、補償、土地處理</td></tr>
+  </table>
+</section>
+
+<!-- 六、考試題型分析 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑥ 考試題型分析——四大類</h2>
+  <table>
+    <tr><th style="width:18%">類型</th><th style="width:28%">說明</th><th>考古題範例</th></tr>
+    <tr><td>① 名詞解釋</td><td>直接問名詞定義，寫出定義即有分</td><td>105年：何謂累進起點地價？地價稅之稅率為何？試就平均地權條例及土地稅法之規定敘述之</td></tr>
+    <tr><td>② 法規（程序／效果）</td><td>考程序或法律效果，寫出法規內容即可</td><td>106年：稅捐稽徵機關對於土地申報移轉現值之審核標準為何？土地增值稅得重購退稅之情形為何？</td></tr>
+    <tr><td>③ 概念比較</td><td>比較兩個易混淆名詞，或同一制度在兩部法規中的規定</td><td>103年：何謂預告登記？何謂禁止處分之登記？試比較說明之</td></tr>
+    <tr><td>④ 混合題型</td><td>上述類型混合出現在同一題</td><td>109年：抵價地的意義為何？又關於抵價地可分配之比例及其原則為何？請依土地徵收條例之規定說明之</td></tr>
+  </table>
+  <div class="warn-box hi">
+    ⚠️ 讀書法建議：土地法偏「背誦科目」，但不能死背條文，一定要先<b>理解規定背後的意義</b>——理解後忘記了很快能靠翻法條回想起來，死背忘記了就是真的忘記，不符合經濟效益。念法條時可依「這題大概會考什麼題型」邊讀邊模擬作答練習。
+  </div>
+</section>
+
+<!-- 七、總論性內容的考古題查證 -->
+<section>
+  <h2 class="sec-title">⑦ 總論性內容的考古題查證（105-114年）</h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">總論本身「單獨命題」比例不高，但下列背景概念會反覆以選擇題形式出現，值得花時間做成清楚的定義卡：</p>
+  <table>
+    <tr><th style="width:36%">子題</th><th style="width:20%">出現年份</th><th>頻率</th></tr>
+    <tr><td>外國人取得／租賃土地之限制<span class="law-tag sub-law">§17-20</span></td><td><span class="examhit">109・110・111・112・114測</span></td><td><b>最高頻</b>，5/10年</td></tr>
+    <tr><td>公有土地定義／撥用／處分<span class="law-tag sub-law">§4・§25・§27・§53</span></td><td><span class="examhit">105・106・108・110・114測</span></td><td>5/10年</td></tr>
+    <tr><td>私有土地限制＋中央地政機關報請行政院制止</td><td><span class="examhit">108・111・113測</span></td><td>3/10年</td></tr>
+    <tr><td>不得私有之土地種類<span class="law-tag sub-law">§14</span></td><td><span class="examhit">107・114測</span></td><td>2/10年</td></tr>
+    <tr><td>土地改良物定義（建築改良物／農作改良物）<span class="law-tag sub-law">§5</span></td><td><span class="examhit">114測</span></td><td>1/10年</td></tr>
+  </table>
+  <div class="warn-box hi2">
+    💡 <b>未見獨立命題的子題：</b>土地法本身的「立法目的」（土地法沒有像平均地權條例那樣明文的立法目的條款，105-114年間沒找到直接命題）、土地分類（建築用地／直接生產用地／交通水利用地／其他用地，§2；近10年未見獨立命題，多出現在103年以前），這兩塊可以簡略帶過，不用花太多篇幅深挖。
+  </div>
+  <div class="example-box" style="margin-top:10px;">
+    <b>具體例題示範：</b>108年「私有土地所有權之移轉、設定負擔或租賃，如有妨害基本國策者，中央地政機關得報請下列何機關制止之？」（答：行政院）／109年「依土地法規定，下列何種土地不得移轉、設定負擔或租賃於外國人？」／111年「依土地法第17條規定，下列何項土地得租賃於外國人？」／114年「下列何者並非土地法中的農作改良物？」「下列有關公有土地撥用之敘述，何者錯誤？」
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>土地法 L15｜契稅</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink:#1e293b; --sub:#64748b; --line:#e2e8f0; --line-strong:#94a3b8;
+    --neutral:#334155; --neutral-bg:#f1f5f9;
+    --accent:#8B4438; --accent-bg:#F1E2DD;
+    --accent2:#9C7A34; --accent2-bg:#EFE6D0;
+  }
+  body {
+    font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+    width: 1400px;
+    margin: 0 auto;
+    background: #f4f5f7;
+    color: var(--ink);
+    padding: 22px 32px 36px;
+  }
+  h1.page-title {
+    font-size: 30px;
+    color: #fff;
+    background: var(--ink);
+    padding: 16px 24px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h1.page-title .sub { font-size: 15px; font-weight: normal; opacity: 0.9; }
+  .tip-banner {
+    background: var(--neutral-bg);
+    border: 2px solid var(--line-strong);
+    color: var(--neutral);
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 15px;
+    margin-bottom: 18px;
+    font-weight: bold;
+  }
+  section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  h2.sec-title {
+    font-size: 20px;
+    color: var(--ink);
+    border-left: 6px solid var(--ink);
+    padding-left: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2.sec-title .star { color: var(--accent); font-size: 15px; }
+  h3.sub-title { font-size: 15.5px; color: var(--ink); margin: 16px 0 8px; }
+  .law-tag {
+    display: inline-block;
+    background: var(--neutral-bg);
+    color: var(--neutral);
+    border: 1px solid var(--line-strong);
+    font-size: 13px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: bold;
+    margin: 2px 4px 2px 0;
+  }
+  .law-tag.sub-law { background: #f8fafc; color: var(--sub); border-color: var(--line); }
+  .law-tag.hi { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
+  .law-tag.hi2 { background: var(--accent2-bg); color: var(--accent2); border-color: var(--accent2); }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  .card { border-radius: 12px; padding: 14px 16px; border: 2px solid var(--line-strong); background: #fff; }
+  .card-title { font-size: 17px; font-weight: bold; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; color: var(--ink); }
+  .card p { font-size: 14.5px; line-height: 1.75; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-top: 4px; }
+  table th { background: var(--ink); color: #fff; padding: 8px 10px; text-align: left; }
+  table td { padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  table tr:nth-child(even) td { background: #f9fafb; }
+  .warn-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); color: var(--neutral);
+    border-radius: 10px; padding: 10px 16px; font-size: 14.5px; margin-top: 10px; font-weight: bold;
+  }
+  .warn-box.hi { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+  .warn-box.hi2 { background: var(--accent2-bg); border-color: var(--accent2); color: var(--accent2); }
+  .info-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); color: var(--neutral);
+    border-radius: 10px; padding: 10px 16px; font-size: 14px; margin-top: 10px;
+  }
+  .formula-box {
+    background: var(--accent2-bg); border: 2px solid var(--accent2); color: var(--accent2);
+    border-radius: 10px; padding: 12px 20px; font-size: 17px; text-align: center; font-weight: bold; margin: 10px 0;
+  }
+  .example-box {
+    background: var(--neutral-bg); border: 2px solid var(--line-strong); border-radius: 10px;
+    padding: 12px 18px; font-size: 14.5px; line-height: 1.7; color: var(--neutral);
+  }
+  .step-tag {
+    display: inline-block; background: var(--ink); color: #fff; font-size: 12.5px; font-weight: bold;
+    padding: 2px 10px; border-radius: 6px; margin-bottom: 6px;
+  }
+  .sub-block { margin-top: 4px; }
+  .sub-block + .sub-block { margin-top: 12px; padding-top: 12px; border-top: 2px dashed var(--line); }
+  .sub-tag {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: bold; color: #fff;
+    background: var(--neutral); padding: 3px 11px; border-radius: 999px; margin-bottom: 8px;
+  }
+  .examhit {
+    display: inline-block; margin-left: 6px; font-size: 11.5px; font-weight: 800; color: var(--accent);
+    background: var(--accent-bg); border: 1px solid var(--accent); border-radius: 10px; padding: 1px 9px;
+    vertical-align: middle;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">
+  土地法 L15｜契稅
+  <span class="sub">移轉稅（課稅標的：房屋）・逐字稿＋上課講義＋筆記講義＋考古題四方核對（2026-07-23）</span>
+</h1>
+
+<div class="tip-banner">📌 讀書建議：契稅規定比土地增值稅單純很多，重點是6/4/2%稅率分組記憶、交換有價差的計算，跟信託不課徵5情形（幾乎跟土地增值稅一樣）</div>
+
+<!-- 一、概念 -->
+<section>
+  <h2 class="sec-title">① 概念——房屋的移轉稅 <span class="law-tag">契稅條例 §2</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">房屋稅（L14）是持有稅，契稅則是<b>移轉稅</b>：買賣、承典、交換、贈與、分割，或因<b>占有而取得所有權</b>，均應申報繳納契稅。</p>
+  <div class="warn-box hi">⚠️ 但書：<b>已開徵土地增值稅區域的土地</b>免徵契稅——契稅事實上就是<b>針對房屋</b>課徵（土地部分已有增值稅負責）。</div>
+  <p style="font-size:14.5px;margin-top:10px;"><b>契價</b>（稅基）<span class="law-tag sub-law">§13</span>＝當地<b>不動產評價委員會評定的房屋標準價格</b>（一個定值）。例外：<b>依法領買、標購公產、法拍</b>取得，若購買價格<b>低於</b>評定標準價格，以<b>低者</b>（實際購買價格）為契價。</p>
+  <div class="formula-box">契稅 ＝ 契價 × 稅率</div>
+  <div class="warn-box hi">
+    ⚠️ <b>契價≠實際成交價</b><span class="examhit">106・107測</span>：課稅基礎一律是「不動產評價委員會評定之標準價格」這個公告值，不是買賣雙方實際約定的房價（除非§11情形下移轉價格更低才取低者）。考古題常用「以實際買賣價格為準」當誘答選項。
+  </div>
+</section>
+
+<!-- 二、納稅義務人 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ② 納稅義務人——六種情況<span class="examhit">109・111・112・113測</span></h2>
+  <table>
+    <tr><th style="width:20%">情況</th><th style="width:20%">納稅義務人</th><th>備註</th></tr>
+    <tr><td>買賣</td><td><b>買受人</b>（買方）</td><td>最常見情況</td></tr>
+    <tr><td>贈與</td><td><b>受贈人</b></td><td>與土地增值稅相同（受贈人繳）；但<b>贈與稅</b>另由<b>贈與人</b>繳，三稅納稅義務人不要搞混</td></tr>
+    <tr><td>占有取得</td><td><b>占有人</b></td><td>—</td></tr>
+    <tr><td>設定典權</td><td><b>典權人</b></td><td>—</td></tr>
+    <tr><td>交換</td><td><b>交換人</b>（雙方皆須申報，見④）</td><td>—</td></tr>
+    <tr><td>分割</td><td><b>分割人</b></td><td>—</td></tr>
+  </table>
+  <div class="info-box">💡 記憶技巧：<b>贈與</b>的契稅納稅義務人跟土地增值稅一樣是<b>受贈人</b>；<b>買賣</b>則不同——契稅是買受人繳，土地增值稅是原所有權人（賣方）繳，方向相反，要注意分辨。</div>
+</section>
+
+<!-- 三、稅率 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ③ 稅率 <span class="law-tag">契稅條例 §3</span><span class="examhit">109・111・112・114測</span></h2>
+  <table>
+    <tr><th style="width:20%">分組</th><th style="width:40%">情況</th><th>稅率</th></tr>
+    <tr><td rowspan="3">高（6%）</td><td>買賣</td><td rowspan="3"><b>6%</b></td></tr>
+    <tr><td>贈與</td></tr>
+    <tr><td>占有</td></tr>
+    <tr><td>中（4%）</td><td>典權</td><td><b>4%</b></td></tr>
+    <tr><td rowspan="2">低（2%）</td><td>交換</td><td rowspan="2"><b>2%</b></td></tr>
+    <tr><td>分割</td></tr>
+  </table>
+  <div class="info-box">記憶口訣：<b>典權4</b>，<b>交換分割2</b>，其他（買賣／贈與／占有）都是<b>6</b>——分三組記比逐條背輕鬆。</div>
+</section>
+
+<!-- 四、交換契稅+價差 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ④ 交換契稅——有價差時的計算 <span class="law-tag">契稅條例 §6</span><span class="examhit">113測</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">交換契稅由交換人估價立契，各自<b>就其承受部分</b>申報納稅（交換多少報多少，稅率 2%）。若有<b>差額價款</b>：</p>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">有支付價差 → 視為買賣</div>
+      <p>差額部分依<b>買賣</b>申報契稅，稅率 <b>6%</b>，納稅義務人為<b>支付價差的一方（買受人）</b></p>
+    </div>
+    <div class="card">
+      <div class="card-title">未支付價差 → 視為贈與</div>
+      <p>差額部分依<b>贈與</b>申報契稅，稅率同樣 <b>6%</b>，納稅義務人為<b>取得價差利益的一方（受贈人）</b></p>
+    </div>
+  </div>
+  <div class="example-box" style="margin-top:10px;">
+    <b>圖解：</b>甲屋 600 萬、乙屋 1000 萬，甲乙交換，價差 400 萬。<br>
+    ・若甲把 400 萬價差<b>付給</b>乙 → 視為乙把 400 萬部分<b>賣給</b>甲 → 這 400 萬課<b>買賣 6%</b>，納稅義務人是甲<br>
+    ・若甲<b>沒付</b>這 400 萬 → 視為乙把 400 萬<b>贈與</b>甲 → 課<b>贈與 6%</b>，納稅義務人同樣是甲<br>
+    → 不論報買賣或贈與，稅率都是 6%，納稅義務人都是<b>甲</b>；至於 600 萬同等值部分，甲乙<b>都要</b>申報交換契稅 2%
+  </div>
+</section>
+
+<!-- 五、減免 -->
+<section>
+  <h2 class="sec-title">⑤ 減免規定 <span class="law-tag">契稅條例 §14</span><span class="examhit">105・106・111測</span></h2>
+  <div class="sub-block">
+    <span class="sub-tag">公家取得公用（①②③）</span>
+    <table>
+      <tr><td>① 各級政府機關、地方自治團體、公立學校<b>因公使用</b>取得不動產（供營業用者不適用）</td></tr>
+      <tr><td>② 政府經營郵政事業，因業務使用取得之不動產</td></tr>
+      <tr><td>③ 政府因公務需要，以公有不動產交換，或因<b>土地重劃</b>而交換取得所有權</td></tr>
+    </table>
+  </div>
+  <div class="sub-block">
+    <span class="sub-tag">起造人單純變更（④⑤）</span>
+    <table>
+      <tr><td>④ 建築物<b>建造完成前</b>單純變更起造人名義者（原因非買賣／交換／贈與這類有償或特定移轉，才免徵；若因此三原因變更則仍須課稅，見<span class="law-tag sub-law">§12 II</span>）</td></tr>
+      <tr><td>⑤ 興建中之建築工程<b>讓與他人繼續建造</b>未完工部分，因而變更起造人名義（防止原建商財務困難、倒閉，改由其他建商接手完工，避免消費者受損）</td></tr>
+    </table>
+  </div>
+  <div class="info-box">記憶技巧：①②③是「<b>公家取得＋公眾使用</b>」一組；④⑤是「<b>起造人變更</b>」一組（純變更名義免稅，但買賣/贈與/交換原因造成的變更仍須課稅）。</div>
+</section>
+
+<!-- 六、申報期間 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑥ 申報期間——立約日起 30 日內 <span class="examhit">104・113測</span></h2>
+  <p style="font-size:14.5px;margin-bottom:8px;">原則：以<b>立約日（契約成立之日）起 30 日內</b>申報。主管稽徵機關收件<b>15 天內</b>查定發單；文件如有欠缺或疑問，應於<b>收件後 7 日內</b>通知納稅義務人補正或說明<span class="law-tag sub-law">§18</span>；納稅義務人收單後 <b>30 天內</b>繳款<span class="law-tag sub-law">§19</span>。</p>
+  <table>
+    <tr><th style="width:26%">特殊情況（無明確立約日）</th><th>申報起算日 <span class="law-tag sub-law">§16</span></th></tr>
+    <tr><td>不動產移轉發生糾紛</td><td><b>法院判決確定之日</b><span class="examhit">104・113測</span>（近10年最愛考的起算日）</td></tr>
+    <tr><td>向政府標購或領買公產</td><td>政府機關核發<b>產權移轉證明書</b>之日</td></tr>
+    <tr><td>向法院標購拍賣之不動產（法拍）</td><td>法院發給<b>權利移轉證明書</b>之日（用詞跟公產不同，是「權利」不是「產權」）</td></tr>
+    <tr><td>建造中變更起造人並取得使照（買賣／交換／贈與原因）</td><td>主管建築機關<b>核發使用執照之日起滿 30 天</b>後（即再加30天才開始起算申報期）</td></tr>
+    <tr><td><b>未辦建物所有權第一次登記</b>之房屋買賣／交換／贈與／分割</td><td>比照一般規則30日內，但須由<b>雙方當事人共同申報</b>（不是單一納稅義務人自己申報）</td></tr>
+  </table>
+  <div class="warn-box hi">
+    ⚠️ <b>滯納金與怠報金分屬不同條文、天數不同，不要混用</b>：
+    <br>・<b>怠報金</b>（不依限<b>申報</b>）<span class="law-tag sub-law" style="background:transparent;border-color:var(--accent);color:var(--accent);">契稅條例§24</span>：每逾<b>3日</b>加徵應納稅額<b>1%</b>，<b>雙重上限</b>——最高不超過應納稅額，且<b>不得超過新臺幣1萬5千元</b>。
+    <br>・<b>滯納金</b>（不依限<b>繳納</b>）<span class="law-tag sub-law" style="background:transparent;border-color:var(--accent);color:var(--accent);">契稅條例§25</span>：每逾<b>2日</b>（不是3日！契稅自己的規定跟其他稅目不同）加徵應納稅額<b>1%</b>；逾期<b>30日</b>仍不繳稅款及滯納金或怠報金者，移送強制執行。
+  </div>
+</section>
+
+<!-- 七、抵繳 -->
+<section>
+  <h2 class="sec-title">⑦ 抵繳——先典後賣 <span class="law-tag">契稅條例 §10</span></h2>
+  <p style="font-size:14.5px;">先設定典權（繳典權契稅 4%），日後所有權人再將該不動產<b>賣給同一位典權人</b>（繳買賣契稅 6%）→ 原本繳的典權契稅可<b>扣抵</b>買賣契稅（只需再補 6%－4%＝2% 差額）。<b>典權人與買方須為同一人</b>才能抵繳，理由是避免對同一不動產重複課稅。</p>
+</section>
+
+<!-- 八、稽徵機關與檢舉獎金 -->
+<section>
+  <h2 class="sec-title">⑧ 稽徵機關與檢舉獎金 <span class="examhit">103・104・105測</span></h2>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">徵收機關 <span class="law-tag sub-law">§29</span></div>
+      <p>契稅由<b>直轄市及縣（市）稅捐稽徵處</b>徵收，或由<b>鄉、鎮、市、區公所</b>代徵。</p>
+    </div>
+    <div class="card">
+      <div class="card-title">檢舉獎金 <span class="law-tag sub-law">§32</span></div>
+      <p>告發或檢舉納稅義務人逃漏、匿報、短報或以其他不正當方式逃稅者，稽徵機關得以罰鍰<b>20%</b>獎給舉發人，並<b>絕對保守秘密</b>；<b>公務員</b>為舉發人時，<b>不適用</b>本條獎金規定。</p>
+    </div>
+  </div>
+  <div class="info-box">💡 這節是近10年考古題證實的獨立考點（103、104、105年皆有），但現有筆記原本完全沒有這個主題，屬於這次核對新補進來的內容，不要因為篇幅少就輕忽。</div>
+</section>
+
+<!-- 九、信託契稅 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ⑨ 信託情形的契稅 <span class="examhit">111・113測</span></h2>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">課徵情形 <span class="law-tag sub-law">§7-1</span></div>
+      <p>受託人依<b>信託本旨</b>將不動產移轉給<b>委託人以外之歸屬權利人</b>時，應由<b>歸屬權利人</b>估價立契，<b>比照贈與契稅稅率（6%）</b>申報繳納——納稅義務人跟稅率都要記住，不是只知道「要課稅」就好。</p>
+    </div>
+    <div class="card">
+      <div class="card-title">不課徵情形（5項）<span class="law-tag sub-law">§14-1</span></div>
+      <p>① 委託人因信託行為移轉給受託人（信託設立登記）<br>② 受託人變更，移轉給新受託人<br>③ 信託關係消滅，移轉給<b>委託人自己</b>（無實質移轉第三人）<br>④ 遺囑信託消滅，移轉給受益人（成立時已繳過遺產稅，不重複課）<br>⑤ 信託不成立，移轉回委託人</p>
+    </div>
+  </div>
+  <div class="info-box">💡 這五種不課徵情形<b>與土地增值稅信託不課徵的規定幾乎一模一樣</b>——契稅（房屋）與土地增值稅（土地）可以對照著一起記。</div>
+  <div class="example-box" style="margin-top:10px;">
+    <b>110年不動產經紀人考古題：</b>依契稅條例規定，以不動產為信託財產，受託人乙依信託本旨移轉信託財產與委託人甲以外之歸屬權利人丙時，應由何人估價立契，在規定之期限申報契稅？又其契稅稅率為何？
+    <br>(A)由乙申報契稅，稅率為6% (B)由乙申報契稅，稅率為2% <b>(C)由丙申報契稅，稅率為6%✓</b> (D)由甲申報契稅，稅率為2%
+    <br>→ 直接對應上方課徵情形：歸屬權利人（丙）申報，比照贈與稅率6%。
+  </div>
+</section>
+
+<!-- 十、例題 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ⑩ 計算例題——102年地政士考古題</h2>
+  <div class="example-box" style="margin-bottom:12px;">
+    <b>題目：</b>甲、乙各有房屋一棟，甲屋評定標準價格 60 萬，乙屋評定標準價格 100 萬。甲乙交換房屋，差額以<b>現金補償</b>。契約於 102 年 4 月 1 日成立，甲於 5 月 5 日申報契稅，乙於 5 月 7 日申報契稅。試算甲、乙各需繳納的契稅與怠報金。
+  </div>
+
+  <div class="sub-block">
+    <span class="step-tag">STEP 1｜交換契稅（就較低值 60 萬申報，甲乙都要報）</span>
+    <p style="font-size:14.5px;">60 萬 × 2% ＝ <b>1.2 萬</b>（甲、乙<b>各自</b>都要繳這筆）</p>
+  </div>
+
+  <div class="sub-block">
+    <span class="step-tag">STEP 2｜價差契稅（100萬－60萬＝40萬價差，現金補償＝有償→視為買賣）</span>
+    <p style="font-size:14.5px;">40 萬 × 6% ＝ <b>2.4 萬</b>（納稅義務人是支付價差、取得較高價值房屋的<b>甲</b>）</p>
+  </div>
+
+  <div class="sub-block">
+    <span class="step-tag">STEP 3｜契稅總額</span>
+    <table>
+      <tr><th style="width:20%">當事人</th><th style="width:40%">組成</th><th>契稅總額</th></tr>
+      <tr><td><b>甲</b></td><td>交換 1.2 萬 ＋ 買賣 2.4 萬</td><td><b>3.6 萬</b></td></tr>
+      <tr><td><b>乙</b></td><td>交換 1.2 萬</td><td><b>1.2 萬</b></td></tr>
+    </table>
+  </div>
+
+  <div class="sub-block">
+    <span class="step-tag">STEP 4｜怠報金（申報期限：契約成立4/1起30日內＝4月30日截止）</span>
+    <table>
+      <tr><th style="width:12%">當事人</th><th style="width:18%">申報日</th><th style="width:22%">逾期天數</th><th style="width:16%">怠報金率</th><th>怠報金</th></tr>
+      <tr><td>甲</td><td>5 月 5 日</td><td>逾 5 天（逾3天，未滿6天）</td><td>1%</td><td>3.6萬 × 1% ＝ <b>360 元</b></td></tr>
+      <tr><td>乙</td><td>5 月 7 日</td><td>逾 7 天（逾6天，未滿9天）</td><td>2%</td><td>1.2萬 × 2% ＝ <b>240 元</b></td></tr>
+    </table>
+  </div>
+  <div class="warn-box hi">💡 答題技巧：怠報金＝<b>應納稅額 × 對應級距%</b>（每逾3日多1%），作答時把稅基、稅率、計算式完整列出，即可拿到不錯的分數。相關法條：契稅條例 §3、§6、§24。</div>
+</section>
+
+<!-- 十一、條文速查 -->
+<section>
+  <h2 class="sec-title">⑪ 條文速查</h2>
+  <table>
+    <tr><th style="width:30%">主題</th><th>條號</th></tr>
+    <tr><td>課徵對象（免徵土地增值稅區域免契稅）</td><td>契稅條例 §2</td></tr>
+    <tr><td>稅率</td><td>§3</td></tr>
+    <tr><td>契價定義</td><td>§13</td></tr>
+    <tr><td>交換契稅估價立契</td><td>§6</td></tr>
+    <tr><td>信託課徵（歸屬權利人比照贈與6%）</td><td>§7-1</td></tr>
+    <tr><td>抵繳（先典後賣）</td><td>§10</td></tr>
+    <tr><td>減免（5項情形）</td><td>§14</td></tr>
+    <tr><td>信託不課徵（5項）</td><td>§14-1</td></tr>
+    <tr><td>申報期間與特殊起算日</td><td>§16</td></tr>
+    <tr><td>查定發單／欠件補正（收件7日內通知）</td><td>§18</td></tr>
+    <tr><td>繳納期限（收單30日內）</td><td>§19</td></tr>
+    <tr><td>怠報金（每3日1%，雙重上限）</td><td>§24</td></tr>
+    <tr><td>滯納金（每2日1%，逾30日移送強制執行）</td><td>§25</td></tr>
+    <tr><td>徵收機關</td><td>§29</td></tr>
+    <tr><td>檢舉獎金（20%）</td><td>§32</td></tr>
+  </table>
+</section>
+
+</body>
+</html>
