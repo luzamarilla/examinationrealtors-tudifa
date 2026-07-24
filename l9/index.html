@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>土地法 L9｜國土計畫法、區域計畫法、都市計畫法、非都市土地使用管制規則（v2 依上課講義校正）</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --ink:#1e293b; --sub:#64748b; --line:#e2e8f0; --line-strong:#94a3b8;
+    --neutral:#374151; --neutral-bg:#f1f2f4;
+    --accent:#8B4438; --accent-bg:#F1E2DD;
+    --accent2:#9C7A34; --accent2-bg:#EFE6D0;
+  }
+  body {
+    font-family: 'Microsoft JhengHei', '微軟正黑體', sans-serif;
+    background: #f4f5f7;
+    color: var(--ink);
+    width: 1400px;
+    margin: 0 auto;
+    padding: 24px 30px;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  /* ── 頁首 ── */
+  .page-header {
+    background: var(--ink);
+    color: white;
+    border-radius: 14px;
+    padding: 24px 34px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .page-header h1 { font-size: 28px; font-weight: 900; letter-spacing: 1px; }
+  .page-header .subtitle { font-size: 14px; opacity: .85; margin-top: 5px; }
+  .page-header .badge {
+    background: rgba(255,255,255,.15);
+    border-radius: 10px;
+    padding: 9px 18px;
+    text-align: center;
+    font-size: 12.5px;
+  }
+  .page-header .badge strong { font-size: 17px; display: block; }
+
+  /* ── Section ── */
+  .section { margin-bottom: 11px; background: #fff; border-radius: 14px; padding: 13px 18px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+  .section-title { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .section-num {
+    background: var(--ink);
+    color: white; width: 32px; height: 32px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 14px; flex-shrink: 0;
+  }
+  .section-title h2 { font-size: 19px; font-weight: 900; color: var(--ink); border-bottom: 3px solid var(--ink); padding-bottom: 3px; }
+
+  /* ── 卡片網格 ── */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+
+  /* ── 通用卡片 ── */
+  .card { background: white; border: 2px solid var(--line-strong); border-radius: 10px; padding: 14px 16px; }
+  .card-title { font-size: 14.5px; font-weight: 900; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; color: var(--ink); }
+
+  .stars { color: var(--accent); font-size: 13px; }
+
+  /* ── 表格 ── */
+  table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; }
+  th { padding: 9px 14px; text-align: left; font-size: 13.5px; font-weight: 700; color: white; background: var(--ink); }
+  td { padding: 8px 14px; border-bottom: 1px solid var(--line); font-size: 13.5px; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: #f8fafc; }
+
+  /* ── 流程箭頭 ── */
+  .flow { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .flow-item { color: white; background: var(--ink); padding: 7px 16px; border-radius: 7px; font-weight: 700; font-size: 13.5px; }
+  .flow-arrow { color: var(--sub); font-size: 18px; font-weight: 700; }
+
+  /* ── 重點框 ── */
+  .highlight-box { border-left: 5px solid var(--line-strong); background: var(--neutral-bg); color: var(--neutral); padding: 10px 16px; border-radius: 0 8px 8px 0; margin: 10px 0; font-size: 13.5px; }
+  .highlight-box.hi { border-left-color: var(--accent); background: var(--accent-bg); color: var(--accent); }
+  .highlight-box.hi2 { border-left-color: var(--accent2); background: var(--accent2-bg); color: var(--accent2); }
+
+  /* ── 法條標籤 ── */
+  .law-tag { display: inline-block; background: var(--neutral-bg); color: var(--neutral); border: 1px solid var(--line-strong); padding: 2px 9px; border-radius: 5px; font-size: 11.5px; font-weight: 700; margin: 0 2px; }
+  .law-tag.hi { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
+  .law-tag.hi2 { background: var(--accent2-bg); color: var(--accent2); border-color: var(--accent2); }
+
+  /* ── 例題／補充 ── */
+  .example-box { background: var(--neutral-bg); border: 2px solid var(--line-strong); border-radius: 10px; padding: 14px 18px; margin-top: 10px; }
+  .example-label { font-size: 11px; color: var(--sub); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+
+  /* ── 條文速查 ── */
+  .law-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  .law-item { background: white; border-radius: 8px; padding: 11px 13px; box-shadow: 0 1px 4px rgba(0,0,0,.06); border-top: 4px solid var(--ink); }
+  .law-item .num { font-size: 13.5px; font-weight: 900; color: var(--ink); margin-bottom: 5px; }
+  .law-item .desc { font-size: 12px; color: var(--sub); }
+
+  hr { border: none; border-top: 2px dashed var(--line); margin: 14px 0; }
+  .note { font-size: 12px; color: var(--sub); font-style: italic; margin-top: 6px; }
+
+  /* ── 階層圖 ── */
+  .hierarchy { background: white; border-radius: 10px; padding: 14px; }
+  .h-level { border-radius: 8px; padding: 10px 18px; text-align: center; font-weight: 900; color: white; margin: 0 auto; background: var(--ink); }
+  .h-arrow { text-align: center; color: var(--sub); font-size: 16px; margin: 5px 0; }
+  .h-children { display: flex; gap: 12px; justify-content: center; margin-top: 5px; }
+  .h-child { flex: 1; border-radius: 8px; padding: 10px 12px; text-align: center; font-size: 12.5px; color: white; background: var(--neutral); }
+
+  /* ── 從屬細節（掛在流程或表格下方的展開說明）── */
+  .step-detail { margin-top: 8px; padding: 8px 0 2px 14px; border-left: 3px dashed var(--line-strong); }
+  .step-label { font-size: 12px; font-weight: bold; color: var(--sub); margin-bottom: 5px; }
+</style>
+</head>
+<body>
+
+<!-- ═══ 頁首 ═══ -->
+<div class="page-header">
+  <div>
+    <div style="font-size:12.5px;opacity:.7;margin-bottom:5px;">114年 不動產經紀人考試｜土地法規 Lesson 3</div>
+    <h1>L9｜都市計畫體系</h1>
+    <div class="subtitle">國土計畫法 → 區域計畫法 → 都市計畫法 → 公共設施用地 → 非都市土地使用管制規則</div>
+  </div>
+  <div style="display:flex;gap:14px;">
+    <div class="badge"><strong>選擇題</strong>不考申論</div>
+    <div class="badge"><strong>經紀人限定</strong>地政士不考</div>
+    <div class="badge"><strong>⭐⭐⭐</strong>了解概念即可</div>
+  </div>
+</div>
+
+<div class="highlight-box" style="margin-bottom:20px;">
+  <strong>📌 讀法提醒：</strong>本堂屬於「都市計畫技術類科」法規，與之前的土地行政類法規（土地法、平均地權條例、土地徵收條例）性質不同。<strong>只有不動產經紀人考這幾個法規，地政士不考</strong>。過往考古題顯示這裡只考選擇題、不考申論題，同學可以先把火力集中在前面的土地法與土地稅法，這堂課有概念、能應付選擇題即可。
+</div>
+
+<!-- ═══ 一、都市計畫體系總覽與考試定位 ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num">1</div>
+    <h2>體系總覽與考試定位 <span class="stars">★★★</span></h2>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">土地行政類法規（之前上過）</div>
+      <div style="font-size:14px;">土地法、平均地權條例、土地徵收條例等</div>
+    </div>
+    <div class="card">
+      <div class="card-title">都市計畫技術類法規（本堂）</div>
+      <div style="font-size:14px;">區域計畫法、都市計畫法、非都市土地使用管制規則</div>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="margin-top:14px;">
+    考不動產估價師的同學會考這一類法規，若只考地政士則不用讀；<strong>不動產經紀人科目「土地法與土地相關稅法概要」的命題大綱裡有納入這幾個法規，所以還是會考，但只出現在選擇題</strong>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══ 二、現況土地使用管制體系 ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num">2</div>
+    <h2>現況土地使用管制體系 <span class="stars">★★★★</span></h2>
+  </div>
+
+  <div class="hierarchy">
+    <div class="h-level" style="max-width:280px;">全國區域計畫</div>
+    <div class="h-arrow">↓</div>
+    <div class="h-level" style="max-width:320px;">直轄市／縣市區域計畫</div>
+    <div class="h-arrow">↓ 分為三種分區</div>
+    <div class="h-children">
+      <div class="h-child">國家公園區<br><span style="font-size:11px;opacity:.85;">依國家公園法管制（不考）</span></div>
+      <div class="h-child">都市計畫區<br><span style="font-size:11px;opacity:.85;">依都市計畫法管制</span></div>
+      <div class="h-child">區域計畫區（非都市土地）<br><span style="font-size:11px;opacity:.85;">依區域計畫法管制</span></div>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="margin-top:14px;">
+    <strong>非都市土地使用管制規則</strong>是依<strong>區域計畫法</strong>制定的子規則，專門用來管制「區域計畫區（非都市土地）」的分區分地使用——這三個法規（區域計畫法、都市計畫法、非都市土地使用管制規則）都在命題大綱裡
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══ 三、國土計畫法 ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num">3</div>
+    <h2>國土計畫法（未來趨勢，不在命題大綱但偶爾考）<span class="stars">★★</span></h2>
+  </div>
+
+  <div class="highlight-box hi2" style="margin-bottom:14px;">
+    國土計畫法<strong>已發布施行，但尚未真正實施</strong>，須等114年整個使用分區計畫圖確定後才會開始——目前考試仍以現行法規（區域計畫法／非都市土地使用管制規則／都市計畫法）為主
+  </div>
+
+  <div class="card-title" style="font-size:17px;margin-bottom:12px;">全國國土計畫四大分類 <span class="law-tag">國土§20</span></div>
+  <div class="grid-4" style="margin-bottom:14px;">
+    <div class="card" style="text-align:center;"><div style="font-size:14px;font-weight:900;">國土保育地區</div></div>
+    <div class="card" style="text-align:center;"><div style="font-size:14px;font-weight:900;">海洋資源地區</div></div>
+    <div class="card" style="text-align:center;"><div style="font-size:14px;font-weight:900;">農業發展地區</div></div>
+    <div class="card" style="text-align:center;"><div style="font-size:14px;font-weight:900;">城鄉發展地區</div></div>
+  </div>
+
+  <div class="highlight-box" style="margin-bottom:14px;">
+    <strong>國家公園、都市計畫不會被取代：</strong>國土保育地區下面仍會有國家公園與都市計畫的土地，農業發展地區、城鄉發展地區下面也仍有都市計畫土地——只有<strong>區域計畫法</strong>將來會被國土計畫法取代
+  </div>
+
+  <div class="grid-3" style="margin-bottom:14px;">
+    <div class="card">
+      <div class="card-title">使用原則 <span class="law-tag">國土§21</span></div>
+      <div style="font-size:13px;">規定四類分區的詳細使用原則，非考試重點</div>
+    </div>
+    <div class="card">
+      <div class="card-title">計畫變更 <span class="law-tag">國土§15</span></div>
+      <div style="font-size:13px;">定期變更：全國10年、直轄市縣市5年；另有隨時變更（特殊情況）</div>
+    </div>
+    <div class="card">
+      <div class="card-title hi" style="color:var(--accent);">公民訴訟制度 <span class="law-tag hi">國土§34Ⅰ</span></div>
+      <div style="font-size:13px;">目前現行法規<strong>沒有</strong>的新制度，見下方詳解</div>
+    </div>
+  </div>
+
+  <div class="card" style="border-color:var(--accent);">
+    <div class="card-title" style="color:var(--accent);">公民訴訟制度詳解（國土計畫法特有）</div>
+    <div style="font-size:14px;">申請人使用許可若違反規定，主管機關卻怠於處罰時，<strong>受害人民或公益團體</strong>可先敘明具體內容以書面告知主管機關要求裁處；若主管機關於書面告知送達之日起<strong>60日內</strong>仍未依法執行，人民或公益團體可以該機關為被告，向<strong>行政法院</strong>提起訴訟，請求法院判命主管機關執行職務</div>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══ 四、區域計畫法：目的、意義、擬定 ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num">4</div>
+    <h2>區域計畫法（一）目的、意義與擬定 <span class="stars">★★★</span></h2>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:14px;">
+    <div class="card">
+      <div class="card-title">目的 <span class="law-tag">區計§1</span></div>
+      <div style="font-size:14px;">促進土地及天然資源之保育利用、人口及產業活動之合理分佈，加速並健全經濟發展、改善生活環境、增進公共福利</div>
+    </div>
+    <div class="card">
+      <div class="card-title">意義 <span class="law-tag">區計§3</span></div>
+      <div style="font-size:14px;">基於地理、人口、資源、經濟活動相互依賴與共同利益關係而制定之區域發展計畫</div>
+    </div>
+  </div>
+
+  <div class="highlight-box hi2" style="margin-bottom:14px;">
+    <strong>計畫年期：</strong>依區域計畫法施行細則§3，不得大於<strong>25年</strong>（都市計畫也是25年為原則，兩者相同）
+  </div>
+
+  <div class="card" style="margin-bottom:14px;">
+    <div class="card-title" style="font-size:15px;">應擬定區域計畫之地區 <span class="law-tag">區計§5</span></div>
+    <div style="font-size:14px;">① 全國性或地區性綜合開發計畫所指定之地區　② 以首都、直轄市為中心，為促進都市實質發展而劃定之地區　③ 其他經內政部指定之地區</div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title" style="font-size:14.5px;">政府勘測權 <span class="law-tag">區計§14</span></div>
+      <div style="font-size:14px;">區域計畫擬定後，政府可進入土地勘測，所有權人<strong>不得拒絕</strong></div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="font-size:14.5px;">擬定機關 <span class="law-tag">區計§6</span></div>
+      <div style="font-size:14px;">跨兩鄉鎮市 → <span class="law-tag">區計§9</span> <strong>縣主管機關</strong>擬定；跨兩縣市或跨兩省 → <strong>中央主管機關</strong>（內政部）擬定；內政部自己擬定時，要送<strong>行政院備案</strong>（自己擬、自己核不合理，需送上級單位）</div>
+    </div>
+  </div>
+
+  <div class="highlight-box hi2" style="margin-top:14px;">
+    <strong>公告程序 <span class="law-tag hi2">區計§10</span>：</strong>核定或備案後<strong>40天內</strong>要公告，並公開展覽<strong>30天</strong>，之後開始施行
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══ 五、區域計畫法：變更與管制 ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num">5</div>
+    <h2>區域計畫法（二）變更與管制 <span class="stars">★★★★</span></h2>
+  </div>
+
+  <div class="card-title" style="font-size:17px;margin-bottom:12px;">計畫變更（三種情形）</div>
+  <div class="grid-3" style="margin-bottom:18px;">
+    <div class="card">
+      <div class="card-title" style="font-size:14px;">下位計畫配合變更 <span class="law-tag">區計§11、§12</span></div>
+      <div style="font-size:13px;">區域計畫下轄的國家公園、都市計畫要擬定或變更時，區域計畫要配合擬定或變更</div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="font-size:14px;">通盤檢討 <span class="law-tag">區計§13</span></div>
+      <div style="font-size:13px;">定期性，每<strong>5年</strong>就整個區域計畫做通盤檢討</div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="font-size:14px;">隨時變更 <span class="law-tag">區計§13Ⅰ</span></div>
+      <div style="font-size:13px;">① 發生或避免重大災害　② 興辦重大開發或建設事業　③ 區域建設推行委員會之建議</div>
+    </div>
+  </div>
+
+  <div class="card-title" style="font-size:17px;margin-bottom:12px;">管制：分區分地 <span class="law-tag">施行細則§11、§13</span></div>
+  <div class="grid-2" style="margin-bottom:14px;">
+    <div class="card" style="text-align:center;">
+      <div style="font-size:26px;font-weight:900;">11種</div>
+      <div style="font-size:14px;margin-top:5px;">使用分區（特定農業區、一般農業區、工業區、鄉村區等）</div>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-size:26px;font-weight:900;">19種</div>
+      <div style="font-size:14px;margin-top:5px;">使用地類別（每個使用分區下再細分）</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">甲乙丙丁建築用地</div>
+    <table>
+      <thead><tr><th>類別</th><th>常見於哪個分區</th></tr></thead>
+      <tbody>
+        <tr><td>甲種、乙種建築用地</td><td style="font-size:13px;">一般農業區或鄉村區裡的農村社區建築物（住家、農舍）</td></tr>
+        <tr><td>丙種建築用地</td><td style="font-size:13px;">山坡地保育區（蓋在山坡地上的房子）</td></tr>
+        <tr><td>丁種建築用地</td><td style="font-size:13px;">工業區（如工廠）</td></tr>
+      </tbody>
+    </table>
+    <div class="note">其他如農牧用地、林業用地、養殖用地等可從字面直接理解用途；如何分辨土地屬於哪個分區／類別：查<strong>土地登記謄本標示部</strong>即可看到「使用分區」與「使用地類別」欄位</div>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══ 六、區域計畫法：分區變更申請程序與罰則 ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num">6</div>
+    <h2>區域計畫法（三）分區變更申請與罰則 <span class="stars">★★★★</span></h2>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:18px;">
+    <div class="card">
+      <div class="card-title">政府逕為變更 <span class="law-tag">區計§15-1Ⅰ</span></div>
+      <div style="font-size:14px;">為加強保育，政府可主動變更，例如將坡度較高的一般農業區逕為變更為山坡地保育區</div>
+    </div>
+    <div class="card">
+      <div class="card-title">申請人申請變更 <span class="law-tag">區計§15-1Ⅱ</span></div>
+      <div style="font-size:14px;">例如一般農業區欲變更為工業區以興建工業園區，原則上可以</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:18px;">
+    <div class="card-title" style="font-size:15.5px;">申請變更要件（五項）<span class="law-tag">區計§15-2</span></div>
+    <div style="font-size:14px;line-height:1.85;">
+      ① 與國土利用係數適當而合理者<br>
+      ② 不得違反中央、直轄市或縣市政府之土地利用或環境保護計畫<br>
+      ③ 對環境保護、自然保育與災害防止有妥善規劃<br>
+      ④ 水源供應、交通設施、排水系統等公共設備須能互相配合<br>
+      ⑤ 須取得開發地區內土地及建物之權利證明文件
+    </div>
+    <div class="highlight-box hi2" style="margin-top:10px;">
+      <strong>開發影響費 <span class="law-tag hi2">區計§15-3</span>：</strong>申請人須繳納開發影響費，可用<strong>現金</strong>或以<strong>區域內土地</strong>抵付；申請須先檢具開發計畫書，經<strong>區域計畫委員會</strong>審議
+    </div>
+    <div class="highlight-box hi2" style="margin-top:10px;">
+      <strong>審議時程 <span class="law-tag hi2">區計§15-4、細則§17</span>：</strong>政府受理後<strong>60天內</strong>送區域計畫委員會審議；審議開始後<strong>90天內</strong>通知申請人審議結果
+    </div>
+    <div class="highlight-box hi2" style="margin-top:10px;">
+      <strong>逕為審議 <span class="law-tag hi2">區計§15-5</span>：</strong>擬定機關（上級主管機關）如認為審議機關逾期怠於審議，得逕為審議，不用一直等下去
+    </div>
+  </div>
+
+  <div class="card-title" style="font-size:17px;margin-bottom:12px;">罰則 <span class="law-tag">區計§21、§22</span></div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">行政罰 <span class="law-tag">區計§21</span></div>
+      <div style="font-size:14px;">違反§15Ⅰ管制使用土地：<strong>6～30萬</strong>罰鍰＋限期改善／變更使用／停止使用／拆除地上物恢復原狀；不遵從可<strong>按次處罰</strong>，並停止供水供電、封閉、強制拆除；逾期不繳可移送法院強制執行</div>
+    </div>
+    <div class="card">
+      <div class="card-title">刑罰 <span class="law-tag">區計§22</span></div>
+      <div style="font-size:14px;">不依限變更使用或拆除建物恢復原狀者，除依行政法辦理外，得處<strong>6個月以下有期徒刑或拘役</strong></div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══ 七、都市計畫法：類型與計畫層級 ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num">7</div>
+    <h2>都市計畫法（一）類型與計畫層級 <span class="stars">★★★★</span></h2>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:14px;">
+    <div class="card">
+      <div class="card-title">目的 <span class="law-tag">都計§1、§5</span></div>
+      <div style="font-size:14px;">改善居民生活環境，並促進市鎮鄉街有計畫之均衡發展；計畫年期同樣以不超過25年為原則（定義§3與區計法§3大同小異）</div>
+    </div>
+    <div class="card">
+      <div class="card-title">與區域計畫最大不同</div>
+      <div style="font-size:14px;">都市計畫土地是有<strong>階層</strong>的，分為三種類型（§10～12）</div>
+    </div>
+  </div>
+
+  <div class="grid-3" style="margin-bottom:18px;">
+    <div class="card">
+      <div class="card-title" style="font-size:14px;">市鎮計畫 <span class="law-tag">都計§10</span></div>
+      <div style="font-size:13px;">首都、直轄市、省轄市、縣政府所在地及縣轄市——人口較稠密、繁華地區</div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="font-size:14px;">鄉街計畫 <span class="law-tag">都計§11</span></div>
+      <div style="font-size:13px;">鄉公所所在地；或人口集居5年前已達3,000人且最近5年增加1/3以上；或人口集居達3,000人且工商業人口佔比50%以上</div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="font-size:14px;">特定區計畫 <span class="law-tag">都計§12</span></div>
+      <div style="font-size:13px;">為發展工業、保持優美風景或其他目的劃定之特定地區（如南科、東北角風景區特定區計畫）</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">主要計畫 vs 細部計畫（兩階段，區分依據 <span class="law-tag">都計§7</span>）</div>
+    <table>
+      <thead><tr><th>階段</th><th>區分依據</th><th>規定</th><th>內容</th></tr></thead>
+      <tbody>
+        <tr><td><strong>主要計畫</strong></td><td style="font-size:13px;">§7第一款</td><td style="font-size:13px;">§15</td><td style="font-size:13px;">整體、概略、大方向的架構，是細部計畫的準則</td></tr>
+        <tr><td><strong>細部計畫</strong></td><td style="font-size:13px;">§7第二款</td><td style="font-size:13px;">§22</td><td style="font-size:13px;">依主要計畫脈絡訂定，含細部計畫書及細部計畫圖</td></tr>
+      </tbody>
+    </table>
+    <div class="highlight-box hi2" style="margin-top:10px;">
+      <strong>時程 <span class="law-tag hi2">都計§17</span>：</strong>主要計畫發布後<strong>2年內</strong>完成第一期細部計畫；細部計畫發布後<strong>5年內</strong>完成區域內公共設施
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══ 八、都市計畫法：擬定核定變更與罰則 ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num">8</div>
+    <h2>都市計畫法（二）擬定、核定、變更與罰則 <span class="stars">★★★★</span></h2>
+  </div>
+
+  <div class="card" style="margin-bottom:18px;">
+    <div class="card-title" style="font-size:15.5px;">擬定機關 <span class="law-tag">都計§13、§14</span></div>
+    <div style="font-size:14px;">市計畫由<strong>直轄市或縣市政府</strong>擬定；鎮、縣轄市計畫及鄉街計畫由各該<strong>鎮、縣轄市或鄉公所</strong>擬定；特定區計畫由<strong>直轄市或縣市政府</strong>擬定；相鄰接之行政地區可會同擬定「聯合都市計畫」</div>
+  </div>
+
+  <div class="card" style="margin-bottom:18px;">
+    <div class="flow" style="flex-direction:column;align-items:stretch;gap:8px;">
+      <div class="flow-item" style="text-align:center;">擬定機關擬定計畫 → 公開展覽、辦說明會，收集人民意見 <span class="law-tag" style="background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.4);">§19（30天）</span></div>
+      <div style="text-align:center;color:var(--sub);">↓</div>
+      <div class="flow-item" style="text-align:center;">送都市計畫委員會審議 <span class="law-tag" style="background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.4);">§18（60天）</span></div>
+      <div style="text-align:center;color:var(--sub);">↓</div>
+      <div class="flow-item" style="text-align:center;">內政部核定（內政部自己擬定者，送行政院備案） <span class="law-tag" style="background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.4);">§20</span></div>
+      <div style="text-align:center;color:var(--sub);">↓</div>
+      <div class="flow-item" style="text-align:center;">核定或備案後30天內公告 <span class="law-tag" style="background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.4);">§21</span></div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:18px;">
+    <div class="card" style="border-color:var(--accent);">
+      <div class="card-title" style="color:var(--accent);">變更：通盤檢討／個案變更 <span class="law-tag hi">易混淆</span></div>
+      <div style="font-size:14px;"><strong>通盤檢討 <span class="law-tag hi">都計§26</span></strong>：定期為<strong>3年或5年</strong>（區域計畫是5年）。<strong>個案變更 <span class="law-tag hi">都計§27</span>（vs 區計§13）</strong>：事由包含戰爭、地震、水災、風災等重大事變／為避免重大災害／為適應國防或經濟發展需要／配合興建重大設施；擬定機關怠於行使職務時，上級機關可逕為變更。<span class="note" style="display:block;margin-top:4px;">⚠️ 通盤檢討與個案變更法條號碼不同，是最容易背錯的一組</span></div>
+    </div>
+    <div class="card">
+      <div class="card-title">禁止建築2年 <span class="law-tag hi2">都計§81</span></div>
+      <div style="font-size:14px;">都市計畫案經委員會通過後，可禁止該地區內新建、增建、改建及採取土石、變更地形，禁止期間<strong>2年</strong>——可與重劃或徵收地區的禁止規定相互參照</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:18px;">
+    <div class="card-title">罰則 <span class="law-tag">都計§79、§80</span></div>
+    <div style="font-size:14px;">§79：違反規定罰所有權人、使用人或管理人<strong>6～30萬</strong>罰鍰，並勒令拆除、改建或恢復原狀；不聽者可按次處罰、停止供水供電、封閉或強制拆除、移送強制執行。§80：不依規定拆除、改建或停止使用者，可處<strong>6個月以下</strong>有期徒刑或拘役——與區域計畫法罰則架構相同（行政罰＋刑罰雙軌）</div>
+  </div>
+
+  <div class="highlight-box">
+    <strong>如何判斷是否為都市計畫土地：</strong>調閱土地登記謄本，標示部的「土地使用分區」與「使用地類別」欄若為<strong>空白</strong>，代表是都市計畫內土地（與非都市土地相反——非都市土地這兩欄會有填載內容）；也可上各該直轄市／縣市政府主管機關（都發局、城鄉局）網站查詢
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══ 九、都市計畫特有：公共設施用地 ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num">9</div>
+    <h2>都市計畫特有：公共設施用地 <span class="stars">★★★</span></h2>
+  </div>
+
+  <div class="highlight-box" style="margin-bottom:14px;">
+    區域計畫法沒有這個用地類別，是<strong>都市計畫特有</strong>的概念
+  </div>
+
+  <div class="card" style="margin-bottom:14px;">
+    <div class="card-title">類型 <span class="law-tag">都計§42</span></div>
+    <div style="font-size:14px;">公園、道路、航空站、學校等</div>
+  </div>
+
+  <div class="card-title" style="font-size:17px;margin-bottom:12px;">設置原則 <span class="law-tag">都計§43～§47</span></div>
+  <div class="grid-2" style="margin-bottom:18px;">
+    <div class="card">
+      <div class="card-title" style="font-size:14px;">§44 交通類設施</div>
+      <div style="font-size:13px;">道路、停車場、加油站等按使用分區及交通預期發展配置；鐵路、公路應避免穿過市中心</div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="font-size:14px;">§45 公園綠地體育場所</div>
+      <div style="font-size:13px;">面積不得少於全部計畫面積之<strong>10%</strong></div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="font-size:14px;">§46 中小學社教市場</div>
+      <div style="font-size:13px;">應按鄰里單位或居民分佈情形適當配置</div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="font-size:14px;">§47 嫌惡設施（鄰避設施）</div>
+      <div style="font-size:13px;">屠宰場、垃圾處理場、殯儀館等，要在邊緣適當地點設置</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:18px;">
+    <div class="card-title">取得方式 <span class="law-tag">都計§48</span></div>
+    <div style="font-size:14px;">依事業性質分兩種主體：<strong>事業取得</strong>——① 徵收　② 購買；<strong>政府取得</strong>——① 徵收　② 區段徵收　③ 市地重劃</div>
+  </div>
+
+  <div class="card" style="margin-bottom:18px;">
+    <div class="card-title">補償標準 <span class="law-tag">都計§49</span></div>
+    <div style="font-size:14px;">土地依<strong>公告現值</strong>補償；若為<strong>公共設施保留地</strong>，依「毗鄰非公共設施保留地之平均公告現值」計算，必要時加成補償，<strong>加成不得少於40%</strong>；建築改良物用<strong>重建價格</strong>補償</div>
+    <div class="highlight-box hi" style="margin-top:10px;">
+      <strong>⚠️ 若走徵收程序：</strong>依土地徵收條例§30規定改用<strong>市價</strong>補償，不再用公告現值
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">交換 <span class="law-tag">都計§50-2</span></div>
+      <div style="font-size:14px;">私有公共設施保留地可與公有非公用土地交換，<span class="law-tag hi2">且不受土地法§25限制</span></div>
+    </div>
+    <div class="card">
+      <div class="card-title">私人投資興辦</div>
+      <div style="font-size:14px;">取得土地——公有<strong>租用</strong> <span class="law-tag">都計§53</span>，租用後受 <span class="law-tag">§54</span> 限制；私有<strong>價購</strong> <span class="law-tag">都計§53</span>，談不攏由政府代買，代買後受 <span class="law-tag">§55</span> 限制。私人須依計畫使用，否則政府可收回。<strong>捐獻</strong> <span class="law-tag">§56</span>：登記公有，並予獎勵。政府也可用<strong>徵收與撥用</strong> <span class="law-tag">§52</span> 方式取得</div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══ 十、非都市土地使用管制規則 ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num">10</div>
+    <h2>非都市土地使用管制規則 <span class="stars">★★★</span></h2>
+  </div>
+
+  <div class="highlight-box" style="margin-bottom:14px;">
+    依<strong>區域計畫法§15</strong>制定（國家公園區內土地例外，不適用本規則）；管制方式同樣是「分區、分地」利用，罰則準用區域計畫法，另有特殊的<strong>容積管制</strong>規定
+  </div>
+
+  <div class="grid-2" style="margin-bottom:14px;">
+    <div class="card">
+      <div class="card-title" style="font-size:15px;">分區分地利用 <span class="law-tag">區細§11＋非都管§2</span>／<span class="law-tag">區細§13＋非都管§3</span></div>
+      <div style="font-size:13.5px;">使用分區依區細§11＋非都管§2認定；使用地類別依區細§13＋非都管§3認定——雙重法源，不是只看非都管本身</div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="font-size:15px;">罰則 <span class="law-tag">區計§21、§22</span></div>
+      <div style="font-size:13.5px;">非都管本身沒有另訂罰則，準用區域計畫法的行政罰（6～30萬）與刑罰（6個月以下有期徒刑或拘役）</div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:14px;">
+    <div class="card">
+      <div class="card-title" style="font-size:15px;">§7 山坡地範圍未編定前 <span class="law-tag">非都管§7</span></div>
+      <div style="font-size:14px;">山坡地範圍內的森林區、山坡地保育區、風景區土地，在未編定使用地類別之前，適用<strong>林業用地</strong>之管制</div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="font-size:15px;">§8「從來使用」概念 <span class="law-tag">非都管§4、§7、§8</span></div>
+      <div style="font-size:14px;">土地使用編定後，原有使用或原有建築物不合土地使用分區者，在政府令其變更使用或拆除前，得為<strong>從來之使用</strong>；除非對公眾安全、衛生福利有重大妨礙，政府才令其變更或停止使用，但須有適當補償</div>
+    </div>
+  </div>
+
+  <div class="card hi" style="border-color:var(--accent);margin-bottom:14px;">
+    <div class="card-title" style="color:var(--accent);">容積管制 <span class="law-tag hi">非都管§9Ⅰ、§9Ⅲ、區細§13</span> <span class="stars">★★★</span></div>
+    <div style="font-size:14px;">屬<strong>原則性規定</strong>，各地方政府得依實際需要自行限縮容積——跟都市計畫的容積管制邏輯不同，非都市土地是「中央訂原則、地方可以更嚴格」，考試容易考「地方政府是否可以自行加嚴」這個方向</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">分區變更達一定規模須強制辦理 <span class="law-tag">非都管§11、§12</span></div>
+    <table>
+      <thead><tr><th>類型</th><th>強制辦理分區變更之門檻</th></tr></thead>
+      <tbody>
+        <tr><td>鄉村區</td><td style="font-size:13px;">社區達50戶，或土地在1公頃以上</td></tr>
+        <tr><td>工業區</td><td style="font-size:13px;">工業用地面積達10公頃以上，或依產創條例申請達5公頃以上</td></tr>
+        <tr><td>遊憩設施</td><td style="font-size:13px;">面積達5公頃以上</td></tr>
+        <tr><td>學校／高爾夫球場</td><td style="font-size:13px;">面積各達10公頃以上</td></tr>
+        <tr><td>公墓／其他殯葬設施</td><td style="font-size:13px;">公墓5公頃以上，或其他殯葬設施2公頃以上</td></tr>
+        <tr><td>其他（前述以外）</td><td style="font-size:13px;">面積達2公頃以上</td></tr>
+        <tr><td>風景區 <span class="law-tag">§12</span></td><td style="font-size:13px;">變更面積原則上須達25公頃以上，<span class="law-tag hi2">但離島地區不在此限</span></td></tr>
+      </tbody>
+    </table>
+    <div class="step-detail">
+      <div class="step-label">申請與程序法條鏈（非都管）</div>
+      <div style="font-size:13px;">規模 <span class="law-tag">§11、§12</span> → 申請 <span class="law-tag">§13</span>／申請開發許可 <span class="law-tag">§14</span>／撤回 <span class="law-tag">§14-1</span> → 程序：公告 <span class="law-tag">§17、§19、§20</span>／廢止許可 <span class="law-tag">§21</span>／變更計劃 <span class="law-tag">§22</span>／山坡地或非山坡地 <span class="law-tag">§23</span></div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══ 十一、條文速查 ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num">11</div>
+    <h2>條文與期限速查</h2>
+  </div>
+  <div class="law-grid">
+    <div class="law-item"><div class="num">國土計畫§20</div><div class="desc">四大分類<br>國海農城</div></div>
+    <div class="law-item"><div class="num">國土計畫§34Ⅰ</div><div class="desc">公民訴訟<br>制度・60日</div></div>
+    <div class="law-item"><div class="num">區計法§1、§3</div><div class="desc">目的與意義</div></div>
+    <div class="law-item"><div class="num">區計法§5</div><div class="desc">應擬定<br>區域計畫地區</div></div>
+    <div class="law-item"><div class="num">區計法§6、§9</div><div class="desc">擬定機關<br>跨鄉鎮/跨縣市</div></div>
+    <div class="law-item"><div class="num">區計法§10</div><div class="desc">40日內公告<br>展覽30日</div></div>
+    <div class="law-item"><div class="num">區計法§11、§12</div><div class="desc">下位計畫<br>配合變更</div></div>
+    <div class="law-item"><div class="num">區計法§13</div><div class="desc">通盤檢討5年<br>隨時變更三事由</div></div>
+    <div class="law-item"><div class="num">區計法§15-1</div><div class="desc">逕變Ⅰ<br>申變Ⅱ</div></div>
+    <div class="law-item"><div class="num">區計法§15-2</div><div class="desc">申請變更<br>五要件</div></div>
+    <div class="law-item"><div class="num">區計法§15-3</div><div class="desc">開發影響費</div></div>
+    <div class="law-item"><div class="num">區計法§15-4、細§17</div><div class="desc">審議期限<br>60天/90天</div></div>
+    <div class="law-item"><div class="num">區計法§15-5</div><div class="desc">逕為審議<br>（怠於審議）</div></div>
+    <div class="law-item"><div class="num">區計法§21、§22</div><div class="desc">行政罰＋刑罰<br>6-30萬／6月以下</div></div>
+    <div class="law-item"><div class="num">都計法§1、§5</div><div class="desc">目的</div></div>
+    <div class="law-item"><div class="num">都計法§7</div><div class="desc">主要/細部計畫<br>區分依據</div></div>
+    <div class="law-item"><div class="num">都計法§10-12</div><div class="desc">市鎮/鄉街/<br>特定區計畫</div></div>
+    <div class="law-item"><div class="num">都計法§13、§14</div><div class="desc">擬定機關</div></div>
+    <div class="law-item"><div class="num">都計法§15、§22</div><div class="desc">主要計畫／<br>細部計畫</div></div>
+    <div class="law-item"><div class="num">都計法§17</div><div class="desc">2年內細部計畫<br>5年內公共設施</div></div>
+    <div class="law-item"><div class="num">都計法§18、§19、§20</div><div class="desc">審議60天/<br>公展30天/核定</div></div>
+    <div class="law-item"><div class="num">都計法§26</div><div class="desc">通盤檢討<br>3或5年</div></div>
+    <div class="law-item"><div class="num">都計法§27</div><div class="desc">個案變更<br>四事由</div></div>
+    <div class="law-item"><div class="num">都計法§45</div><div class="desc">公園綠地<br>不得少於10%</div></div>
+    <div class="law-item"><div class="num">都計法§48</div><div class="desc">公設用地<br>取得方式</div></div>
+    <div class="law-item"><div class="num">都計法§49</div><div class="desc">公設保留地補償<br>加成不得少於40%</div></div>
+    <div class="law-item"><div class="num">都計法§50-2</div><div class="desc">公保地交換<br>不受土地法§25限制</div></div>
+    <div class="law-item"><div class="num">都計法§52-56</div><div class="desc">私人投資興辦<br>取得/限制/捐獻</div></div>
+    <div class="law-item"><div class="num">都計法§79、§80</div><div class="desc">行政罰＋刑罰<br>6-30萬／6月以下</div></div>
+    <div class="law-item"><div class="num">都計法§81</div><div class="desc">禁止建築<br>兩年</div></div>
+    <div class="law-item"><div class="num">非都管§2、§3</div><div class="desc">分區分地<br>雙重法源</div></div>
+    <div class="law-item"><div class="num">非都管§4、§7、§8</div><div class="desc">山坡地適用林業<br>從來使用</div></div>
+    <div class="law-item"><div class="num">非都管§9、區細§13</div><div class="desc">容積管制<br>地方可自行限縮</div></div>
+    <div class="law-item"><div class="num">非都管§11、§12</div><div class="desc">強制分區變更<br>規模門檻</div></div>
+    <div class="law-item"><div class="num">非都管§13-23</div><div class="desc">分區變更<br>申請與程序</div></div>
+  </div>
+</div>
+
+<div style="text-align:center;color:#9ca3af;font-size:12px;margin-top:32px;padding-bottom:20px;">
+  土地法 L9｜114年不動產經紀人考試 · 國土計畫法、區域計畫法、都市計畫法、非都市土地使用管制規則 · v2 依上課講義校正 · 2026-07-17
+</div>
+
+</body>
+</html>
