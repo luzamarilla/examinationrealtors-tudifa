@@ -37,16 +37,16 @@
     border: 2px solid var(--line-strong);
     color: var(--neutral);
     border-radius: 10px;
-    padding: 10px 18px;
+    padding: 8px 16px;
     font-size: 15px;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
     font-weight: bold;
   }
   section {
     background: #fff;
     border-radius: 14px;
-    padding: 18px 22px;
-    margin-bottom: 16px;
+    padding: 14px 20px;
+    margin-bottom: 12px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.08);
   }
   h2.sec-title {
@@ -54,13 +54,13 @@
     color: var(--ink);
     border-left: 6px solid var(--ink);
     padding-left: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 9px;
     display: flex;
     align-items: center;
     gap: 8px;
   }
   h2.sec-title .star { color: var(--accent); font-size: 15px; }
-  h3.sub-title { font-size: 15.5px; color: var(--ink); margin: 16px 0 8px; }
+  h3.sub-title { font-size: 15.5px; color: var(--ink); margin: 11px 0 6px; }
   .law-tag {
     display: inline-block;
     background: var(--neutral-bg);
@@ -71,6 +71,8 @@
     border-radius: 999px;
     font-weight: bold;
     margin: 2px 4px 2px 0;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
   .law-tag.sub-law { background: #f8fafc; color: var(--sub); border-color: var(--line); }
   .law-tag.hi { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
@@ -80,54 +82,122 @@
     background: var(--accent-bg); border: 1px solid var(--accent); border-radius: 10px; padding: 1px 9px;
     vertical-align: middle;
   }
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
-  .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
-  .card { border-radius: 12px; padding: 14px 16px; border: 2px solid var(--line-strong); background: #fff; }
-  .card-title { font-size: 17px; font-weight: bold; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; color: var(--ink); }
-  .card p { font-size: 14.5px; line-height: 1.75; }
-  table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-top: 4px; }
-  table th { background: var(--ink); color: #fff; padding: 8px 10px; text-align: left; }
-  table td { padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 9px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 9px; }
+  .card { border-radius: 12px; padding: 11px 14px; border: 2px solid var(--line-strong); background: #fff; }
+  .card-title { font-size: 17px; font-weight: bold; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; color: var(--ink); }
+  .card p { font-size: 14.5px; line-height: 1.6; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-top: 2px; }
+  table th { background: var(--ink); color: #fff; padding: 6px 10px; text-align: left; }
+  table td { padding: 6px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
   table tr:nth-child(even) td { background: #f9fafb; }
   .warn-box {
     background: var(--neutral-bg); border: 2px solid var(--line-strong); color: var(--neutral);
-    border-radius: 10px; padding: 10px 16px; font-size: 14.5px; margin-top: 10px; font-weight: bold;
+    border-radius: 10px; padding: 8px 14px; font-size: 14.5px; margin-top: 7px; font-weight: bold;
   }
   .warn-box.hi { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
   .warn-box.hi2 { background: var(--accent2-bg); border-color: var(--accent2); color: var(--accent2); }
   .info-box {
     background: var(--neutral-bg); border: 2px solid var(--line-strong); color: var(--neutral);
-    border-radius: 10px; padding: 10px 16px; font-size: 14px; margin-top: 10px;
+    border-radius: 10px; padding: 8px 14px; font-size: 14px; margin-top: 7px;
   }
   .example-box {
     background: var(--neutral-bg); border: 2px solid var(--line-strong); border-radius: 10px;
-    padding: 12px 18px; font-size: 14.5px; line-height: 1.7; color: var(--neutral);
+    padding: 9px 16px; font-size: 14.5px; line-height: 1.6; color: var(--neutral);
   }
-  .flow { display: flex; flex-direction: column; gap: 3px; }
+  .flow { display: flex; flex-direction: column; gap: 2px; }
   .flow-step { display: flex; align-items: center; gap: 14px; }
   .flow-num {
     flex-shrink: 0; width: 28px; height: 28px; background: var(--ink); color: #fff; border-radius: 50%;
     display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13.5px;
   }
-  .flow-box { flex: 1; background: var(--neutral-bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 14px; font-size: 14.5px; }
+  .flow-box { flex: 1; background: var(--neutral-bg); border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; font-size: 14.5px; }
   .flow-arrow { text-align: center; color: var(--sub); font-size: 15px; margin-left: 13px; }
-  .sub-block { margin-top: 4px; }
-  .sub-block + .sub-block { margin-top: 12px; padding-top: 12px; border-top: 2px dashed var(--line); }
+  .sub-block { margin-top: 3px; }
+  .sub-block + .sub-block { margin-top: 9px; padding-top: 9px; border-top: 2px dashed var(--line); }
   .sub-tag {
     display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: bold; color: #fff;
-    background: var(--neutral); padding: 3px 11px; border-radius: 999px; margin-bottom: 8px;
+    background: var(--neutral); padding: 3px 11px; border-radius: 999px; margin-bottom: 5px;
   }
-  .ladder { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+  .ladder { display: flex; flex-direction: column; gap: 5px; margin-top: 6px; }
   .ladder-step {
     background: var(--neutral-bg); border: 2px solid var(--line-strong); border-radius: 10px;
-    padding: 10px 16px; font-size: 14.5px; display: flex; align-items: center; gap: 10px;
+    padding: 8px 14px; font-size: 14.5px; display: flex; align-items: center; gap: 10px;
   }
   .ladder-rank {
     flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--ink); color: #fff;
     display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px;
   }
   .ladder-arrow { text-align: center; color: var(--accent); font-weight: bold; font-size: 16px; }
+  .cond-box { border: 2px solid var(--line-strong); border-radius: 12px; overflow:hidden; margin-top:7px; }
+  .cond-if { background: var(--neutral-bg); padding: 9px 16px; font-size: 14.5px; border-bottom: 2px dashed var(--line-strong); }
+  .cond-then { background: #fff; padding: 9px 16px; font-size: 14.5px; }
+  .cond-label { display:inline-block; font-size:12px; font-weight:bold; color:#fff; background:var(--neutral); padding:2px 10px; border-radius:999px; margin-right:8px; }
+  .cond-then .cond-label { background: var(--accent); }
+  .cond-box.no .cond-then .cond-label { background: var(--sub); }
+  .oneliner { font-size: 13px; color: var(--sub); background: var(--neutral-bg); border-radius: 8px; padding: 8px 14px; margin-bottom: 10px; line-height:1.7; }
+  .foot-note { font-size: 12px; color: var(--sub); margin-top: 6px; border-left: 3px solid var(--line); padding: 3px 0 3px 10px; }
+  .tree-groups-flat { display:grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 8px; }
+  .tree-group { background:var(--neutral-bg); border:2px solid var(--line-strong); border-radius:10px; padding:9px 14px; }
+  .group-head { display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:900; margin-bottom:6px; }
+  .group-num { width:20px; height:20px; border-radius:50%; background:var(--ink); color:#fff; font-size:11.5px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .cond-line { font-size:13px; padding:2px 0; }
+  .cond-or { font-size:12px; color:var(--sub); text-align:center; margin:1px 0; }
+  .group-caption { font-size:11.5px; color:var(--sub); margin-top:5px; }
+  .proc-row { font-size:12.5px; padding:3px 0; display:flex; align-items:center; flex-wrap:wrap; gap:5px; }
+  .proc-arrow { color:var(--accent); font-weight:bold; }
+  .tree-groups-3 { display:grid; grid-template-columns: 1.1fr 1fr 1.3fr; gap: 12px; margin-top: 8px; }
+  .rcp-item { background:#fff; border:1px solid var(--line); border-radius:8px; padding:6px 9px; font-size:12.5px; line-height:1.5; margin-bottom:6px; }
+  .rcp-item:last-child { margin-bottom:0; }
+  .rcp-item b { font-size:13px; }
+  .rcp-item .note { display:block; color:var(--sub); font-size:11px; margin-top:2px; }
+
+  .ladder2 { display:flex; flex-direction:column; margin-top:6px; }
+  .step-row { display:flex; align-items:stretch; gap:8px; }
+  .step-num2 {
+    flex-shrink:0; width:22px; height:22px; border-radius:50%; background:var(--ink); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:11.5px; font-weight:900; margin-top:5px;
+  }
+  .step-q { flex:1; background:var(--neutral-bg); border-radius:8px; padding:7px 11px; font-size:13.5px; font-weight:bold; display:flex; align-items:center; }
+  .step-yes { flex-shrink:0; width:230px; border:2px solid var(--accent); background:var(--accent-bg); border-radius:8px; padding:6px 10px; font-size:11.5px; line-height:1.4; }
+  .step-yes.alt { border-color:var(--accent2); background:var(--accent2-bg); }
+  .step-yes .r-title { font-weight:900; font-size:12.5px; color:var(--ink); }
+  .step-yes .r-tag { display:inline-block; font-size:10px; font-weight:900; color:#2f7d5f; background:#e3f3ec; border-radius:999px; padding:0 6px; margin-left:4px; }
+  .step-connector { display:flex; align-items:center; gap:8px; padding:2px 0 2px 11px; }
+  .step-connector .conn-line { width:2px; height:12px; background:var(--line-strong); margin-left:10px; }
+  .step-connector .no-label { font-size:11px; color:var(--sub); font-weight:bold; }
+  .final-row { display:flex; align-items:stretch; gap:8px; margin-top:2px; }
+  .final-row .step-num2 { background:var(--sub); }
+  .final-split { flex:1; display:flex; gap:8px; }
+  .final-card { flex:1; border:2px solid var(--accent2); background:var(--accent2-bg); border-radius:8px; padding:6px 10px; font-size:11.5px; line-height:1.4; }
+  .final-card .r-title { font-weight:900; font-size:12.5px; color:var(--ink); }
+  .final-card .r-tag { display:inline-block; font-size:10px; font-weight:900; color:#2f7d5f; background:#e3f3ec; border-radius:999px; padding:0 6px; margin-left:4px; }
+  .final-branch-label { font-size:10.5px; color:var(--sub); font-weight:bold; margin-bottom:2px; }
+
+  .eff-tag { flex-shrink:0; font-size:11.5px; font-weight:900; padding:2px 9px; border-radius:999px; margin-left:auto; }
+  .eff-tag.wu { color:var(--accent); background:var(--accent-bg); border:1px solid var(--accent); }
+  .eff-tag.zhai { color:var(--accent2); background:var(--accent2-bg); border:1px solid var(--accent2); }
+  .group-wrap { border:2px dashed var(--accent2); border-radius:12px; padding:6px 6px 2px; margin:2px 0; }
+  .group-wrap-label { font-size:12px; font-weight:900; color:var(--accent2); margin:2px 0 6px 4px; }
+  .group-wrap .ladder-step { border-color:var(--line); }
+  .cmp-2 { display:grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
+  .cmp-card { border-radius: 12px; padding: 12px 14px; border: 2px solid var(--line-strong); }
+  .cmp-card.a { border-color: var(--ink); }
+  .cmp-head { font-size: 14.5px; font-weight: 900; margin-bottom: 6px; display:flex; align-items:center; gap:6px; }
+  .cmp-list { list-style:none; font-size: 13px; line-height: 1.85; }
+  .cmp-list li { display:flex; gap:8px; }
+  .cmp-key { flex-shrink:0; font-weight:bold; color: var(--sub); min-width: 56px; }
+  .scene { display:grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px; }
+  .scene-card { border: 2px dashed var(--line-strong); border-radius: 10px; padding: 10px 12px; }
+  .scene-title { font-size: 12px; font-weight: 900; color: var(--neutral); margin-bottom: 6px; text-align:center; }
+  .plot { display:flex; align-items:center; justify-content:center; gap: 3px; margin-bottom: 6px; }
+  .plot-seg { height: 34px; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:900; font-size:12.5px; border-radius: 5px; }
+  .rank-row { display:flex; align-items:center; justify-content:center; gap:5px; font-size:12px; flex-wrap:wrap; }
+  .rank-chip { display:flex; align-items:center; gap:3px; background: var(--neutral-bg); border-radius:999px; padding: 2px 9px 2px 3px; font-weight:bold; }
+  .rank-num { width:16px; height:16px; border-radius:50%; background:var(--ink); color:#fff; font-size:10px; display:flex; align-items:center; justify-content:center; }
+  .rank-num.win { background: var(--accent); }
+  .rank-arrow { color: var(--line-strong); font-weight:bold; }
 </style>
 </head>
 <body>
@@ -181,8 +251,11 @@
       <p>拋棄<span class="law-tag sub-law">民§764</span>／無人繼承<span class="law-tag sub-law">民§1185</span>／天然變遷／私地徵收／無主土地公告30日登記國有<span class="law-tag sub-law">土§57</span>／照價收買（強制）<span class="law-tag sub-law">平§89 II</span>／面積測量增減<span class="law-tag sub-law">土§63</span></p>
     </div>
   </div>
+  <div class="info-box">
+    💡 <b>時效取得定義</b>：以所有之意思、和平公然占有他人「未登記」之不動產——<b>§769</b>惡意/有過失占有<b>20年</b>；<b>§770</b>善意且無過失<b>10年</b>→屆滿後得請求登記為所有人（非自動取得）。
+  </div>
   <div class="warn-box hi">
-    ⚠️ <b>原始取得 vs 繼受取得</b>（逐字稿明講「非常重要的考點」）：<b>原始取得</b>＝非基於既有權利，重新創設新所有權（如徵收、時效取得、區段徵收領回抵價地）；<b>繼受取得</b>＝承受前手權利（如買賣連同原有抵押權負擔）。
+    ⚠️ <b>原始取得 vs 繼受取得</b>：<b>原始取得</b>＝非基於既有權利，重新創設新所有權（如徵收、時效取得、區段徵收領回抵價地）；<b>繼受取得</b>＝承受前手權利（如買賣連同原有抵押權負擔）。💡 左側「取得原因」清單6項皆屬原始取得；繼受取得（買賣／贈與／繼承等一般法律行為）未列入本清單，因其非土地法特別規範重點。
   </div>
 
   <h3 class="sub-title">未辦繼承之處理流程 <span class="law-tag">土§73-1</span></h3>
@@ -245,56 +318,75 @@
   <div class="sub-block">
     <span class="sub-tag">⑤重劃或徵收確定後之限制</span>
     <p style="font-size:14.5px;">區段徵收/市地重劃地區選定後公告禁止移轉、分割、設定負擔：<span class="law-tag sub-law">平§53</span>（區段徵收）／<span class="law-tag sub-law">平§59</span>（市地重劃）／<span class="law-tag sub-law">徵§23</span>（一般徵收）／<span class="law-tag sub-law">徵§37</span>（區段徵收）</p>
+    <div class="info-box">💡 這裡只是總覽，細節分散在後面章節：<b>平§59（市地重劃）</b>在 <b>L6</b> 已有完整流程圖（核定→公告30天→反對比例→調處）；<b>平§53／徵§37（區段徵收）</b>目前在 <b>L7-8</b> 只用於「區段徵收原因」的法源比較，尚未針對本條「禁止處分限制」展開細節；<b>徵§23（一般徵收）</b>目前是筆記缺口，待補。</div>
   </div>
 </section>
 
 <!-- 四、公有土地處分 -->
 <section>
   <h2 class="sec-title">④ 公有土地處分 vs 撥用</h2>
-  <p style="font-size:14.5px;margin-bottom:8px;">定義：<span class="law-tag sub-law">土§4・土§25</span>（處分）vs <span class="law-tag sub-law">平§7・土§26</span>（撥用）</p>
-  <div class="flow">
-    <div class="flow-step"><div class="flow-num">1</div><div class="flow-box">直轄市/縣市政府對公有土地欲<b>處分、設定負擔、或為超過10年期租賃</b></div></div>
-    <div class="flow-arrow">↓ 須同時具備</div>
-    <div class="flow-step"><div class="flow-num">2</div><div class="flow-box">經該管區內<b>民意機關同意</b> ＋ <b>行政院核准</b>（三個條件缺一不可）</div></div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">處分 <span class="law-tag sub-law">土§4・土§25</span></div>
+      <p>對象：政府 → <b>人民／私人</b>（賣出、設定負擔、超過10年期租賃）</p>
+    </div>
+    <div class="card">
+      <div class="card-title">撥用 <span class="law-tag sub-law">平§7・土§26</span><span class="law-tag sub-law">平細§13・徵§43、44</span></div>
+      <p>對象：<b>公家機關 ↔ 公家機關</b>之間互相調用（例：A單位要用B單位管理的地）。原則<b>無償</b>，有償為例外。</p>
+    </div>
   </div>
-  <div class="info-box">💡 <b>撥用</b>：公家機關對公家機關之間互相調用土地（例：A單位要用B單位管理的地要辦撥用），原則<b>無償</b>，有償為例外<span class="law-tag sub-law">平細§13・徵§43、44</span>。</div>
+
+  <h3 class="sub-title">處分的成立要件</h3>
+  <div class="cond-box">
+    <div class="cond-if"><span class="cond-label">若</span>直轄市/縣市政府對公有土地欲<b>處分、設定負擔、或為超過10年期租賃</b>（三者之一）</div>
+    <div class="cond-then"><span class="cond-label">需經</span>①該管區內<b>民意機關同意</b>　②<b>行政院核准</b>（兩者缺一不可）</div>
+  </div>
 </section>
 
 <!-- 五、共有土地處分 -->
 <section>
   <h2 class="sec-title"><span class="star">★★★★★</span> ⑤ 共有土地處分——土地法 §34-1</h2>
-  <div class="grid-2">
-    <div class="card">
-      <div class="card-title">民法§819原則</div>
-      <p>各共有人得<b>自由處分</b>應有部分；但共有物<b>處分/變更/設定負擔</b>須<b>全體共有人同意</b></p>
-    </div>
-    <div class="card">
-      <div class="card-title">土地法§34-1（民法特別法）</div>
-      <p><b>多數決例外規定</b>：共有人數1/2以上<b>且</b>應有部分1/2以上；<b>或</b>應有部分逾2/3（人數不計）</p>
-    </div>
-  </div>
-  <p style="font-size:14.5px;margin:10px 0 4px;"><b>三大立法目的</b>：①保護多數人利益 ②促進共有不動產經濟利用（I~III，共有物本身）③簡化共有關係（IV，優先購買權）</p>
-  <div class="warn-box hi">
-    ⚠️ <b>易混淆比較</b>：土地法§34-1講「<b>處分</b>」（賣掉），民法§820講「<b>管理</b>」（如出租），兩者要件相同（人數過半+應有部分過半，或應有部分逾2/3人數不計）但<b>適用情境不同</b>，引用法條時務必小心不要誤用。
+
+  <div class="oneliner">
+    <b>民法§819原則</b>：各共有人得自由處分應有部分；但共有物處分/變更/設定負擔須<b>全體共有人同意</b>　｜
+    <b>三大立法目的</b>：①保護多數人利益 ②促進共有不動產經濟利用（I~III）③簡化共有關係（IV優先購買權）
   </div>
 
-  <h3 class="sub-title">§34-1 完整六項逐條拆解</h3>
-  <table>
-    <tr><th style="width:12%">項次</th><th style="width:26%">內容</th><th>白話</th></tr>
-    <tr><td>I 要件</td><td>多數決比例</td><td>人數+應有部分雙過半，或應有部分逾2/3免計人數</td></tr>
-    <tr><td>II 程序</td><td>通知義務</td><td>事先<b>書面通知</b>他共有人；不能書面通知則<b>公告</b></td></tr>
-    <tr><td>III 責任</td><td>連帶清償</td><td>對他共有人負連帶清償責任，須提出受領/提存證明才能辦登記，並代為申請登記</td></tr>
-    <tr><td>IV 優購權</td><td>優先購買權</td><td>共有人出賣應有部分時，他共有人得同一價格共同或單獨優先承購</td></tr>
-    <tr><td>V 準用</td><td>公同共有</td><td>前四項規定於公同共有準用之</td></tr>
-    <tr><td>VI 分割調處</td><td>爭議處理</td><td>不能協議分割者，得申請直轄市/縣市地政機關調處，不服者<b>15日內</b>向司法機關訴請處理</td></tr>
-  </table>
-  <h3 class="sub-title">處分程序</h3>
-  <div class="flow">
-    <div class="flow-step"><div class="flow-num">1</div><div class="flow-box">書面通知全體共有人（不能通知→公告代替）</div></div>
-    <div class="flow-arrow">↓</div>
-    <div class="flow-step"><div class="flow-num">2</div><div class="flow-box">提出不同意共有人受領證明或價金提存證明</div></div>
-    <div class="flow-arrow">↓</div>
-    <div class="flow-step"><div class="flow-num">3</div><div class="flow-box">辦理移轉登記</div></div>
+  <h3 class="sub-title">§34-1 處分：規範／條件／程序</h3>
+  <div class="tree-groups-3">
+    <div class="tree-group">
+      <div class="group-head"><span class="group-num">1</span>規範</div>
+      <div class="rcp-item">
+        <b>共有物之處分／變更／設定負擔</b>
+        <span class="note">（不含「管理」，管理走民§820）</span>
+      </div>
+      <div class="rcp-item">
+        <b>出賣應有部分 → 優先購買權</b>
+      </div>
+      <div class="rcp-item">
+        <b>不能協議分割</b>
+        <span class="note">→ 申請地政機關調處，不服者 15 日內向司法機關訴請</span>
+      </div>
+      <div class="group-caption">前四項規定於<b>公同共有</b>準用之</div>
+    </div>
+    <div class="tree-group">
+      <div class="group-head"><span class="group-num">2</span>條件</div>
+      <div class="cond-line">共有人數 <b>1/2↑</b>　應有部分 <b>1/2↑</b></div>
+      <div class="cond-or">或</div>
+      <div class="cond-line">應有部分 <b>2/3↑</b>（人數不計）</div>
+      <div class="group-caption">促進共有土地或建築改良物之經濟效用</div>
+    </div>
+    <div class="tree-group">
+      <div class="group-head"><span class="group-num">3</span>程序</div>
+      <div class="proc-row">書面通知 <span class="law-tag sub-law">土§34-1 II,執§8</span><span class="proc-arrow">→</span>不能通知<span class="proc-arrow">→</span>公告（限定情況）</div>
+      <div class="proc-row">變更登記 <span class="law-tag sub-law">土§34-1 III,執9</span><span class="proc-arrow">→</span>連帶責任、提出價金受領或提存證明</div>
+      <div class="proc-row">優先購買權 <span class="law-tag sub-law">土§34-1 IV,執12,13</span><span class="proc-arrow">→</span>簡化共有關係（詳見⑥）</div>
+    </div>
+  </div>
+
+  <div class="warn-box hi">
+    ⚠️ <b>易混淆比較</b>：土地法§34-1講「<b>處分</b>」（賣掉），民法§820講「<b>管理</b>」（如出租），兩者要件相同（人數過半+應有部分過半，或應有部分逾2/3人數不計）但<b>適用情境不同</b>，引用法條時務必小心不要誤用。
   </div>
 </section>
 
@@ -302,50 +394,149 @@
 <section>
   <h2 class="sec-title"><span class="star">★★★★★</span> ⑥ 優先購買權<span class="examhit">105・106・107・108・109・111測</span></h2>
   <p style="font-size:14.5px;margin-bottom:6px;">意義：不動產出售時，權利關係人有「依<b>同樣條件</b>」優先購買的權利（若共有人需貸款而買方不需要，則不符合）。</p>
+
   <div class="warn-box hi2">
     💡 前提：①須是<b>有效買賣</b>（先有買賣才有優先購買權）②買受人須為共有人以外之<b>第三人</b>（賣給共有人，另一共有人不可主張優先購買，因已達成簡化共有關係目的）；只適用<b>有償買賣</b>——贈與、交換、信託行為、共有物分割皆不適用；性質為<b>法定形成權</b>（一方意思表示即使法律關係發生變動）。
   </div>
 
   <h3 class="sub-title">效力比較：物權 vs 債權</h3>
   <table>
-    <tr><th style="width:16%"></th><th style="width:28%">依據</th><th style="width:28%">未通知的後果</th><th>立法目的</th></tr>
+    <tr><th style="width:16%"></th><th style="width:26%">依據</th><th style="width:26%">未通知的後果</th><th>立法目的</th></tr>
     <tr><td><b>物權效力</b></td><td><span class="law-tag sub-law">土§104、107</span></td><td>買賣契約<b>無效</b></td><td>促使房地基地所有權合一</td></tr>
     <tr><td><b>債權效力</b></td><td><span class="law-tag sub-law">土§34-1・民物編施行§8-5</span></td><td>契約仍有效，僅得<b>請求損害賠償</b></td><td>簡化共有關係</td></tr>
   </table>
 
-  <div class="grid-2" style="margin-top:12px;">
-    <div class="card">
-      <div class="card-title">物權效力細節</div>
-      <p><span class="law-tag sub-law">土§104</span>基地出賣時，地上權人/典權人/承租人有優先購買權；房屋出賣時，基地所有權人有優先購買權；順序以登記先後定之；<b>10日內</b>不表示視為放棄；出賣人未通知而與第三人訂約者，<b>契約不得對抗</b>優先購買權人。<span class="law-tag sub-law">土§107</span>出租人出賣或出典<b>耕地</b>時規定同上（基地換成耕地）。</p>
+  <div class="cmp-2">
+    <div class="cmp-card a">
+      <div class="cmp-head">🔒 物權效力細節 <span class="law-tag hi">108考過</span></div>
+      <ul class="cmp-list">
+        <li><span class="cmp-key">§104</span>基地出賣→地上權人/典權人/承租人優先；房屋出賣→基地所有權人優先</li>
+        <li><span class="cmp-key">順序</span>以登記先後定之</li>
+        <li><span class="cmp-key">期限</span>10日內不表示＝視為放棄</li>
+        <li><span class="cmp-key">未通知</span>契約<b style="color:var(--accent)">不得對抗</b>優先購買權人</li>
+        <li><span class="cmp-key">§107</span>出租人出賣或出典<b>耕地</b>時規定同上（基地換耕地）</li>
+      </ul>
     </div>
-    <div class="card">
-      <div class="card-title">債權效力細節——賣地 vs 賣屋</div>
-      <p><span class="law-tag sub-law">民物編施行§8-5 III</span>（賣地）：區分所有建物之基地分離出賣時，專有部分所有權人無基地應有部分或不足者，按面積比例優先承買，<b>且權利優先於其他共有人</b>。<span class="law-tag sub-law">民物編施行§8-5 V</span>（賣屋）：專有部分分離出賣時，基地所有權人無專有部分者，有依相同條件優先承買之權——<b>注意條文沒有「優先於其他共有人」這句話</b>！</p>
+    <div class="cmp-card">
+      <div class="cmp-head">📄 債權效力細節——賣地 vs 賣屋</div>
+      <ul class="cmp-list">
+        <li><span class="cmp-key">賣地</span><span class="law-tag sub-law">§8-5 III</span>區分所有建物之基地分離出賣，專有部分所有權人無基地應有部分或不足者，按面積比例優先承買，<b>且優先於其他共有人</b></li>
+        <li><span class="cmp-key">賣屋</span><span class="law-tag sub-law">§8-5 V</span>專有部分分離出賣，基地所有權人無專有部分者，得依相同條件優先承買——<b style="color:var(--accent)">條文沒有「優先於其他共有人」這句話</b></li>
+      </ul>
     </div>
   </div>
-  <div class="warn-box hi">
-    ⚠️ <b>前提概念</b>：民法§799 V規定區分所有建物專有部分與其所屬基地權利不得分離而為移轉或設定負擔，理解8-5條為何存在要先懂這條——正常情況下建物與基地綁在一起賣，8-5條處理的是「修法前已分屬不同人」這種例外情境。
+  <div class="foot-note">💡 為什麼會有§8-5例外：民法§799 I 定義區分所有建物（數人區分一建築物各專有其一部）；§799 V 規定專有部分與基地不得分離移轉／設定負擔，正常情況房地綁在一起賣；§8-5處理的是「修法前已分屬不同人」這種例外情境。</div>
+
+  <h3 class="sub-title">行使期限對照——期限跟著法源走，起算點都是「接到通知後」</h3>
+  <table>
+    <tr><th style="width:16%">法源</th><th style="width:14%">性質</th><th style="width:16%">表示期限</th><th style="width:16%">規定層級</th><th>逾期後果</th></tr>
+    <tr><td><b>§104／§107</b>（基地房屋/耕地優先購買）</td><td>物權效力</td><td><b>10日內</b>（接到出賣通知後起算）</td><td>條文本身<br><span style="font-size:11.5px;color:var(--sub);">§104 II 明文</span></td><td>視為放棄；未通知契約不得對抗優先購買權人</td></tr>
+    <tr><td><b>§34-1 IV</b>（共有人優先承購）</td><td>債權效力</td><td><b>15日內</b>（接到出賣通知後起算）</td><td>執行要點§13①<br><span style="font-size:11.5px;color:var(--sub);">母法條文本身未寫</span></td><td>視為放棄；出賣人若未通知，他共有人得請求損害賠償</td></tr>
+    <tr><td><b>§8-5 III／V</b>（區分所有建物）</td><td>債權效力</td><td><b>15日內</b>（先公告5日，自最後公告日起算）</td><td>條文本身<br><span style="font-size:11.5px;color:var(--sub);">§8-5 VII 明文</span></td><td>視為放棄（拋棄優先承買權）</td></tr>
+  </table>
+  <div class="foot-note">💡 §34-1 的 15 日只在執行要點（行政規則），母法六項本身沒有寫天數；§104 的 10 日、§8-5 的 15 日則是直接寫在條文裡，規定位階比 §34-1 更高。§8-5 通知方式也不同——是用「建築物公告處公告 5 日」，不是像 §34-1、§104 那樣書面通知本人。</div>
+
+  <h3 class="sub-title">圖解情境（對應上方賣地／賣屋兩種細節）</h3>
+  <div class="scene">
+    <div class="scene-card">
+      <div class="scene-title">賣地：D 賣地給 E</div>
+      <div class="plot">
+        <div class="plot-seg" style="width:56px;background:#94a3b8;">D 1/3</div>
+        <div class="plot-seg" style="width:56px;background:#94a3b8;">B 1/3</div>
+        <div class="plot-seg" style="width:56px;background:#94a3b8;">C 1/3</div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-chip"><span class="rank-num win">1</span>A(§8-5Ⅲ)</div>
+        <span class="rank-arrow">＞</span>
+        <div class="rank-chip"><span class="rank-num">2</span>B、C</div>
+      </div>
+      <div class="foot-note" style="margin-top:6px;">💡 土地由 D／B／C 各持 1/3；A 是 D 那層樓的<b>建物</b>所有權人，但<b>沒有基地應有部分</b>（無地）。D 要賣他的土地 1/3，A 因為「無基地應有部分」而依§8-5Ⅲ優先承購，且明文優先於其他共有人（B、C）。</div>
+    </div>
+    <div class="scene-card">
+      <div class="scene-title">賣屋：甲要賣屋</div>
+      <div class="plot">
+        <div class="plot-seg" style="width:84px;background:var(--ink);">甲 1/2</div>
+        <div class="plot-seg" style="width:84px;background:var(--ink);">乙 1/2</div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-chip"><span class="rank-num win">1</span>乙(§34-1)</div>
+        <span class="rank-arrow">＞</span>
+        <div class="rank-chip"><span class="rank-num">2</span>丙(§8-5Ⅴ)</div>
+      </div>
+      <div class="foot-note" style="margin-top:6px;">💡 土地是丙單獨所有；甲乙是房屋（專有部分）各半共有。甲要賣他的1/2房屋，乙是<b>房屋的其他共有人</b>，依§34-1有優先購買權；丙是<b>基地所有權人</b>，依§8-5Ⅴ也有優先購買權，但條文<b>沒有「優先於其他共有人」</b>這句話，退回一般規則，所以乙（§34-1）＞丙（§8-5Ⅴ）。</div>
+    </div>
   </div>
 
   <h3 class="sub-title">優先購買權競合效果——最終排序</h3>
   <div class="ladder">
-    <div class="ladder-step"><div class="ladder-rank">1</div>土地法§104、107（物權效力）——最優先</div>
+    <div class="ladder-step">
+      <div class="ladder-rank">1</div>土地法§104、107（基地/房屋出賣時，地上權人/典權人/承租人優先；§107為耕地版）——最優先
+      <span class="eff-tag wu">物權效力</span>
+    </div>
     <div class="ladder-arrow">▼ 優先於</div>
-    <div class="ladder-step"><div class="ladder-rank">2</div>民法物權編施行法§8-5第3項（賣地時，區分所有建物所有權人優先於其他共有人）</div>
-    <div class="ladder-arrow">▼ 優先於</div>
-    <div class="ladder-step"><div class="ladder-rank">3</div>土地法§34-1（債權效力，共有人優先購買）</div>
-    <div class="ladder-arrow">▼ 優先於</div>
-    <div class="ladder-step"><div class="ladder-rank">4</div>民法物權編施行法§8-5第5項（賣屋時，基地所有權人優先承買）——最後順位</div>
+
+    <div class="group-wrap">
+      <div class="group-wrap-label">↓ 以下三層都是「債權效力」，內部再依「有沒有明文優先於其他共有人」排序</div>
+      <div class="ladder-step">
+        <div class="ladder-rank">2</div>民物編施行法§8-5 III（賣地，區分所有建物所有權人優先於其他共有人）
+        <span class="eff-tag zhai">債權效力</span>
+      </div>
+      <div class="ladder-arrow">▼ 優先於</div>
+      <div class="ladder-step">
+        <div class="ladder-rank">3</div>土地法§34-1（共有人優先購買）
+        <span class="eff-tag zhai">債權效力</span>
+      </div>
+      <div class="ladder-arrow">▼ 優先於</div>
+      <div class="ladder-step">
+        <div class="ladder-rank">4</div>民物編施行法§8-5 V（賣屋，基地所有權人優先承買）——最後順位
+        <span class="eff-tag zhai">債權效力</span>
+      </div>
+    </div>
   </div>
-  <div class="info-box">出處：土地法第34條之1執行要點第13點(六)。</div>
-  <div class="example-box" style="margin-top:10px;">
-    <b>圖解情境：</b>三樓公寓，土地各1/3，A/B/C為建物所有權人。<br>
-    ・<b>賣地情境</b>：D（基地共有人）賣地給E → A（建物所有權人之一，無基地應有部分）優先購買，且 <b>A ＞ B、C（其他共有人）</b>（適用§8-5 III）<br>
-    ・<b>賣屋情境</b>：甲乙各1/2持有建物，丙持有全部土地1/3，甲要賣屋 → 丙（基地所有權人）雖有優先購買權，但因§8-5 V沒說優先於其他共有人，須退回土地法34-1判斷，結論是 <b>乙（房屋共有人，依34-1）＞ 丙（依§8-5 V）</b>
+  <div class="foot-note">出處：土地法第34條之1執行要點第13點(六)。</div>
+
+  <h3 class="sub-title">判斷表：這個情境該用哪一條？</h3>
+  <div class="ladder2">
+    <div class="step-row">
+      <div class="step-num2">1</div>
+      <div class="step-q">賣的是「應有部分（持分）」，賣方是共有人之一嗎？</div>
+      <div class="step-yes">
+        是 → <span class="r-title">§34-1 Ⅳ</span><span class="r-tag">債權15日</span><br>
+        共有人優先承購，未通知契約仍有效，只能求償
+      </div>
+    </div>
+    <div class="step-connector"><div class="conn-line"></div><span class="no-label">否（賣整體，非持分）↓</span></div>
+
+    <div class="step-row">
+      <div class="step-num2">2</div>
+      <div class="step-q">同一建物分屬不同人「專有＋共有」（不限大樓，公寓/透天分層登記都算），且該部分與基地已分屬不同人嗎？</div>
+      <div class="step-yes alt">
+        是 → <span class="r-title">§8-5</span><span class="r-tag">條文15日</span><br>
+        賣地用Ⅲ項（優先於其他共有人）／賣屋用Ⅴ項（無此優先）
+      </div>
+    </div>
+    <div class="step-connector"><div class="conn-line"></div><span class="no-label">否（一般地上權/典權/租賃關係）↓</span></div>
+
+    <div class="final-row">
+      <div class="step-num2">3</div>
+      <div class="final-split">
+        <div class="final-card">
+          <div class="final-branch-label">標的是耕地＋租賃關係</div>
+          <span class="r-title">§107</span><span class="r-tag">物權10日</span><br>
+          出租人賣/典耕地，承租人優先
+        </div>
+        <div class="final-card">
+          <div class="final-branch-label">其他一般情形</div>
+          <span class="r-title">§104</span><span class="r-tag">物權10日</span><br>
+          基地→地上權人/典權人/承租人優先；房屋→基地所有權人優先
+        </div>
+      </div>
+    </div>
   </div>
+  <div class="foot-note">💡 三個關鍵區分點：§34-1 看「共有人賣持分」／§104、§107 看「地房本來就分屬不同人（地上權/典權/租賃），賣的是整體」／§8-5 看「區分所有建物，房地分離的例外情況」。判斷出法條後，期限跟著固定，不用另外背。</div>
 
   <h3 class="sub-title">調處</h3>
-  <p style="font-size:14.5px;">共有物分割依共有人協議之方法行之（原則全體同意，<span class="law-tag sub-law">民§824</span>）：協議分割→不成→（土地走）調處/（建改物走）裁判→不服調處15日內起訴→裁判；15日內未起訴則其他共有人可依調處結果辦理共有物分割登記。調處時機不只共有物分割，還包括土§34-1共有物分割爭議、土§46-2重測界址爭議、土§59土地權利爭議等（皆由直轄市/縣市政府調處委員會處理，目的是減訟便民）。</p>
+  <p style="font-size:14px;color:var(--sub);">共有物分割依共有人協議之方法行之（原則全體同意，<span class="law-tag sub-law">民§824</span>）：協議分割→不成→（土地走）調處/（建改物走）裁判→不服調處15日內起訴→裁判；15日內未起訴則其他共有人可依調處結果辦理共有物分割登記。調處事由還包括土§34-1共有物分割爭議、土§46-2重測界址爭議、土§59土地權利爭議（皆由直轄市/縣市政府調處委員會處理）。</p>
 </section>
 
 <!-- 七、考古題查證 -->
