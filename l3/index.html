@@ -114,6 +114,49 @@
   }
   .flow-box { flex: 1; background: var(--neutral-bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 14px; font-size: 14.5px; }
   .flow-arrow { text-align: center; color: var(--sub); font-size: 15px; margin-left: 13px; }
+  .flow-h { display: flex; align-items: center; gap: 6px; margin-top: 4px; }
+  .flow-h-step {
+    flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px;
+    background: var(--neutral-bg); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px;
+  }
+  .flow-h-num {
+    flex-shrink: 0; width: 20px; height: 20px; background: var(--ink); color: #fff; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11.5px;
+  }
+  .flow-h-label { font-size: 14px; white-space: nowrap; }
+  .flow-h-arrow { display: flex; align-items: center; color: var(--sub); font-size: 16px; padding: 0 1px; }
+  .merge-flow { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; margin-top: 6px; }
+  .merge-end, .merge-start {
+    background: var(--neutral-bg); border: 1px solid var(--line); border-radius: 8px;
+    padding: 10px 14px; font-size: 14px; text-align: center; white-space: nowrap;
+  }
+  .merge-mid { display: flex; flex-direction: column; gap: 8px; }
+  .merge-row { display: flex; align-items: center; gap: 8px; }
+  .merge-arrow-label { flex-shrink: 0; font-size: 12px; color: var(--sub); white-space: nowrap; width: 52px; }
+  .merge-box { flex: 1; background: var(--neutral-bg); border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; font-size: 13.5px; }
+  .merge-line { flex: 1; height: 0; border-top: 2px solid var(--line-strong); position: relative; margin: 0 6px; }
+  .merge-line::after { content: "→"; position: absolute; right: -3px; top: -10px; color: var(--sub); font-size: 15px; }
+  .merge-arrow-out { flex-shrink: 0; color: var(--sub); font-size: 16px; }
+  .flow-h3 { display: flex; align-items: stretch; gap: 6px; margin-top: 4px; }
+  .flow-h3-step {
+    display: flex; align-items: center; gap: 7px;
+    background: var(--neutral-bg); border: 1px solid var(--line); border-radius: 8px;
+    padding: 7px 12px; font-size: 13.5px;
+  }
+  .flow-h3-num {
+    flex-shrink: 0; width: 20px; height: 20px; background: var(--ink); color: #fff; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;
+  }
+  .flow-h3-arrow {
+    flex-shrink: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: var(--sub); font-size: 11px; width: 60px; text-align: center; line-height: 1.3;
+  }
+  .flow-h3-arrow span { font-size: 15px; }
+  .grid-2-compact { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .card-compact {
+    border-radius: 8px; padding: 7px 12px; border: 1px solid var(--line-strong); background: #fff;
+    font-size: 13.5px; line-height: 1.4;
+  }
   .sub-block { margin-top: 4px; }
   .sub-block + .sub-block { margin-top: 12px; padding-top: 12px; border-top: 2px dashed var(--line); }
   .sub-tag {
@@ -150,31 +193,37 @@
   <h2 class="sec-title"><span class="star">★★★★</span> ② 地籍圖重測<span class="examhit">105・106・110・113測</span></h2>
   <p style="font-size:14.5px;margin-bottom:8px;">原因（四項）<span class="law-tag sub-law">土§46-1</span>：地籍原圖破損／滅失／比例尺變更／其他重大原因。</p>
   <h3 class="sub-title">重測方式（3段式）</h3>
-  <div class="flow">
-    <div class="flow-step"><div class="flow-num">1</div><div class="flow-box">原則：所有權人設立界標、到場指界</div></div>
-    <div class="flow-arrow">↓ 例外（逐字稿：「非常常考」）</div>
-    <div class="flow-step"><div class="flow-num">2</div><div class="flow-box">地政機關依序逕行施測：①鄰地界址②現使用人之指界③參照舊地籍圖④地方習慣</div></div>
-    <div class="flow-arrow">↓ 有爭議</div>
-    <div class="flow-step"><div class="flow-num">3</div><div class="flow-box">依<span class="law-tag sub-law">土§59 II</span>調處，不服可起訴</div></div>
+  <div class="flow-h3">
+    <div class="flow-h3-step" style="flex:0.85"><div class="flow-h3-num">1</div><div>原則：所有權人設立界標、到場指界</div></div>
+    <div class="flow-h3-arrow"><span>→</span>例外</div>
+    <div class="flow-h3-step" style="flex:1.5"><div class="flow-h3-num">2</div><div>依序逕行施測：①鄰地界址②現使用人之指界③參照舊地籍圖④地方習慣</div></div>
+    <div class="flow-h3-arrow"><span>→</span>有爭議</div>
+    <div class="flow-h3-step" style="flex:0.9"><div class="flow-h3-num">3</div><div>依<span class="law-tag sub-law">土§59 II</span>調處，不服可起訴</div></div>
   </div>
   <div class="warn-box hi2">💡 地籍圖重測係<b>觀念通知</b>，非<b>行政處分</b>（司法院釋字第374號）。</div>
 
   <h3 class="sub-title">觀念補充：行政處分 vs 觀念通知</h3>
   <table>
-    <tr><th style="width:22%">類型</th><th>定義</th></tr>
-    <tr><td>行政處分</td><td>中央或地方機關就公法上具體事件所為之決定，對外直接發生法律效果的單方行政行為</td></tr>
-    <tr><td>觀念通知</td><td>行政機關對外單方行為，純屬單純意思通知，對申請事項無准駁表示，不生法律效果（最高行政法院108年裁字第731號裁定）</td></tr>
+    <tr><th style="width:60%">類型</th><th>能否提訴願/行政訴訟</th></tr>
+    <tr><td>行政處分（對外直接發生法律效果）</td><td>✅ 可以</td></tr>
+    <tr><td>觀念通知（單純意思通知，不生法律效果）</td><td>❌ 不行</td></tr>
   </table>
-  <div class="info-box">💡 兩者最大差異：能否提起訴願/行政訴訟（觀念通知不行，行政處分可以）。</div>
 
   <h3 class="sub-title">重測結果</h3>
-  <div class="flow">
-    <div class="flow-step"><div class="flow-num">1</div><div class="flow-box">公告<b>30日</b><span class="law-tag sub-law">土§46-3</span></div></div>
-    <div class="flow-arrow">↓ 分岔</div>
-    <div class="flow-step"><div class="flow-num">2a</div><div class="flow-box">有到場指界者：可申請複丈（<b>以一次為限</b>），不服要走起訴</div></div>
-    <div class="flow-step"><div class="flow-num">2b</div><div class="flow-box">未到場指界者：<b>不得</b>申請複丈</div></div>
-    <div class="flow-arrow">↓ 若無異議</div>
-    <div class="flow-step"><div class="flow-num">3</div><div class="flow-box">標示變更登記<span class="law-tag sub-law">土§78</span>（<b>免繳登記費</b>）</div></div>
+  <div class="merge-flow">
+    <div class="merge-start">公告<b>30日</b><br><span class="law-tag sub-law">土§46-3</span></div>
+    <div class="merge-mid">
+      <div class="merge-row">
+        <span class="merge-arrow-label">↳ 有異議</span>
+        <div class="merge-box">申請複丈：有到場<b>✓</b>／未到場<b>✗</b>（<b>限一次</b>），不服要走起訴</div>
+        <span class="merge-arrow-out">→</span>
+      </div>
+      <div class="merge-row">
+        <span class="merge-arrow-label">↳ 無異議</span>
+        <div class="merge-line"></div>
+      </div>
+    </div>
+    <div class="merge-end">標示變更登記<br><span class="law-tag sub-law">土§78</span>（<b>免繳登記費</b>）</div>
   </div>
 
   <div class="example-box" style="margin-top:10px;">
@@ -187,25 +236,30 @@
 <!-- 三、登記定義與機關 -->
 <section>
   <h2 class="sec-title">③ 土地登記定義與辦理機關</h2>
-  <p style="font-size:14.5px;margin-bottom:8px;">定義：土地及建築改良物之所有權與他項權利之登記<span class="law-tag sub-law">土§37 I</span>；登記內容、程序、規費、資料提供、應附文件及異議處理由中央地政機關（《土地登記規則》）定之<span class="law-tag sub-law">土§37 II</span>。</p>
-  <div class="flow">
-    <div class="flow-step"><div class="flow-num">1</div><div class="flow-box">地籍測量（整理分區分段分宗編號<span class="law-tag sub-law">土§40</span>）</div></div>
-    <div class="flow-arrow">↓</div>
-    <div class="flow-step"><div class="flow-num">2</div><div class="flow-box">總登記<span class="law-tag sub-law">土§38 I</span></div></div>
-    <div class="flow-arrow">↓</div>
-    <div class="flow-step"><div class="flow-num">3</div><div class="flow-box">權利變更登記</div></div>
+  <p style="font-size:14.5px;margin-bottom:2px;">定義：土地及建築改良物之所有權與他項權利之登記<span class="law-tag sub-law">土§37 I</span>。</p>
+  <p style="font-size:14.5px;margin-bottom:8px;">登記內容、程序、規費、資料提供、應附文件及異議處理由中央地政機關（《土地登記規則》）定之<span class="law-tag sub-law">土§37 II</span>。</p>
+
+  <h3 class="sub-title">辦理程序</h3>
+  <div class="flow-h">
+    <div class="flow-h-step"><div class="flow-h-num">1</div><div class="flow-h-label">地籍測量 <span class="law-tag sub-law">土§40</span></div></div>
+    <div class="flow-h-arrow">→</div>
+    <div class="flow-h-step"><div class="flow-h-num">2</div><div class="flow-h-label">總登記 <span class="law-tag sub-law">土§38 I</span></div></div>
+    <div class="flow-h-arrow">→</div>
+    <div class="flow-h-step"><div class="flow-h-num">3</div><div class="flow-h-label">權利變更登記</div></div>
   </div>
-  <div class="info-box">機關：直轄市/縣市地政機關辦理，得分設登記機關（地政事務所）<span class="law-tag sub-law">土§39</span>。例外：第三、四類土地（交通水利用地、其他用地）免予編號登記<span class="law-tag sub-law">土§41</span>。</div>
+
+  <div class="info-box">辦理機關：直轄市/縣市地政機關，得分設登記機關（地政事務所）<span class="law-tag sub-law">土§39</span>。例外：第三、四類土地（交通水利用地、其他用地）免予編號登記<span class="law-tag sub-law">土§41</span>。</div>
+  <div class="warn-box hi">⚠ 易混淆：中央地政機關：訂《土地登記規則》；縣/市地政機關：辦理機關。</div>
 </section>
 
 <!-- 四、登記種類 -->
 <section>
   <h2 class="sec-title">④ 土地登記種類——四大類</h2>
-  <div class="grid-2">
-    <div class="card"><p>① 土地總登記</p></div>
-    <div class="card"><p>② 權利變更登記（買賣、贈與、交換）</p></div>
-    <div class="card"><p>③ <b>限制登記</b>（預告登記、查封、假扣押、假處分）</p></div>
-    <div class="card"><p>④ 塗銷登記</p></div>
+  <div class="grid-2-compact">
+    <div class="card-compact">① 土地總登記</div>
+    <div class="card-compact">② 權利變更登記（買賣、贈與、交換）</div>
+    <div class="card-compact">③ <b>限制登記</b>（預告登記、查封、假扣押、假處分）</div>
+    <div class="card-compact">④ 塗銷登記</div>
   </div>
 </section>
 
@@ -219,11 +273,24 @@
     <tr><td>普遍</td><td>§41 I</td><td>第三、四類土地免予編號登記</td></tr>
     <tr><td>強制</td><td>§57</td><td><b>逾登記期限無人聲請登記</b>之土地或逾限未補繳證明文件者，視為<b>無主土地</b>，公告後無異議即登記國有</td></tr>
   </table>
+  <div class="info-box">💡 「強制」是指登記本身是<b>義務</b>、每個人都要做；§57（無主地→國有）是<b>不履行義務的後果</b>，不是「強制」的定義本身。</div>
   <h3 class="sub-title">程序五步驟</h3>
   <div class="flow">
     <div class="flow-step"><div class="flow-num">1</div><div class="flow-box">調查地籍</div></div>
     <div class="flow-arrow">↓</div>
-    <div class="flow-step"><div class="flow-num">2</div><div class="flow-box">公布：登記區(§42,50)／登記期限(§49)→逾期(§57)→公告≥30天→無異議歸國有／有異議走§59</div></div>
+    <div class="flow-step">
+      <div class="flow-num">2</div>
+      <div class="flow-h3" style="flex:1;margin-top:0;">
+        <div class="flow-h3-step" style="flex:1.3">公布登記區<span class="law-tag sub-law">§42,50</span>／期限<span class="law-tag sub-law">§49</span></div>
+        <div class="flow-h3-arrow"><span>→</span>逾期</div>
+        <div class="flow-h3-step" style="flex:0.7">公告≥30天<span class="law-tag sub-law">§57</span></div>
+        <div class="flow-h3-arrow"><span>→</span></div>
+        <div class="merge-mid" style="flex:1.2">
+          <div class="merge-row"><span class="merge-arrow-label">無異議</span><div class="merge-box">歸國有</div></div>
+          <div class="merge-row"><span class="merge-arrow-label">有異議</span><div class="merge-box">走<span class="law-tag sub-law">§59</span>調處</div></div>
+        </div>
+      </div>
+    </div>
     <div class="flow-arrow">↓</div>
     <div class="flow-step"><div class="flow-num">3</div><div class="flow-box">收件：私有地(§51)／公有地(§52囑託國有直有縣市有、§53逕為國有、§54時效取得)→異議走調處(§66)</div></div>
     <div class="flow-arrow">↓</div>
@@ -252,7 +319,7 @@
 
 <!-- 七、限制登記/預告登記 -->
 <section>
-  <h2 class="sec-title"><span class="star">★★★★★</span> ⑦ 限制登記／預告登記<span class="examhit">103・108・109・112・113・114測</span></h2>
+  <h2 class="sec-title"><span class="star">★★★★★</span> ⑦ 限制登記／預告登記<span class="examhit">102・103・108・109・112・113・114測</span></h2>
   <p style="font-size:14.5px;margin-bottom:8px;">定義：限制登記名義人處分其土地權利所為之登記。<b>預告登記＝債權物權化</b>——債權請求權原本只是相對效力，登記後變成<b>對世效力</b>。</p>
   <table>
     <tr><th style="width:14%">項次</th><th>內容 <span class="law-tag sub-law">土§79-1</span></th></tr>
@@ -261,11 +328,20 @@
     <tr><td>III</td><td><b>例外不可對抗</b>：徵收、法院判決、強制執行</td></tr>
   </table>
 
-  <div class="example-box" style="margin-top:10px;">
+  <div class="example-box" style="margin-top:10px;margin-bottom:10px;">
     <b>103年不動產經紀人考古題（真實考題）：</b>何謂預告登記？何謂禁止處分登記？試比較說明之。<br>
     禁止處分登記定義：債權人就金錢以外之請求，為保全權益，聲請法院對債務人不動產暫行限制處分，法院囑託登記機關登記。<br>
-    <b>比較：</b>相同——性質皆屬限制登記的一種、皆免繳登記規費；相異——主體（人民申請 vs 法院囑託）、辦理方式（申請 vs 囑託）、是否立即辦理（一般流程 vs 收到即優先辦理）、是否應審查（需審查文件 vs 免審查逕辦）、效力/性質不同。
+    <b>102年地政士考古題：</b>何謂預告登記？闡釋效力為何？（§79-1）
   </div>
+  <table>
+    <tr><th style="width:22%">項目</th><th style="width:39%">預告登記</th><th>禁止處分登記</th></tr>
+    <tr><td>性質</td><td>均屬限制登記的一種</td><td>相同</td></tr>
+    <tr><td>登記規費</td><td>均免繳</td><td>相同</td></tr>
+    <tr><td>申請主體</td><td>人民申請</td><td>法院囑託</td></tr>
+    <tr><td>辦理方式</td><td>申請</td><td>囑託</td></tr>
+    <tr><td>是否立即辦理</td><td>一般流程</td><td>收到即優先辦理</td></tr>
+    <tr><td>是否應審查</td><td>需審查文件</td><td>免審查逕辦</td></tr>
+  </table>
 </section>
 
 <!-- 八、登記規費 -->
@@ -286,11 +362,11 @@
   <h2 class="sec-title"><span class="star">★★★★</span> ⑨ 土地登記之損害賠償<span class="examhit">108・109・112測</span></h2>
   <p style="font-size:14.5px;margin-bottom:8px;">依據<span class="law-tag sub-law">土§68 I</span>：因登記錯誤、遺漏或虛偽致受損害者，由地政機關負賠償責任，但可證明歸責於受害人者除外。</p>
   <h3 class="sub-title">四構成要件</h3>
-  <div class="grid-2">
-    <div class="card"><p>① 登記錯誤、遺漏或虛偽</p></div>
-    <div class="card"><p>② 有損害發生</p></div>
-    <div class="card"><p>③ 不可歸責於受害人</p></div>
-    <div class="card"><p>④ 錯誤/遺漏/虛偽與損害有因果關係</p></div>
+  <div class="grid-2-compact">
+    <div class="card-compact">① 登記錯誤、遺漏或虛偽</div>
+    <div class="card-compact">② 有損害發生</div>
+    <div class="card-compact">③ 不可歸責於受害人</div>
+    <div class="card-compact">④ 錯誤/遺漏/虛偽與損害有因果關係</div>
   </div>
   <div class="info-box">
     案例：弟弟盜用哥哥權狀辦抵押權登記，可帶入四要件逐一檢驗。<br>
@@ -300,9 +376,6 @@
   <p style="font-size:14.5px;">原則：書面聲請上級主管機關查明核准。例外：純屬登記人員記載疏忽、且有原始登記原因證明文件可稽者，登記機關可<b>逕行更正</b>。</p>
   <div class="warn-box hi">
     ⚠️ <b>最大前提</b>：更正後的所有權人仍須是<b>同一人</b>，若把王小明改成陳小明這種變更主體的錯誤，不適用更正登記，只能走法院判決塗銷。
-  </div>
-  <div class="example-box" style="margin-top:10px;">
-    <b>102年地政士考古題：</b>何謂預告登記？闡釋效力為何？（§79-1）
   </div>
 </section>
 
