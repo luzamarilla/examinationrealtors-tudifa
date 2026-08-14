@@ -20,22 +20,26 @@
     color: var(--ink);
     padding: 22px 32px 36px;
   }
-  h1.page-title {
-    font-size: 30px;
-    color: #fff;
+  .page-header {
     background: var(--ink);
-    padding: 16px 24px;
+    color: white;
     border-radius: 14px;
+    padding: 24px 34px;
     margin-bottom: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  h1.page-title .sub {
-    font-size: 15px;
-    font-weight: normal;
-    opacity: 0.9;
+  .page-header h1 { font-size: 28px; font-weight: 900; letter-spacing: 1px; }
+  .page-header .subtitle { font-size: 14px; opacity: .85; margin-top: 5px; }
+  .page-header .badge {
+    background: rgba(255,255,255,.15);
+    border-radius: 10px;
+    padding: 9px 18px;
+    text-align: center;
+    font-size: 12.5px;
   }
+  .page-header .badge strong { font-size: 17px; display: block; }
   .tip-banner {
     background: var(--neutral-bg);
     border: 2px solid var(--line-strong);
@@ -66,6 +70,10 @@
   h2.sec-title .star {
     color: var(--accent);
     font-size: 15px;
+  }
+  .examhit {
+    display: inline-block; margin-left: 6px; font-size: 11.5px; font-weight: 800; color: var(--accent);
+    background: var(--accent-bg); border: 1px solid var(--accent); border-radius: 10px; padding: 1px 9px;
   }
   .law-tag {
     display: inline-block;
@@ -335,10 +343,18 @@
 </head>
 <body>
 
-<h1 class="page-title">
-  土地法 L6｜土地重劃
-  <span class="sub">市地重劃（主力）／農地重劃（次要）・依上課講義校正法條版</span>
-</h1>
+<div class="page-header">
+  <div>
+    <div style="font-size:13px;opacity:.7;margin-bottom:5px;">114年 不動產經紀人考試｜土地法</div>
+    <h1>L6｜土地重劃</h1>
+    <div class="subtitle">市地重劃（主力）／農地重劃（次要）・依上課講義校正法條版</div>
+  </div>
+  <div style="display:flex;gap:14px;">
+    <div class="badge"><strong>平§56、58、59、60-2</strong>核心條文</div>
+    <div class="badge"><strong>L6</strong>土地重劃・市地為主</div>
+    <div class="badge"><strong>⭐⭐⭐</strong>自辦重劃獎勵・流程異議最高頻</div>
+  </div>
+</div>
 
 <div class="tip-banner">📌 讀書建議：市地重劃是考試火力集中點，農地重劃冷門、行有餘力再看</div>
 
@@ -364,7 +380,7 @@
 
 <!-- 二、重劃事由 -->
 <section>
-  <h2 class="sec-title"><span class="star">★★★</span> ② 重劃事由</h2>
+  <h2 class="sec-title">② 重劃事由</h2>
   <table>
     <tr><th style="width:22%">法源</th><th>內容</th></tr>
     <tr>
@@ -431,11 +447,12 @@
       </div>
     </div>
   </div>
+  <div class="warn-box hi2"><span class="examhit">114測</span> 防雷區——同意門檻換數字：市地重劃／農地重劃自辦皆為 <b>1/2</b>；<b>農村社區土地重劃（獨立法規，非平均地權條例，課堂未教）門檻是 2/3</b>，考古題曾把三者放在同一題比較，只需記住「2/3 最高」即可，不用另外唸整部法規。</div>
 </section>
 
 <!-- 五、自辦重劃獎勵 -->
 <section>
-  <h2 class="sec-title">⑤ 自辦重劃的五項獎勵 <span class="law-tag">平均地權條例 §58</span></h2>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑤ 自辦重劃的五項獎勵 <span class="law-tag">平均地權條例 §58</span><span class="examhit">109・111・114測</span></h2>
   <div class="grid-3">
     <div class="card card-city"><p>① 低利重劃貸款</p></div>
     <div class="card card-city"><p>② 免/減地籍整理規費、換狀費用</p></div>
@@ -447,14 +464,14 @@
 
 <!-- 六、重劃程序全流程 -->
 <section>
-  <h2 class="sec-title"><span class="star">★★★</span> ⑥ 重劃程序全流程</h2>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑥ 重劃程序全流程<span class="examhit">107申・113申</span></h2>
   <div class="flow">
     <div class="flow-step"><div class="flow-num">1</div><div class="flow-box">選定重劃地區（新舊都經）<span class="law-tag">平§56 I</span></div></div>
     <div class="flow-arrow">↓</div>
     <div class="flow-step"><div class="flow-num">2</div><div class="flow-box">擬定重劃計畫書 → 送主管機關核定<span class="law-tag">平§56 II</span><span class="law-tag">施行細則§81</span></div></div>
     <div class="flow-arrow">↓</div>
     <div class="flow-step"><div class="flow-num">3</div><div class="flow-box">核定及公告通知 30 天<span class="law-tag">平§56 II</span><span class="law-tag">平§59（禁止處分）</span></div></div>
-    <div class="flow-branch">若所有權人數＋面積 &gt; 1/2 反對 → 調處（僅一次）<span class="law-tag sub-law" style="background:transparent;border-color:var(--accent2);color:var(--accent2);">平§56 III</span> → 修訂計畫書 → 重新報請核定 → 直接公告實施</div>
+    <div class="flow-branch">若所有權人數 <b>且</b> 面積 <b>皆</b> &gt; 1/2 反對（兩條件都要成立，不是相加）→ 調處（僅一次）<span class="law-tag sub-law" style="background:transparent;border-color:var(--accent2);color:var(--accent2);">平§56 III</span> → 修訂計畫書 → 重新報請核定 → 直接公告實施</div>
     <div class="flow-arrow">↓</div>
     <div class="flow-step"><div class="flow-num">4</div><div class="flow-box">測量調查（界址/面積/權利狀態）＋ 地價評估（重劃前各筆地價／重劃後區段地價）</div></div>
     <div class="flow-arrow">↓</div>
@@ -474,7 +491,7 @@
 
 <!-- 七、十工用地 -->
 <section>
-  <h2 class="sec-title"><span class="star">★★★</span> ⑦ 費用負擔——十工用地 <span class="law-tag">平均地權條例 §60 I</span><span class="law-tag">施行細則 §83</span></h2>
+  <h2 class="sec-title">⑦ 費用負擔——十工用地 <span class="law-tag">平均地權條例 §60 I</span><span class="law-tag">施行細則 §83</span></h2>
   <div class="ten-grid">
     <div class="ten-item">道路</div>
     <div class="ten-item">溝渠</div>
@@ -495,7 +512,7 @@
     對照區段徵收九工（道、溝、綠、兒、廣、車、體、國、公）：市地重劃<b>沒有體育場所</b>，改成「零售市場」；區段徵收的「國民學校」在市地重劃拆成「國民小學」＋「國民中學」兩項。
   </div>
 
-  <h3 style="margin-top:20px;font-size:15.5px;color:var(--ink);">抵充順序 <span style="font-weight:normal;font-size:13px;color:var(--sub);">（兩條各自獨立的規定，不是同一套流程的接續步驟）</span></h3>
+  <h3 style="margin-top:20px;font-size:15.5px;color:var(--ink);">抵充順序 <span style="font-weight:normal;font-size:13px;color:var(--sub);">（兩條各自獨立的規定，不是同一套流程的接續步驟）</span><span class="examhit">111測</span></h3>
   <div class="grid-2" style="margin-top:10px;">
     <div class="nested-wrap">
       <div class="nested-label">↳ 十工用地（十種列舉項目）<span class="law-tag" style="margin-left:6px;">平§60 I</span></div>
@@ -516,7 +533,7 @@
 
 <!-- 八、共同負擔與抵費地 -->
 <section>
-  <h2 class="sec-title"><span class="star">★★★</span> ⑧ 共同負擔與抵費地 <span class="law-tag">平均地權條例 §60</span><span class="law-tag">施行細則 §84</span></h2>
+  <h2 class="sec-title">⑧ 共同負擔與抵費地 <span class="law-tag">平均地權條例 §60</span><span class="law-tag">施行細則 §84</span></h2>
   <p style="font-size:14.5px;margin-bottom:10px;">共同負擔原則用<b>抵費地</b>（區內未建築土地）折抵<span class="law-tag sub-law">細§84 I</span>，例外才用現金。</p>
   <div class="warn-box hi">
     ⚠️ 抵費地比例<b>不得超過 45%</b><span class="law-tag sub-law" style="background:transparent;border-color:var(--accent);color:var(--accent);">平§60 III</span>（除非<b>私有</b>土地所有權人半數以上，且其所有土地面積超過區內私有土地總面積半數同意）→ 換句話說，所有權人配回的土地<b>最少不會低於 55%</b>
@@ -557,7 +574,7 @@
 <!-- 十一、權利清理 -->
 <section>
   <h2 class="sec-title"><span class="star">★★★</span> ⑪ 權利清理<span style="margin-left:auto;font-weight:normal;font-size:13px;color:var(--sub);text-align:right;max-width:640px;line-height:1.6;"><b style="color:var(--ink);">目的：</b>換地後，舊地上原有的租約、地上權、抵押權等權利需轉載、補償或協調處理，避免產權不清。</span></h2>
-  <h3 style="font-size:15.5px;color:var(--ink);margin-bottom:8px;">1. 租賃權（債權）<span class="law-tag sub-law">平§63／§63-1</span></h3>
+  <h3 style="font-size:15.5px;color:var(--ink);margin-bottom:8px;">1. 租賃權（債權）<span class="law-tag sub-law">平§63／§63-1</span><span class="examhit">105・107・108</span></h3>
   <table>
     <tr><th style="width:20%">類型</th><th style="width:33%">情況</th><th>補償</th><th style="width:16%">依據</th></tr>
     <tr><td rowspan="2">耕地（公私有皆通用）</td><td>出租人有分配到土地</td><td>補承租人<b>公告現值 1/3</b></td><td rowspan="2"><span class="law-tag sub-law">平§63</span><span class="law-tag sub-law">細§89、90</span></td></tr>
@@ -607,6 +624,29 @@
       <div class="role-name">C（承租人）</div>
       耕地租約且 A 有分配到地 → 可向 A 要求<b>公告現值 1/3</b> 補償<br><span class="law-tag">平§63</span><span class="law-tag">細§89、90</span>
     </div>
+  </div>
+</section>
+
+<!-- 十四、近10年常考題目彙整 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑭ 近 10 年常考題目彙整 <span class="examhit">105–114年</span></h2>
+  <div class="info-box">
+    📖 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（非搜尋摘要臆測）。市地重劃是 L5 地用／L6 市地重劃／L7-8 徵收徵用／L9 國土計畫四堂中命中密度<b>最低</b>的一堂——9/10 年有命中，僅 <b>110 年完全查無</b>市地重劃相關命題；但 107、113 兩年各出過一整題申論題，條號密度反而是四堂最齊全的。
+  </div>
+
+  <table>
+    <tr><th style="width:12%">年度・題型</th><th>考點摘要</th><th style="width:22%">對應章節／法條</th></tr>
+    <tr><td>107 申論一</td><td>選定重劃地區後之禁建限制事項＋例外 8 款＋施工中建築物之處理（不妨礙者續建、妨礙者通知停工／限期改善）</td><td>⑥重劃程序全流程<br><span class="law-tag sub-law">平§59</span><span class="law-tag sub-law">實施辦法§11、§13</span></td></tr>
+    <tr><td>109 測5</td><td>獎勵土地所有權人自行組織重劃會辦理市地重劃：登記費減半、低利貸款、抵費地免徵土增稅、免／減地價稅田賦</td><td>⑤自辦重劃五項獎勵<br><span class="law-tag sub-law">平§58</span></td></tr>
+    <tr><td>110</td><td>（本年度查無市地重劃相關命題，是 10 年中唯一掛零的一年）</td><td>—</td></tr>
+    <tr><td>111 測18・23・24</td><td>自辦重劃分配土地之房地合一稅持有期間認定／十工用地抵充順序（優先用原公有道路溝渠河川未登記地）／自辦重劃獎勵事項辨析</td><td>⑤⑦抵充順序<br><span class="law-tag sub-law">平§60 I</span></td></tr>
+    <tr><td>112 測11</td><td>重劃後應分配土地面積已達最小分配面積標準 1/2，得申請放棄分配改領現金補償，按重劃後分配位置評定地價計算</td><td>⑨⑩土地分配<br><span class="law-tag sub-law">實施辦法</span></td></tr>
+    <tr><td>113 申論一</td><td>公辦市地重劃主管機關公告通知事項＋所有權人異議時機方式＋主管機關異議處理：計畫書核定公告 30 日、選定地區公告禁限事項、分配結果公告 30 日並得書面異議、異議未過半調處／過半修訂重行報核</td><td>⑥重劃程序全流程<br><span class="law-tag sub-law">平§56、§59、§60-2</span><span class="law-tag sub-law">實施辦法§17</span></td></tr>
+    <tr><td>114 測20</td><td>自辦土地重劃綜合比較：市地重劃／農地重劃同意門檻皆為私有土地所有權人半數以上且面積過半；農村社區土地重劃需 2/3 以上同意</td><td>④重劃方式</td></tr>
+  </table>
+
+  <div class="warn-box hi">
+    ⚠️ 兩大必考重點：<b>①自辦（獎勵）市地重劃</b>——109、111、114 連續出現，是近年新增重點；<b>②重劃全流程公告與異議程序</b>（§56、§59、§60-2）——107、113 兩年各以申論題完整命題，一旦考申論就是這題。次要考點：耕地／出租土地因重劃致不能達租賃目的之補償（跨 L5，105、107、108 年出現，見本筆記第⑪節租賃權表格）。
   </div>
 </section>
 
