@@ -20,18 +20,26 @@
     color: var(--ink);
     padding: 22px 32px 36px;
   }
-  h1.page-title {
-    font-size: 30px;
-    color: #fff;
+  .page-header {
     background: var(--ink);
-    padding: 16px 24px;
+    color: white;
     border-radius: 14px;
+    padding: 24px 34px;
     margin-bottom: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  h1.page-title .sub { font-size: 15px; font-weight: normal; opacity: 0.9; }
+  .page-header h1 { font-size: 28px; font-weight: 900; letter-spacing: 1px; }
+  .page-header .subtitle { font-size: 14px; opacity: .85; margin-top: 5px; }
+  .page-header .badge {
+    background: rgba(255,255,255,.15);
+    border-radius: 10px;
+    padding: 9px 18px;
+    text-align: center;
+    font-size: 12.5px;
+  }
+  .page-header .badge strong { font-size: 17px; display: block; }
   .tip-banner {
     background: var(--neutral-bg);
     border: 2px solid var(--line-strong);
@@ -167,10 +175,18 @@
 </head>
 <body>
 
-<h1 class="page-title">
-  土地法 L3｜地籍
-  <span class="sub">地籍測量・土地登記・逐字稿＋上課講義＋考古題三方核對（2026-07-23）</span>
-</h1>
+<div class="page-header">
+  <div>
+    <div style="font-size:13px;opacity:.7;margin-bottom:5px;">114年 不動產經紀人考試｜土地法</div>
+    <h1>L3｜地籍</h1>
+    <div class="subtitle">地籍測量・土地登記・逐字稿＋上課講義＋考古題三方核對（2026-07-23）</div>
+  </div>
+  <div style="display:flex;gap:14px;">
+    <div class="badge"><strong>§79-1</strong>核心條文</div>
+    <div class="badge"><strong>L3</strong>地籍・土地登記</div>
+    <div class="badge"><strong>⭐⭐⭐⭐⭐</strong>限制登記／預告登記最高頻</div>
+  </div>
+</div>
 
 <div class="tip-banner">📌 讀書建議：這堂分兩大類——地籍測量（Part A）跟土地登記（Part B）。「預告登記」是本堂最高頻考點，幾乎年年考，優先弄懂。</div>
 

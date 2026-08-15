@@ -20,18 +20,26 @@
     color: var(--ink);
     padding: 22px 32px 36px;
   }
-  h1.page-title {
-    font-size: 30px;
-    color: #fff;
+  .page-header {
     background: var(--ink);
-    padding: 16px 24px;
+    color: white;
     border-radius: 14px;
+    padding: 24px 34px;
     margin-bottom: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  h1.page-title .sub { font-size: 15px; font-weight: normal; opacity: 0.9; }
+  .page-header h1 { font-size: 28px; font-weight: 900; letter-spacing: 1px; }
+  .page-header .subtitle { font-size: 14px; opacity: .85; margin-top: 5px; }
+  .page-header .badge {
+    background: rgba(255,255,255,.15);
+    border-radius: 10px;
+    padding: 9px 18px;
+    text-align: center;
+    font-size: 12.5px;
+  }
+  .page-header .badge strong { font-size: 17px; display: block; }
   .tip-banner {
     background: var(--neutral-bg);
     border: 2px solid var(--line-strong);
@@ -202,10 +210,18 @@
 </head>
 <body>
 
-<h1 class="page-title">
-  土地法 L2｜地權
-  <span class="sub">土地權利得喪限制・優先購買權・逐字稿＋上課講義＋考古題三方核對（2026-07-23）</span>
-</h1>
+<div class="page-header">
+  <div>
+    <div style="font-size:13px;opacity:.7;margin-bottom:5px;">114年 不動產經紀人考試｜土地法</div>
+    <h1>L2｜地權</h1>
+    <div class="subtitle">土地權利得喪限制・優先購買權・逐字稿＋上課講義＋考古題三方核對（2026-07-23）</div>
+  </div>
+  <div style="display:flex;gap:14px;">
+    <div class="badge"><strong>§14、§17～20、§34-1</strong>核心條文</div>
+    <div class="badge"><strong>L2</strong>地權・得喪限制</div>
+    <div class="badge"><strong>⭐⭐⭐⭐⭐</strong>優先購買權最高頻</div>
+  </div>
+</div>
 
 <div class="tip-banner">📌 讀書建議：這堂是全科最高頻考點之一，重點是「共有土地處分§34-1」跟「優先購買權效力排序」，務必先弄懂物權效力vs債權效力這條分類線，其他子題再依序補強</div>
 
@@ -398,6 +414,7 @@
   <div class="warn-box hi2">
     💡 前提：①須是<b>有效買賣</b>（先有買賣才有優先購買權）②買受人須為共有人以外之<b>第三人</b>（賣給共有人，另一共有人不可主張優先購買，因已達成簡化共有關係目的）；只適用<b>有償買賣</b>——贈與、交換、信託行為、共有物分割皆不適用；性質為<b>法定形成權</b>（一方意思表示即使法律關係發生變動）。
   </div>
+  <div class="foot-note">📎 §104（基地房屋）／§107（耕地）各自的要件、案例圖解見 <b>L5</b>；這裡整理的是跨規定（§34-1／§104／§107／§8-5）的效力排序與期限比較——111年申論就是直接考「列舉三項規定並比較」的題型。</div>
 
   <h3 class="sub-title">效力比較：物權 vs 債權</h3>
   <table>

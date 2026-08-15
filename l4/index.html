@@ -20,18 +20,26 @@
     color: var(--ink);
     padding: 22px 32px 36px;
   }
-  h1.page-title {
-    font-size: 30px;
-    color: #fff;
+  .page-header {
     background: var(--ink);
-    padding: 16px 24px;
+    color: white;
     border-radius: 14px;
+    padding: 24px 34px;
     margin-bottom: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  h1.page-title .sub { font-size: 15px; font-weight: normal; opacity: 0.9; }
+  .page-header h1 { font-size: 28px; font-weight: 900; letter-spacing: 1px; }
+  .page-header .subtitle { font-size: 14px; opacity: .85; margin-top: 5px; }
+  .page-header .badge {
+    background: rgba(255,255,255,.15);
+    border-radius: 10px;
+    padding: 9px 18px;
+    text-align: center;
+    font-size: 12.5px;
+  }
+  .page-header .badge strong { font-size: 17px; display: block; }
   .tip-banner {
     background: var(--neutral-bg);
     border: 2px solid var(--line-strong);
@@ -131,10 +139,18 @@
 </head>
 <body>
 
-<h1 class="page-title">
-  土地法 L4｜地價
-  <span class="sub">規定地價・實價登錄・照價收買・依逐字稿＋上課講義核對＋考古題核對（2026-08-01已依講義L4-1~14逐張核對完成）</span>
-</h1>
+<div class="page-header">
+  <div>
+    <div style="font-size:13px;opacity:.7;margin-bottom:5px;">114年 不動產經紀人考試｜土地法</div>
+    <h1>L4｜地價</h1>
+    <div class="subtitle">規定地價・實價登錄・照價收買・依逐字稿＋上課講義核對＋考古題核對（2026-08-01已依講義L4-1~14逐張核對完成）</div>
+  </div>
+  <div style="display:flex;gap:14px;">
+    <div class="badge"><strong>平§47、47-1、47-3</strong>核心條文</div>
+    <div class="badge"><strong>L4</strong>地價・公告現值</div>
+    <div class="badge"><strong>⭐⭐⭐⭐⭐</strong>申報移轉現值最高頻</div>
+  </div>
+</div>
 
 <div class="tip-banner">📌 讀書建議：先弄懂「公告地價」跟「公告土地現值」性質不同（分別對應地價稅、土地增值稅），再記「申報土地移轉現值六種審核標準」——這是本堂最高頻考點</div>
 
