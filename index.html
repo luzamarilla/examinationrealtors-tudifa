@@ -84,6 +84,11 @@
 
   .stars { color: var(--accent); font-size: 14px; }
 
+  .examhit {
+    display: inline-block; margin-left: 6px; font-size: 11.5px; font-weight: 800; color: var(--accent);
+    background: var(--accent-bg); border: 1px solid var(--accent); border-radius: 10px; padding: 1px 9px;
+  }
+
   /* ── 表格 ── */
   table { width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.07); }
   th { padding: 9px 14px; text-align: left; font-size: 14px; font-weight: 700; color: white; }
@@ -105,7 +110,7 @@
   .reason-row.missing .reason-label { color: #9ca3af; text-decoration: line-through; }
   .num-badge { display: inline-block; background: var(--accent2-bg); color: var(--accent2); font-weight: 900; padding: 1px 8px; border-radius: 6px; }
   .period-cell { text-align: center; }
-  .period-cell .big-num { display: block; font-size: 26px; font-weight: 900; color: var(--ink); line-height: 1.3; }
+  .period-cell .big-num { display: block; font-size: 22px; font-weight: 900; color: var(--ink); line-height: 1.3; }
   .period-cell .small-note { display: block; font-size: 12px; color: #6b7280; margin-top: 2px; }
 
   /* ── 流程箭頭 ── */
@@ -120,6 +125,11 @@
 
   /* ── 法條標籤 ── */
   .law-tag { display: inline-block; background: var(--ink); color: white; padding: 2px 9px; border-radius: 5px; font-size: 12px; font-weight: 700; margin: 0 2px; }
+
+  /* ── 涵蓋度徽章（考古題對應總覽用） ── */
+  .badge { display: inline-block; font-size: 12px; font-weight: 800; padding: 3px 11px; border-radius: 20px; background: #6b7280; color: #fff; white-space: nowrap; }
+  .badge.top { background: var(--accent); }
+  .badge.mid { background: var(--accent2); }
 
   /* ── 口訣（內嵌小標籤，接在標題文字後面，不佔一行） ── */
   .mnemo-inline {
@@ -203,7 +213,7 @@
 <div class="section">
   <div class="section-title">
     <div class="section-num" style="background:var(--ink);">1</div>
-    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">徵收的定義與要件 <span class="stars">★★★★★</span></h2>
+    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">徵收的定義與要件 <span class="stars">★★★★★</span><span class="examhit">108申</span></h2>
   </div>
 
   <div class="card" style="margin-bottom:20px;">
@@ -287,7 +297,7 @@
 <div class="section">
   <div class="section-title">
     <div class="section-num" style="background:var(--ink);">3</div>
-    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">徵收的原因與標的 <span class="stars">★★★★</span></h2>
+    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">徵收的原因與標的 <span class="stars">★★★★</span><span class="examhit">107・113・114測</span></h2>
   </div>
 
   <div class="card" style="margin-bottom:20px;">
@@ -406,6 +416,7 @@
       <div style="text-align:center;color:var(--sub);">↓</div>
       <div class="flow-item" style="background:var(--ink);text-align:center;">⑧ 發給補償費與交付土地（程序完成，所有權人權利義務終止）</div>
     </div>
+    <div class="highlight-box hi2" style="margin-top:14px;"><span class="examhit">111測10</span> <strong>緊急先進入例外：</strong>國防／交通／水利事業，在補償費未發給完竣前、或未核定發給抵價地前，因<strong>公共安全急需</strong>，需用土地人得先進入被徵收土地內工作（不受一般須先完成補償才交付土地的順序限制）</div>
   </div>
 
   <div class="grid-2" style="margin-bottom:20px;">
@@ -422,6 +433,7 @@
       </div>
     </div>
   </div>
+  <div class="note"><span class="examhit">105測13・測40B</span> 補償費<strong>存入保管專戶</strong>時，原所有權人並非存入當下就喪失所有權，實務上須等到<strong>登記於需地機關名下時</strong>才喪失——與一般「補償費發給完竣時終止」的原則不同，是這類存入專戶情境下的特殊時點。<span style="color:var(--sub);">（⚠️ 確切條號待查證，逐字稿與現行考選部條文未明確標註出處）</span></div>
 </div>
 
 <hr>
@@ -430,7 +442,7 @@
 <div class="section">
   <div class="section-title">
     <div class="section-num" style="background:var(--ink);">5</div>
-    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">徵收補償費之發給 <span class="stars">★★★★★</span></h2>
+    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">徵收補償費之發給 <span class="stars">★★★★★</span><span class="examhit">105・109・110・111・112・113測</span></h2>
   </div>
 
   <div class="card-title" style="font-size:18px;color:var(--ink);margin-bottom:14px;">補償項目（★★★必考）<span class="law-tag" style="background:var(--ink);">土徵§30起</span></div>
@@ -471,13 +483,13 @@
     </div>
     <div style="font-size:14px;font-weight:900;color:var(--ink);margin-bottom:8px;">例外情形（土徵§20 II，不受15日限制）：</div>
     <div class="grid-2">
-      <div style="font-size:14px;">① 補償異議由地價評議委員會復議中<br><span style="font-size:12px;color:var(--accent2);">→ 呼應前段：補償價額異議須於公告期滿次日起30日內提出；異議進行中，15日發給期限暫停，待復議／行政救濟終結後才發給</span></div>
+      <div style="font-size:14px;">① 補償異議由地價評議委員會復議中</div>
       <div style="font-size:14px;">② 應受補償人書面同意延期或分期發給</div>
       <div style="font-size:14px;">③ 應受補償人拒絕受領或不能受領</div>
       <div style="font-size:14px;">④ 應受補償人所在地不明</div>
     </div>
     <div class="highlight-box" style="margin-top:14px;">
-      因③④無法發給者，補償費<strong>存入保管專戶</strong>（土徵§26，15日期限屆滿後再3個月內存入）；通知生效後 <strong>15 年內</strong>未領取，歸屬<strong>國庫</strong>——概念類似土地法§73-1的保管專戶規定
+      因③④無法發給者，補償費<strong>存入保管專戶</strong>（土徵§26，15日期限屆滿後<strong>3個月內</strong>存入）；通知生效後 <strong>15 年內</strong>未領取，歸屬<strong>國庫</strong>——概念類似土地法§73-1的保管專戶規定。<span class="examhit">112測14</span> 歸屬國庫後，應接續辦理<strong>廢止徵收</strong>
     </div>
     <div class="note">補償費發給完竣時，原所有權人之權利義務即告終止；若受補償人身故，繼承人得依<strong>應繼分</strong>領取（土徵§25）</div>
   </div>
@@ -489,7 +501,7 @@
 <div class="section">
   <div class="section-title">
     <div class="section-num" style="background:var(--ink);">6</div>
-    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">收回權｜未用．用錯．改用 <span class="stars">★★★★★</span></h2>
+    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">收回權｜未用．用錯．改用 <span class="stars">★★★★★</span><span class="examhit">106・109測</span></h2>
   </div>
 
   <div class="highlight-box">
@@ -499,35 +511,36 @@
   <div class="card-title" style="font-size:18px;color:var(--ink);margin-bottom:14px;margin-top:16px;">三個規定比較（最容易搞混的考點）</div>
   <div class="card" style="margin-bottom:20px;">
     <table>
-      <thead><tr><th style="background:var(--ink);width:14%;">依據</th><th style="background:var(--ink);width:56%;">收回原因</th><th style="background:var(--ink);width:30%;text-align:center;">行使期限</th></tr></thead>
+      <thead><tr>
+        <th style="background:var(--ink);width:14%;">依據</th>
+        <th style="background:var(--ink);text-align:center;">未用</th>
+        <th style="background:var(--ink);text-align:center;">用錯</th>
+        <th style="background:var(--ink);text-align:center;">改用</th>
+        <th style="background:var(--ink);width:22%;text-align:center;">行使期限</th>
+      </tr></thead>
       <tbody>
         <tr>
           <td><strong>土徵條例<br>§9</strong></td>
-          <td>
-            <div class="reason-row"><span class="reason-icon">1</span><span class="reason-label">未用</span><span>發給補償費<span class="num-badge">滿3年</span>未依計畫使用</span></div>
-            <div class="reason-row"><span class="reason-icon">2</span><span class="reason-label">用錯</span><span>未依原核准計畫使用</span></div>
-            <div class="reason-row"><span class="reason-icon">3</span><span class="reason-label">改用</span><span>使用<span class="num-badge">未滿5年</span>即變更用途</span></div>
-          </td>
+          <td style="text-align:center;"><span class="num-badge">滿3年</span><br><span style="font-size:11px;color:var(--sub);">未依計畫使用</span></td>
+          <td style="text-align:center;color:var(--sub);">✓<br><span style="font-size:11px;">未依原核准計畫使用</span></td>
+          <td style="text-align:center;"><span class="num-badge">未滿5年</span><br><span style="font-size:11px;color:var(--sub);">即變更用途</span></td>
           <td class="period-cell"><span class="big-num">20年內</span><span class="small-note">自公告之日起算</span></td>
         </tr>
         <tr>
           <td><strong>土地法<br>§219</strong></td>
-          <td>
-            <div class="reason-row"><span class="reason-icon">1</span><span class="reason-label">未用</span><span>補償發給完竣<span class="num-badge">滿1年</span>未依計畫使用</span></div>
-            <div class="reason-row"><span class="reason-icon">2</span><span class="reason-label">用錯</span><span>未依原核准計畫使用</span></div>
-            <div class="reason-row missing"><span class="reason-icon">3</span><span class="reason-label">改用</span><span>無此項規定</span></div>
-          </td>
+          <td style="text-align:center;"><span class="num-badge">滿1年</span><br><span style="font-size:11px;color:var(--sub);">未依計畫使用</span></td>
+          <td style="text-align:center;color:var(--sub);">✓<br><span style="font-size:11px;">未依原核准計畫使用</span></td>
+          <td style="text-align:center;color:#9ca3af;">✗<br><span style="font-size:11px;text-decoration:line-through;">無此項規定</span></td>
           <td class="period-cell"><span class="big-num">5年內</span><span class="small-note">自發給完竣滿1年起算</span></td>
         </tr>
         <tr>
           <td><strong>土地法<br>§219-1</strong><br><span class="note" style="margin:4px 0 0;">（釋字763號增訂）</span></td>
-          <td>
-            <div class="reason-row"><span class="reason-icon">!</span><span class="reason-label">未通知</span><span>地政機關<strong>未依規定每年通知、公告</strong>原所有權人土地使用情形</span></div>
-          </td>
+          <td colspan="3" style="text-align:center;font-size:13px;color:var(--ink);">——單一情形：地政機關<strong>未依規定每年通知、公告</strong>原所有權人土地使用情形——</td>
           <td class="period-cell"><span class="big-num">10年內</span><span class="small-note">自使用期限屆滿次日起算</span></td>
         </tr>
       </tbody>
     </table>
+    <div class="note" style="margin-top:8px;">💡 灰色✓／✗＝三個規定邏輯相同或相異之處一眼看出；<span class="num-badge">橘色數字</span>才是真正需要背的關鍵差異。</div>
     <div class="highlight-box hi" style="margin-top:14px;">
       <strong>不得收回的例外：</strong>土地法規定「可歸責於原所有權人／使用人」者不得收回；土徵條例則相反——規定「<strong>不可歸責於需用土地人</strong>」者不得收回，兩者邏輯方向相反，注意別背錯方向
     </div>
@@ -567,7 +580,7 @@
 <div class="section">
   <div class="section-title">
     <div class="section-num" style="background:var(--ink);">7</div>
-    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">撤銷與廢止 <span class="mnemo-inline">撤銷一開始就錯・廢止是後來才錯</span> <span class="stars">★★★</span></h2>
+    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">撤銷與廢止 <span class="mnemo-inline">撤銷一開始就錯・廢止是後來才錯</span> <span class="stars">★★★</span><span class="examhit">106・108・111・113測</span></h2>
   </div>
 
   <div class="card" style="margin-bottom:20px;">
@@ -583,9 +596,9 @@
   <div class="card-title" style="font-size:18px;color:var(--ink);margin-bottom:14px;">程序（原則發動人：需用土地人）</div>
   <div class="card" style="margin-bottom:20px;">
     <div class="flow" style="flex-direction:column;align-items:stretch;gap:10px;">
-      <div class="flow-item" style="background:var(--ink);text-align:center;">需用土地人符合§49事由 → 向地方政府申請撤銷／廢止</div>
+      <div class="flow-item" style="background:var(--ink);text-align:center;">需用土地人符合§49事由 → 向<strong>中央主管機關（內政部）</strong>申請撤銷／廢止（<strong>徵§50 I</strong>）</div>
       <div style="text-align:center;color:#6b7280;">↓</div>
-      <div class="flow-item" style="background:var(--ink);text-align:center;">地方政府審核通過 → 公告 30 日（同一開始徵收公告的期限）</div>
+      <div class="flow-item" style="background:var(--ink);text-align:center;">中央主管機關核准後通知地方政府 → 地方政府公告 30 日（同一開始徵收公告的期限）（<strong>徵§51 I、II</strong>）</div>
       <div style="text-align:center;color:#6b7280;">↓</div>
       <div class="flow-item" style="background:var(--ink);text-align:center;">通知所有權人於<strong>不得小於6個月</strong>的期間內繳回補償費，需用土地人發回土地</div>
     </div>
@@ -647,11 +660,11 @@
 <div class="section">
   <div class="section-title">
     <div class="section-num" style="background:var(--ink);">8</div>
-    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">一併徵收 <span class="stars">★★★★★</span></h2>
+    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">一併徵收 <span class="stars">★★★★★</span><span class="examhit">107測</span></h2>
   </div>
 
+  <div class="card-title" style="font-size:18px;color:var(--ink);margin-bottom:14px;">甲、土地改良物之一併徵收期限比較</div>
   <div class="card" style="margin-bottom:20px;">
-    <div class="card-title" style="font-size:16px;color:var(--ink);">甲、土地改良物之一併徵收期限比較</div>
     <div style="font-size:14px;">土地改良物原則上應與土地一併徵收（第3節已述其例外），關於「什麼時候一併徵收」兩法規定不同：</div>
     <table style="margin-top:10px;">
       <thead><tr><th style="background:var(--ink);">依據</th><th style="background:var(--ink);">期限規定</th></tr></thead>
@@ -729,7 +742,7 @@
 <div class="section">
   <div class="section-title">
     <div class="section-num" style="background:var(--ink);">10</div>
-    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">土地徵用｜概念與規定 <span class="stars">★★★</span></h2>
+    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">土地徵用｜概念與規定 <span class="stars">★★★</span><span class="examhit">107測</span></h2>
   </div>
 
   <div class="card" style="margin-bottom:20px;">
@@ -803,7 +816,7 @@
 <div class="section">
   <div class="section-title">
     <div class="section-num" style="background:var(--ink);">12</div>
-    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">區段徵收之意義與原因 <span class="stars">★★★★</span></h2>
+    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">區段徵收之意義與原因 <span class="stars">★★★★</span><span class="examhit">112申・114測</span></h2>
   </div>
 
   <div class="card" style="margin-bottom:20px;">
@@ -931,7 +944,7 @@
 <div class="section">
   <div class="section-title">
     <div class="section-num" style="background:var(--ink);">14</div>
-    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">補償方式：現金 vs 抵價地 <span class="stars">★★★★★</span></h2>
+    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">補償方式：現金 vs 抵價地 <span class="stars">★★★★★</span><span class="examhit">110・112・113測</span></h2>
   </div>
 
   <div style="margin-bottom:9px;"><span class="law-tag" style="background:var(--ink);">徵§39 I</span> <span class="highlight-box hi2" style="display:inline-block;padding:2px 10px;font-size:12px;font-weight:900;">109年申論實際出題</span></div>
@@ -971,7 +984,7 @@
 <div class="section">
   <div class="section-title">
     <div class="section-num" style="background:var(--ink);">15</div>
-    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">抵價地比例規定 <span class="stars">★★★★★</span></h2>
+    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">抵價地比例規定 <span class="stars">★★★★★</span><span class="examhit">106・108・109申・112申・114測</span></h2>
   </div>
 
   <div class="card" style="margin-bottom:20px;">
@@ -1136,7 +1149,7 @@
 <div class="section">
   <div class="section-title">
     <div class="section-num" style="background:var(--ink);">19</div>
-    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">區段徵收土地處置（七種土地分類）<span class="stars">★★★★</span></h2>
+    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">區段徵收土地處置（七種土地分類）<span class="stars">★★★★</span><span class="examhit">111・113測</span></h2>
   </div>
 
   <div class="highlight-box" style="margin-bottom:20px;">
@@ -1241,6 +1254,67 @@
     <div class="law-item" style="border-top-color:var(--line-strong);"><div class="num" style="color:var(--ink);">道溝公綠兒<br>廣車體國</div><div class="desc">九種公共設施<br>無償登記公有</div></div>
     <div class="law-item" style="border-top-color:var(--line-strong);"><div class="num" style="color:var(--ink);">1個月</div><div class="desc">反悔改領<br>現金／抵價地</div></div>
     <div class="law-item" style="border-top-color:var(--line-strong);"><div class="num" style="color:var(--ink);">3年</div><div class="desc">徵用期滿<br>可要求改徵收</div></div>
+  </div>
+</div>
+
+<hr>
+
+<!-- ═══ 二十一、主題→涵蓋度總覽（快速掃描版） ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num" style="background:var(--ink);">21</div>
+    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">考古題對應：主題→涵蓋度總覽</h2>
+  </div>
+
+  <div class="highlight-box" style="margin-bottom:16px;">
+    📋 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（2026-08-14）。快速掃描用——依本堂已標記的高頻考點列出對應章節與命中年度；完整逐年逐題明細見下方㉒「近 10 年常考題目彙整」逐年版，或 <code>土地法\土地法L5-L9_考古題深查.md</code>。
+  </div>
+
+  <table>
+    <tr><th style="background:var(--ink);width:32%;">高頻考點</th><th style="background:var(--ink);width:22%;">對應本堂筆記章節</th><th style="background:var(--ink);width:26%;">涵蓋狀態</th></tr>
+    <tr><td>抵價地比例規定（50%原則／不得少於40%／曾農地重劃不得少於45%，徵§39）</td><td>⑩抵價地比例規定</td><td><span class="badge top">✓ 最高頻必考（5年：106/108/109申/112申/114）</span></td></tr>
+    <tr><td>撤銷與廢止徵收之原因與區辨（徵§49）</td><td>⑤撤銷與廢止</td><td><span class="badge top">高頻（4年：106/108/111/113）</span></td></tr>
+    <tr><td>補償方式：現金 vs 抵價地／專戶保管逾15年歸國庫</td><td>⑨補償方式：現金 vs 抵價地</td><td><span class="badge mid">中高頻（3年：110/112/113）</span></td></tr>
+    <tr><td>徵收的原因與標的（特定農業區限制、一併徵收要件）</td><td>②徵收的原因與標的</td><td><span class="badge mid">中高頻（3年：107/113/114）</span></td></tr>
+    <tr><td>收回權：未用．用錯．改用（§9，5年/3個月/3年期限）</td><td>④收回權｜未用．用錯．改用</td><td><span class="badge mid">中頻（2年：106/109）</span></td></tr>
+    <tr><td>徵收補償費之發給（繼承人領取、市價定義）</td><td>③徵收補償費之發給</td><td><span class="badge mid">中頻（2年：109/113）</span></td></tr>
+    <tr><td>區段徵收之意義與原因（含先行區段徵收，徵§4）</td><td>⑧區段徵收之意義與原因</td><td><span class="badge mid">中頻（2年：112申論/114）</span></td></tr>
+    <tr><td>區段徵收土地處置（七種土地分類、標租期限99年）</td><td>⑫區段徵收土地處置</td><td><span class="badge mid">中頻（2年：111/113）</span></td></tr>
+    <tr><td>徵收的定義與要件（公益、法律保留、比例原則）</td><td>①徵收的定義與要件</td><td><span class="badge">申論命中（108申論一，完整條號）</span></td></tr>
+    <tr><td>一併徵收（殘餘地過小、形勢不整）</td><td>⑥一併徵收</td><td><span class="badge">一般命中（1年：107）</span></td></tr>
+    <tr><td>土地徵用｜概念與規定（逾6年應書面通知）</td><td>⑦土地徵用｜概念與規定</td><td><span class="badge">一般命中（1年：107，徵用專屬考點）</span></td></tr>
+  </table>
+
+  <div class="highlight-box hi2" style="margin-top:12px;">⚠️ 上表是「哪個主題最會考」的總覽，實際命中的完整題幹與細節請往下看㉒逐年彙整表——尤其抵價地比例、撤銷廢止兩個最高頻主題，近 10 年反覆用不同情境重考同一組數字／區辨點，是這堂的必拿分核心。</div>
+</div>
+
+<!-- ═══ 二十二、近10年常考題目彙整（逐年版） ═══ -->
+<div class="section">
+  <div class="section-title">
+    <div class="section-num" style="background:var(--ink);">22</div>
+    <h2 style="color:var(--ink);border-bottom:3px solid var(--line-strong);">近 10 年常考題目彙整（逐年版） <span class="examhit">105–114年</span></h2>
+  </div>
+
+  <div class="highlight-box" style="margin-bottom:16px;">
+    📖 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（非搜尋摘要臆測）。徵收．徵用是 L5 地用／L6 市地重劃／L7-8 徵收徵用／L9 國土計畫四堂中命中密度<b>最高</b>的一堂——<b>10/10 年皆有命中</b>，且題數最多（共 39 題次），是這四堂的必拿分核心。
+  </div>
+
+  <table>
+    <tr><th style="background:var(--ink);width:11%;">年度</th><th style="background:var(--ink);">考點摘要</th><th style="background:var(--ink);width:24%;">對應法條</th></tr>
+    <tr><td>105<br><span class="note" style="font-style:normal;">4 題次</span></td><td>測13 徵收補償金綜合辨析（債權讓與請求權仍可行使／公同共有補償金仍為公同共有／最高限額抵押權得代位徵收補償金／登記於需地機關時始喪失所有權）<br>測20 耕地出租後遭徵收，承租人優先購買權可否對抗徵收登記（跨L5）<br>測36 徵收補償之性質為「損失補償」<br>測40(B) 補償費存入專戶保管時，原所有權人喪失所有權之時點</td><td>題解未附具體條號</td></tr>
+    <tr><td>106<br><span class="note" style="font-style:normal;">5 題次</span></td><td>申論二(部分) 都市計畫法公設保留地取得方式：徵收／區段徵收／市地重劃三者並列（跨L6/L9）<br>測2 區段徵收抵價地總面積比例，以徵收總面積 <b>50%</b> 為原則<br>測4 抵價地領回後第一次移轉課徵土增稅之原地價認定<br>測22 收回權：公告之日起 <b>20 年內</b>得申請照原補償價額收回<br>測23 撤銷徵收原因（都市計畫已改以聯合開發等方式開發之例外）</td><td><span class="law-tag">都市計畫法§48</span></td></tr>
+    <tr><td>107<br><span class="note" style="font-style:normal;">4 題次</span></td><td>測12 特定農業區農牧用地徵收限制（除零星夾雜或國防交通必須外不得徵收；爭議依行政程序法舉行聽證）<br>測13 徵用專屬考點：因興辦繼續性公共建設得徵用私地／逾 6 年或 2 次以上合計逾 6 年應書面通知<br>測14 徵收殘餘地過小或形勢不整致不能為相當使用，得申請一併徵收<br>測15 申請發給抵價地，權利義務於接到核定發給抵價地通知時終止</td><td>土徵條例（徵用、一併徵收專屬考點）</td></tr>
+    <tr><td>108<br><span class="note" style="font-style:normal;">4 題次</span></td><td>申論一 徵收意義＋要件（公益原則、法律保留原則、比例原則、須給予補償、標的須為受憲法保障之財產權）<br>測4 優先購買權行使主體：原土地所有權人或其繼承人<br>測17 撤銷徵收：依原計畫開始使用後因情事變更致無徵收必要<br>測23 抵價地比例 <b>50%</b> 原則（不得少於 <b>40%</b>），曾經農地重劃者不得少於 <b>45%</b></td><td><span class="law-tag">土§208</span><span class="law-tag">土§209</span><span class="law-tag">土徵§1</span><span class="law-tag">土徵§3</span><span class="law-tag">土徵§13-2</span><span class="law-tag">土徵§30</span><span class="law-tag">土徵§57</span><span class="law-tag">土徵§39</span></td></tr>
+    <tr><td>109<br><span class="note" style="font-style:normal;">4 題次</span></td><td>申論一 抵價地意義＋比例原則（與108測23同考點，高頻重考）<br>測11 收回權 §9 三期限：未滿5年不繼續使用／3個月內繳還逾期視為放棄／補償費發給完竣屆滿3年未依計畫使用<br>測12 徵收補償綜合：農作改良物按孳息成熟時估定／徵收當期市價定義／建物按重建價格估定／公設保留地補償<br>測20 補償費，所有權人死亡未辦竣繼承登記，部分繼承人得按應繼分領取</td><td><span class="law-tag">土徵§9</span><span class="law-tag">土徵§25</span></td></tr>
+    <tr><td>110<br><span class="note" style="font-style:normal;">2 題次</span></td><td>測12 拒絕受領之徵收補償費存入專戶保管，逾 <b>15 年</b>未領取歸屬國庫<br>測13 建築改良物之補償費按徵收當時該建物之重建價格估定（本年度命中密度最低，僅 2 題次）</td><td><span class="law-tag">土徵§26</span></td></tr>
+    <tr><td>111<br><span class="note" style="font-style:normal;">5 題次</span></td><td>測10 補償費未發給完竣前或未核定發給抵價地前，因公共安全急需得先進入被徵收土地內工作<br>測11 撤銷或廢止徵收者，原設定之他項權利及耕地租約得予回復<br>測17 區段徵收範圍土地處理方式（抵價地發交領回／國宅用地得讓售／可建地標租期限並非25年，屬錯誤敘述）<br>測19 因作業錯誤致原徵收土地不在工程用地範圍內，應辦理撤銷徵收<br>測21 補償費需用土地人應於公告期滿後 <b>15 日內</b>繳交完竣，逾期該部分徵收失其效力</td><td><span class="law-tag">土徵§20</span></td></tr>
+    <tr><td>112<br><span class="note" style="font-style:normal;">3 題次</span></td><td>申論一 「先行區段徵收」意涵＋目的＋案例（§4Ⅱ新設都市地區/舊都市更新/農業區保護區變更建築用地等三款得先行區段徵收）＋地用面（§40申請領回抵價地、§39抵價地比例）＋地權面（§23公告後禁止處分登記）<br>測13 受領遲延／拒絕受領／不能受領之補償費存入專戶保管，逾15年未領取歸屬國庫<br>測14 專戶保管補償費逾15年未領取歸屬國庫後，應辦理廢止徵收</td><td><span class="law-tag">土徵§4</span><span class="law-tag">土徵§23</span><span class="law-tag">土徵§39</span><span class="law-tag">土徵§40</span><span class="law-tag">土徵§26</span></td></tr>
+    <tr><td>113<br><span class="note" style="font-style:normal;">5 題次</span></td><td>測5 撤銷或廢止綜合（申請機關為需用土地人向中央主管機關提出／開發方式改變應廢止徵收／作業錯誤致土地不在工程用地範圍內應撤銷徵收）<br>測6 徵收補償費綜合（公設保留地按公告土地現值非市價／補償地價非由估價師評定／建物按重建價格非重置價格／農作物按孳息成熟時估定為正解）<br>測7 專戶保管逾 <b>15 年</b>（非10年誘答）未領取歸屬國庫<br>測8 特定農業區重大建設徵收若有爭議應行聽證（與114測3同考點）<br>測18 區段徵收土地規劃整理後之處理方式，可供建築土地標租期限不得逾 <b>99 年</b></td><td><span class="law-tag">土徵§49</span><span class="law-tag">土徵§26</span></td></tr>
+    <tr><td>114<br><span class="note" style="font-style:normal;">3 題次</span></td><td>測3 徵收特定農業區農牧用地，土地所有權人異議應辦理聽證（與113測8同考點）<br>測9 曾經實施農地重劃者，抵價地總面積比例不得少於 <b>45%</b>（與108測23、109申論一同高頻考點）<br>測23 得為區段徵收之情形（不含「興辦國營事業或公安事業者」，與112申論一§4款項相同考點）</td><td><span class="law-tag">土徵§39</span><span class="law-tag">土徵§4</span></td></tr>
+  </table>
+
+  <div class="highlight-box hi" style="margin-top:16px;">
+    ⚠️ <b>五大必考重點</b>（依出現頻率排序）：<b>①區段徵收抵價地比例</b>（50%原則／不得少於40%／曾農地重劃不得少於45%）——106、108、109、112、114共 <b>5 年</b>出現，是L7-8最核心必考數字；<b>②徵收補償費專戶保管逾15年未領取歸屬國庫</b>，並連動應辦理廢止徵收——110、112、113三年出現，113年更明確以「10年」為誘答陷阱排除；<b>③撤銷／廢止徵收之原因與區辨</b>——106、108、111、113反覆出現；<b>④已徵收土地收回權</b>（§9，5年/3個月/3年等具體期限）——106、109兩年出現；<b>⑤先行區段徵收特殊制度</b>（§4）——112年以申論題完整命題、114年再以測驗題重考，屬新興重點。
   </div>
 </div>
 
