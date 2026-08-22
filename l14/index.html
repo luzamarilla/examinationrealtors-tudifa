@@ -20,18 +20,26 @@
     color: var(--ink);
     padding: 22px 32px 36px;
   }
-  h1.page-title {
-    font-size: 30px;
-    color: #fff;
+  .page-header {
     background: var(--ink);
-    padding: 16px 24px;
+    color: white;
     border-radius: 14px;
+    padding: 24px 34px;
     margin-bottom: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  h1.page-title .sub { font-size: 15px; font-weight: normal; opacity: 0.9; }
+  .page-header h1 { font-size: 28px; font-weight: 900; letter-spacing: 1px; }
+  .page-header .subtitle { font-size: 14px; opacity: .85; margin-top: 5px; }
+  .page-header .badge {
+    background: rgba(255,255,255,.15);
+    border-radius: 10px;
+    padding: 9px 18px;
+    text-align: center;
+    font-size: 12.5px;
+  }
+  .page-header .badge strong { font-size: 17px; display: block; }
   .tip-banner {
     background: var(--neutral-bg);
     border: 2px solid var(--line-strong);
@@ -113,6 +121,9 @@
     background: var(--accent-bg); border: 1px solid var(--accent); border-radius: 10px; padding: 1px 9px;
     vertical-align: middle;
   }
+  .badge { display: inline-block; font-size: 12px; font-weight: 800; padding: 3px 11px; border-radius: 20px; background: #6b7280; color: #fff; white-space: nowrap; }
+  .badge.top { background: var(--accent); }
+  .badge.mid { background: var(--accent2); }
   .example-box {
     background: var(--neutral-bg); border: 2px solid var(--line-strong); border-radius: 10px;
     padding: 12px 18px; font-size: 14.5px; line-height: 1.7; color: var(--neutral);
@@ -121,10 +132,18 @@
 </head>
 <body>
 
-<h1 class="page-title">
-  土地法 L14｜房屋稅
-  <span class="sub">持有稅（課稅標的：房屋）・逐字稿＋上課講義＋考古題三方核對（2026-07-23）</span>
-</h1>
+<div class="page-header">
+  <div>
+    <div style="font-size:13px;opacity:.7;margin-bottom:5px;">114年 不動產經紀人考試｜土地法</div>
+    <h1>L14｜房屋稅</h1>
+    <div class="subtitle">持有稅（課稅標的：房屋）・逐字稿＋上課講義＋考古題三方核對（2026-07-23）</div>
+  </div>
+  <div style="display:flex;gap:14px;">
+    <div class="badge"><strong>房屋稅條例§4、5、10</strong>核心條文</div>
+    <div class="badge"><strong>L14</strong>房屋稅・持有稅</div>
+    <div class="badge"><strong>⭐⭐⭐⭐⭐</strong>囤房稅2.0稅率最高頻</div>
+  </div>
+</div>
 
 <div class="tip-banner">📌 讀書建議：113年囤房稅2.0大修法是近年最熱門考點，稅率表要花時間記熟；其餘規定相對單純，比地價稅簡單</div>
 
@@ -375,6 +394,21 @@
     <tr><td>停止課徵</td><td>§8</td></tr>
     <tr><td>減半徵收／私有免徵及申報期限</td><td>§15</td></tr>
     <tr><td>公有房屋免徵</td><td>§14</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2 class="sec-title">⑪ 考古題對應：主題→涵蓋度總覽</h2>
+  <div class="warn-box hi2" style="margin-bottom:8px;">
+    📋 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（2026-08-13）。房屋稅是稅法系列中命中密度最高的一堂之一，112、113 年更連續以整題申論命題（見⑨）。
+  </div>
+  <table>
+    <tr><th style="width:36%">高頻考點</th><th style="width:22%">對應章節</th><th>涵蓋狀態</th></tr>
+    <tr><td>減免規定——三個層級（含申報期限手續題）</td><td>⑦減免規定</td><td><span class="badge top">✓ 最高頻必考（5年：104申論・106・107・109・114）</span></td></tr>
+    <tr><td>納稅義務人<span class="law-tag sub-law">§4</span></td><td>③納稅義務人</td><td><span class="badge top">最高頻（4年：106・109・111・114）</span></td></tr>
+    <tr><td>稅率——113年囤房稅2.0大修法<span class="law-tag sub-law">§5 I</span></td><td>⑤稅率——113年囤房稅2.0</td><td><span class="badge mid">中頻（2年：113・114，新制熱點）</span></td></tr>
+    <tr><td>全國總持有戶數差別稅率<span class="law-tag sub-law">§5 II</span></td><td>⑥全國總持有戶數差別稅率</td><td><span class="badge">一般命中（1年：113）</span></td></tr>
+    <tr><td>稅基——房屋現值<span class="law-tag sub-law">§10</span></td><td>④稅基——房屋現值</td><td><span class="badge">一般命中（1年：112申論）</span></td></tr>
   </table>
 </section>
 

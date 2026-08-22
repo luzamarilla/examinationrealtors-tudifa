@@ -20,18 +20,26 @@
     color: var(--ink);
     padding: 22px 32px 36px;
   }
-  h1.page-title {
-    font-size: 30px;
-    color: #fff;
+  .page-header {
     background: var(--ink);
-    padding: 16px 24px;
+    color: white;
     border-radius: 14px;
+    padding: 24px 34px;
     margin-bottom: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  h1.page-title .sub { font-size: 15px; font-weight: normal; opacity: 0.9; }
+  .page-header h1 { font-size: 28px; font-weight: 900; letter-spacing: 1px; }
+  .page-header .subtitle { font-size: 14px; opacity: .85; margin-top: 5px; }
+  .page-header .badge {
+    background: rgba(255,255,255,.15);
+    border-radius: 10px;
+    padding: 9px 18px;
+    text-align: center;
+    font-size: 12.5px;
+  }
+  .page-header .badge strong { font-size: 17px; display: block; }
   .tip-banner {
     background: var(--neutral-bg);
     border: 2px solid var(--line-strong);
@@ -80,6 +88,9 @@
     background: var(--accent-bg); border: 1px solid var(--accent); border-radius: 10px; padding: 1px 9px;
     vertical-align: middle;
   }
+  .badge { display: inline-block; font-size: 12px; font-weight: 800; padding: 3px 11px; border-radius: 20px; background: #6b7280; color: #fff; white-space: nowrap; }
+  .badge.top { background: var(--accent); }
+  .badge.mid { background: var(--accent2); }
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
   .card { border-radius: 12px; padding: 14px 16px; border: 2px solid var(--line-strong); background: #fff; }
@@ -126,10 +137,18 @@
 </head>
 <body>
 
-<h1 class="page-title">
-  土地法 L1｜土地法規總論（前導課）
-  <span class="sub">科目架構・讀書方法・逐字稿＋上課講義＋考古題三方核對（2026-07-23）</span>
-</h1>
+<div class="page-header">
+  <div>
+    <div style="font-size:13px;opacity:.7;margin-bottom:5px;">114年 不動產經紀人考試｜土地法</div>
+    <h1>L1｜土地法規總論（前導課）</h1>
+    <div class="subtitle">科目架構・讀書方法・逐字稿＋上課講義＋考古題三方核對（2026-07-23）</div>
+  </div>
+  <div style="display:flex;gap:14px;">
+    <div class="badge"><strong>§14、§17～20、§25</strong>核心條文</div>
+    <div class="badge"><strong>L1</strong>土地法規總論・前導課</div>
+    <div class="badge"><strong>⭐⭐⭐</strong>外國人取得租賃限制最高頻</div>
+  </div>
+</div>
 
 <div class="tip-banner">📌 這堂是前導課，沒有法條實體內容，重點是搞懂「這科要讀什麼、去哪查、怎麼考」，把時間留給後面地權/地籍/地價/地用等堂次的實質內容</div>
 
@@ -271,6 +290,21 @@
   <div class="example-box" style="margin-top:10px;">
     <b>具體例題示範：</b>108年「私有土地所有權之移轉、設定負擔或租賃，如有妨害基本國策者，中央地政機關得報請下列何機關制止之？」（答：行政院）／109年「依土地法規定，下列何種土地不得移轉、設定負擔或租賃於外國人？」／111年「依土地法第17條規定，下列何項土地得租賃於外國人？」／114年「下列何者並非土地法中的農作改良物？」「下列有關公有土地撥用之敘述，何者錯誤？」
   </div>
+</section>
+
+<section>
+  <h2 class="sec-title">⑧ 考古題對應：主題→涵蓋度總覽</h2>
+  <div class="warn-box hi2" style="margin-bottom:8px;">
+    📋 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（2026-08-13/14）。快速掃描用，依⑦已標記的考古題子題整理，總論本身單獨命題比例不高，多以背景概念形式出現在選擇題。
+  </div>
+  <table>
+    <tr><th style="width:36%">高頻考點</th><th style="width:22%">對應章節</th><th>涵蓋狀態</th></tr>
+    <tr><td>外國人取得／租賃土地之限制<span class="law-tag sub-law">§17-20</span></td><td>⑦總論性內容的考古題查證</td><td><span class="badge top">✓ 最高頻（5/10年：109・110・111・112・114）</span></td></tr>
+    <tr><td>公有土地定義／撥用／處分<span class="law-tag sub-law">§4・§25・§27・§53</span></td><td>⑦總論性內容的考古題查證</td><td><span class="badge top">✓ 最高頻（5/10年：105・106・108・110・114）</span></td></tr>
+    <tr><td>私有土地限制＋中央地政機關報請行政院制止</td><td>⑦總論性內容的考古題查證</td><td><span class="badge mid">中頻（3/10年：108・111・113）</span></td></tr>
+    <tr><td>不得私有之土地種類<span class="law-tag sub-law">§14</span></td><td>⑦總論性內容的考古題查證</td><td><span class="badge mid">中頻（2/10年：107・114）</span></td></tr>
+    <tr><td>土地改良物定義（建築改良物／農作改良物）<span class="law-tag sub-law">§5</span></td><td>⑦總論性內容的考古題查證</td><td><span class="badge">一般命中（1/10年：114）</span></td></tr>
+  </table>
 </section>
 
 </body>

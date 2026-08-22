@@ -20,18 +20,26 @@
     color: var(--ink);
     padding: 22px 32px 36px;
   }
-  h1.page-title {
-    font-size: 30px;
-    color: #fff;
+  .page-header {
     background: var(--ink);
-    padding: 16px 24px;
+    color: white;
     border-radius: 14px;
+    padding: 24px 34px;
     margin-bottom: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  h1.page-title .sub { font-size: 15px; font-weight: normal; opacity: 0.9; }
+  .page-header h1 { font-size: 28px; font-weight: 900; letter-spacing: 1px; }
+  .page-header .subtitle { font-size: 14px; opacity: .85; margin-top: 5px; }
+  .page-header .badge {
+    background: rgba(255,255,255,.15);
+    border-radius: 10px;
+    padding: 9px 18px;
+    text-align: center;
+    font-size: 12.5px;
+  }
+  .page-header .badge strong { font-size: 17px; display: block; }
   .tip-banner {
     background: var(--neutral-bg);
     border: 2px solid var(--line-strong);
@@ -118,14 +126,25 @@
     background: var(--accent-bg); border: 1px solid var(--accent); border-radius: 10px; padding: 1px 9px;
     vertical-align: middle;
   }
+  .badge { display: inline-block; font-size: 12px; font-weight: 800; padding: 3px 11px; border-radius: 20px; background: #6b7280; color: #fff; white-space: nowrap; }
+  .badge.top { background: var(--accent); }
+  .badge.mid { background: var(--accent2); }
 </style>
 </head>
 <body>
 
-<h1 class="page-title">
-  土地法 L13｜房地合一所得稅
-  <span class="sub">移轉稅（房地一體）・逐字稿＋上課講義＋重點講義＋考古題四方核對（2026-07-23）</span>
-</h1>
+<div class="page-header">
+  <div>
+    <div style="font-size:13px;opacity:.7;margin-bottom:5px;">114年 不動產經紀人考試｜土地法</div>
+    <h1>L13｜房地合一所得稅</h1>
+    <div class="subtitle">移轉稅（房地一體）・逐字稿＋上課講義＋重點講義＋考古題四方核對（2026-07-23）</div>
+  </div>
+  <div style="display:flex;gap:14px;">
+    <div class="badge"><strong>所得稅法§14-4、14-8</strong>核心條文</div>
+    <div class="badge"><strong>L13</strong>房地合一所得稅</div>
+    <div class="badge"><strong>⭐⭐⭐⭐</strong>持有期間累進稅率最高頻</div>
+  </div>
+</div>
 
 <div class="tip-banner">📌 讀書建議：先弄懂「跟土地增值稅不重複課稅」的原理（扣除土地漲價總數額），再記稅率級距（2/5/10年、45/35/20/15%）跟自用住宅400萬免稅額</div>
 
@@ -328,6 +347,22 @@
     <tr><td>自用住宅優惠／其他免稅</td><td>§4-5</td></tr>
     <tr><td>申報罰則</td><td>§108-2</td></tr>
     <tr><td>移轉現值認定（土地漲價總數額計算依據）</td><td>土地稅法 §30 I</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2 class="sec-title">⑭ 考古題對應：主題→涵蓋度總覽</h2>
+  <div class="warn-box hi2" style="margin-bottom:8px;">
+    📋 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（2026-08-13）。
+  </div>
+  <table>
+    <tr><th style="width:36%">高頻考點</th><th style="width:22%">對應章節</th><th>涵蓋狀態</th></tr>
+    <tr><td>稅率——持有期間累進<span class="law-tag sub-law">§14-4 III</span></td><td>⑥稅率——持有期間累進</td><td><span class="badge top">✓ 最高頻必考（4年：106・110・111・112）</span></td></tr>
+    <tr><td>重購退稅——vs 土地增值稅比較<span class="law-tag sub-law">§35</span></td><td>⑪重購退稅</td><td><span class="badge mid">中頻（3年：106・108・110）</span></td></tr>
+    <tr><td>特別優惠稅率20%（境內個人）</td><td>⑦特別優惠稅率20%</td><td><span class="badge mid">中頻（2年：106・113）</span></td></tr>
+    <tr><td>交易損失得於3年內扣除（§14-4 I但書，常用5年/7年當誘答）</td><td>①意義——房地一體的移轉稅</td><td><span class="badge">一般命中（1年：108）</span></td></tr>
+    <tr><td>市地重劃／區段徵收分配土地之取得日認定（追溯原取得日）</td><td>②課徵對象</td><td><span class="badge">一般命中（1年：111）</span></td></tr>
+    <tr><td>必要費用推計<span class="law-tag sub-law">所得稅法§14-6</span>（無單據時按成交價3%，上限30萬）</td><td>④稅基——房地交易所得</td><td><span class="badge">一般命中（1年：110）</span></td></tr>
   </table>
 </section>
 

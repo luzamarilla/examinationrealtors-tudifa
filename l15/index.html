@@ -20,18 +20,26 @@
     color: var(--ink);
     padding: 22px 32px 36px;
   }
-  h1.page-title {
-    font-size: 30px;
-    color: #fff;
+  .page-header {
     background: var(--ink);
-    padding: 16px 24px;
+    color: white;
     border-radius: 14px;
+    padding: 24px 34px;
     margin-bottom: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  h1.page-title .sub { font-size: 15px; font-weight: normal; opacity: 0.9; }
+  .page-header h1 { font-size: 28px; font-weight: 900; letter-spacing: 1px; }
+  .page-header .subtitle { font-size: 14px; opacity: .85; margin-top: 5px; }
+  .page-header .badge {
+    background: rgba(255,255,255,.15);
+    border-radius: 10px;
+    padding: 9px 18px;
+    text-align: center;
+    font-size: 12.5px;
+  }
+  .page-header .badge strong { font-size: 17px; display: block; }
   .tip-banner {
     background: var(--neutral-bg);
     border: 2px solid var(--line-strong);
@@ -117,14 +125,25 @@
     background: var(--accent-bg); border: 1px solid var(--accent); border-radius: 10px; padding: 1px 9px;
     vertical-align: middle;
   }
+  .badge { display: inline-block; font-size: 12px; font-weight: 800; padding: 3px 11px; border-radius: 20px; background: #6b7280; color: #fff; white-space: nowrap; }
+  .badge.top { background: var(--accent); }
+  .badge.mid { background: var(--accent2); }
 </style>
 </head>
 <body>
 
-<h1 class="page-title">
-  土地法 L15｜契稅
-  <span class="sub">移轉稅（課稅標的：房屋）・逐字稿＋上課講義＋筆記講義＋考古題四方核對（2026-07-23）</span>
-</h1>
+<div class="page-header">
+  <div>
+    <div style="font-size:13px;opacity:.7;margin-bottom:5px;">114年 不動產經紀人考試｜土地法</div>
+    <h1>L15｜契稅</h1>
+    <div class="subtitle">移轉稅（課稅標的：房屋）・逐字稿＋上課講義＋筆記講義＋考古題四方核對（2026-07-23）</div>
+  </div>
+  <div style="display:flex;gap:14px;">
+    <div class="badge"><strong>契稅條例§3、6、14</strong>核心條文</div>
+    <div class="badge"><strong>L15</strong>契稅・移轉稅</div>
+    <div class="badge"><strong>⭐⭐⭐⭐</strong>稅率・納稅義務人最高頻</div>
+  </div>
+</div>
 
 <div class="tip-banner">📌 讀書建議：契稅規定比土地增值稅單純很多，重點是6/4/2%稅率分組記憶、交換有價差的計算，跟信託不課徵5情形（幾乎跟土地增值稅一樣）</div>
 
@@ -332,6 +351,24 @@
     <tr><td>滯納金（條文寫每2日1%，實際依稅捐稽徵法§20從新從優適用每3日1%，逾30日移送強制執行）</td><td>§25</td></tr>
     <tr><td>徵收機關</td><td>§29</td></tr>
     <tr><td>檢舉獎金（20%）</td><td>§32</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2 class="sec-title">⑫ 考古題對應：主題→涵蓋度總覽</h2>
+  <div class="warn-box hi2" style="margin-bottom:8px;">
+    📋 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（2026-08-13）。
+  </div>
+  <table>
+    <tr><th style="width:36%">高頻考點</th><th style="width:22%">對應章節</th><th>涵蓋狀態</th></tr>
+    <tr><td>納稅義務人——六種情況</td><td>②納稅義務人</td><td><span class="badge top">✓ 最高頻必考（4年：109・111・112・113）</span></td></tr>
+    <tr><td>稅率<span class="law-tag sub-law">§3</span></td><td>③稅率</td><td><span class="badge top">最高頻（4年：109・111・112・114）</span></td></tr>
+    <tr><td>減免規定<span class="law-tag sub-law">§14</span></td><td>⑤減免規定</td><td><span class="badge mid">中頻（3年：105・106・111）</span></td></tr>
+    <tr><td>稽徵機關與檢舉獎金</td><td>⑧稽徵機關與檢舉獎金</td><td><span class="badge mid">中頻（3年：103・104・105）</span></td></tr>
+    <tr><td>契價≠實際成交價（常用「以實際買賣價格為準」當誘答）</td><td>①概念——房屋的移轉稅</td><td><span class="badge mid">中頻（2年：106・107）</span></td></tr>
+    <tr><td>申報期間——立約日起30日內（含不動產移轉糾紛以法院判決確定之日起算）</td><td>⑥申報期間</td><td><span class="badge mid">中頻（2年：104・113）</span></td></tr>
+    <tr><td>信託情形的契稅</td><td>⑨信託情形的契稅</td><td><span class="badge mid">中頻（2年：111・113）</span></td></tr>
+    <tr><td>交換契稅——有價差時的計算<span class="law-tag sub-law">§6</span></td><td>④交換契稅</td><td><span class="badge">一般命中（1年：113）</span></td></tr>
   </table>
 </section>
 

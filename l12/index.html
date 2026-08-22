@@ -20,18 +20,26 @@
     color: var(--ink);
     padding: 22px 32px 36px;
   }
-  h1.page-title {
-    font-size: 30px;
-    color: #fff;
+  .page-header {
     background: var(--ink);
-    padding: 16px 24px;
+    color: white;
     border-radius: 14px;
+    padding: 24px 34px;
     margin-bottom: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  h1.page-title .sub { font-size: 15px; font-weight: normal; opacity: 0.9; }
+  .page-header h1 { font-size: 28px; font-weight: 900; letter-spacing: 1px; }
+  .page-header .subtitle { font-size: 14px; opacity: .85; margin-top: 5px; }
+  .page-header .badge {
+    background: rgba(255,255,255,.15);
+    border-radius: 10px;
+    padding: 9px 18px;
+    text-align: center;
+    font-size: 12.5px;
+  }
+  .page-header .badge strong { font-size: 17px; display: block; }
   .tip-banner {
     background: var(--neutral-bg);
     border: 2px solid var(--line-strong);
@@ -104,6 +112,9 @@
     background: var(--accent-bg); border: 1px solid var(--accent); border-radius: 10px; padding: 1px 9px;
     vertical-align: middle;
   }
+  .badge { display: inline-block; font-size: 12px; font-weight: 800; padding: 3px 11px; border-radius: 20px; background: #6b7280; color: #fff; white-space: nowrap; }
+  .badge.top { background: var(--accent); }
+  .badge.mid { background: var(--accent2); }
   .card table { margin-top: 0; }
   .card table td { font-size: 14px; padding: 7px 8px; }
   .card table td:last-child { width: 34%; color: var(--sub); font-size: 13px; }
@@ -130,10 +141,18 @@
 </head>
 <body>
 
-<h1 class="page-title">
-  土地法 L12｜土地增值稅
-  <span class="sub">移轉稅・依逐字稿＋上課講義核對</span>
-</h1>
+<div class="page-header">
+  <div>
+    <div style="font-size:13px;opacity:.7;margin-bottom:5px;">114年 不動產經紀人考試｜土地法</div>
+    <h1>L12｜土地增值稅</h1>
+    <div class="subtitle">移轉稅・依逐字稿＋上課講義核對</div>
+  </div>
+  <div style="display:flex;gap:14px;">
+    <div class="badge"><strong>土地稅法§28、31、34</strong>核心條文</div>
+    <div class="badge"><strong>L12</strong>土地增值稅・移轉稅</div>
+    <div class="badge"><strong>⭐⭐⭐⭐</strong>一生一次一生一屋最高頻</div>
+  </div>
+</div>
 
 <div class="tip-banner">📌 讀書建議：這堂資訊量最大，先抓穩「稅基＝漲價總數額」「稅率20/30/40％累進」「自用10％」三根柱子，再練 Byon 例題把整套算法串起來</div>
 
@@ -398,6 +417,22 @@
     <tr><td>被徵收／法拍免申報代扣</td><td>§52</td></tr>
     <tr><td>權利人單獨申報</td><td>§49-1 後段／土地登記規則 §27</td></tr>
     <tr><td>農地變更不課徵（另免遺贈稅田賦）</td><td>農發條例 §38-1</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2 class="sec-title">⑭ 考古題對應：主題→涵蓋度總覽</h2>
+  <div class="warn-box hi2" style="margin-bottom:8px;">
+    📋 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（2026-08-13，08-13 另補標籤從2個擴充到16個）。土地增值稅幾乎年年考，是稅法系列命中密度最高的一堂。
+  </div>
+  <table>
+    <tr><th style="width:36%">高頻考點</th><th style="width:22%">對應章節</th><th>涵蓋狀態</th></tr>
+    <tr><td>免徵 vs 不課徵比較（繼承取得、被徵收土地、公共設施保留地§39、夫妻間贈與§28-2、農地移轉§39-2）</td><td>⑨免徵 vs 不課徵</td><td><span class="badge top">✓ 最高頻必考（6年：105・106・107・110申・113・114申）</span></td></tr>
+    <tr><td>特別稅率10%——自用住宅「一生一次」與「一生一屋」<span class="law-tag sub-law">§34</span></td><td>⑥特別稅率10%</td><td><span class="badge top">最高頻（4年：105・106・110・112）</span></td></tr>
+    <tr><td>移轉現值的認定（一般申報／法院判決起訴日／法院拍賣拍定日）</td><td>⑩移轉現值的認定</td><td><span class="badge top">高頻（4年：106申論・108・111・112）</span></td></tr>
+    <tr><td>重購退稅<span class="law-tag sub-law">§35</span></td><td>⑪重購退稅</td><td><span class="badge mid">中頻（2年：106申論・109）</span></td></tr>
+    <tr><td>設定典權——回贖時無息返還已繳稅款</td><td>②納稅義務人</td><td><span class="badge">一般命中（1年：112）</span></td></tr>
+    <tr><td>地價稅抵繳土地增值稅（上限5%）<span class="law-tag sub-law">§31 III</span></td><td>⑫補充規定</td><td><span class="badge">一般命中（1年：111）</span></td></tr>
   </table>
 </section>
 

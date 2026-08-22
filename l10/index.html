@@ -20,22 +20,26 @@
     color: var(--ink);
     padding: 22px 32px 36px;
   }
-  h1.page-title {
-    font-size: 30px;
-    color: #fff;
+  .page-header {
     background: var(--ink);
-    padding: 16px 24px;
+    color: white;
     border-radius: 14px;
+    padding: 24px 34px;
     margin-bottom: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  h1.page-title .sub {
-    font-size: 15px;
-    font-weight: normal;
-    opacity: 0.9;
+  .page-header h1 { font-size: 28px; font-weight: 900; letter-spacing: 1px; }
+  .page-header .subtitle { font-size: 14px; opacity: .85; margin-top: 5px; }
+  .page-header .badge {
+    background: rgba(255,255,255,.15);
+    border-radius: 10px;
+    padding: 9px 18px;
+    text-align: center;
+    font-size: 12.5px;
   }
+  .page-header .badge strong { font-size: 17px; display: block; }
   .tip-banner {
     background: var(--neutral-bg);
     border: 2px solid var(--line-strong);
@@ -78,6 +82,14 @@
   .law-tag.sub-law { background: #f8fafc; color: var(--sub); border-color: var(--line); }
   .law-tag.hi { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
   .law-tag.hi2 { background: var(--accent2-bg); color: var(--accent2); border-color: var(--accent2); }
+  .examhit {
+    display: inline-block; margin-left: 6px; font-size: 11.5px; font-weight: 800; color: var(--accent);
+    background: var(--accent-bg); border: 1px solid var(--accent); border-radius: 10px; padding: 1px 9px;
+    vertical-align: middle;
+  }
+  .badge { display: inline-block; font-size: 12px; font-weight: 800; padding: 3px 11px; border-radius: 20px; background: #6b7280; color: #fff; white-space: nowrap; }
+  .badge.top { background: var(--accent); }
+  .badge.mid { background: var(--accent2); }
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; }
   .card {
@@ -134,10 +146,18 @@
 </head>
 <body>
 
-<h1 class="page-title">
-  土地法 L10｜土地稅法導論
-  <span class="sub">前導課・稅目全覽與共通架構・依逐字稿製作（尚無上課講義可核對）</span>
-</h1>
+<div class="page-header">
+  <div>
+    <div style="font-size:13px;opacity:.7;margin-bottom:5px;">114年 不動產經紀人考試｜土地法</div>
+    <h1>L10｜土地稅法導論</h1>
+    <div class="subtitle">前導課・稅目全覽與共通架構・依逐字稿製作（尚無上課講義可核對）</div>
+  </div>
+  <div style="display:flex;gap:14px;">
+    <div class="badge"><strong>稅目全覽</strong>共通架構</div>
+    <div class="badge"><strong>L10</strong>土地稅法・前導課</div>
+    <div class="badge"><strong>⭐⭐⭐</strong>重購退稅比較最高頻</div>
+  </div>
+</div>
 
 <div class="tip-banner">📌 讀書建議：前導課重點是建立「稅額＝稅基×稅率」這套共通架構，後面每堂課（地價稅、增值稅⋯）都是套這套架構去理解，不用死背</div>
 
@@ -280,6 +300,18 @@
 <section>
   <h2 class="sec-title">⑨ 筆記呈現方式</h2>
   <p style="font-size:14.5px;">與土地法相同，採主題式重點整理＋法條提示（篇幅關係無法貼出完整條文，對照小六法或全國法規資料庫）。每個稅目（地價稅、增值稅⋯）各自做一個單元，方便針對不熟悉的稅目複習。下一堂 L11 進入<b>地價稅</b>，L12 進入<b>土地增值稅</b>。</p>
+</section>
+
+<!-- 十、考古題對應：主題→涵蓋度總覽 -->
+<section>
+  <h2 class="sec-title">⑩ 考古題對應：主題→涵蓋度總覽</h2>
+  <div class="warn-box hi2" style="margin-bottom:8px;">
+    📋 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（2026-08-13）。L10 是稅法系列導論堂，本身多為背景架構鋪陳，單獨命題比例低於 L11-L15 各稅目本身，標籤數少屬正常現象。
+  </div>
+  <table>
+    <tr><th style="width:36%">高頻考點</th><th style="width:22%">對應章節</th><th>涵蓋狀態</th></tr>
+    <tr><td>重購退稅比較——房地合一所得稅 vs 土地增值稅</td><td>⑧重購退稅比較表</td><td><span class="badge mid">中頻（3年：106・108・110）</span></td></tr>
+  </table>
 </section>
 
 </body>
