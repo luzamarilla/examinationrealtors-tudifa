@@ -133,6 +133,16 @@
     display: inline-block; background: var(--ink); color: #fff; font-size: 12.5px; font-weight: bold;
     padding: 2px 10px; border-radius: 6px; margin-bottom: 6px;
   }
+  .trap-box {
+    background: #fff; border-left: 5px solid var(--accent); border-radius: 0 10px 10px 0;
+    padding: 12px 16px; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+  }
+  .trap-box .q-label {
+    display: inline-block; background: var(--accent); color: #fff; font-weight: 800; font-size: 12px;
+    padding: 2px 9px; border-radius: 6px; margin-bottom: 6px;
+  }
+  .trap-box .q-text { font-size: 14px; line-height: 1.6; color: var(--ink); }
+  .note { font-size: 13px; color: var(--sub); font-style: italic; margin-top: 8px; }
 </style>
 </head>
 <body>
@@ -141,7 +151,7 @@
   <div>
     <div style="font-size:13px;opacity:.7;margin-bottom:5px;">114年 不動產經紀人考試｜土地法</div>
     <h1>L1｜土地法規總論（前導課）</h1>
-    <div class="subtitle">科目架構・讀書方法・逐字稿＋上課講義＋考古題三方核對（2026-07-23）</div>
+    <div class="subtitle">科目架構・讀書方法・逐字稿＋上課講義＋考古題三方核對（2026-07-23）・跨堂比較總表併入（2026-08-26）</div>
   </div>
   <div style="display:flex;gap:14px;">
     <div class="badge"><strong>§14、§17～20、§25</strong>核心條文</div>
@@ -305,6 +315,120 @@
     <tr><td>不得私有之土地種類<span class="law-tag sub-law">§14</span></td><td>⑦總論性內容的考古題查證</td><td><span class="badge mid">中頻（2/10年：107・114）</span></td></tr>
     <tr><td>土地改良物定義（建築改良物／農作改良物）<span class="law-tag sub-law">§5</span></td><td>⑦總論性內容的考古題查證</td><td><span class="badge">一般命中（1/10年：114）</span></td></tr>
   </table>
+</section>
+
+<!-- 九、跨堂比較總表①：徵收．徵用．市地重劃 四制度比較 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★★</span> ⑨ 徵收．徵用．市地重劃 四制度比較（跨堂總複習：L2＋L5＋L6＋L7-8）</h2>
+  <div class="info-box">📌 這節內容整理自 L2（地權）、L5（地用）、L6（市地重劃）、L7-8（一般徵收、區段徵收、徵用）已核對完成的筆記，不是新查證內容，是把橫跨多堂才看得懂的比較點抽出來做總複習——建議先把後面這幾堂讀完，再回頭看這節串起完整比較。單一制度的完整規定、流程圖、法條原文仍以各堂筆記為準。</div>
+
+  <h3 class="sub-title">一句話分辨四制度</h3>
+  <div class="grid-4">
+    <div class="card" style="border-top:4px solid var(--ink);">
+      <div class="card-title">一般徵收</div>
+      <p>政府強制買走「特定幾筆」私有地的<b>所有權</b>，給市價補償</p>
+    </div>
+    <div class="card" style="border-top:4px solid var(--accent);">
+      <div class="card-title">區段徵收</div>
+      <p>政府強制買走「全區整片」私有地的<b>所有權</b>，重新整理後可選現金或領地回來</p>
+    </div>
+    <div class="card" style="border-top:4px solid var(--accent2);">
+      <div class="card-title">徵用</div>
+      <p>政府「借用」私有地（不拿走所有權），做臨時性工程，給徵收補償的<b>10%</b></p>
+    </div>
+    <div class="card" style="border-top:4px solid #2f6f5e;">
+      <div class="card-title">市地重劃</div>
+      <p>政府幫「全區整片」畸零地重新整地分界，<b>所有權不移轉</b>，配回原地主手上</p>
+    </div>
+  </div>
+  <div class="warn-box hi">最容易混的一組：徵收（一般／區段）＝所有權<b>換手</b>，徵用＝只是<b>借用</b>，市地重劃＝所有權<b>沒換手</b>只是整地——三種「政府拿走所有權的程度」剛好是三個層次，先分清楚這一層再看細節比較不會背混。</div>
+
+  <h3 class="sub-title">四制度總表</h3>
+  <table>
+    <tr><th style="width:12%">維度</th><th style="width:22%">一般徵收</th><th style="width:22%">區段徵收</th><th style="width:22%">徵用</th><th style="width:22%">市地重劃</th></tr>
+    <tr><td><b>性質</b></td><td>移轉<b>所有權</b></td><td>移轉<b>所有權</b>（全區）</td><td>只取得<b>使用權</b>，不移轉所有權</td><td><b>不移轉</b>所有權，僅標示變更、配回原地主</td></tr>
+    <tr><td><b>範圍</b></td><td>特定筆數（需用土地人指定）</td><td>全區整片，重新分宗整理</td><td>特定筆數，通常配合臨時工程</td><td>全區整片，限<b>都市土地</b></td></tr>
+    <tr><td><b>主要法源</b></td><td>土地法§208、土地徵收條例§3</td><td>土地法§212、土徵條例§4、平均地權條例§53</td><td>土地徵收條例§58</td><td>平均地權條例§56起</td></tr>
+    <tr><td><b>發動原因</b></td><td>十款事由：國防、交通、公用、水利、衛生及環保、公共建築、教育學術文化、社會福利、國營事業、其他</td><td><b>新舊都非農其</b>：新市區建設・舊市區更新・都市土地變更・非都市土地開發・農村社區更新・其他</td><td>興辦<b>臨時性</b>公共建設工程</td><td><b>新舊都經</b>：新開發都市・舊都市更新・都市土地開發新社區・中央主管機關指定限期辦理</td></tr>
+    <tr><td><b>補償／找補方式</b></td><td><b>現金</b>，依市價（§30）</td><td><b>現金</b>或<b>抵價地</b>可選（§39），可互相反悔一次</td><td><b>現金</b>，為一般徵收補償的<b>10%</b></td><td><b>抵費地</b>折抵共同負擔＋<b>差額地價</b>找補（多退少補）</td></tr>
+    <tr><td><b>比例限制</b></td><td>—（全額補償，無比例概念）</td><td>抵價地領回<b>不得少於</b>50%（原則）／40%（特殊）／45%（已辦農地重劃）</td><td>—</td><td>抵費地折抵<b>不得超過</b>45%　→　地主領回不得少於55%</td></tr>
+    <tr><td><b>期限特色</b></td><td>補償費<b>公告期滿15日內</b>發給，否則徵收失效</td><td>現金比照15日內；<b>抵價地不受15日限制</b>（須經規劃分配、抽籤配地）</td><td>以「年度」為單位，不滿1年以月計；15日內發給</td><td>無15日限制，分配結果公告30日</td></tr>
+    <tr><td><b>地主可行使的權利</b></td><td><b>收回權</b>（未用／用錯／改用）、<b>優先購買權</b>、申請撤銷／廢止</td><td>現金↔抵價地<b>互相反悔一次</b>（1個月內）；區段徵收本身<b>不適用</b>收回權</td><td>逾3年（或兩次合計逾3年）可<b>請求改徵收</b>，需地機關不得拒絕；但改徵收後<b>不得</b>再申請收回權</td><td>分配結果<b>異議權</b>（公告期間內書面提出）；應分配面積未達最小分配面積1/2，得申請<b>放棄分配改領現金</b></td></tr>
+    <tr><td><b>常見例子</b></td><td>捷運站、道路等特定路廊用地</td><td>新市鎮開發（如林口、淡海新市鎮）</td><td>施工便道、臨時土石方堆置場</td><td>都市計畫區內畸零不整地整理成方整建地</td></tr>
+  </table>
+
+  <h3 class="sub-title">抵價地 vs 抵費地（最容易搞混）</h3>
+  <table>
+    <tr><th>項目</th><th>抵費地（市地重劃）</th><th>抵價地（區段徵收）</th></tr>
+    <tr><td>抵付項目</td><td>工程費用、重劃費用、貸款利息（共同負擔）</td><td>政府應發給之<b>地價補償</b></td></tr>
+    <tr><td>來源方向</td><td><b>所有權人 → 政府</b>（用土地抵給政府）</td><td><b>政府 → 所有權人</b>（用土地發給地主）</td></tr>
+    <tr><td>比例範圍</td><td>不得<b>超過45%</b></td><td>以50%為原則，不得<b>少於</b>40%（特殊）／45%（農地重劃）</td></tr>
+    <tr><td>性質</td><td>強制，未建築土地一定要抵付</td><td>任意，可選領錢、領地或部分領錢部分領地</td></tr>
+  </table>
+  <div class="info-box">記憶法：「費」＝工程費用，跟市地重劃綁在一起；「價」＝地價補償，跟區段徵收綁在一起。方向也相反——重劃是地主把地交出去抵費用，徵收是政府把地發給地主抵地價。</div>
+
+  <h3 class="sub-title">一般徵收 vs 區段徵收 程序對照</h3>
+  <table>
+    <tr><th style="width:20%">步驟性質</th><th style="width:40%">一般徵收</th><th style="width:40%">區段徵收</th></tr>
+    <tr><td>綜合評估</td><td>① 綜合評估分析</td><td>① 綜合評估分析</td></tr>
+    <tr><td>公聽會</td><td>② 舉行公聽會（必要時聽證）</td><td>② 舉行公聽會（必要時聽證）</td></tr>
+    <tr style="background:var(--accent2-bg);"><td>報核／許可<span class="law-tag hi2" style="margin-left:4px;">徵§38</span></td><td>併入右方④步驟（內政部依§13七項審查）</td><td><b>獨立列為一步</b>：地方→內政部許可／內政部自辦→行政院核准</td></tr>
+    <tr><td>協議價購</td><td>③ 協議取得土地</td><td>④ 協議價購</td></tr>
+    <tr><td>申請．核准．公告</td><td>④ 申請徵收與審查 → ⑤ 核准、公告30日並通知</td><td>⑤ 申請徵收 → 核准、公告、通知（合併為一步）</td></tr>
+    <tr style="background:var(--accent-bg);"><td>異議處理</td><td>⑥ 異議處理（雙軌分岔：其他公告事項／補償價額）</td><td style="color:var(--sub);">筆記未單獨畫出，依「準用」原則應比照左方 ⚠️</td></tr>
+    <tr style="background:var(--accent-bg);"><td>禁止效力</td><td>⑦ 公告後之禁止效力</td><td style="color:var(--sub);">筆記未單獨畫出，依「準用」原則應比照左方 ⚠️</td></tr>
+    <tr style="background:var(--accent2-bg);"><td>補償方式<span class="law-tag hi2" style="margin-left:4px;">徵§39</span></td><td>⑧ 發給補償費與交付土地（<b>僅現金</b>）</td><td>⑥ 發給補償費（<b>現金或抵價地</b>）</td></tr>
+  </table>
+  <div class="note">赭黃底＝兩者程序有實質差異（報核單位、補償方式）；陶紅底＝區段徵收流程圖目前沒畫出這兩步，需確認是否真的準用或只是筆記漏畫；白底＝兩者相同或對應</div>
+
+  <h3 class="sub-title">權利清理：一般徵收／區段徵收 vs 市地重劃<span class="examhit">108・111測</span></h3>
+  <div class="info-box">核心口訣：一般徵收、區段徵收（領現金）→ 政府叫地主與他項權利人「<b>自行清理／自行協議</b>」就結束了；市地重劃的規定則依權利類型分別複雜處理</div>
+  <table>
+    <tr><th style="width:14%">情境</th><th style="width:29%">一般徵收／區段徵收（領現金）</th><th style="width:29%">區段徵收（領抵價地）</th><th style="width:28%">市地重劃</th></tr>
+    <tr><td><b>處理原則</b></td><td><span class="law-tag">徵§36</span> 主管機關通知當事人限期<b>自行協議</b></td><td><span class="law-tag">徵§41</span> 耕地租約／他項權利／限制登記，限期<b>自行清理</b></td><td><span class="law-tag">平§63、64</span> 依<b>權利類型分別處理</b>（見下列）</td></tr>
+    <tr><td><b>協議／清理不成</b></td><td>補償費依<b>§26</b>存入保管專戶，待雙方自行協議完成後再領取</td><td>逾期未提出證明文件 → 主管機關核定<b>不發給抵價地</b>，改發現金</td><td style="color:var(--sub);">依下方個別規則處理，無統一存專戶步驟</td></tr>
+    <tr><td><b>典權／抵押權</b></td><td style="color:var(--sub);">同上，無特殊規定</td><td><span class="law-tag">徵§42</span>（例外）可申請<b>轉載</b>到新領回的抵價地上，不必自行清理</td><td>有分配土地：<b>轉載</b>到領回土地上；沒分配土地：權利消滅，得請求補償</td></tr>
+    <tr><td><b>耕地租約</b></td><td style="color:var(--sub);">同上，無特殊規定</td><td>依上方自行清理原則辦理（§41）</td><td>有領回土地：承租人補償＝<b>公告現值1/3</b>；沒領回土地：補償費<b>1/3</b>撥給承租人<span class="examhit">108測14</span></td></tr>
+    <tr><td><b>非耕地租賃</b></td><td style="color:var(--sub);">—</td><td style="color:var(--sub);">—</td><td>請求相當於<b>一年租金</b>之補償</td></tr>
+    <tr><td><b>撤銷／廢止後<br>權利可否回復</b></td><td style="color:var(--sub);">（一般徵收無抵價地轉載機制，原則不回復）</td><td><span class="law-tag">徵§52</span> 原則<b>不予回復</b>；<b>但書</b>：轉載的抵押權／典權<b>准予回復</b><span class="examhit">111測11</span></td><td style="color:var(--sub);">不適用（無撤銷廢止概念）</td></tr>
+  </table>
+  <div class="note">灰字「—」／說明文字＝該欄位無對應規定或不適用該情境</div>
+
+  <h3 class="sub-title">常見易混淆陷阱整理</h3>
+  <div class="grid-2">
+    <div class="trap-box"><div class="q-label">陷阱 1</div><div class="q-text">「區段徵收也可以主張收回權」——<b>錯</b>。收回權是「未依計畫使用」的邏輯，區段徵收原則上以抵價地／現金補償結案，不適用收回權。</div></div>
+    <div class="trap-box"><div class="q-label">陷阱 2</div><div class="q-text">「徵用跟徵收一樣要移轉所有權」——<b>錯</b>。徵用只是取得使用權，期滿要還；只有徵用逾3年地主主動請求，才會轉換成徵收（所有權才換手）。</div></div>
+    <div class="trap-box"><div class="q-label">陷阱 3</div><div class="q-text">「市地重劃地主領回比例比區段徵收少」——<b>錯</b>，方向相反。市地重劃領回<b>較多</b>（≥55%，因為政府沒拿走所有權，只是整地），區段徵收領回<b>較少</b>（原則≥50%，因為政府把所有權整個拿走再發還部分）。</div></div>
+    <div class="trap-box"><div class="q-label">陷阱 4</div><div class="q-text">「市地重劃跟區段徵收的發動原因一樣」——<b>錯</b>。區段徵收多了「都市土地變更」「非都市土地開發」兩項是市地重劃沒有的；市地重劃限都市土地，區段徵收都市、非都市皆可用。</div></div>
+  </div>
+</section>
+
+<!-- 十、跨堂比較總表②：優先購買權 五種來源比較 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★★</span> ⑩ 優先購買權 五種來源比較（跨堂總複習：L2＋L5＋L7-8）<span class="examhit">105・106・107・108・109・111・113・114測</span></h2>
+  <div class="info-box">意義：不動產出售時，權利關係人有「依<b>同樣條件</b>」優先購買的權利。全科橫跨 <b>L2（§34-1、§8-5）</b>、<b>L5（§104、§107）</b>、<b>L7-8（徵§59）</b>三堂才能看全，內容整理自 L2⑥ 已核對完成的競合排序。</div>
+  <table>
+    <tr><th style="width:16%">來源</th><th style="width:24%">情境</th><th style="width:14%">效力性質</th><th style="width:16%">表示期限</th><th>未通知後果</th></tr>
+    <tr><td><b>§104／§107</b></td><td>基地／耕地出賣或出典</td><td><b>物權效力</b></td><td>10日內</td><td>買賣契約<b>無效</b>，不得對抗優先購買權人</td></tr>
+    <tr><td><b>§34-1 Ⅳ</b></td><td>共有人出賣應有部分（持分）</td><td>債權效力</td><td>15日內（執行要點，母法未寫）</td><td>契約仍有效，僅得請求<b>損害賠償</b></td></tr>
+    <tr><td><b>§8-5 Ⅲ／Ⅴ</b></td><td>區分所有建物房地分離出賣（賣地用Ⅲ／賣屋用Ⅴ）</td><td>債權效力</td><td>15日內（先公告5日）</td><td>視為放棄（拋棄優先承買權）</td></tr>
+    <tr><td><b>徵§59</b></td><td>徵收後變更使用目的標售</td><td colspan="2" style="color:var(--sub);">性質為<b>政府標售</b>，非私人間買賣，不參與右方競合排序</td><td>詳見本節下方</td></tr>
+  </table>
+
+  <h3 class="sub-title">競合效果——最終排序（僅前3種私人買賣間排序，徵§59單獨不參與）</h3>
+  <div class="flow">
+    <div class="flow-step"><div class="flow-num">1</div><div class="flow-box"><b>土地法§104、107</b>（地上權人／典權人／承租人優先；耕地版同理）——最優先　<span class="law-tag">物權</span></div></div>
+    <div class="flow-arrow">▼ 優先於</div>
+    <div class="flow-step"><div class="flow-num">2</div><div class="flow-box"><b>民物編施行法§8-5Ⅲ</b>（賣地，區分所有建物所有權人優先於其他共有人）　<span class="law-tag hi2">債權</span></div></div>
+    <div class="flow-arrow">▼ 優先於</div>
+    <div class="flow-step"><div class="flow-num">3</div><div class="flow-box"><b>土地法§34-1</b>（共有人優先購買）　<span class="law-tag hi2">債權</span></div></div>
+    <div class="flow-arrow">▼ 優先於</div>
+    <div class="flow-step"><div class="flow-num">4</div><div class="flow-box"><b>民物編施行法§8-5Ⅴ</b>（賣屋，基地所有權人優先承買）——最後順位　<span class="law-tag hi2">債權</span></div></div>
+  </div>
+  <div class="note">出處：土地法第34條之1執行要點第13點(六)。物權效力＞債權效力；債權效力內部再依「有沒有明文優先於其他共有人」排序。</div>
+
+  <div class="warn-box hi2">判斷口訣：賣的是「持分」、賣方是共有人 → §34-1；房地分屬不同人的「區分所有建物」例外情境 → §8-5；地上權/典權/租賃關係的一般情境（耕地用§107，其他用§104）。判斷出法條後期限跟著固定。徵§59 只在「徵收後政府標售」這個情境才會用到，不是私人買賣，判斷起點就不一樣。</div>
+  <div class="note">完整案例圖解、判斷流程圖見 <b>L2⑥</b>；徵§59 完整流程見 <b>L7-8</b>。</div>
 </section>
 
 </body>
