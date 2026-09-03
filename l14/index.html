@@ -89,6 +89,8 @@
   .card-title { font-size: 17px; font-weight: bold; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; color: var(--ink); }
   .card p { font-size: 14.5px; line-height: 1.75; }
   table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-top: 4px; }
+  table.examyear-table { table-layout: fixed; }
+  table.examyear-table td { overflow-wrap: break-word; }
   table th { background: var(--ink); color: #fff; padding: 8px 10px; text-align: left; }
   table td { padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
   table tr:nth-child(even) td { background: #f9fafb; }
@@ -155,7 +157,7 @@
 
 <!-- 二、課徵對象 -->
 <section>
-  <h2 class="sec-title">② 課徵對象 <span class="law-tag">房屋稅條例 §3</span></h2>
+  <h2 class="sec-title">② 課徵對象 <span class="law-tag">房屋稅條例 §3</span><span class="examhit">109・111申</span></h2>
   <div class="grid-2">
     <div class="card">
       <div class="card-title">① 房屋</div>
@@ -173,7 +175,7 @@
 
 <!-- 三、納稅義務人 -->
 <section>
-  <h2 class="sec-title"><span class="star">★★★</span> ③ 納稅義務人 <span class="law-tag">房屋稅條例 §4</span><span class="examhit">106・109・111・114測</span></h2>
+  <h2 class="sec-title"><span class="star">★★★</span> ③ 納稅義務人 <span class="law-tag">房屋稅條例 §4</span><span class="examhit">105・106・109・111・114測</span></h2>
   <p style="font-size:14.5px;margin-bottom:8px;">原則：<b>房屋所有權人</b>（<b>住址不明</b>者，由管理人或現住人代徵）。特殊情況：</p>
   <table>
     <tr><th style="width:24%">情況</th><th>納稅義務人</th></tr>
@@ -198,7 +200,7 @@
 
 <!-- 四、稅基 -->
 <section>
-  <h2 class="sec-title"><span class="star">★★★★</span> ④ 稅基——房屋現值 <span class="law-tag">房屋稅條例 §10</span><span class="examhit">112申論</span></h2>
+  <h2 class="sec-title"><span class="star">★★★★</span> ④ 稅基——房屋現值 <span class="law-tag">房屋稅條例 §10</span><span class="examhit">105・112申論</span></h2>
   <div class="flow">
     <div class="flow-step"><div class="flow-num">1</div><div class="flow-box">建造完成 <b>30 天內</b>向稅務局申報現值</div></div>
     <div class="flow-arrow">↓</div>
@@ -220,7 +222,7 @@
 
 <!-- 五、稅率 -->
 <section>
-  <h2 class="sec-title"><span class="star">★★★★★</span> ⑤ 稅率——113年囤房稅2.0大修法 <span class="law-tag">房屋稅條例 §5 I</span><span class="examhit">113・114測</span></h2>
+  <h2 class="sec-title"><span class="star">★★★★★</span> ⑤ 稅率——113年囤房稅2.0大修法 <span class="law-tag">房屋稅條例 §5 I</span><span class="examhit">113測</span></h2>
   <div class="warn-box hi">🔥 113 年大修法（囤房稅2.0）甫上路即入題：113年申論題整題考房屋稅（無人設籍空屋能否適用自住稅率），MC也開始考新制稅率級距與自住認定要件，務必記熟以下稅率表</div>
 
   <h3 class="sub-title">住家用房屋（由低到高四個級距）</h3>
@@ -380,36 +382,45 @@
   </div>
 </section>
 
-<!-- 十、條文速查 -->
 <section>
-  <h2 class="sec-title">⑩ 條文速查</h2>
-  <table>
-    <tr><th style="width:30%">主題</th><th>條號</th></tr>
-    <tr><td>課徵對象</td><td>房屋稅條例 §3</td></tr>
-    <tr><td>納稅義務人</td><td>§4</td></tr>
-    <tr><td>稅基（房屋現值）</td><td>§10</td></tr>
-    <tr><td>房屋現值評定因素</td><td>§11</td></tr>
-    <tr><td>稅率（113年修法）</td><td>§5 I（住家用四級距）、§5 II（全國總戶數／持有時間差別稅率）</td></tr>
-    <tr><td>增加使用價值之建築物</td><td>§2</td></tr>
-    <tr><td>停止課徵</td><td>§8</td></tr>
-    <tr><td>減半徵收／私有免徵及申報期限</td><td>§15</td></tr>
-    <tr><td>公有房屋免徵</td><td>§14</td></tr>
-  </table>
-</section>
-
-<section>
-  <h2 class="sec-title">⑪ 考古題對應：主題→涵蓋度總覽</h2>
+  <h2 class="sec-title">⑩ 考古題對應：主題→涵蓋度總覽</h2>
   <div class="warn-box hi2" style="margin-bottom:8px;">
-    📋 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（2026-08-13）。房屋稅是稅法系列中命中密度最高的一堂之一，112、113 年更連續以整題申論命題（見⑨）。
+    📋 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（2026-08-13 初查，2026-09-01 補查5個年度＋1個新主題＋1處勘誤）。房屋稅是稅法系列中命中密度最高的一堂之一，112、113 年更連續以整題申論命題（見⑨）。
   </div>
   <table>
     <tr><th style="width:36%">高頻考點</th><th style="width:22%">對應章節</th><th>涵蓋狀態</th></tr>
     <tr><td>減免規定——三個層級（含申報期限手續題）</td><td>⑦減免規定</td><td><span class="badge top">✓ 最高頻必考（5年：104申論・106・107・109・114）</span></td></tr>
-    <tr><td>納稅義務人<span class="law-tag sub-law">§4</span></td><td>③納稅義務人</td><td><span class="badge top">最高頻（4年：106・109・111・114）</span></td></tr>
-    <tr><td>稅率——113年囤房稅2.0大修法<span class="law-tag sub-law">§5 I</span></td><td>⑤稅率——113年囤房稅2.0</td><td><span class="badge mid">中頻（2年：113・114，新制熱點）</span></td></tr>
-    <tr><td>全國總持有戶數差別稅率<span class="law-tag sub-law">§5 II</span></td><td>⑥全國總持有戶數差別稅率</td><td><span class="badge">一般命中（1年：113）</span></td></tr>
-    <tr><td>稅基——房屋現值<span class="law-tag sub-law">§10</span></td><td>④稅基——房屋現值</td><td><span class="badge">一般命中（1年：112申論）</span></td></tr>
+    <tr><td>納稅義務人<span class="law-tag sub-law">§4</span></td><td>③納稅義務人</td><td><span class="badge top">最高頻（5年：105・106・109・111・114）</span></td></tr>
+    <tr><td>課徵對象<span class="law-tag sub-law">§3</span></td><td>②課徵對象</td><td><span class="badge mid">中頻（2年：109・111申）</span></td></tr>
+    <tr><td>稅基——房屋現值<span class="law-tag sub-law">§10</span></td><td>④稅基——房屋現值</td><td><span class="badge mid">中頻（2年：105・112申論）</span></td></tr>
+    <tr><td>稅率——113年囤房稅2.0大修法<span class="law-tag sub-law">§5 I</span></td><td>⑤稅率——113年囤房稅2.0</td><td><span class="badge">一般命中（1年：113，原標記114測經核對查無對應題目已移除）</span></td></tr>
+    <tr><td>全國總持有戶數差別稅率<span class="law-tag sub-law">§5 II</span></td><td>⑥全國總持有戶數差別稅率</td><td><span class="badge">一般命中（1年：113，對應題精確度待後續查證）</span></td></tr>
   </table>
+</section>
+
+<!-- 十一、近10年常考題目彙整（逐年版） -->
+<section>
+  <h2 class="sec-title">⑪ 近 10 年常考題目彙整（逐年版） <span class="examhit">105–114年</span></h2>
+  <div class="warn-box hi2" style="margin-bottom:8px;">
+    📖 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（2026-09-01）。105-107・109・111-114 共 8 個年度有命中，108・110 查無，合計 12 題次。
+  </div>
+  <table class="examyear-table">
+    <tr><th style="width:8%">年度・題型</th><th style="width:33%">考點摘要（題目）</th><th style="width:14%">對應章節</th><th style="width:45%">正解</th></tr>
+    <tr><td>105<br><span style="font-size:12px;color:var(--sub);">2 題次</span></td><td>測5 房屋標準價格由何委員會負責<br>測6 房屋稅納稅義務人不包括下列何者</td><td>④稅基<br>③納稅義務人</td><td>測5：<b>D</b>（不動產評價委員會）<br>測6：<b>B</b>（不含債權人）</td></tr>
+    <tr><td>106<br><span style="font-size:12px;color:var(--sub);">1 題次</span></td><td>測17 自住房屋稅率要件辨析（本題問「非」要件者）</td><td>⑦減免規定</td><td>測17：<b>A</b>（法條未要求「土地」所有權人設籍，是房屋所有權人）</td></tr>
+    <tr><td>107<br><span style="font-size:12px;color:var(--sub);">1 題次</span></td><td>測24 私有房屋受重大災害時之減免規定為何</td><td>⑦減免規定</td><td>測24：<b>B</b>（毀損5成以上須修復始能使用者免徵）</td></tr>
+    <tr><td>108</td><td>（查無對應題目）</td><td>—</td><td>—</td></tr>
+    <tr><td>109<br><span style="font-size:12px;color:var(--sub);">2 題次</span></td><td>測1 合法登記工廠供直接生產使用之自有房屋如何課徵（本題問「錯誤」敘述）<br>測19 房屋為信託財產時，誰是納稅義務人</td><td>⑦減免規定<br>②課徵對象<br>③納稅義務人</td><td>測1：<b>A</b>（錯誤敘述，應為減半非免徵）<br>測19：<b>B</b>（受託人）</td></tr>
+    <tr><td>110</td><td>（查無對應題目）</td><td>—</td><td>—</td></tr>
+    <tr><td>111<br><span style="font-size:12px;color:var(--sub);">2 題次</span></td><td>測4 未辦所有權登記之房屋，納稅義務人如何認定（本題問「錯誤」敘述）<br>申論二 房屋稅課徵對象完整定義（與L10/L13共用同一題）</td><td>③納稅義務人<br>②課徵對象</td><td>測4：<b>D</b>（錯誤敘述）<br>申論二：見解析</td></tr>
+    <tr><td>112<br><span style="font-size:12px;color:var(--sub);">1 題次</span></td><td>申論二 房屋標準價格三大影響因素＋實務爭議＋非自住稅率＋徵收率決定機制完整說明</td><td>④稅基</td><td>申論二：見解析</td></tr>
+    <tr><td>113<br><span style="font-size:12px;color:var(--sub);">3 題次</span></td><td>申論二 無人設籍空屋房屋稅課徵＋自住出租房屋稅率案例<br>測19 起造人持有待銷售住家用房屋，起課2年內差別稅率為何<br>測24 自住1.2%四項要件辨析（本題問「錯誤」敘述）</td><td>⑤稅率2.0</td><td>申論二：見解析<br>測19：<b>B</b>（1.2%~2.4%）<br>測24：<b>C</b>（錯誤敘述，戶數上限是「全國一戶」）</td></tr>
+    <tr><td>114<br><span style="font-size:12px;color:var(--sub);">2 題次</span></td><td>測5 未辦所有權登記且所有人不明者，如何認定納稅義務人（本題問「錯誤」敘述）<br>測15 何種房屋免徵房屋稅</td><td>③納稅義務人<br>⑦減免規定</td><td>測5：<b>C</b>（錯誤敘述，應優先使用執照非建造執照）<br>測15：<b>A</b>（無償供政府機關公用或供軍用之房屋）</td></tr>
+  </table>
+  <div class="info-box" style="margin-top:6px;">💡 複習用法：先蓋住最右欄「正解」，只看「考點摘要」欄自問自答，再攤開驗證；「（本題問『錯誤』敘述）」提示的是反著找答案的題型，作答邏輯跟一般題相反，要先意識到這點再選。</div>
+  <div class="warn-box hi" style="margin-top:10px;">
+    ⚠️ <b>兩大必考重點</b>：<b>①減免規定</b>——三個層級（停止課徵／減半／免徵）幾乎年年出現，「農會儲存公糧倉庫免徵 vs 農會自用倉庫減半」是常見誘答；<b>②納稅義務人</b>——105、106、109、111、114年年出現，常以「典權／信託／未辦登記」三種特殊情境交叉出題，「未辦所有權登記」的回推順序（使用執照→建造執照→現住人）務必記熟。113年囤房稅2.0是近年新興重點，但目前題目集中在113年單一年度，尚未累積多年命中。
+  </div>
 </section>
 
 </body>
