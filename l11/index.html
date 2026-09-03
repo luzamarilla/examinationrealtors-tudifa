@@ -89,6 +89,8 @@
   .card-title { font-size: 17px; font-weight: bold; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; color: var(--ink); }
   .card p { font-size: 14.5px; line-height: 1.75; }
   table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-top: 4px; }
+  table.examyear-table { table-layout: fixed; }
+  table.examyear-table td { overflow-wrap: break-word; }
   table th { background: var(--ink); color: #fff; padding: 8px 10px; text-align: left; }
   table td { padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
   table tr:nth-child(even) td { background: #f9fafb; }
@@ -123,56 +125,34 @@
   }
   .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
 
-  /* ---- 分支樹（公有/私有 → 沒申報/有申報） ---- */
-  .tree, .tree ul { display: flex; list-style: none; }
-  .tree { text-align: center; justify-content: center; padding: 6px 0 0; }
-  .tree li {
-    display: flex; flex-direction: column; align-items: center;
-    position: relative; padding: 26px 16px 0;
+  /* ---- 橫式分支流程（土地 → 公有/私有 → 沒申報/有申報） ---- */
+  .htree { display: flex; align-items: center; gap: 12px; margin-top: 10px; flex-wrap: wrap; }
+  .htree-node {
+    display: inline-flex; align-items: center; justify-content: center; gap: 4px;
+    border: 2px solid var(--line-strong); border-radius: 10px; padding: 7px 15px;
+    font-size: 14px; font-weight: bold; background: #fff; white-space: nowrap; flex-shrink: 0;
   }
-  .tree li::before, .tree li::after {
-    content: ''; position: absolute; top: 0; right: 50%;
-    border-top: 2px solid var(--line-strong); width: 50%; height: 26px;
+  .htree-node.root { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .htree-node.leaf-hi { border-color: var(--accent); background: var(--accent-bg); color: var(--accent); }
+  .htree-node.leaf-mid { border-color: var(--accent2); background: var(--accent2-bg); color: var(--accent2); }
+  .htree-arrow { color: var(--line-strong); font-size: 16px; flex-shrink: 0; }
+  .htree-branch {
+    display: flex; flex-direction: column; gap: 8px;
+    padding-left: 14px; border-left: 2px solid var(--line-strong);
   }
-  .tree li::after { right: auto; left: 50%; border-left: 2px solid var(--line-strong); }
-  .tree li:only-child::before, .tree li:only-child::after { display: none; }
-  .tree li:only-child { padding-top: 0; }
-  .tree li:first-child::before, .tree li:last-child::after { border: 0 none; }
-  .tree li:last-child::before { border-right: 2px solid var(--line-strong); border-radius: 0 8px 0 0; }
-  .tree li:first-child::after { border-radius: 8px 0 0 0; }
-  .tree ul::before {
-    content: ''; position: absolute; top: 0; left: 50%;
-    border-left: 2px solid var(--line-strong); width: 0; height: 26px;
+  .htree-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .htree-result { font-size: 12.5px; color: var(--sub); line-height: 1.4; }
+  .htree-result b { color: var(--ink); }
+  .hscale { position: relative; width: 96px; height: 12px; flex-shrink: 0; }
+  .hscale .track { position: absolute; top: 4px; left: 0; right: 0; height: 4px; background: var(--accent2); border-radius: 3px; }
+  .hscale .cap { position: absolute; top: 0; width: 2px; height: 12px; background: var(--ink); }
+  .hscale .cap.left { left: 0; }
+  .hscale .cap.mid { left: 50%; transform: translateX(-1px); }
+  .hscale .cap.right { right: 0; }
+  .htree-footnote {
+    margin-top: 10px; padding-top: 8px; border-top: 1px dashed var(--line);
+    font-size: 11.5px; color: var(--sub); display: flex; gap: 18px;
   }
-  .tree > li { padding-top: 0; }
-  .tree > li::before, .tree > li::after { display: none; }
-  .tree-node {
-    display: inline-block; border: 2px solid var(--line-strong); border-radius: 10px;
-    padding: 8px 18px; font-size: 15px; font-weight: bold; background: #fff; white-space: nowrap;
-  }
-  .tree-node.root { background: var(--ink); color: #fff; border-color: var(--ink); }
-  .tree-node.leaf-hi { border-color: var(--accent); background: var(--accent-bg); color: var(--accent); }
-  .tree-node.leaf-mid { border-color: var(--accent2); background: var(--accent2-bg); color: var(--accent2); }
-  .tree-result { margin-top: 8px; font-size: 13.5px; color: var(--sub); line-height: 1.6; max-width: 210px; }
-  .tree-result b { color: var(--ink); }
-
-  /* ---- 迷你水平刻度（嵌在「有申報」節點下方）---- */
-  .mini-scale { position: relative; width: 210px; height: 16px; margin: 14px auto 6px; }
-  .mini-scale .track { position: absolute; top: 6px; left: 0; right: 0; height: 4px; background: var(--accent2); border-radius: 3px; }
-  .mini-scale .cap { position: absolute; top: 1px; width: 2px; height: 14px; background: var(--ink); }
-  .mini-scale .cap.left { left: 0; }
-  .mini-scale .cap.mid { left: 50%; transform: translateX(-1px); }
-  .mini-scale .cap.right { right: 0; }
-  .mini-scale .tick-label { position: absolute; top: -15px; font-size: 11px; font-weight: bold; color: var(--ink); white-space: nowrap; }
-  .mini-scale .tick-label.left { left: 0; }
-  .mini-scale .tick-label.mid { left: 50%; transform: translateX(-50%); }
-  .mini-scale .tick-label.right { right: 0; }
-  .mini-scale-note {
-    display: flex; justify-content: space-between; width: 210px; margin: 0 auto;
-    font-size: 11px; color: var(--sub); line-height: 1.4; gap: 6px;
-  }
-  .mini-scale-note span { max-width: 100px; }
-  .mini-scale-note span:last-child { text-align: right; }
 
   /* ---- 特別稅率申請：時間軸 ---- */
   .timeline { position: relative; margin: 16px 4px 6px; padding-left: 4px; }
@@ -253,6 +233,14 @@
   </div>
   <div class="info-box">
     ⚠️ <b>代繳 ≠ 納稅義務人</b>：納稅義務人行蹤不明、權責不明、無人管理，或有占有人時，可申請由占有人「代為繳納」，但代繳人只是幫忙繳，真正的納稅義務人仍是上表所列的人，不會因代繳而變更。
+    <p style="margin-top:8px;font-size:14px;">代繳情形共 <b>4 種</b>，但能不能事後「向納稅義務人求償」要分清楚（109 申論考過）：</p>
+    <table style="margin-top:4px;">
+      <tr><th style="width:8%">代繳情形</th><th style="width:46%">內容</th><th>可否向納稅義務人求償</th></tr>
+      <tr><td>①</td><td>納稅義務人<b>行蹤不明</b></td><td><b>✓ 可求償</b></td></tr>
+      <tr><td>②</td><td><b>權屬不明</b></td><td><b>✓ 可求償</b></td></tr>
+      <tr><td>③</td><td><b>無人管理</b></td><td><b>✓ 可求償</b></td></tr>
+      <tr><td>④</td><td>土地所有權人<b>主動申請</b>由占有人代繳</td><td>✗ 不可求償（自己要求的，不算被迫代墊）</td></tr>
+    </table>
   </div>
 </section>
 
@@ -265,43 +253,35 @@
     ⚠️ 常見陷阱：題目問地價稅要用<b>申報地價</b>，不能直接用<b>公告地價</b>！申報地價＝公告地價 × 80%（未申報者，政府逕以此計算）。
   </div>
 
-  <ul class="tree" style="margin-top:10px;">
-    <li>
-      <span class="tree-node root">土地</span>
-      <ul>
-        <li>
-          <span class="tree-node leaf-hi">🏛️ 公有</span>
-          <div class="tree-result">申報地價 <b>＝</b> 公告地價<br><span class="law-tag hi">100%，不打折</span></div>
-        </li>
-        <li>
-          <span class="tree-node">🏠 私有</span>
-          <ul>
-            <li>
-              <span class="tree-node leaf-hi">📭 沒申報</span>
-              <div class="tree-result">逕以<span class="law-tag hi">公告地價 × 80%</span>認定<br>（實務上私有土地多屬此類）</div>
-            </li>
-            <li>
-              <span class="tree-node leaf-mid">📝 有申報</span>
-              <div class="tree-result">需落在公告地價 <b>80%～120%</b> 區間內</div>
-              <div class="mini-scale">
-                <div class="track"></div>
-                <div class="cap left"></div>
-                <div class="cap mid"></div>
-                <div class="cap right"></div>
-                <div class="tick-label left">80%</div>
-                <div class="tick-label mid">100%</div>
-                <div class="tick-label right">120%</div>
-              </div>
-              <div class="mini-scale-note">
-                <span>低於 80%：政府得照價收買</span>
-                <span>超過 120%：以 120% 為準</span>
-              </div>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
+  <div class="htree">
+    <span class="htree-node root">土地</span>
+    <span class="htree-arrow">→</span>
+    <div class="htree-branch">
+      <div class="htree-row">
+        <span class="htree-node leaf-hi">🏛️ 公有</span>
+        <span class="htree-result">申報地價 <b>＝</b> 公告地價（<b>100%</b>，不打折）</span>
+      </div>
+      <div class="htree-row">
+        <span class="htree-node">🏠 私有</span>
+        <span class="htree-arrow">→</span>
+        <div class="htree-branch">
+          <div class="htree-row">
+            <span class="htree-node leaf-hi">📭 沒申報</span>
+            <span class="htree-result">逕以<b>公告地價 × 80%</b>認定（實務上多屬此類）</span>
+          </div>
+          <div class="htree-row">
+            <span class="htree-node leaf-mid">📝 有申報</span>
+            <span class="htree-result">需落在 <b>80%～120%</b> 區間內</span>
+            <div class="hscale"><div class="track"></div><div class="cap left"></div><div class="cap mid"></div><div class="cap right"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="htree-footnote">
+    <span>低於 80%：政府得照價收買</span>
+    <span>超過 120%：以 120% 為準</span>
+  </div>
 </section>
 
 <!-- 四、稅率 -->
@@ -325,7 +305,7 @@
 
 <!-- 五、累進起點地價 -->
 <section>
-  <h2 class="sec-title">⑤ 累進起點地價 <span class="law-tag">土地稅法 §16 II</span><span class="examhit">113測</span></h2>
+  <h2 class="sec-title">⑤ 累進起點地價 <span class="law-tag">土地稅法 §16 II</span><span class="examhit">105・108・113測</span></h2>
   <p style="font-size:14.5px;margin-bottom:8px;">每個直轄市／縣市各自不同，以該縣市土地「<b>7 公畝之平均地價</b>」為準，但<b>排除</b>：<span class="mnemo-char">工</span>業用地、<span class="mnemo-char">礦</span>業用地、<span class="mnemo-char">農</span>業用地、<span class="mnemo-char">免</span>稅土地（這四類地價通常偏低，若納入計算會拉低累進起點，反而讓一般所有權人更容易被課到高稅率）。</p>
   <div class="formula-box">累進起點地價 ＝ (該縣市總地價－工礦農免總地價) ÷ (該縣市總面積－工礦農免總面積) × 7</div>
   <p style="font-size:13.5px;color:var(--sub);">→ 先算出扣除四類地後的「每公畝平均單價」，再乘以 7（因規定是 7 公畝）。台北市地價高，累進起點地價自然也比台中、台南高，分縣市計算才公平。</p>
@@ -333,7 +313,7 @@
 
 <!-- 六、特別稅率 -->
 <section>
-  <h2 class="sec-title"><span class="star">★★★</span> ⑥ 特別稅率 <span class="law-tag">土地稅法 §17～20</span><span class="examhit">105・106・109・112測</span></h2>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑥ 特別稅率 <span class="law-tag">土地稅法 §17～20</span><span class="examhit">105・106・109・112・114測</span></h2>
   <table>
     <tr><th style="width:14%">稅率</th><th style="width:16%">是否累進</th><th>適用範圍</th></tr>
     <tr><td><b>2‰</b></td><td>不累進</td><td>自用住宅、國民住宅、勞工宿舍，或符合自用住宅使用之信託土地（都跟「住」有關，屬民生必需，稅率最優惠）</td></tr>
@@ -476,40 +456,45 @@
   </div>
 </section>
 
-<!-- 十二、條文速查 -->
 <section>
-  <h2 class="sec-title">⑫ 條文速查</h2>
-  <table>
-    <tr><th style="width:26%">主題</th><th>條號</th></tr>
-    <tr><td>已規定地價課徵範圍</td><td>土地稅法 §14</td></tr>
-    <tr><td>納稅義務人（一般）／信託</td><td>§3-1</td></tr>
-    <tr><td>納稅義務基準日（8/31）</td><td>土地稅法施行細則 §20</td></tr>
-    <tr><td>稅基（地價總額）</td><td>§15 I</td></tr>
-    <tr><td>申報地價 30 天內申報</td><td>平均地權條例 §16</td></tr>
-    <tr><td>一般稅率／累進起點地價</td><td>§16 I／§16 II</td></tr>
-    <tr><td>特別稅率（2‰／6‰／10‰／免徵）</td><td>§17～20</td></tr>
-    <tr><td>自用住宅用地廣義定義</td><td>§9</td></tr>
-    <tr><td>自用住宅用地要件</td><td>§9、§17、施行細則§4、§9</td></tr>
-    <tr><td>特別稅率申請流程／原因消滅</td><td>§41～42</td></tr>
-    <tr><td>空地認定與罰則</td><td>§11</td></tr>
-    <tr><td>地價稅抵繳土地增值稅（上限5%）</td><td>§31 III</td></tr>
-  </table>
-</section>
-
-<section>
-  <h2 class="sec-title">⑬ 考古題對應：主題→涵蓋度總覽</h2>
+  <h2 class="sec-title">⑫ 考古題對應：主題→涵蓋度總覽</h2>
   <div class="warn-box hi2" style="margin-bottom:8px;">
-    📋 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（2026-08-13）。
+    📋 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（2026-08-13 初查，2026-09-01 補查累進起點地價／特別稅率兩項新命中年度）。
   </div>
   <table>
     <tr><th style="width:36%">高頻考點</th><th style="width:22%">對應章節</th><th>涵蓋狀態</th></tr>
     <tr><td>稅率——一般稅率（累進）</td><td>④稅率——一般稅率</td><td><span class="badge top">✓ 最高頻必考（5年：105・108・112・113・114）</span></td></tr>
     <tr><td>納稅義務人</td><td>②納稅義務人</td><td><span class="badge top">最高頻（4年：106・107・108・109，含109申論）</span></td></tr>
-    <tr><td>特別稅率<span class="law-tag sub-law">§17～20</span></td><td>⑥特別稅率</td><td><span class="badge top">高頻（4年：105・106・109・112）</span></td></tr>
+    <tr><td>特別稅率<span class="law-tag sub-law">§17～20</span></td><td>⑥特別稅率</td><td><span class="badge top">最高頻（5年：105・106・109・112・114）</span></td></tr>
+    <tr><td>累進起點地價<span class="law-tag sub-law">§16 II</span></td><td>⑤累進起點地價</td><td><span class="badge mid">中頻（3年：105・108・113）</span></td></tr>
     <tr><td>自用住宅用地（2‰優惠稅率要件）</td><td>⑦自用住宅用地</td><td><span class="badge mid">中頻（2年：107・114）</span></td></tr>
-    <tr><td>累進起點地價<span class="law-tag sub-law">§16 II</span></td><td>⑤累進起點地價</td><td><span class="badge">一般命中（1年：113）</span></td></tr>
     <tr><td>空地與荒地罰則比較</td><td>⑩空地與荒地罰則比較</td><td><span class="badge">一般命中（1年：106）</span></td></tr>
   </table>
+</section>
+
+<!-- 十三、近10年常考題目彙整（逐年版） -->
+<section>
+  <h2 class="sec-title">⑬ 近 10 年常考題目彙整（逐年版） <span class="examhit">105–114年</span></h2>
+  <div class="warn-box hi2" style="margin-bottom:8px;">
+    📖 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（2026-09-01）。105-109・111-114 共 9 個年度已核對，僅 <b>110 年尚未查證</b>；9 年中除 110 外全數有命中，合計 24 題次（另有 3 題屬納稅義務人／特別稅率周邊的旁支考點，一併收錄供參考）。
+  </div>
+  <table class="examyear-table">
+    <tr><th style="width:8%">年度・題型</th><th style="width:33%">考點摘要（題目）</th><th style="width:14%">對應章節</th><th style="width:45%">正解</th></tr>
+    <tr><td>105<br><span style="font-size:12px;color:var(--sub);">3 題次</span></td><td>申論二 累進起點地價定義＋一般稅率結構完整說明（7公畝平均地價、10‰起算5級累進至55‰）<br>測3 特別稅率2‰不適用範圍<br>測7 累進起點地價定義選項辨析（5公畝／5公頃／7公頃皆為誘答）</td><td>④一般稅率<br>⑤累進起點地價<br>⑥特別稅率</td><td>申論二：見解析<br>測3：<b>A</b>（公有供公共使用土地）<br>測7：<b>C</b>（7公畝）</td></tr>
+    <tr><td>106<br><span style="font-size:12px;color:var(--sub);">5 題次＋1旁支</span></td><td>測18 贈與移轉當年度地價稅由誰負擔<br>測19 設典土地地價稅納稅義務人為何（本題問「錯誤」敘述）<br>測34／申論二 公設保留地地價稅：自用住宅／非自用稅率<br>測39 空地荒地罰則：土地法與平均地權條例門檻是否相同<br>〔旁支〕測1 各稅目小額免徵門檻比較（地價稅／田賦／土增稅／房屋稅）</td><td>②納稅義務人<br>⑥特別稅率<br>⑩空地荒地罰則</td><td>測18：<b>A</b>（甲，原所有權人）<br>測19：<b>A</b>（正確應為典權人乙）<br>測34：<b>D</b>（正確應為自用2‰／非自用6‰，非統一10‰）<br>測39：<b>D</b>（正確應為報經內政部核准，非行政院農業委員會）<br>測1：<b>D</b>（房屋稅無此100元門檻規定）</td></tr>
+    <tr><td>107<br><span style="font-size:12px;color:var(--sub);">3 題次</span></td><td>測19 權屬不明土地誰是納稅義務人（本題問「非」屬者）<br>測20 信託土地地價稅納稅義務人為何<br>測22 自用住宅用地要件辨析（本題問「錯誤」敘述）</td><td>②納稅義務人<br>⑦自用住宅用地</td><td>測19：<b>C</b>（權屬不明地應以使用人為義務人，非稅捐機關指定）<br>測20：<b>B</b>（受託人）<br>測22：<b>A</b>（正確：法規未要求有居住事實，只需辦竣戶籍登記＋未出租未營業）</td></tr>
+    <tr><td>108<br><span style="font-size:12px;color:var(--sub);">3 題次</span></td><td>申論二 累進起點地價＋一般稅率結構（與105申論二同考點再考）<br>測7 累進稅率級距計算，超過15~20倍課稅率為何<br>測11 設典土地納稅義務人為誰（本題問「錯誤」敘述）</td><td>④一般稅率<br>⑤累進起點地價<br>②納稅義務人</td><td>申論二：見解析<br>測7：<b>D</b>（45‰，15~20倍級距）<br>測11：<b>B</b>（正確應為典權人，非出典人）</td></tr>
+    <tr><td>109<br><span style="font-size:12px;color:var(--sub);">2 題次</span></td><td>申論二 納稅義務人＋代繳義務人求償規定完整說明（典權人／承領人／耕作權人；行蹤不明・權屬不明・無人管理三種代繳情形得求償）<br>測4 供公眾停車使用之停車場用地稅率為何（本題問「錯誤」敘述）</td><td>②納稅義務人<br>⑥特別稅率</td><td>申論二：見解析<br>測4：<b>A</b>（錯誤敘述，正確應為6‰）</td></tr>
+    <tr><td>110</td><td>（尚未查證，暫沿用「查無命中」判斷，待後續補查）</td><td>—</td><td>—</td></tr>
+    <tr><td>111<br><span style="font-size:12px;color:var(--sub);">1 題次</span></td><td>測3 重新規定地價增繳之地價稅，抵繳土地增值稅上限為多少（與 L12 土地增值稅堂共用同一題）</td><td>抵繳土地增值稅§31III</td><td>測3：<b>D</b>（5%）</td></tr>
+    <tr><td>112<br><span style="font-size:12px;color:var(--sub);">2 題次＋1旁支</span></td><td>測1 公設保留地未使用且與使用中土地隔離者如何計徵<br>測5 累進稅率5~10倍應課稅率為何（本題問「錯誤」敘述）<br>〔旁支〕測24 得由稽徵機關指定代繳之情形，不含哪一項</td><td>⑥特別稅率<br>④一般稅率</td><td>測1：<b>A</b>（免徵）<br>測5：<b>C</b>（錯誤敘述，正確應為25‰）<br>測24：<b>A</b>（土地訴訟中非代繳事由）</td></tr>
+    <tr><td>113<br><span style="font-size:12px;color:var(--sub);">1 題次＋1旁支</span></td><td>測21 累進起點地價應於何時算竣並報請哪些機關備查<br>〔旁支〕測17 特別稅率原因消滅未申報之罰則為何</td><td>⑤累進起點地價<br>④一般稅率</td><td>測21：<b>D</b>（報財政部及內政部備查）<br>測17：<b>C</b>（短匿稅額3倍以下罰鍰）</td></tr>
+    <tr><td>114<br><span style="font-size:12px;color:var(--sub);">4 題次</span></td><td>申論一（部分）公設保留地地價稅減免完整規定：建築使用2‰／6‰、未使用免徵、農用課田賦<br>測4 一般稅率之基本稅率為何<br>測24 自用住宅用地2‰適用要件為何<br>測25 公設保留地未使用時如何計徵，選項刻意將「免徵」偷換為「減半徵收」</td><td>⑥特別稅率<br>④一般稅率<br>⑦自用住宅用地</td><td>申論一：見解析<br>測4：<b>C</b>（千分之十）<br>測24：<b>C</b>（國宅／勞工宿舍自動工日起適用2‰）<br>測25：<b>B</b>（免徵，非減半徵收）</td></tr>
+  </table>
+  <div class="info-box" style="margin-top:6px;">💡 複習用法：先蓋住最右欄「正解」，只看「考點摘要」欄自問自答，再攤開驗證；「（本題問『錯誤』敘述）」提示的是反著找答案的題型，作答邏輯跟一般題相反，要先意識到這點再選。</div>
+  <div class="warn-box hi" style="margin-top:10px;">
+    ⚠️ <b>三大必考重點</b>：<b>①一般稅率／累進起點地價</b>——105、108、112、113、114連續出現，105・108兩年更以申論題完整命題，累進5級距（10/15/25/35/45/55‰）跟「7公畝」是核心數字；<b>②納稅義務人</b>——106、107、108、109年年出現，常以「贈與／典權／信託／權屬不明」四種特殊情境交叉出題；<b>③特別稅率（2‰／6‰／10‰／免徵）</b>——105、106、109、112、114連續出現，公設保留地「免徵」vs「減半徵收」是常見誘答陷阱。
+  </div>
 </section>
 
 </body>

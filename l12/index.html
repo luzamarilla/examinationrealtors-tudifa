@@ -89,6 +89,8 @@
   .card-title { font-size: 17px; font-weight: bold; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; color: var(--ink); }
   .card p { font-size: 14.5px; line-height: 1.75; }
   table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-top: 4px; }
+  table.examyear-table { table-layout: fixed; }
+  table.examyear-table td { overflow-wrap: break-word; }
   table th { background: var(--ink); color: #fff; padding: 8px 10px; text-align: left; }
   table td { padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
   table tr:nth-child(even) td { background: #f9fafb; }
@@ -183,7 +185,7 @@
 
 <!-- 三、稅基 -->
 <section>
-  <h2 class="sec-title"><span class="star">★★★</span> ③ 稅基——土地漲價總數額 <span class="law-tag">土地稅法 §28</span></h2>
+  <h2 class="sec-title"><span class="star">★★★</span> ③ 稅基——土地漲價總數額 <span class="law-tag">土地稅法 §28</span><span class="examhit">106・107測</span></h2>
   <div class="formula-box">土地漲價總數額 ＝ 本次移轉現值 － (前次移轉現值 × 物價指數) － 土地改良費用</div>
   <div class="grid-2">
     <div class="card">
@@ -286,7 +288,7 @@
 
 <!-- 九、申報期間 -->
 <section>
-  <h2 class="sec-title">⑧ 申報期間與繳稅流程</h2>
+  <h2 class="sec-title">⑧ 申報期間與繳稅流程 <span class="examhit">114測</span></h2>
   <div class="flow-h">
     <div class="flow-h-box">契約日<span class="flow-h-sub">（公定契約日期，起算日）</span></div>
     <div class="flow-h-arrow">30 日內 →</div>
@@ -312,7 +314,7 @@
       <table>
         <tr><td>政府機關出售公有地／受贈私有地</td><td>§28</td></tr>
         <tr><td>繼承取得之土地（已繳遺產稅）<span class="examhit">105測</span></td><td>同 §28</td></tr>
-        <tr><td>捐贈財團法人社福或學校</td><td>§28-1——須為財團法人、不得從中獲利、解散後財產歸地方政府；違反處<b>2 倍</b>罰鍰</td></tr>
+        <tr><td>捐贈財團法人社福或學校<span class="examhit">110測</span></td><td>§28-1——須為財團法人、不得從中獲利、解散後財產歸地方政府；違反處<b>2 倍</b>罰鍰（平均地權條例§35-1為私人捐贈之類似規定，違反同樣追罰）</td></tr>
         <tr><td>被徵收土地<span class="examhit">105測</span></td><td>§39——一般徵收全免；區段徵收抵價地、市地重劃後土地<b>第一次</b>出售皆減徵 40%</td></tr>
         <tr><td>公共設施保留地，被徵收前移轉<span class="examhit">113測・114申論</span></td><td><b>都市</b>土地（都市計畫指定）：§39 II 免稅<br><b>非都市</b>土地：§39 III（110年5月21日增訂，回應釋字779號）——經需用土地人開闢完成或依計畫核定供公共設施使用，並完成使用地編定，經需用土地人證明，同樣<b>可</b>免稅</td></tr>
         <tr><td>協議價購土地</td><td>—</td></tr>
@@ -339,7 +341,7 @@
 
 <!-- 十一、移轉現值認定 -->
 <section>
-  <h2 class="sec-title">⑩ 移轉現值的認定 <span class="law-tag">土地稅法 §31</span><span class="law-tag">§30、30-1</span><span class="law-tag sub-law">平§47-2</span><span class="examhit">106申論・108・111・112測</span></h2>
+  <h2 class="sec-title">⑩ 移轉現值的認定 <span class="law-tag">土地稅法 §31</span><span class="law-tag">§30、30-1</span><span class="law-tag sub-law">平§47-2</span><span class="examhit">106申論・108・110・111・112測</span></h2>
   <div class="grid-2">
     <div class="card">
       <div class="card-title">前次移轉現值</div>
@@ -399,41 +401,47 @@
   </table>
 </section>
 
-<!-- 十四、條文速查 -->
 <section>
-  <h2 class="sec-title">⑬ 條文速查</h2>
-  <table>
-    <tr><th style="width:30%">主題</th><th>條號</th></tr>
-    <tr><td>納稅義務人</td><td>土地稅法 §5、§5-2</td></tr>
-    <tr><td>稅基（漲價總數額）／繼承等免徵</td><td>§28</td></tr>
-    <tr><td>一般稅率／長期持有減徵</td><td>§33 I／§33 VI～VIII</td></tr>
-    <tr><td>自用住宅特別稅率10%</td><td>§34 I～IV（廣義定義見 §9）</td></tr>
-    <tr><td>免徵：捐贈財團法人／被徵收土地／公共設施保留地</td><td>§28-1／§39／§39 II（都市土地）＋§39 III（非都市土地，110年增訂回應釋字779號）</td></tr>
-    <tr><td>不課徵：夫妻贈與／農地繼續農用／信託</td><td>§28-2／§39-2／§28-3</td></tr>
-    <tr><td>不課徵：公司合併</td><td>金融機構合併法 §13</td></tr>
-    <tr><td>重購退稅</td><td>§35</td></tr>
-    <tr><td>移轉現值認定</td><td>§31（前次）／§30、30-1（本次）／平§47-2</td></tr>
-    <tr><td>地價稅抵繳增值稅（上限5%）</td><td>§31 III</td></tr>
-    <tr><td>被徵收／法拍免申報代扣</td><td>§52</td></tr>
-    <tr><td>權利人單獨申報</td><td>§49-1 後段／土地登記規則 §27</td></tr>
-    <tr><td>農地變更不課徵（另免遺贈稅田賦）</td><td>農發條例 §38-1</td></tr>
-  </table>
-</section>
-
-<section>
-  <h2 class="sec-title">⑭ 考古題對應：主題→涵蓋度總覽</h2>
+  <h2 class="sec-title">⑬ 考古題對應：主題→涵蓋度總覽</h2>
   <div class="warn-box hi2" style="margin-bottom:8px;">
-    📋 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（2026-08-13，08-13 另補標籤從2個擴充到16個）。土地增值稅幾乎年年考，是稅法系列命中密度最高的一堂。
+    📋 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（2026-08-13 初查，2026-09-01 補查5個年度＋2個新主題）。土地增值稅幾乎年年考，是稅法系列命中密度最高的一堂。
   </div>
   <table>
     <tr><th style="width:36%">高頻考點</th><th style="width:22%">對應章節</th><th>涵蓋狀態</th></tr>
-    <tr><td>免徵 vs 不課徵比較（繼承取得、被徵收土地、公共設施保留地§39、夫妻間贈與§28-2、農地移轉§39-2）</td><td>⑨免徵 vs 不課徵</td><td><span class="badge top">✓ 最高頻必考（6年：105・106・107・110申・113・114申）</span></td></tr>
+    <tr><td>免徵 vs 不課徵比較（繼承取得、被徵收土地、公共設施保留地§39、夫妻間贈與§28-2、農地移轉§39-2）</td><td>⑨免徵 vs 不課徵</td><td><span class="badge top">✓ 最高頻必考（6年：105・106・107・110申・113測・114申）</span></td></tr>
     <tr><td>特別稅率10%——自用住宅「一生一次」與「一生一屋」<span class="law-tag sub-law">§34</span></td><td>⑥特別稅率10%</td><td><span class="badge top">最高頻（4年：105・106・110・112）</span></td></tr>
-    <tr><td>移轉現值的認定（一般申報／法院判決起訴日／法院拍賣拍定日）</td><td>⑩移轉現值的認定</td><td><span class="badge top">高頻（4年：106申論・108・111・112）</span></td></tr>
+    <tr><td>移轉現值的認定（一般申報／法院判決起訴日／法院拍賣拍定日）</td><td>⑩移轉現值的認定</td><td><span class="badge top">最高頻（5年：106申論・108・110・111・112）</span></td></tr>
+    <tr><td>稅基——土地漲價總數額<span class="law-tag sub-law">§28</span></td><td>③稅基</td><td><span class="badge mid">中頻（2年：106・107）</span></td></tr>
     <tr><td>重購退稅<span class="law-tag sub-law">§35</span></td><td>⑪重購退稅</td><td><span class="badge mid">中頻（2年：106申論・109）</span></td></tr>
     <tr><td>設定典權——回贖時無息返還已繳稅款</td><td>②納稅義務人</td><td><span class="badge">一般命中（1年：112）</span></td></tr>
-    <tr><td>地價稅抵繳土地增值稅（上限5%）<span class="law-tag sub-law">§31 III</span></td><td>⑫補充規定</td><td><span class="badge">一般命中（1年：111）</span></td></tr>
+    <tr><td>地價稅抵繳土地增值稅（上限5%）<span class="law-tag sub-law">§31 III</span></td><td>⑫補充規定</td><td><span class="badge">一般命中（1年：111，與L11地價稅堂共用同一題）</span></td></tr>
+    <tr><td>申報期間與繳稅流程</td><td>⑧申報期間</td><td><span class="badge">一般命中（1年：114）</span></td></tr>
   </table>
+</section>
+
+<!-- 十四、近10年常考題目彙整（逐年版） -->
+<section>
+  <h2 class="sec-title">⑭ 近 10 年常考題目彙整（逐年版） <span class="examhit">105–114年</span></h2>
+  <div class="warn-box hi2" style="margin-bottom:8px;">
+    📖 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（2026-09-01）。10 年全數有命中，合計 26 題次，是土地稅法系列命中密度最高的一堂。
+  </div>
+  <table class="examyear-table">
+    <tr><th style="width:8%">年度・題型</th><th style="width:33%">考點摘要（題目）</th><th style="width:14%">對應章節</th><th style="width:45%">正解</th></tr>
+    <tr><td>105<br><span style="font-size:12px;color:var(--sub);">3 題次</span></td><td>測11 何種情形土地增值稅得優惠或免徵<br>測8 區段徵收領回抵價地，原地價如何認定（本題問「錯誤」敘述）<br>測39 出賣人遲延過戶致買方多繳增值稅，買方得否求償</td><td>⑨免徵vs不課徵<br>⑥特別稅率10%</td><td>測11：<b>C</b>（繼承免徵，選項A將一生一次稅率誤植為5%）<br>測8：<b>B</b>（正確應為仍須課徵，非免徵）<br>測39：<b>C</b>（乙得向甲請求遲延損害賠償）</td></tr>
+    <tr><td>106<br><span style="font-size:12px;color:var(--sub);">7 題次</span></td><td>申論一 移轉現值審核標準＋重購退稅三種情形完整說明<br>測4 區段徵收抵價地原地價如何認定<br>測10 一生一次要件辨析（本題問「錯誤」敘述，法條為「直系親屬」非「受扶養親屬」）<br>測12 土地增值稅課稅基礎為何<br>測20 重購退稅計算題，補強自用住宅重購門檻<br>測21 農業用地不課徵要件辨析（本題問「錯誤」敘述）<br>測33 一生一屋「不受一次優惠限制」條件為何</td><td>⑩移轉現值<br>⑪重購退稅<br>⑥特別稅率10%<br>③稅基<br>⑨免徵vs不課徵</td><td>申論一：見解析<br>測4：<b>C</b>（以領回抵價地之地價認定）<br>測10：<b>C</b>（正確用詞為「直系親屬」，非「受扶養親屬」）<br>測12：<b>C</b>（土地漲價總數額）<br>測20：<b>B</b>（公告土地現值大於1,000萬元）<br>測21：<b>C</b>（正確應為區內而非以外編定之農牧用地）<br>測33：<b>B</b>（配偶及未成年子女名下無其他房屋）</td></tr>
+    <tr><td>107<br><span style="font-size:12px;color:var(--sub);">1 題次</span></td><td>測21 配偶贈與後再移轉，以何時原地價計算漲價總數額</td><td>⑨免徵vs不課徵<br>③稅基</td><td>測21：<b>D</b>（漲價總數額）</td></tr>
+    <tr><td>108<br><span style="font-size:12px;color:var(--sub);">2 題次</span></td><td>測6 法院判決移轉以何日認定移轉現值<br>測22 判決移轉現值認定基準（本題問「錯誤」敘述）</td><td>⑩移轉現值</td><td>測6：<b>C</b>（起訴日）<br>測22：<b>D</b>（錯誤敘述，正確應為起訴日非判決確定日）</td></tr>
+    <tr><td>109<br><span style="font-size:12px;color:var(--sub);">1 題次</span></td><td>測3 自耕農地出售後何種情形得申請重購退稅</td><td>⑪重購退稅</td><td>測3：<b>C</b>（自耕農地2年內另購仍作自耕）</td></tr>
+    <tr><td>110<br><span style="font-size:12px;color:var(--sub);">3 題次</span></td><td>申論一 原地價定義＋作用＋配偶贈與再移轉之原地價認定<br>測8 私人捐贈社福用地免稅，例外三種追罰情形不含哪一項<br>測19 一生一次要件辨析<br>測20 免稅土地移轉現值核定規則為何</td><td>⑨免徵vs不課徵<br>③稅基<br>⑥特別稅率10%<br>⑩移轉現值</td><td>申論一：見解析<br>測8：<b>A</b>（未辦理用地變更不算違規情形）<br>測19：<b>A</b>（只有②成立，按10%徵收）<br>測20：<b>A</b>（以實際出售價額為準）</td></tr>
+    <tr><td>111<br><span style="font-size:12px;color:var(--sub);">2 題次</span></td><td>測3 重新規定地價增繳之地價稅，抵繳增值稅上限為多少（與L11地價稅堂共用同一題）<br>測22 法院拍賣以何日認定移轉現值</td><td>⑫補充規定<br>⑩移轉現值</td><td>測3：<b>D</b>（5%）<br>測22：<b>D</b>（拍定日）</td></tr>
+    <tr><td>112<br><span style="font-size:12px;color:var(--sub);">3 題次</span></td><td>測2 一生一次面積限制辨析<br>測3 設典預繳增值稅，出典人回贖時如何處理<br>測4 法院判決以何日認定移轉現值</td><td>⑥特別稅率10%<br>②納稅義務人<br>⑩移轉現值</td><td>測2：<b>B</b>（都市3公畝／非都市7公畝以內部分）<br>測3：<b>D</b>（無息退還）<br>測4：<b>B</b>（起訴日）</td></tr>
+    <tr><td>113<br><span style="font-size:12px;color:var(--sub);">1 題次</span></td><td>測22 非都市土地供公共設施使用，尚未徵收前移轉免稅要件（本題問「錯誤」敘述；與114申論二同考點，本題確認是「測驗題」非「113申」，原標記已更正）</td><td>⑨免徵vs不課徵</td><td>測22：<b>C</b>（正確要件不含此項，因與「尚未被徵收」矛盾）</td></tr>
+    <tr><td>114<br><span style="font-size:12px;color:var(--sub);">2 題次</span></td><td>申論二 §39Ⅲ非都市土地免徵要件完整說明（與113測22同考點）<br>測6 移轉現值應於訂約後幾日內申報</td><td>⑨免徵vs不課徵<br>⑧申報期間</td><td>申論二：見解析<br>測6：<b>B</b>（30日）</td></tr>
+  </table>
+  <div class="info-box" style="margin-top:6px;">💡 複習用法：先蓋住最右欄「正解」，只看「考點摘要」欄自問自答，再攤開驗證；「（本題問『錯誤』敘述）」提示的是反著找答案的題型，作答邏輯跟一般題相反，要先意識到這點再選。</div>
+  <div class="warn-box hi" style="margin-top:10px;">
+    ⚠️ <b>三大必考重點</b>：<b>①免徵 vs 不課徵比較</b>——10年中6年出現，是全堂最高頻，記住「免徵原地價重新核計、不課徵原地價不變」這條判斷關鍵；<b>②移轉現值的認定</b>——106、108、110、111、112連續出現，「如期申報訂約日／逾期收件日／法院判決起訴日／法院拍賣拍定日」四組最容易混；<b>③一生一次與一生一屋</b>——105、106、110、112連續出現，「直系親屬vs未成年子女」「出售前1年vs5年無出租」是常見誘答陷阱。
+  </div>
 </section>
 
 </body>
