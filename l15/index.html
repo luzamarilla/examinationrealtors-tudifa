@@ -89,6 +89,8 @@
   .card-title { font-size: 17px; font-weight: bold; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; color: var(--ink); }
   .card p { font-size: 14.5px; line-height: 1.75; }
   table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-top: 4px; }
+  table.examyear-table { table-layout: fixed; }
+  table.examyear-table td { overflow-wrap: break-word; }
   table th { background: var(--ink); color: #fff; padding: 8px 10px; text-align: left; }
   table td { padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
   table tr:nth-child(even) td { background: #f9fafb; }
@@ -152,31 +154,36 @@
   <h2 class="sec-title">① 概念——房屋的移轉稅 <span class="law-tag">契稅條例 §2</span></h2>
   <p style="font-size:14.5px;margin-bottom:8px;">房屋稅（L14）是持有稅，契稅則是<b>移轉稅</b>：買賣、承典、交換、贈與、分割，或因<b>占有而取得所有權</b>，均應申報繳納契稅。</p>
   <div class="warn-box hi">⚠️ 但書：<b>已開徵土地增值稅區域的土地</b>免徵契稅——契稅事實上就是<b>針對房屋</b>課徵（土地部分已有增值稅負責）。</div>
-  <p style="font-size:14.5px;margin-top:10px;"><b>契價</b>（稅基）<span class="law-tag sub-law">§13</span>＝當地<b>不動產評價委員會評定的房屋標準價格</b>（一個定值）。例外：<b>依法領買、標購公產、法拍</b>取得，若購買價格<b>低於</b>評定標準價格，以<b>低者</b>（實際購買價格）為契價。</p>
-  <div class="formula-box">契稅 ＝ 契價 × 稅率</div>
-  <div class="warn-box hi">
-    ⚠️ <b>契價≠實際成交價</b><span class="examhit">106・107測</span>：課稅基礎一律是「不動產評價委員會評定之標準價格」這個公告值，不是買賣雙方實際約定的房價（除非§11情形下移轉價格更低才取低者）。考古題常用「以實際買賣價格為準」當誘答選項。
-  </div>
 </section>
 
 <!-- 二、納稅義務人 -->
 <section>
-  <h2 class="sec-title"><span class="star">★★★</span> ② 納稅義務人——六種情況<span class="examhit">109・111・112・113測</span></h2>
+  <h2 class="sec-title"><span class="star">★★★</span> ② 納稅義務人——六種情況<span class="examhit">106・109・111・112・113測</span></h2>
   <table>
     <tr><th style="width:20%">情況</th><th style="width:20%">納稅義務人</th><th>備註</th></tr>
     <tr><td>買賣</td><td><b>買受人</b>（買方）</td><td>最常見情況</td></tr>
     <tr><td>贈與</td><td><b>受贈人</b></td><td>與土地增值稅相同（受贈人繳）；但<b>贈與稅</b>另由<b>贈與人</b>繳，三稅納稅義務人不要搞混</td></tr>
     <tr><td>占有取得</td><td><b>占有人</b></td><td>—</td></tr>
     <tr><td>設定典權</td><td><b>典權人</b></td><td>—</td></tr>
-    <tr><td>交換</td><td><b>交換人</b>（雙方皆須申報，見④）</td><td>—</td></tr>
+    <tr><td>交換</td><td><b>交換人</b>（雙方皆須申報，見⑤）</td><td>—</td></tr>
     <tr><td>分割</td><td><b>分割人</b></td><td>—</td></tr>
   </table>
   <div class="info-box">💡 記憶技巧：<b>贈與</b>的契稅納稅義務人跟土地增值稅一樣是<b>受贈人</b>；<b>買賣</b>則不同——契稅是買受人繳，土地增值稅是原所有權人（賣方）繳，方向相反，要注意分辨。</div>
 </section>
 
-<!-- 三、稅率 -->
+<!-- 三、稅基 -->
 <section>
-  <h2 class="sec-title"><span class="star">★★★★</span> ③ 稅率 <span class="law-tag">契稅條例 §3</span><span class="examhit">109・111・112・114測</span></h2>
+  <h2 class="sec-title"><span class="star">★★★</span> ③ 稅基——契價 <span class="law-tag">契稅條例 §13</span><span class="examhit">106・107測</span></h2>
+  <p style="font-size:14.5px;margin-top:4px;"><b>契價</b>＝當地<b>不動產評價委員會評定的房屋標準價格</b>（一個定值）。例外：<b>依法領買、標購公產、法拍</b>取得，若購買價格<b>低於</b>評定標準價格，以<b>低者</b>（實際購買價格）為契價。</p>
+  <div class="formula-box">契稅 ＝ 契價 × 稅率</div>
+  <div class="warn-box hi">
+    ⚠️ <b>契價≠實際成交價</b><span class="examhit">106・107測</span>：課稅基礎一律是「不動產評價委員會評定之標準價格」這個公告值，不是買賣雙方實際約定的房價（除非§11情形下移轉價格更低才取低者）。考古題常用「以實際買賣價格為準」當誘答選項。
+  </div>
+</section>
+
+<!-- 四、稅率 -->
+<section>
+  <h2 class="sec-title"><span class="star">★★★★</span> ④ 稅率 <span class="law-tag">契稅條例 §3</span><span class="examhit">109・111・112・114測</span></h2>
   <table>
     <tr><th style="width:20%">分組</th><th style="width:40%">情況</th><th>稅率</th></tr>
     <tr><td rowspan="3">高（6%）</td><td>買賣</td><td rowspan="3"><b>6%</b></td></tr>
@@ -189,9 +196,9 @@
   <div class="info-box">記憶口訣：<b>典權4</b>，<b>交換分割2</b>，其他（買賣／贈與／占有）都是<b>6</b>——分三組記比逐條背輕鬆。</div>
 </section>
 
-<!-- 四、交換契稅+價差 -->
+<!-- 五、交換契稅+價差 -->
 <section>
-  <h2 class="sec-title"><span class="star">★★★★</span> ④ 交換契稅——有價差時的計算 <span class="law-tag">契稅條例 §6</span><span class="examhit">113測</span></h2>
+  <h2 class="sec-title"><span class="star">★★★★</span> ⑤ 交換契稅——有價差時的計算 <span class="law-tag">契稅條例 §6</span><span class="examhit">113測</span></h2>
   <p style="font-size:14.5px;margin-bottom:8px;">交換契稅由交換人估價立契，各自<b>就其承受部分</b>申報納稅（交換多少報多少，稅率 2%）。若有<b>差額價款</b>：</p>
   <div class="grid-2">
     <div class="card">
@@ -211,9 +218,9 @@
   </div>
 </section>
 
-<!-- 五、減免 -->
+<!-- 六、減免 -->
 <section>
-  <h2 class="sec-title">⑤ 減免規定 <span class="law-tag">契稅條例 §14</span><span class="examhit">105・106・111測</span></h2>
+  <h2 class="sec-title">⑥ 減免規定 <span class="law-tag">契稅條例 §14</span><span class="examhit">105・106測</span></h2>
   <div class="sub-block">
     <span class="sub-tag">公家取得公用（①②③）</span>
     <table>
@@ -232,9 +239,9 @@
   <div class="info-box">記憶技巧：①②③是「<b>公家取得＋公眾使用</b>」一組；④⑤是「<b>起造人變更</b>」一組（純變更名義免稅，但買賣/贈與/交換原因造成的變更仍須課稅）。</div>
 </section>
 
-<!-- 六、申報期間 -->
+<!-- 七、申報期間 -->
 <section>
-  <h2 class="sec-title"><span class="star">★★★</span> ⑥ 申報期間——立約日起 30 日內 <span class="examhit">104・113測</span></h2>
+  <h2 class="sec-title"><span class="star">★★★</span> ⑦ 申報期間——立約日起 30 日內 <span class="examhit">104・106・113・114測</span></h2>
   <p style="font-size:14.5px;margin-bottom:8px;">原則：以<b>立約日（契約成立之日）起 30 日內</b>申報。主管稽徵機關收件<b>15 天內</b>查定發單；文件如有欠缺或疑問，應於<b>收件後 7 日內</b>通知納稅義務人補正或說明<span class="law-tag sub-law">§18</span>；納稅義務人收單後 <b>30 天內</b>繳款<span class="law-tag sub-law">§19</span>。</p>
   <table>
     <tr><th style="width:26%">特殊情況（無明確立約日）</th><th>申報起算日 <span class="law-tag sub-law">§16</span></th></tr>
@@ -251,15 +258,16 @@
   </div>
 </section>
 
-<!-- 七、抵繳 -->
+<!-- 八、抵繳 -->
 <section>
-  <h2 class="sec-title">⑦ 抵繳——先典後賣 <span class="law-tag">契稅條例 §10</span></h2>
+  <h2 class="sec-title">⑧ 抵繳——先典後賣 <span class="law-tag">契稅條例 §10</span><span class="examhit">105測</span></h2>
   <p style="font-size:14.5px;">先設定典權（繳典權契稅 4%），日後所有權人再將該不動產<b>賣給同一位典權人</b>（繳買賣契稅 6%）→ 原本繳的典權契稅可<b>扣抵</b>買賣契稅（只需再補 6%－4%＝2% 差額）。<b>典權人與買方須為同一人</b>才能抵繳，理由是避免對同一不動產重複課稅。</p>
+  <div class="info-box">💡 105年考古題曾以「先典後賣取得不動產者」作為免徵契稅選項中的<b>錯誤選項</b>出現——先典後賣是「抵繳」而非「免徵」，兩者不要混淆。</div>
 </section>
 
-<!-- 八、稽徵機關與檢舉獎金 -->
+<!-- 九、稽徵機關與檢舉獎金 -->
 <section>
-  <h2 class="sec-title">⑧ 稽徵機關與檢舉獎金 <span class="examhit">103・104・105測</span></h2>
+  <h2 class="sec-title">⑨ 稽徵機關與檢舉獎金 <span class="examhit">103・104測（待查證）</span></h2>
   <div class="grid-2">
     <div class="card">
       <div class="card-title">徵收機關 <span class="law-tag sub-law">§29</span></div>
@@ -270,12 +278,12 @@
       <p>告發或檢舉納稅義務人逃漏、匿報、短報或以其他不正當方式逃稅者，稽徵機關得以罰鍰<b>20%</b>獎給舉發人，並<b>絕對保守秘密</b>；<b>公務員</b>為舉發人時，<b>不適用</b>本條獎金規定。</p>
     </div>
   </div>
-  <div class="info-box">💡 這節是近10年考古題證實的獨立考點（103、104、105年皆有），但現有筆記原本完全沒有這個主題，屬於這次核對新補進來的內容，不要因為篇幅少就輕忽。</div>
+  <div class="warn-box hi2">💡 2026-09-01 補查更正：原標記「103・104・105年皆有」，經重新通讀 105 年全卷 40 題測驗＋2 題申論後，<b>查無</b>「稽徵機關」「檢舉」「獎金」相關題目，105 這筆命中已移除；103・104 兩年不在本次可查證的 PDF 範圍內（僅存 105～114 年），標記維持但列為<b>待查證</b>，建議之後找到 103・104 年題本再核實。</div>
 </section>
 
-<!-- 九、信託契稅 -->
+<!-- 十、信託契稅 -->
 <section>
-  <h2 class="sec-title"><span class="star">★★★★</span> ⑨ 信託情形的契稅 <span class="examhit">111・113測</span></h2>
+  <h2 class="sec-title"><span class="star">★★★★</span> ⑩ 信託情形的契稅 <span class="examhit">110・111・113測</span></h2>
   <div class="grid-2">
     <div class="card">
       <div class="card-title">課徵情形 <span class="law-tag sub-law">§7-1</span></div>
@@ -294,9 +302,9 @@
   </div>
 </section>
 
-<!-- 十、例題 -->
+<!-- 十一、例題 -->
 <section>
-  <h2 class="sec-title"><span class="star">★★★★</span> ⑩ 計算例題——102年地政士考古題</h2>
+  <h2 class="sec-title"><span class="star">★★★★</span> ⑪ 計算例題——102年地政士考古題</h2>
   <div class="example-box" style="margin-bottom:12px;">
     <b>題目：</b>甲、乙各有房屋一棟，甲屋評定標準價格 60 萬，乙屋評定標準價格 100 萬。甲乙交換房屋，差額以<b>現金補償</b>。契約於 102 年 4 月 1 日成立，甲於 5 月 5 日申報契稅，乙於 5 月 7 日申報契稅。試算甲、乙各需繳納的契稅與怠報金。
   </div>
@@ -331,45 +339,48 @@
   <div class="warn-box hi">💡 答題技巧：怠報金＝<b>應納稅額 × 對應級距%</b>（每逾3日多1%），作答時把稅基、稅率、計算式完整列出，即可拿到不錯的分數。相關法條：契稅條例 §3、§6、§24。</div>
 </section>
 
-<!-- 十一、條文速查 -->
-<section>
-  <h2 class="sec-title">⑪ 條文速查</h2>
-  <table>
-    <tr><th style="width:30%">主題</th><th>條號</th></tr>
-    <tr><td>課徵對象（免徵土地增值稅區域免契稅）</td><td>契稅條例 §2</td></tr>
-    <tr><td>稅率</td><td>§3</td></tr>
-    <tr><td>契價定義</td><td>§13</td></tr>
-    <tr><td>交換契稅估價立契</td><td>§6</td></tr>
-    <tr><td>信託課徵（歸屬權利人比照贈與6%）</td><td>§7-1</td></tr>
-    <tr><td>抵繳（先典後賣）</td><td>§10</td></tr>
-    <tr><td>減免（5項情形）</td><td>§14</td></tr>
-    <tr><td>信託不課徵（5項）</td><td>§14-1</td></tr>
-    <tr><td>申報期間與特殊起算日</td><td>§16</td></tr>
-    <tr><td>查定發單／欠件補正（收件7日內通知）</td><td>§18</td></tr>
-    <tr><td>繳納期限（收單30日內）</td><td>§19</td></tr>
-    <tr><td>怠報金（每3日1%，雙重上限）</td><td>§24</td></tr>
-    <tr><td>滯納金（條文寫每2日1%，實際依稅捐稽徵法§20從新從優適用每3日1%，逾30日移送強制執行）</td><td>§25</td></tr>
-    <tr><td>徵收機關</td><td>§29</td></tr>
-    <tr><td>檢舉獎金（20%）</td><td>§32</td></tr>
-  </table>
-</section>
-
 <section>
   <h2 class="sec-title">⑫ 考古題對應：主題→涵蓋度總覽</h2>
   <div class="warn-box hi2" style="margin-bottom:8px;">
-    📋 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（2026-08-13）。
+    📋 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（2026-08-13 初查，2026-09-01 補查5個年度＋2處勘誤）。
   </div>
   <table>
     <tr><th style="width:36%">高頻考點</th><th style="width:22%">對應章節</th><th>涵蓋狀態</th></tr>
-    <tr><td>納稅義務人——六種情況</td><td>②納稅義務人</td><td><span class="badge top">✓ 最高頻必考（4年：109・111・112・113）</span></td></tr>
-    <tr><td>稅率<span class="law-tag sub-law">§3</span></td><td>③稅率</td><td><span class="badge top">最高頻（4年：109・111・112・114）</span></td></tr>
-    <tr><td>減免規定<span class="law-tag sub-law">§14</span></td><td>⑤減免規定</td><td><span class="badge mid">中頻（3年：105・106・111）</span></td></tr>
-    <tr><td>稽徵機關與檢舉獎金</td><td>⑧稽徵機關與檢舉獎金</td><td><span class="badge mid">中頻（3年：103・104・105）</span></td></tr>
-    <tr><td>契價≠實際成交價（常用「以實際買賣價格為準」當誘答）</td><td>①概念——房屋的移轉稅</td><td><span class="badge mid">中頻（2年：106・107）</span></td></tr>
-    <tr><td>申報期間——立約日起30日內（含不動產移轉糾紛以法院判決確定之日起算）</td><td>⑥申報期間</td><td><span class="badge mid">中頻（2年：104・113）</span></td></tr>
-    <tr><td>信託情形的契稅</td><td>⑨信託情形的契稅</td><td><span class="badge mid">中頻（2年：111・113）</span></td></tr>
-    <tr><td>交換契稅——有價差時的計算<span class="law-tag sub-law">§6</span></td><td>④交換契稅</td><td><span class="badge">一般命中（1年：113）</span></td></tr>
+    <tr><td>納稅義務人——六種情況</td><td>②納稅義務人</td><td><span class="badge top">✓ 最高頻必考（5年：106・109・111・112・113）</span></td></tr>
+    <tr><td>稅率<span class="law-tag sub-law">§3</span></td><td>④稅率</td><td><span class="badge top">最高頻（4年：109・111・112・114）</span></td></tr>
+    <tr><td>申報期間——立約日起30日內（含不動產移轉糾紛以法院判決確定之日起算）</td><td>⑦申報期間</td><td><span class="badge top">最高頻（4年：104・106・113・114）</span></td></tr>
+    <tr><td>信託情形的契稅</td><td>⑩信託情形的契稅</td><td><span class="badge mid">中頻（3年：110・111・113）</span></td></tr>
+    <tr><td>減免規定<span class="law-tag sub-law">§14</span></td><td>⑥減免規定</td><td><span class="badge mid">中頻（2年：105・106，原標記111測經核對查無對應題目已移除）</span></td></tr>
+    <tr><td>契價≠實際成交價（常用「以實際買賣價格為準」當誘答）</td><td>③稅基——契價</td><td><span class="badge mid">中頻（2年：106・107）</span></td></tr>
+    <tr><td>交換契稅——有價差時的計算<span class="law-tag sub-law">§6</span></td><td>⑤交換契稅</td><td><span class="badge">一般命中（1年：113）</span></td></tr>
+    <tr><td>抵繳——先典後賣<span class="law-tag sub-law">§10</span></td><td>⑧抵繳</td><td><span class="badge">一般命中（1年：105，選項旁證）</span></td></tr>
+    <tr><td>稽徵機關與檢舉獎金</td><td>⑨稽徵機關與檢舉獎金</td><td><span class="badge">待查證（原標記105測經核對查無，103・104不在本次可查證範圍）</span></td></tr>
   </table>
+</section>
+
+<!-- 十三、近10年常考題目彙整（逐年版） -->
+<section>
+  <h2 class="sec-title">⑬ 近 10 年常考題目彙整（逐年版） <span class="examhit">105–114年</span></h2>
+  <div class="warn-box hi2" style="margin-bottom:8px;">
+    📖 資料來源：全國陳國補習班「不動產經紀人解答」考古題解 PDF，105～114 年逐題核對（2026-09-01）。10 年全數有命中，合計 17 題次，是稅法系列中命中密度最高的一堂之一。
+  </div>
+  <table class="examyear-table">
+    <tr><th style="width:8%">年度・題型</th><th style="width:33%">考點摘要（題目）</th><th style="width:14%">對應章節</th><th style="width:45%">正解</th></tr>
+    <tr><td>105<br><span style="font-size:12px;color:var(--sub);">2 題次</span></td><td>測2 何種情形得免徵契稅（含「先典後賣」選項）<br>測37 契稅欠稅應移送何處強制執行</td><td>⑧抵繳<br>⑥減免規定</td><td>測2：<b>B</b>（先典後賣是抵繳非免徵）<br>測37：<b>C</b>（法務部行政執行署所屬行政執行分署）</td></tr>
+    <tr><td>106<br><span style="font-size:12px;color:var(--sub);">4 題次</span></td><td>測5 建造中變更起造人名義，何種原因須課契稅<br>測11 何種情形免徵契稅<br>測16 申報起算日辨析（本題問「錯誤」敘述）<br>測19 設典契稅納稅義務人為誰／測32 契稅課稅基礎為何</td><td>②納稅義務人<br>⑥減免規定<br>⑦申報期間<br>③稅基</td><td>測5：<b>B</b>（贈與）<br>測11：<b>C</b>（開徵土增稅區域土地）<br>測16：<b>D</b>（錯誤敘述，糾紛以法院判決確定日為準）<br>測19：<b>A</b>（典權人）<br>測32：<b>D</b>（契價）</td></tr>
+    <tr><td>107<br><span style="font-size:12px;color:var(--sub);">1 題次</span></td><td>測23 契價之認定基準為何</td><td>③稅基</td><td>測23：<b>B</b>（不動產評價委員會評定標準價格，非實際買賣價格）</td></tr>
+    <tr><td>108</td><td>（查無對應題目）</td><td>—</td><td>—</td></tr>
+    <tr><td>109<br><span style="font-size:12px;color:var(--sub);">2 題次</span></td><td>測2 各類契稅稅率辨析（本題問「錯誤」敘述）<br>測18 買賣契稅應由誰申報納稅</td><td>④稅率<br>②納稅義務人</td><td>測2：<b>D</b>（錯誤敘述，典權契稅為4%非6%）<br>測18：<b>C</b>（買受人）</td></tr>
+    <tr><td>110<br><span style="font-size:12px;color:var(--sub);">1 題次</span></td><td>信託財產移轉予委託人以外歸屬權利人，應由誰申報、稅率為何</td><td>⑩信託契稅</td><td><b>C</b>（歸屬權利人申報，稅率6%）</td></tr>
+    <tr><td>111<br><span style="font-size:12px;color:var(--sub);">3 題次</span></td><td>測5 契稅相關敘述辨析（本題問「錯誤」敘述）<br>測6 信託關係消滅移轉予第三人歸屬人時是否課徵契稅<br>測7 何種契約契稅稅率最低</td><td>②納稅義務人<br>④稅率<br>⑩信託契稅</td><td>測5：<b>A</b>（錯誤敘述，買賣契稅應由買受人非出賣人申報）<br>測6：<b>B</b>（信託關係消滅，移轉予第三人歸屬人時應課徵契稅）<br>測7：<b>C</b>（分割2%）</td></tr>
+    <tr><td>112<br><span style="font-size:12px;color:var(--sub);">1 題次</span></td><td>四種契約類型的納稅義務人與稅率綜合辨析</td><td>②納稅義務人<br>④稅率</td><td><b>C</b>（典權契稅應由典權人申報）</td></tr>
+    <tr><td>113<br><span style="font-size:12px;color:var(--sub);">2 題次</span></td><td>測20 不動產移轉糾紛之申報起算日為何<br>測23 信託歸屬權利人申報契稅相關敘述（本題同時是「納稅義務人」「信託契稅」「交換契稅§6」三主題共用同一題，不是三道獨立題目）</td><td>⑦申報期間<br>②④⑤⑩多主題共用</td><td>測20：<b>B</b>（法院判決確定之日）<br>測23：<b>A</b>（歸屬權利人申報）</td></tr>
+    <tr><td>114<br><span style="font-size:12px;color:var(--sub);">1 題次</span></td><td>測16 契稅繳納期限及怠報金／滯納金／漏稅罰鍰規定辨析</td><td>⑦申報期間</td><td>測16：<b>A</b>（核定繳款書送達後30日內繳納）</td></tr>
+  </table>
+  <div class="info-box" style="margin-top:6px;">💡 複習用法：先蓋住最右欄「正解」，只看「考點摘要」欄自問自答，再攤開驗證；「（本題問『錯誤』敘述）」提示的是反著找答案的題型，作答邏輯跟一般題相反，要先意識到這點再選。</div>
+  <div class="warn-box hi" style="margin-top:10px;">
+    ⚠️ <b>三大必考重點</b>：<b>①納稅義務人六種情況</b>——106、109、111、112、113年年出現，「買賣買受人／贈與受贈人／典權典權人」三者最常混考；<b>②稅率</b>——「典權4%、交換分割2%、其他6%」三組口訣要背死；<b>③申報期間</b>——「不動產移轉糾紛以法院判決確定日為準」是104、106、113、114連續出現的最愛考起算日。113年測23是「納稅義務人／信託契稅／交換契稅」三合一共用題，複習時注意不要誤以為是三道不同題目。
+  </div>
 </section>
 
 </body>
