@@ -209,6 +209,7 @@
   .rank-num { width:16px; height:16px; border-radius:50%; background:var(--ink); color:#fff; font-size:10px; display:flex; align-items:center; justify-content:center; }
   .rank-num.win { background: var(--accent); }
   .rank-arrow { color: var(--line-strong); font-weight:bold; }
+  .mnemo-char { display:inline-block; min-width:1.5em; height:1.5em; line-height:1.42em; text-align:center; border-radius:50%; border:2px solid var(--accent2); background:var(--accent2-bg); color:var(--accent2); font-weight:800; margin:0 1px; }
 </style>
 </head>
 <body>
@@ -293,7 +294,8 @@
     標售成功：價金歸國庫專戶，<b>10年內</b>繼承人可依<b>法定應繼分</b>申請領取（111測1）。標售不成：再標售降價<b>不得超過20%</b>，最多標<b>5次</b>；5次不成則登記國有，繼承人仍可依第5次底價領價金。
   </div>
   <div class="warn-box hi2">
-    💡 優先購買權人依序為<b>繼承人→合法使用人→其他共有人</b>（113測10考順序），但條文限定「<b>就其使用範圍</b>」才有優先購買權——逐字稿特別強調「有沒有實際使用是非常關鍵的要件」。
+    💡 優先購買權人依序為<b>繼承人→合法使用人→其他共有人</b>（113測10考順序），但條文限定「<b>就其使用範圍</b>」才有優先購買權——逐字稿特別強調「有沒有實際使用是非常關鍵的要件」。<br>
+    與其他法律（如<b>§104基地</b>、<b>§34-1共有</b>）的優先購買權競合時，<b>優先適用§73-1</b>；不符§73-1者，才另依其他法律主張（標售作業要點第13點）。使用範圍：繼承人、共有人看<b>實際使用</b>；合法使用人看<b>登記或契約</b>，範圍重疊時依物權登記先後、物權優於債權（同要點第11點）。
   </div>
   <div class="warn-box hi">
     ⚠️ <b>法條號更正</b>：逐字稿口述「因繼承...應經登記始得處分」時說是民法<b>758條</b>，但講義印刷版與查證後確認正確是民法<b>§759</b>（因繼承、強制執行、徵收、法院之判決或其他非因法律行為，於登記前已取得不動產物權者，應經登記，始得處分其物權）——逐字稿是老師口誤，筆記以759條為準。<b>土地法§73-1是111年6月修正的重大修法重點</b>，務必留意。
@@ -306,7 +308,7 @@
 
   <div class="sub-block">
     <span class="sub-tag">①禁止私有（任何人）<span class="law-tag" style="background:transparent;border-color:#fff;color:#fff;">§14、§15</span></span>
-    <p style="font-size:14.5px;">十款不得私有土地<span class="law-tag sub-law">土§14</span>：海岸／天然湖澤／可通運水道／城鎮水道湖澤／公共交通道路／礦泉地／瀑布地／公共水源地／名勝古蹟／其他。附著於土地之礦<b>不因</b>土地所有權取得而私有<span class="law-tag sub-law">土§15</span>（例：買礦山≠擁有礦）。立法目的：貫徹依法治國原則＋符合比例原則。</p>
+    <p style="font-size:14.5px;">十款不得私有土地<span class="law-tag sub-law">土§14</span>（口訣：海湖水道成群離被搶的機率不遠了）：<span class="mnemo-char">海</span>岸／天然<span class="mnemo-char">湖</span>澤／可通運<span class="mnemo-char">水</span>道／<span class="mnemo-char">城</span>鎮水道湖澤／公共交通<span class="mnemo-char">道</span>路／礦<span class="mnemo-char">泉</span>地／瀑<span class="mnemo-char">布</span>地／公共水<span class="mnemo-char">源</span>地／名勝古<span class="mnemo-char">蹟</span>／其他法<span class="mnemo-char">律</span>禁止私有。附著於土地之礦<b>不因</b>土地所有權取得而私有<span class="law-tag sub-law">土§15</span>（例：買礦山≠擁有礦）。立法目的：貫徹依法治國原則＋符合比例原則。</p>
   </div>
 
   <div class="sub-block">
@@ -360,6 +362,12 @@
   <div class="cond-box">
     <div class="cond-if"><span class="cond-label">若</span>直轄市/縣市政府對公有土地欲<b>處分、設定負擔、或為超過10年期租賃</b>（三者之一）</div>
     <div class="cond-then"><span class="cond-label">需經</span>①該管區內<b>民意機關同意</b>　②<b>行政院核准</b>（兩者缺一不可）</div>
+  </div>
+
+  <h3 class="sub-title">撥用的程序<span class="examhit">106測</span></h3>
+  <div class="cond-box">
+    <div class="cond-if"><span class="cond-label">若</span>需用公有土地的機關要<b>撥用</b>（土§26）</div>
+    <div class="cond-then"><span class="cond-label">需經</span>商同該管直轄市或縣市<b>政府</b>，層請<b>行政院</b>核准——<b>不經民意機關</b>（陷阱：民意機關同意／內政部／國產署核准）</div>
   </div>
 </section>
 
@@ -450,12 +458,13 @@
   </div>
   <div class="foot-note">💡 為什麼會有§8-5例外：民法§799 I 定義區分所有建物（數人區分一建築物各專有其一部）；§799 V 規定專有部分與基地不得分離移轉／設定負擔，正常情況房地綁在一起賣；§8-5處理的是「修法前已分屬不同人」這種例外情境。</div>
 
-  <h3 class="sub-title">行使期限對照——期限跟著法源走，起算點都是「接到通知後」</h3>
+  <h3 class="sub-title">行使期限對照——期限跟著法源走：基10、共15、標30</h3>
   <table>
     <tr><th style="width:16%">法源</th><th style="width:14%">性質</th><th style="width:16%">表示期限</th><th style="width:16%">規定層級</th><th>逾期後果</th></tr>
     <tr><td><b>§104／§107</b>（基地房屋/耕地優先購買）</td><td>物權效力</td><td><b>10日內</b>（接到出賣通知後起算）</td><td>條文本身<br><span style="font-size:11.5px;color:var(--sub);">§104 II 明文</span></td><td>視為放棄；未通知契約不得對抗優先購買權人</td></tr>
     <tr><td><b>§34-1 IV</b>（共有人優先承購）</td><td>債權效力</td><td><b>15日內</b>（接到出賣通知後起算）</td><td>執行要點§13①<br><span style="font-size:11.5px;color:var(--sub);">母法條文本身未寫</span></td><td>視為放棄；出賣人若未通知，他共有人得請求損害賠償</td></tr>
     <tr><td><b>§8-5 III／V</b>（區分所有建物）</td><td>債權效力</td><td><b>15日內</b>（先公告5日，自最後公告日起算）</td><td>條文本身<br><span style="font-size:11.5px;color:var(--sub);">§8-5 VII 明文</span></td><td>視為放棄（拋棄優先承買權）</td></tr>
+    <tr><td><b>§73-1 III</b>（逾期未辦繼承標售）</td><td>依序：繼承人→合法使用人→其他共有人，就其使用範圍</td><td><b>決標後30日內</b>（不是接到通知後）</td><td>條文本身<br><span style="font-size:11.5px;color:var(--sub);">§73-1 III 明文</span></td><td>視為放棄；與§104、§34-1競合時優先適用§73-1</td></tr>
   </table>
   <div class="foot-note">💡 §34-1 的 15 日只在執行要點（行政規則），母法六項本身沒有寫天數；§104 的 10 日、§8-5 的 15 日則是直接寫在條文裡，規定位階比 §34-1 更高。§8-5 通知方式也不同——是用「建築物公告處公告 5 日」，不是像 §34-1、§104 那樣書面通知本人。</div>
 
